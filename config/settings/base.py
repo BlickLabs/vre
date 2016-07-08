@@ -42,7 +42,10 @@ THIRD_PARTY_APPS = (
 )
 
 # Apps specific for this project go here.
-LOCAL_APPS = ()
+LOCAL_APPS = (
+    'vre.apps.documents',
+    'vre.apps.develops',
+)
 
 INSTALLED_APPS = THIRD_PARTY_APPS + DJANGO_APPS + LOCAL_APPS
 
