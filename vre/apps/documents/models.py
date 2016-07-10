@@ -6,6 +6,7 @@ import uuid
 
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
+from private_media.storages import PrivateMediaStorage
 
 from vre.apps.develops.models import Develop
 
@@ -27,7 +28,8 @@ class Document(models.Model):
         _('File'),
         blank=False,
         null=False,
-        upload_to=get_file_path
+        upload_to=get_file_path,
+        storage=PrivateMediaStorage()
     )
     develop = models.ForeignKey(
         Develop,
