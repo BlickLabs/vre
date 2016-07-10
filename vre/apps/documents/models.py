@@ -39,3 +39,6 @@ class Document(models.Model):
     class Meta:
         verbose_name = _('Document')
         verbose_name_plural = _('Documents')
+
+    def __unicode__(self):
+        return self.title
