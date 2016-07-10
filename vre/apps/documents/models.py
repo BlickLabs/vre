@@ -1,10 +1,19 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*
 
+import os
+import uuid
+
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
 from vre.apps.develops.models import Develop
+
+
+def get_file_path(instance, filename):
+    ext = filename.split('.')[-1]
+    filename = "%s.%s" % (uuid.uuid4(), ext)
+    return os.path.join('reportes', filename)
 
 
 class Document(models.Model):
@@ -18,7 +27,7 @@ class Document(models.Model):
         _('File'),
         blank=False,
         null=False,
-        upload_to='reports'
+        upload_to=get_file_path
     )
     develop = models.ForeignKey(
         Develop,
