@@ -14,6 +14,7 @@ from vre.apps.documents import  urls as documents_urls
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'', include('private_media.urls')),
 
     # Custom urls
     # url(r'', include(module_urls, namespace='module')),
