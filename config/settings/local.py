@@ -64,9 +64,3 @@ TEST_RUNNER = 'django.test.runner.DiscoverRunner'
 # STATIC FILE CONFIGURATION
 # -----------------------------------------------------------------------------
 STATIC_URL = '/static/'
-
-# MEDIA CONFIGURATION
-# -----------------------------------------------------------------------------
-MEDIA_ROOT = str(PROJECT_DIR('media'))
-
-MEDIA_URL = '/media/'
