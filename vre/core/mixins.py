@@ -27,3 +27,21 @@ class AuthRedirectMixin(object):
         else:
             return super(AuthRedirectMixin, self).get(self, request, *args,
                                                       **kwargs)
+
+
+class NextUrlMixin(object):
+    """
+        Allows to redirect to the url in the next value in url
+        remember to add <input type="hidden" name="next" value="{{ next }}">
+        in the form on a {% if next %} statement
+    """
+    def get_context_data(self, **kwargs):
+        kwargs.setdefault('next', self.request.GET.get('next'))
+        return super(NextUrlMixin, self).get_context_data(**kwargs)
+
+    def get_success_url(self):
+        if 'next' in self.request.POST:
+            url = self.request.POST.get('next')
+        else:
+            url = self.success_url
+        return url
