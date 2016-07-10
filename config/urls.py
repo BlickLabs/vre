@@ -10,6 +10,7 @@ from django.contrib import admin
 from django.views import defaults as error_views
 
 from vre.apps.documents import  urls as documents_urls
+from vre.apps.xauth import urls as xauth_urls
 
 
 urlpatterns = [
@@ -19,6 +20,7 @@ urlpatterns = [
     # Custom urls
     # url(r'', include(module_urls, namespace='module')),
     url(r'', include(documents_urls, namespace='documents')),
+    url(r'', include(xauth_urls, namespace='xauth')),
 ]
 
 if settings.DEBUG:
