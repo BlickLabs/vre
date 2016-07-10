@@ -39,6 +39,7 @@ DJANGO_APPS = (
 
 THIRD_PARTY_APPS = (
     'suit',
+    'private_media',
 )
 
 # Apps specific for this project go here.
@@ -132,6 +133,10 @@ SUIT_CONFIG = {
     'ADMIN_NAME': 'vre',
 }
 
+# Auth Model Configuration
+# -----------------------------------------------------------------------------
+AUTH_USER_MODEL = "users.CoolUser"
+
 # STATIC CONFIGURATION
 # -----------------------------------------------------------------------------
 STATICFILES_DIRS = (
@@ -143,4 +148,20 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
 
-AUTH_USER_MODEL = "users.CoolUser"
+STATIC_ROOT = str(PROJECT_DIR('staticfiles'))
+
+# Private Media Configuration
+# -----------------------------------------------------------------------------
+PRIVATE_MEDIA_ROOT = str(PROJECT_DIR('media/private'))
+
+PRIVATE_MEDIA_URL = '/media/private/'
+
+PRIVATE_MEDIA_SERVER = 'private_media.servers.DefaultServer'
+
+PRIVATE_MEDIA_PERMISSIONS = 'vre.core.permissions.LoginPermission'
+
+# Public Media Configuration
+# -----------------------------------------------------------------------------
+MEDIA_ROOT = str(PROJECT_DIR('media/public'))
+
+MEDIA_URL = '/media/public/'
