@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	Descargar archivo
+{% endblock %}
+
+{% block content %}
+	<h1>
+		Descargar un documeto
+	</h1>
+
+	<table>
+		<tr>
+			<th>
+				Nombre
+			</th>
+			<th>
+				Archivo
+			</th>
+		</tr>
+		{% for document in documents %}
+			<tr>
+				<td>
+					{{ document.title }}
+				</td>
+				<td>
+					<a href="{{ document.file.url }}" target="_blank">
+						Archivo
+					</a>
+
+				</td>
+			</tr>
+		{% endfor %}
+
+	</table>
+
+{% endblock %}
