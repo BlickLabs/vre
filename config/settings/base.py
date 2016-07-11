@@ -166,3 +166,10 @@ PRIVATE_MEDIA_PERMISSIONS = 'vre.core.permissions.LoginPermission'
 MEDIA_ROOT = str(PROJECT_DIR('media/public'))
 
 MEDIA_URL = '/media/public/'
+
+# Public Media Configuration
+# -----------------------------------------------------------------------------
+EMAIL_BACKEND = 'django_mailgun.MailgunBackend'
+MAILGUN_ACCESS_KEY = env("MAILGUN_ACCESS_KEY")
+MAILGUN_SERVER_NAME = env("MAILGUN_SERVER_NAME")
+DEFAULT_EMAIL_TO = env("DEFAULT_EMAIL_TO")
