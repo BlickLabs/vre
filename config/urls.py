@@ -11,6 +11,7 @@ from django.views import defaults as error_views
 
 from vre.apps.documents import  urls as documents_urls
 from vre.apps.xauth import urls as xauth_urls
+from vre.apps.landing import urls as landing_urls
 
 
 urlpatterns = [
@@ -21,6 +22,7 @@ urlpatterns = [
     # url(r'', include(module_urls, namespace='module')),
     url(r'', include(documents_urls, namespace='documents')),
     url(r'', include(xauth_urls, namespace='xauth')),
+    url(r'', include(landing_urls, namespace='landing')),
 ]
 
 if settings.DEBUG:
