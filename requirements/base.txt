@@ -19,3 +19,4 @@ django-suit==0.2.19
 # Your custom requirements go here
 # -----------------------------------------------------------------------------
 git+https://github.com/RacingTadpole/django-private-media.git
+django-mailgun==0.8.0
