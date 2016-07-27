@@ -70,7 +70,7 @@ module.exports = function (grunt) {
           dest: 'dist/css/bower_dependencies.min.css'
         }]
       }
-    }
+    },
     uglify: {
       app: {
         options: {},
