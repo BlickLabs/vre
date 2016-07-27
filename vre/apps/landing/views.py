@@ -6,6 +6,8 @@ from django.views.generic import FormView, TemplateView
 
 from vre.apps.landing.forms import ContactForm
 
+class HomepageView(TemplateView):
+    template_name = 'landing/index.html'
 
 class ContactView(FormView):
     template_name = 'landing/contact.html'
