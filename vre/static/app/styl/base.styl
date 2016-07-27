@@ -8,7 +8,7 @@ a, a:hover, a:active, a:visited
 footer
   background $orange
   color white
-  padding 80px 60px 50px 60px
+  padding 75px 60px 50px 60px
   
   .footer-container
     align-items center
@@ -16,6 +16,12 @@ footer
     
     .footer-col
       width 33.333333%
+    
+      &:first-child
+        margin-right 30px
+        
+      &:last-child
+        margin-left 30px
       
       a
         color white
@@ -26,3 +32,17 @@ footer
     .footer-logo-legend
       display block
       font-size 16px
+      
+  #footer-newsletter-form
+    input[type="email"]
+      background rgba(white, 0.3)
+      simple-border('all', 1px, white)
+      display block
+      font-weight $fontLight
+      margin-top 8px
+      max-width 272px
+      padding 10px 16px 12px 16px
+      width 100%
+      
+      &::placeholder
+        color white
