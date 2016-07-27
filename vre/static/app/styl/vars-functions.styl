@@ -11,3 +11,32 @@ $fontLight = 300
 $fontNormal = 400
 $fontSemiBold = 600
 $fontBold = 700
+
+// Functions
+simple-border(side, width, colour, style = solid)
+  border-color colour
+  border-style style
+  if side == 'top'
+    border-width width 0 0 0
+  else if side == 'right'
+    border-width 0 width 0 0
+  else if side == 'bottom'
+    border-width 0 0 width 0
+  else if side == 'left'
+    border-width 0 0 0 width
+  else if side == 'topbottom'
+    border-width width 0
+  else if side == 'leftright'
+    border-width 0 width
+  else if side == 'notop'
+    border-width 0 width width width
+  else if side == 'noright'
+    border-width width 0 width width
+  else if side == 'nobottom'
+    border-width width width 0 width
+  else if side == 'notop'
+    border-width width width width 0
+  else if side == 'all'
+    border-width width
+  else
+    border-width width
