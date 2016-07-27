@@ -54,21 +54,17 @@ module.exports = function (grunt) {
     },
     bower_concat: {
       all: {
-        dest: 'app/js/bower_dependencies.js',
-        cssDest: 'app/css/bower_dependencies.css',
+        dest: {
+          js: 'app/js/bower_dependencies.js',
+          css: 'dist/css/bower_dependencies.css'
+        },
         dependencies: {
           'bootstrap': 'jquery',
           'jquery-validation': 'jquery'
+        },
+        mainFiles: {
+          'bootstrap': ['dist/js/bootstrap.min.js', 'dist/css/bootstrap.min.css']
         }
-      }
-    },
-    cssmin: {
-      target: {
-        files: [{
-          expand: true,
-          src: ['app/css/bower_dependencies.css'],
-          dest: 'dist/css/bower_dependencies.min.css'
-        }]
       }
     },
     uglify: {
@@ -81,7 +77,7 @@ module.exports = function (grunt) {
       bower: {
         options: {},
         files: {
-          'dist/js/bower_dependencies.min.js': ['<%= bower_concat.all.dest %>']
+          'dist/js/bower_dependencies.min.js': ['<%= bower_concat.all.dest.js %>']
         }
       }
     },
@@ -118,10 +114,9 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-bower-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.registerTask('default', ['stylus', 'jslint', 'concat', 'bower_concat', 'uglify', 'cssmin', 'copy', 'watch']);
+  grunt.registerTask('default', ['stylus', 'jslint', 'concat', 'bower_concat', 'uglify', 'copy', 'watch']);
   grunt.registerTask('compileStylus', ['stylus']);
   grunt.registerTask('compileJavascript', ['jslint', 'concat', 'uglify:app']);
-  grunt.registerTask('compileBower', ['bower_concat', 'uglify:bower', 'cssmin']);
+  grunt.registerTask('compileBower', ['bower_concat', 'uglify:bower']);
 };
