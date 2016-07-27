@@ -141,7 +141,7 @@ AUTH_USER_MODEL = "users.CoolUser"
 # STATIC CONFIGURATION
 # -----------------------------------------------------------------------------
 STATICFILES_DIRS = (
-    str(PROJECT_DIR.path('static')),
+    str(PROJECT_DIR.path('static/dist')),
 )
 
 STATICFILES_FINDERS = (
