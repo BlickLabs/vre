@@ -6,7 +6,7 @@ module.exports = function (grunt) {
     pkg: grunt.file.readJSON('package.json'),
     watch: {
       styl: {
-        files: ['app/styl/*.styl'],
+        files: ['app/styl/*.styl', 'app/styl/*/*.styl'],
         tasks: ['compileStylus']
       },
       js: {
