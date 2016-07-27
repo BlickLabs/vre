@@ -31,7 +31,7 @@ module.exports = function (grunt) {
       },
       compile: {
         files: {
-          'dist/css/styles.min.css': 'app/styl/main.styl'
+          'dist/css/main.min.css': 'app/styl/main.styl'
         }
       }
     },
