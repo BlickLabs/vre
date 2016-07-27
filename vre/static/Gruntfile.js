@@ -20,7 +20,10 @@ module.exports = function (grunt) {
           function () {
             return require('autoprefixer-stylus')('last 2 versions', 'ie 8');
           }
-        ]
+        ],
+        define: {
+          import_tree: require('stylus-import-tree')
+        }
       },
       compile: {
         files: {
