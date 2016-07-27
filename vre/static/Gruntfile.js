@@ -56,7 +56,7 @@ module.exports = function (grunt) {
       all: {
         dest: {
           js: 'app/js/bower_dependencies.js',
-          css: 'dist/css/bower_dependencies.css'
+          css: 'dist/css/bower_dependencies.min.css'
         },
         dependencies: {
           'bootstrap': 'jquery',
