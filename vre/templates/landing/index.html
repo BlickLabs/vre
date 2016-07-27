@@ -1,6 +1,29 @@
 {% extends "base.html" %}
+{% load static from staticfiles %}
 {% block content %}
-<div class="parallax-simple homepage-cover">
-  Test
+<div class="cover homepage-cover">
+  <div class="phone-box">
+    <div class="phone-box-content">
+      <span class="big-text">55 8852 7468</span>
+      Visita nuestro Showroom
+    </div>
+  </div>
+  <div class="homepage-menu">
+    <div class="logo-container">
+      <img src="{% static "img/icons/icons-01.png" %}" alt="VRE Logo" />
+      <span>VERTICAL REAL ESTATE</span>
+    </div>
+    <ul class="menu-list">
+      <li><a href="#">INICIO</a></li>
+      <li><a href="#">DESARROLLOS</a></li>
+      <li><a href="#">NOSOTROS</a></li>
+      <li><a href="#">INVERSIONISTAS</a></li>
+      <li><a href="#">CONTACTO</a></li>
+    </ul>
+  </div>
+  <div class="white-box text-center">
+    Desarrollamos <b>departamentos</b> en el corazón de la ciudad
+  </div>
 </div>
+Test
 {% endblock %}

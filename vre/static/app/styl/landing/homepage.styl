@@ -1,3 +1,68 @@
 .homepage-cover
+  background-image url('../img/homepage_cover.jpg')
+  simple-border('bottom', 4px, $orange)
   color white
-  height 50vh
+  height 60vh
+  position relative
+  width 100%
+  
+  .phone-box
+    position relative
+    text-align right
+    width 100%
+    
+    .phone-box-content
+      background $orange
+      display inline-block
+      font-size 13px
+      padding 15px 40px
+      right 0
+      text-align center
+      top 0
+      
+      .big-text
+        display block
+        font-size 25px
+        font-weight $fontSemiBold
+        line-height 1
+  .homepage-menu
+    center-block()
+    margin-top 10px
+    max-width 500px
+    text-align center
+    width auto
+    
+    .logo-container
+      font-family 'Oswald'
+      font-size 42px
+      
+      img
+        height 58px
+        margin-right 10px
+        vertical-align top
+
+    .menu-list
+      font-size 15px
+      font-weight $fontSemiBold
+      list-style none
+      margin-left -40px
+
+      li
+        display inline-block
+        
+        &:not(:last-child)::after
+          content ' | '
+        
+        a
+          display inline-block
+          color white
+        
+  .white-box
+    background white
+    bottom -4px
+    color black
+    font-size 20px
+    left 150px
+    max-width 270px
+    padding 25px 20px 30px 20px
+    position absolute
