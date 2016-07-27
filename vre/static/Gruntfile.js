@@ -6,12 +6,16 @@ module.exports = function (grunt) {
     pkg: grunt.file.readJSON('package.json'),
     watch: {
       styl: {
-        files: ['styl/*.styl'],
+        files: ['app/styl/*.styl'],
         tasks: ['compileStylus']
       },
       js: {
-        files: ['js/*.js'],
+        files: ['app/js/*.js'],
         tasks: ['compileJavascript']
+      },
+      etc: {
+        files: ['app/fonts/*.*', 'app/img/*.*', 'app/img/icons/*.*'],
+        tasks: ['copy']
       }
     },
     stylus: {
@@ -27,14 +31,13 @@ module.exports = function (grunt) {
       },
       compile: {
         files: {
-          'css/styles.min.css': 'styl/main.styl'
+          'dest/css/styles.min.css': 'app/styl/main.styl'
         }
       }
     },
     jslint: {
       client: {
-        src: ['js/*.js'
-          ],
+        src: ['app/js/*.js', '!app/js/app.js', '!app/js/bower_dependencies.js'],
         directives: {
           browser: true
         }
@@ -45,13 +48,13 @@ module.exports = function (grunt) {
         separator: ''
       },
       basic: {
-        src: ['js/*.js'],
-        dest: 'js/app.js'
+        src: ['app/js/*.js', '!app/js/app.js', '!app/js/bower_dependencies.js'],
+        dest: 'app/js/app.js'
       }
     },
     bower_concat: {
       all: {
-        dest: 'js/bower_dependencies.js',
+        dest: 'app/js/bower_dependencies.js',
         dependencies: {
           'underscore': 'jquery'
         }
@@ -63,9 +66,35 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
-          'js/app.min.js': ['<%= concat.basic.dest %>'],
-          'js/bower.min.js': ['<%= bower_concat.all.dest %>']
+          'dist/js/app.min.js': ['<%= concat.basic.dest %>'],
+          'dist/js/bower_dependencies.min.js': ['<%= bower_concat.all.dest %>']
         }
+      }
+    },
+    copy: {
+      foo : {
+        files : [
+          {
+            expand : true,
+            dest   : 'dist/img',
+            cwd    : 'app/img',
+            src    : [
+              '**/*'
+            ]
+          },
+          {
+            expand : true,
+            dest   : 'dist/fonts',
+            cwd    : 'app/fonts',
+            src    : [
+              '**/*'
+            ]
+          },
+          {
+            src: 'app/favicon.ico',
+            dest: 'dist/favicon.ico'
+          }
+        ]
       }
     }
   });
@@ -75,7 +104,8 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-bower-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.registerTask('default', ['stylus', 'jslint', 'concat', 'bower_concat', 'uglify', 'watch']);
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.registerTask('default', ['stylus', 'jslint', 'concat', 'bower_concat', 'uglify', 'copy', 'watch']);
   grunt.registerTask('compileStylus', ['stylus']);
   grunt.registerTask('compileJavascript', ['jslint', 'concat', 'uglify']);
 };
