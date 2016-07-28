@@ -183,12 +183,11 @@
         margin-top 20px
         
 // Media queries
-@media screen and (max-width: 1100px)
+@media $mediumWindow
   .homepage-cover-divider-2 .text-part
     min-width 400px
     
-@media screen and (max-width: 773px) and (orientation: landscape),
-screen and (max-width: 767px) and (orientation: portrait)
+@media $hybridMobileTablet
   .homepage-cover
     .phone-box .phone-box-content
       font-size 10px
@@ -201,21 +200,8 @@ screen and (max-width: 767px) and (orientation: portrait)
       font-size 15px
       left 40px
       padding 15px 10px 18px 10px
- 
-@media screen and (max-width: 768px) and (orientation: portrait)
-  .homepage-cover
-    height 50vh
 
-  .homepage-cover-divider-1 .image-part,
-  .homepage-cover-divider-2 .image-part
-    height 40vh
-    
-@media screen and (max-width: 768px) and (orientation: landscape)
-  .homepage-cover-divider-1 .image-part,
-  .homepage-cover-divider-2 .image-part
-    height 70vh
-
-@media screen and (max-width: 768px)
+@media $smallBase
   .homepage-developments .item
     width 100% !important
     margin-left 0 !important
@@ -265,6 +251,19 @@ screen and (max-width: 767px) and (orientation: portrait)
         position relative
         right initial
         text-align center     
+
+@media $smallPortrait
+  .homepage-cover
+    height 50vh
+
+  .homepage-cover-divider-1 .image-part,
+  .homepage-cover-divider-2 .image-part
+    height 40vh
+    
+@media $smallLandscape
+  .homepage-cover-divider-1 .image-part,
+  .homepage-cover-divider-2 .image-part
+    height 70vh
 
 @media screen and (max-width: 480px)
   .homepage-cover .homepage-menu .logo-container
