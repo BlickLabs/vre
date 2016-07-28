@@ -31,7 +31,7 @@
     margin-top 10px
     max-width 500px
     text-align center
-    width auto
+    width 90%
     
     .logo-container
       font-family 'Oswald'
@@ -71,8 +71,10 @@
 .homepage-developments
   font-size $sectionTitleSize
   margin-bottom 30px
+  center-block()
   margin-top 40px
   text-align center
+  width 90%
   
   &-items
     center-block()
@@ -132,10 +134,9 @@
     position relative
     z-index 1
     
-
 .homepage-contact-divider
   line-height 1.25
-  margin 80px 0
+  margin 80px 20px
   
   span
     display block
@@ -151,7 +152,9 @@
   .container-360
     center-block()
     margin-top 20px
-    width 60%
+    max-width 900px
+    min-width 280px
+    width 80%
     
 .homepage-cover-divider-2
   align-items shrink
@@ -180,3 +183,112 @@
       
       .orange-button
         margin-top 20px
+        
+// Media queries
+@media screen and (max-width: 1100px)
+  .homepage-cover-divider-2 .text-part
+    min-width 400px
+    
+@media screen and (max-width: 773px) and (orientation: landscape),
+screen and (max-width: 767px) and (orientation: portrait)
+  .homepage-cover
+    .phone-box .phone-box-content
+      font-size 10px
+      padding 10px 30px
+      
+      .big-text
+        font-size 20px
+
+    .white-box
+      font-size 15px
+      left 40px
+      padding 15px 10px 18px 10px
+ 
+@media screen and (max-width: 768px) and (orientation: portrait)
+  .homepage-cover
+    height 50vh
+
+  .homepage-cover-divider-1 .image-part,
+  .homepage-cover-divider-2 .image-part
+    height 40vh
+    
+@media screen and (max-width: 768px) and (orientation: landscape)
+  .homepage-cover-divider-1 .image-part,
+  .homepage-cover-divider-2 .image-part
+    height 70vh
+
+@media screen and (max-width: 768px)
+  .homepage-developments .item
+    width 100% !important
+    margin-left 0 !important
+    
+    &:not(:first-child)
+      margin-top 30px
+      
+    &:first-child
+      margin-top 20px
+  
+  .homepage-contact-divider
+    margin 55px 20px
+
+  .homepage-cover-divider-1,
+  .homepage-cover-divider-2
+    display block
+    height auto
+    
+    .text-part,
+    .image-part
+      display block
+      width 100%
+      
+  .homepage-cover-divider-1
+    .text-part
+      min-width auto
+
+      .white-box
+        font-size 22px
+        margin-bottom 0
+        padding 30px 20px
+        text-align center
+        width 100%
+      img
+        max-width 280px
+      
+  .homepage-cover-divider-2
+    min-height auto
+
+    .text-part
+      min-width auto
+
+      div
+        bottom initial
+        left initial
+        margin 40px 20px
+        position relative
+        right initial
+        text-align center     
+
+@media screen and (max-width: 480px)
+  .homepage-cover .homepage-menu .logo-container
+    font-size 30px
+    
+    img
+      height 45px
+      
+  .homepage-cover .white-box
+    left 50%
+    width 280px
+    transform translateX(-50%)
+    
+@media screen and (max-width: 320px)
+  .homepage-cover
+    height 60vh
+
+    .homepage-menu
+      margin-top 20px
+
+      .logo-container
+        font-size 25px
+        
+        img
+          height 40px
