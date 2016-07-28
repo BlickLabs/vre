@@ -53,3 +53,23 @@ footer
       
       &::placeholder
         color white
+        
+@media screen and (max-width: 768px)
+  footer
+    padding 30px 0
+
+    .footer-container
+      display block
+      
+      .footer-col
+        display block
+        margin 60px auto !important
+        text-align center
+        width 90%
+        
+        &#footer-newsletter-form input
+          center-block()
+        
+        .footer-logo
+          max-width 400px
+          min-width 240px
