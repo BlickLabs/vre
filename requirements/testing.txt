@@ -2,4 +2,4 @@
 
 # Python-MySQL Database Adapter
 # ------------------------------------------------
-mysql-python-1.2.5
+mysql-python==1.2.5
