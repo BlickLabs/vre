@@ -98,3 +98,53 @@
         height auto
         max-height 250px
         width 100%
+        
+.homepage-orange-divider
+  display flex
+  height auto
+  min-height 50vh
+  
+  .text-part
+    background $orange
+    text-align center
+    width 350px
+    
+    img
+      margin-bottom 45px
+      margin-top 30px
+      width 65%
+      
+    .white-box
+      background white
+      font-size 28px
+      line-height 1.25
+      margin-bottom 80px
+      padding 30px 20px 30px 70px
+      position relative
+      text-align left
+      width 130%
+      z-index 2
+    
+  .image-part
+    background-attachment fixed
+    background-image url('../img/homepage_cover.jpg')
+    flex-grow 1
+    position relative
+    z-index 1
+    
+
+.homepage-contact-divider
+  line-height 1.25
+  margin 80px 0
+  
+  span
+    display block
+    font-size $sectionTitleSize
+  
+  .button
+    simple-border('all', 2px, $orange)
+    color $orange
+    display inline-block
+    margin-top 40px
+    padding 18px 50px
+    width auto
