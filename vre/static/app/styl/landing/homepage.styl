@@ -2,7 +2,7 @@
   background-image url('../img/homepage_cover.jpg')
   simple-border('bottom', 4px, $orange)
   color white
-  height 60vh
+  height 80vh
   position relative
   width 100%
   
@@ -99,7 +99,7 @@
         max-height 250px
         width 100%
         
-.homepage-orange-divider
+.homepage-cover-divider-1
   display flex
   height auto
   min-height 50vh
@@ -107,7 +107,8 @@
   .text-part
     background $orange
     text-align center
-    width 350px
+    min-width 350px
+    width 28%
     
     img
       margin-bottom 45px
@@ -118,7 +119,7 @@
       background white
       font-size 28px
       line-height 1.25
-      margin-bottom 80px
+      margin-bottom 100px
       padding 30px 20px 30px 70px
       position relative
       text-align left
@@ -140,11 +141,44 @@
   span
     display block
     font-size $sectionTitleSize
-  
-  .button
-    simple-border('all', 2px, $orange)
-    color $orange
-    display inline-block
+    
+  .orange-button
     margin-top 40px
-    padding 18px 50px
-    width auto
+
+.homepage-gray-divider
+  background $lighterGray
+  padding 60px 20px
+  
+  .container-360
+    center-block()
+    margin-top 20px
+    width 60%
+    
+.homepage-cover-divider-2
+  align-items shrink
+  display flex
+  height 50vh
+  min-height 450px
+  
+  .image-part
+    background-attachment fixed
+    background-image url('../img/homepage_cover.jpg')
+    flex-grow 1
+
+  .text-part
+    position relative
+    text-align right
+    min-width 500px
+    width 35%
+    
+    div
+      bottom 60px
+      position absolute
+      right 80px
+
+      span
+        display block
+        line-height 1.5
+      
+      .orange-button
+        margin-top 20px
