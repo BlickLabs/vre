@@ -25,6 +25,7 @@
         font-size 25px
         font-weight $fontSemiBold
         line-height 1
+  
   .homepage-menu
     center-block()
     margin-top 10px
@@ -66,3 +67,34 @@
     max-width 270px
     padding 25px 20px 30px 20px
     position absolute
+
+.homepage-developments
+  font-size $sectionTitleSize
+  margin-bottom 30px
+  margin-top 40px
+  text-align center
+  
+  &-items
+    center-block()
+    margin-top 10px
+    max-width 1500px
+    text-align center
+    
+    .item
+      display inline-block
+      width 45% !important
+      
+      &:nth-child(even)
+        margin-left 20px
+        
+      &:nth-child(n + 3)
+        margin-top 25px
+
+      &-name
+        margin-top 10px
+        width 30%
+
+      &-picture
+        height auto
+        max-height 250px
+        width 100%

@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static from staticfiles %}
+{% block title %}VRE México{% endblock %}
 {% block content %}
 <div class="cover homepage-cover">
   <div class="phone-box">
@@ -25,5 +26,17 @@
     Desarrollamos <b>departamentos</b> en el corazón de la ciudad
   </div>
 </div>
-Test
+<div class="homepage-developments">
+  Conoce nuestros desarrollos
+  <div class="homepage-developments-items">
+    <div class="item">
+      <img src="{% static "img/homepage_cover.jpg" %}" class="item-picture">
+      <img class="item-name" src="{% static "img/icons/icons-02.png" %}" />
+    </div>
+    <div class="item">
+      <img src="{% static "img/homepage_cover.jpg" %}" class="item-picture">
+      <img class="item-name" src="{% static "img/icons/icons-04.png" %}" />
+    </div>
+  </div>
+</div>
 {% endblock %}
