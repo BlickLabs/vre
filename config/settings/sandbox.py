@@ -10,6 +10,10 @@ import dj_database_url
 DEBUG = env.bool('DJANGO_DEBUG', default=False)
 TEMPLATES[0]['OPTIONS']['debug'] = DEBUG
 
+SECRET_KEY = env("DJANGO_SECRET_KEY", default='CHANGEME!!!')
+
 DATABASES = {
     'default': dj_database_url.config()
 }
+
+STATIC_URL = '/static/'

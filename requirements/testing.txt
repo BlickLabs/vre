@@ -1,4 +1,5 @@
 -r base.txt
 
-mock
-model-mommy
+# Python-MySQL Database Adapter
+# ------------------------------------------------
+mysql-python==1.2.5
