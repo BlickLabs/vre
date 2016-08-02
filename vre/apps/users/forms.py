@@ -3,15 +3,16 @@
 
 from django import forms
 from django.contrib.auth.forms import ReadOnlyPasswordHashField
+from django.utils.translation import ugettext_lazy as _
 
 from vre.apps.users.models import CoolUser
 
 class UserCreationForm(forms.ModelForm):
     password1 = forms.CharField(
-        label='Password', widget=forms.PasswordInput
+        label=_('Password'), widget=forms.PasswordInput
     )
     password2 = forms.CharField(
-        label='Password confirmation', widget=forms.PasswordInput
+        label=_('Password confirmation'), widget=forms.PasswordInput
     )
 
     class Meta:
