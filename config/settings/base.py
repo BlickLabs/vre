@@ -45,7 +45,7 @@ THIRD_PARTY_APPS = (
 # Apps specific for this project go here.
 LOCAL_APPS = (
     'vre.apps.documents',
-    'vre.apps.develops',
+    'vre.apps.developments',
     'vre.apps.users',
     'vre.apps.xauth',
 )

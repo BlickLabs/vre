@@ -3,7 +3,7 @@
 
 from django.contrib import admin
 
-from vre.apps.develops.forms import DevelopForm
+from vre.apps.developments.forms import DevelopForm
 from . import models
 
 

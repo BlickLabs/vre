@@ -16,7 +16,7 @@ class UserCreationForm(forms.ModelForm):
 
     class Meta:
         mdodel = CoolUser
-        fields = ('email', 'first_name', 'last_name', 'user_type', 'develops')
+        fields = ('email', 'first_name', 'last_name', 'user_type', 'developments')
 
     def clean_password2(self):
         password1 = self.cleaned_data.get("password1")
@@ -38,4 +38,4 @@ class UserChangeForm(forms.ModelForm):
     password = ReadOnlyPasswordHashField()
     class Meta:
         model = CoolUser
-        fields = ('email', 'first_name', 'last_name', 'user_type', 'develops')
+        fields = ('email', 'first_name', 'last_name', 'user_type', 'developments')
