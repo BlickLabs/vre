@@ -10,8 +10,8 @@ from vre.apps.developments.models import Develop
 from .managers import CoolUserManager
 
 TYPE_CHOICES = (
-    ('client', 'Client'),
-    ('investor', 'Investor'),
+    ('client', _('Client')),
+    ('investor', _('Investor')),
 )
 
 class CoolUser(PermissionsMixin, AbstractBaseUser):
