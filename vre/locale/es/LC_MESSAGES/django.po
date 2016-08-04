@@ -1,0 +1,140 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-02 11:00-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: config/settings/base.py:89
+msgid "English"
+msgstr "Ingles"
+
+#: config/settings/base.py:90
+msgid "Spanish"
+msgstr "Español"
+
+#: vre/apps/developments/models.py:11
+msgid "Name"
+msgstr "Nombre"
+
+#: vre/apps/developments/models.py:19
+msgid "Slug"
+msgstr "Slug"
+
+#: vre/apps/developments/models.py:25 vre/apps/documents/models.py:36
+msgid "Develop"
+msgstr "Desarrollo"
+
+#: vre/apps/developments/models.py:26 vre/apps/users/models.py:51
+msgid "Developments"
+msgstr "Desarrollos"
+
+#: vre/apps/documents/models.py:22
+msgid "Title"
+msgstr "Titulo"
+
+#: vre/apps/documents/models.py:28
+msgid "File"
+msgstr "Archivo"
+
+#: vre/apps/documents/models.py:40
+msgid "Document"
+msgstr "Documento"
+
+#: vre/apps/documents/models.py:41
+msgid "Documents"
+msgstr "Documentos"
+
+#: vre/apps/users/forms.py:12
+msgid "Password"
+msgstr "Contraseña"
+
+#: vre/apps/users/forms.py:15
+msgid "Password confirmation"
+msgstr "Confirmar contraseña"
+
+#: vre/apps/users/models.py:13
+msgid "Client"
+msgstr "Cliente"
+
+#: vre/apps/users/models.py:14
+msgid "Investor"
+msgstr "Inversionista"
+
+#: vre/apps/users/models.py:19
+msgid "Email address"
+msgstr "Correo electrónico"
+
+#: vre/apps/users/models.py:24
+msgid "First name"
+msgstr "Nombre(s)"
+
+#: vre/apps/users/models.py:29
+msgid "Last name"
+msgstr "Apellido(s)"
+
+#: vre/apps/users/models.py:34
+msgid "User type"
+msgstr "Tipo de usuario"
+
+#: vre/apps/users/models.py:41
+msgid "Active"
+msgstr "Activo"
+
+#: vre/apps/users/models.py:43
+msgid "Designates that this user is active to login the plataform"
+msgstr "Designa el usuario como activo en la plataforma"
+
+#: vre/apps/users/models.py:46
+msgid "Join Date"
+msgstr "Fecha de registor"
+
+#: vre/apps/users/models.py:60
+msgid "User"
+msgstr "Usuario"
+
+#: vre/apps/users/models.py:61
+msgid "Users"
+msgstr "Usuarios"
+
+#: vre/core/messages.py:9
+msgid "This field can not be blank"
+msgstr "El campo no puede estar vacio"
+
+#: vre/core/messages.py:10
+#, python-format
+msgid "There is a %(model_name)s with this %(field_label)s already registred"
+msgstr "Hay %(model_name)s con este %(field_label)s ya registrado"
+
+#: vre/core/messages.py:11
+msgid "The data do not match"
+msgstr "La información no concuerda"
+
+#: vre/core/messages.py:12
+msgid "The username or password are incorrect"
+msgstr "El usuario o la contraseña son incorrectas"
+
+#: vre/core/messages.py:13
+msgid "This account is inactive"
+msgstr "Esta cuenta esta inactiva"
+
+#: vre/core/messages.py:14
+msgid "The password is incorrect"
+msgstr "La contraseña es incorrecta"
+
+#: vre/core/messages.py:18
+msgid "Profile updated"
+msgstr "Perfil actualizado"

@@ -8,7 +8,7 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from private_media.storages import PrivateMediaStorage
 
-from vre.apps.develops.models import Develop
+from vre.apps.developments.models import Develop
 
 
 def get_file_path(instance, filename):

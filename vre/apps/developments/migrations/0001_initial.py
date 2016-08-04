@@ -21,7 +21,7 @@ class Migration(migrations.Migration):
             ],
             options={
                 'verbose_name': 'Develop',
-                'verbose_name_plural': 'Develops',
+                'verbose_name_plural': 'Developments',
             },
         ),
     ]

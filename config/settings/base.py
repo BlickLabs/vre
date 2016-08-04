@@ -12,6 +12,8 @@ from __future__ import absolute_import, unicode_literals
 
 import environ
 
+from django.utils.translation import ugettext_lazy as _
+
 # DIRS
 # -----------------------------------------------------------------------------
 ROOT_DIR = environ.Path(__file__) - 3  # (/a/b/myfile.py - 3 = /)
@@ -45,7 +47,7 @@ THIRD_PARTY_APPS = (
 # Apps specific for this project go here.
 LOCAL_APPS = (
     'vre.apps.documents',
-    'vre.apps.develops',
+    'vre.apps.developments',
     'vre.apps.users',
     'vre.apps.xauth',
 )
@@ -57,6 +59,7 @@ INSTALLED_APPS = THIRD_PARTY_APPS + DJANGO_APPS + LOCAL_APPS
 MIDDLEWARE_CLASSES = (
     # Make sure djangosecure.middleware.SecurityMiddleware is listed first
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -80,7 +83,16 @@ FIXTURE_DIRS = (
 # -----------------------------------------------------------------------------
 TIME_ZONE = 'America/Mexico_City'
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es'
+
+LANGUAGES = (
+    ('en', _('English')),
+    ('es', _('Spanish')),
+)
+
+LOCALE_PATHS = (
+    str(PROJECT_DIR.path('locale')),
+)
 
 USE_I18N = True
 

@@ -23,7 +23,7 @@ class Develop(models.Model):
 
     class Meta:
         verbose_name = _('Develop')
-        verbose_name_plural = _('Develops')
+        verbose_name_plural = _('Developments')
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)

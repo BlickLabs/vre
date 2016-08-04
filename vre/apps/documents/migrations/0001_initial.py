@@ -11,7 +11,7 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('develops', '0001_initial'),
+        ('developments', '0001_initial'),
     ]
 
     operations = [
@@ -21,7 +21,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('title', models.CharField(max_length=50, verbose_name='Title')),
                 ('file', models.FileField(upload_to=b'reports', verbose_name='File')),
-                ('develop', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='develops.Develop', verbose_name='Develop')),
+                ('develop', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='developments.Develop', verbose_name='Develop')),
             ],
             options={
                 'verbose_name': 'Document',

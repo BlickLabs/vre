@@ -32,14 +32,14 @@ class UserAdmin(BaseUserAdmin):
             'fields': ('is_superuser', 'is_active')
         }),
         ('Develops', {
-            'fields': ('develops',)
+            'fields': ('developments',)
         }),
     )
     add_fieldsets = (
         (None, {
             'classes': ('wide',),
             'fields': ('email', 'first_name', 'last_name', 'user_type',
-                       'password1', 'password2', 'develops')}),
+                       'password1', 'password2', 'developments')}),
     )
     search_fields = ('email',)
     ordering = ('email',)
