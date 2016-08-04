@@ -6,6 +6,7 @@ a, a:hover, a:active
   text-decoration none !important
   
 .orange-button
+  background white
   simple-border('all', 2px, $orange)
   color $orange !important
   display inline-block
@@ -13,10 +14,13 @@ a, a:hover, a:active
   transition all 0.2s
   width auto
   
-  &:hover
+  &:hover, &:active
     background $orange
     color white !important
-  
+    
+  &:focus, &:active
+    outline none
+
 footer
   background $orange
   color white
