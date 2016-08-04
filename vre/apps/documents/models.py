@@ -17,6 +17,12 @@ def get_file_path(instance, filename):
     return os.path.join('reportes', filename)
 
 
+def get_file_path_brochuere(instance, filename):
+    ext = filename.split('.')[-1]
+    filename = "%s.%s" % (uuid.uuid4(), ext)
+    return os.path.join('brochures', filename)
+
+
 class Document(models.Model):
     title = models.CharField(
         _('Title'),
@@ -42,3 +48,23 @@ class Document(models.Model):
 
     def __unicode__(self):
         return self.title
+
+
+class Brochure(models.Model):
+    file = models.FileField(
+        _('File'),
+        blank=False,
+        null=False,
+        upload_to=get_file_path_brochuere,
+    )
+    develop = models.ForeignKey(
+        Develop,
+        verbose_name=_('Develop')
+    )
+
+    class Meta:
+        verbose_name = _('Brochure')
+        verbose_name_plural = _('Brochures')
+
+    def __unicode__(self):
+        return 'Brochure %s' % self.develop.name
