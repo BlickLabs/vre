@@ -4,14 +4,15 @@
 {% block content %}
 <div class="homepage-cover cover simple-parallax">
   <div class="phone-box">
-    <div class="phone-box-content">
+    <a href="#"><div class="phone-box-content">
       <span class="big-text">55 8852 7468</span>
       Visita nuestro Showroom
-    </div>
+    </div></a>
   </div>
   <div class="homepage-menu">
     <div class="logo-container">
-      <img src="{% static "img/icons/icons-01.png" %}" alt="VRE Logo" />
+      <img class="show-in-fixed" src="{% static "img/icons/icons-01.png" %}" alt="VRE Logo" />
+      <img class="hide-in-fixed" src="{% static "img/icons/icons-01.png" %}" alt="VRE Logo" />
       <span>VERTICAL REAL ESTATE</span>
     </div>
     <ul class="menu-list">

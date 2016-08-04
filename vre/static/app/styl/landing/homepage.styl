@@ -14,6 +14,7 @@
     
     .phone-box-content
       background $orange
+      color white !important
       display inline-block
       font-size 13px
       padding 15px 40px
@@ -50,6 +51,9 @@
         height 58px
         margin-right 10px
         vertical-align top
+        
+      .show-in-fixed
+        display none
 
     .menu-list
       font-size 15px
@@ -73,6 +77,7 @@
       height 73px
       margin-top 0 !important
       max-width 100%
+      padding-top 6.5px
       position fixed
       text-align left
       top 0
@@ -81,11 +86,25 @@
       
       .logo-container
         display inline-block
+        margin-left 20px
+        vertical-align middle
+        
         span
+          display none
+          
+        .show-in-fixed
+          background gray
+          display inline-block
+          
+        .hide-in-fixed
           display none
 
       .menu-list
         display inline-block
+        line-height 1
+        margin-bottom 0
+        margin-left -20px
+        vertical-align middle
 
         li
           &::after
@@ -96,6 +115,10 @@
 
           a
             color black
+            transition color 0.2s
+            
+            &:hover
+              color $orange
         
   .white-box
     background white
