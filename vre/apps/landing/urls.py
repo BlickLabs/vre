@@ -23,5 +23,9 @@ urlpatterns = [
         view=views.NewsletterView.as_view(),
         name='suscribe'),
 
+    url(regex=r'^download/$',
+        view=views.DownloadFileView.as_view(),
+        name='suscribe'),
+
 
 ]
