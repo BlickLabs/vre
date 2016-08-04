@@ -41,7 +41,11 @@ module.exports = function (grunt) {
         directives: {
           browser: true,
           indent: 2,
-          devel: true
+          devel: true,
+          globals: {
+            '$': true,
+            'jquery': true
+          }
         }
       }
     },

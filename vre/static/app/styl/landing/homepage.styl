@@ -26,6 +26,14 @@
         font-size 25px
         font-weight $fontSemiBold
         line-height 1
+        
+    &.fix-in-top
+      height 73px
+      position fixed
+      right 0
+      top 0
+      width auto
+      z-index 11
   
   .homepage-menu
     center-block()
@@ -58,6 +66,36 @@
         a
           display inline-block
           color white
+    
+    &.fix-in-top
+      background white
+      box-shadow 0 0 5px #333
+      height 73px
+      margin-top 0 !important
+      max-width 100%
+      position fixed
+      text-align left
+      top 0
+      width 100%
+      z-index 10
+      
+      .logo-container
+        display inline-block
+        span
+          display none
+
+      .menu-list
+        display inline-block
+
+        li
+          &::after
+            content '  '
+            
+          &:not(:first-child)
+            margin-left 12px
+
+          a
+            color black
         
   .white-box
     background white

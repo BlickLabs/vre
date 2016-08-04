@@ -1,4 +1,14 @@
 (function () {
   'use strict';
-  console.log('holi');
+  if ($('.homepage-cover').length) {
+    $(window).scroll(function () {
+      if ($(window).scrollTop() >= 30) {
+        $('.phone-box').addClass('fix-in-top');
+        $('.homepage-menu').addClass('fix-in-top');
+      } else {
+        $('.phone-box').removeClass('fix-in-top');
+        $('.homepage-menu').removeClass('fix-in-top');
+      }
+    });
+  }
 }());
