@@ -3,7 +3,9 @@
   <div class="footer-container">
     <form class="footer-col" id="footer-newsletter-form">
       Suscribete a nuestro Newsletter
-      <input type="email" placeholder="Correo electrónico" />
+      <input type="email" name="email" placeholder="Correo electrónico" />
+	    {% csrf_token %}
+	    <button type="button" id="btn-newsletter">Suscribir!</button>
     </form>
     <div class="footer-col text-center">
       <img src="{% static "img/icons/icons-03.png" %}" alt="VRE Logo" class="footer-logo">

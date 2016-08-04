@@ -16,5 +16,27 @@
 	{% block content %}
 	{% endblock %}
   {% include "footer.html" %}
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+	<script>
+		$(document).on("keypress", "form", function(event) {
+		    return event.keyCode != 13;
+		});
+
+		$('#btn-newsletter').click(function(){
+	    $.ajax({
+		    url: "{% url 'landing:suscribe' %}",
+	      type : 'POST',
+		    data: $('#footer-newsletter-form').serialize(),
+		    success: function(data){
+			    console.log(data);
+			    alert('success!');
+			  },
+			  error: function(data){
+          console.log(data);
+			    alert('error!');
+			  }
+	    });
+		});
+	</script>
 </body>
 </html>
