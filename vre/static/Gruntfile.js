@@ -39,7 +39,13 @@ module.exports = function (grunt) {
       client: {
         src: ['app/js/*.js', '!app/js/app.js', '!app/js/bower_dependencies.js'],
         directives: {
-          browser: true
+          browser: true,
+          indent: 2,
+          devel: true,
+          globals: {
+            '$': true,
+            'jquery': true
+          }
         }
       }
     },

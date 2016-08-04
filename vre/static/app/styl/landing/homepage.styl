@@ -3,6 +3,7 @@
   simple-border('bottom', 4px, $orange)
   color white
   height 80vh
+  min-height 480px
   position relative
   width 100%
   
@@ -13,6 +14,7 @@
     
     .phone-box-content
       background $orange
+      color white !important
       display inline-block
       font-size 13px
       padding 15px 40px
@@ -25,6 +27,14 @@
         font-size 25px
         font-weight $fontSemiBold
         line-height 1
+        
+    &.fix-in-top
+      height 73px
+      position fixed
+      right 0
+      top 0
+      width auto
+      z-index 11
   
   .homepage-menu
     center-block()
@@ -41,6 +51,9 @@
         height 58px
         margin-right 10px
         vertical-align top
+        
+      .show-in-fixed
+        display none
 
     .menu-list
       font-size 15px
@@ -57,22 +70,95 @@
         a
           display inline-block
           color white
+    
+    &.fix-in-top
+      background white
+      box-shadow 0 0 5px #333
+      height 73px
+      margin-top 0 !important
+      max-width 100%
+      padding-top 8px
+      position fixed
+      text-align left
+      top 0
+      width 100%
+      z-index 10
+      
+      .logo-container
+        display inline-block
+        height 53px
+        margin-left 20px
+        vertical-align middle
+        
+        span
+          display none
+          
+        .show-in-fixed
+          display inline-block
+          height 100%
+          
+        .hide-in-fixed
+          display none
+
+      .menu-list
+        display inline-block
+        line-height 1
+        margin-bottom 0
+        margin-left -20px
+        vertical-align middle
+
+        li
+          &::after
+            content '  '
+            
+          &:not(:first-child)
+            margin-left 12px
+
+          a
+            color black
+            transition color 0.2s
+            
+            &:hover
+              color $orange
         
   .white-box
     background white
-    bottom -4px
+    bottom -75px
     color black
-    font-size 20px
+    font-size 18px
     left 150px
-    max-width 270px
-    padding 25px 20px 30px 20px
+    max-width 350px
+    padding 38px 40px 10px 40px
     position absolute
+    
+    #homepage-special-form
+      font-size 17px
+      margin-top 20px
+
+      input
+        background none
+        simple-border('bottom', 1px, $orange)
+        padding 8px
+        width 100%
+        
+        &:focus
+          outline none
+          
+        &:not(:first-child)
+          margin-top 10px
+          
+        &::placeholder
+          font-weight $fontLight
+          
+      button
+        margin-top 45px
+        padding 8px 35px
 
 .homepage-developments
   font-size $sectionTitleSize
   margin-bottom 30px
   center-block()
-  margin-top 40px
+  margin-top 80px
   text-align center
   width 90%
   
@@ -199,9 +285,11 @@
     .white-box
       font-size 15px
       left 40px
-      padding 15px 10px 18px 10px
+      padding 20px
 
 @media $smallBase
+  .homepage-cover
+    min-height 430px
   .homepage-developments .item
     width 100% !important
     margin-left 0 !important

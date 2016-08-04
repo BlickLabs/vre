@@ -16,10 +16,11 @@
 	{% block content %}
 	{% endblock %}
   {% include "footer.html" %}
-	<script src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+  <script src="{% static "js/bower_dependencies.min.js" %}"></script>
+	<script src="{% static "js/app.min.js" %}"></script>
 	<script>
 		$(document).on("keypress", "form", function(event) {
-		    return event.keyCode != 13;
+		    return event.keyCode != 13;s
 		});
 
 		$('#btn-newsletter').click(function(){
