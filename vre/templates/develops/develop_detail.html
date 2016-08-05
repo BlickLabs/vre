@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Detalle del desarrollo</title>
+</head>
+<body>
+	<h1>
+		{{ develop.name }}
+	</h1>
+	<a href="{% url 'developments:download_brochure' id=develop.id %}">
+		Descargar Brochure
+	</a>
+</body>
+</html>
