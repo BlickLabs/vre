@@ -2,11 +2,9 @@
 # -*- coding: utf-8 -*-
 
 from django.core.urlresolvers import reverse_lazy
-from django.http import JsonResponse, HttpResponse
+from django.http import JsonResponse
 from django.views.generic import FormView, TemplateView, View
-from django.utils.encoding import smart_str
 
-from vre.apps.documents.models import Document
 from vre.apps.landing.forms import ContactForm
 
 from vre.core.config import MailChimpConfig
@@ -18,19 +16,6 @@ import urlparse
 
 class HomepageView(TemplateView):
     template_name = 'landing/index.html'
-
-
-class DownloadFileView(View):
-    def get(self, request):
-        document = Document.objects.get()
-        filename = document.file.name.split('/')[-1]
-        print filename
-        response = HttpResponse(
-            document.file,
-            content_type='application/force-download'
-        )
-        response['Content-Disposition'] = 'attachment; filename=%s' % filename
-        return response
 
 
 class ContactView(FormView):
