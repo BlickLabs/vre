@@ -50,6 +50,7 @@ LOCAL_APPS = (
     'vre.apps.developments',
     'vre.apps.users',
     'vre.apps.xauth',
+    'vre.apps.newsletter',
 )
 
 INSTALLED_APPS = THIRD_PARTY_APPS + DJANGO_APPS + LOCAL_APPS
