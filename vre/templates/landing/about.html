@@ -3,4 +3,34 @@
 {% block title %}Nosotros | VRE México{% endblock %}
 {% block content %}
 {% include "sections_navbar.html" %}
+<main id="sections-content">
+  <div class="about-us-cover cover">
+    <p>
+      <img src="{% static "img/icons/icons-01.png" %}" alt="VRE Logo" height="200px" width="100px">
+      Vertical Real Estate Mexico es una firma enfocada en el desarrollo inmobiliario dentro de las principales ciudades de México
+    </p>
+  </div>
+  <div class="about-us-container">
+    <div class="about-us-content">
+      <div class="introductory-text">
+        <div class="image-part">
+          <img src="{% static "img/icons/icons-08.png" %}" >
+        </div>
+        <div class="text-part">
+          <p>Creemos firmemente que las ciudades, más no los países, son y serán los elementos constitutivos de las economías en desarrollo, y como consecuencia, estas deberán avanzar hacia desarrollos verticales con la finalidad de albergar a un mayor número de personas las cuales puedan disfrutar de los extraordinarios beneficios y sinergias de vivir en una ciudad.</p>
+          <p>Cada espacio que diseñamos y construimos es terminado con la mejor selección de acabados y materiales.</p>
+          <p>Juntos, estos elementos logran crear espacios funcionales con una gran estética y resistencia a la vida diaria.</p>
+        </div>
+      </div>
+      <div class="secondary-cover cover">
+        <img src="{% static "img/icons/icons-09.png" %}" >
+      </div>
+      <div class="gray-container">
+        <p>
+          Somos un equipo multidisciplinario comprometido con nuestros clientes e inversionistas. En conjunto contamos con más de 20 años de experiencia internacional en los sectores de diseño, construcción, desarrollo inmobiliario y finanzas. Contamos con el sólido respaldo de Zago Construcciones, firma con más de 50 años de experiencia en proyectos de construcción.
+        </p>
+      </div>
+    </div>
+  </div>
+</main>
 {% endblock %}
