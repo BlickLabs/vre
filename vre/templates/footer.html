@@ -1,5 +1,5 @@
 {% load static from staticfiles %}
-<footer>
+<footer class="{%if request.path == "/"%}orange-footer{%else%}gray-footer{%endif%}">
   <div class="footer-container">
     <form class="footer-col" id="footer-newsletter-form">
       Suscribete a nuestro Newsletter
