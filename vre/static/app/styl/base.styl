@@ -21,6 +21,32 @@ a, a:hover, a:active
   &:focus, &:active
     outline none
 
+.orange-cover-divider
+  display flex
+  height auto
+  min-height 50vh
+  
+  .text-part
+    background $orange
+    text-align center
+    min-width 350px
+    width 28%
+    
+    .outgoing-box
+      position relative
+      text-align left
+      width 130%
+      z-index 2
+      
+  .image-part
+    flex-grow 1
+    position relative
+    z-index 1
+    
+  &.inverse-order
+    .text-part .outgoing-box
+      left -30%
+
 footer
   color white
   padding 50px 75px
@@ -87,6 +113,23 @@ footer
         outline none
 
 @media $smallBase
+  .orange-cover-divider
+    display block
+    height auto
+    
+    .text-part,
+    .image-part
+      display block
+      width 100%
+
+    .text-part
+      min-width auto
+
+      .outgoing-box
+        left 0 !important
+        text-align center
+        width 100%
+
   footer
     padding 30px 0
 
@@ -105,3 +148,11 @@ footer
         .footer-logo
           max-width 400px
           min-width 240px
+          
+@media $smallPortrait
+  .orange-cover-divider .image-part
+    height 40vh
+    
+@media $smallLandscape
+  .orange-cover-divider .image-part
+    height 70vh

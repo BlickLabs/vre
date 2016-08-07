@@ -186,37 +186,21 @@
         width 100%
         
 .homepage-cover-divider-1
-  display flex
-  height auto
-  min-height 50vh
-  
   .text-part
-    background $orange
-    text-align center
-    min-width 350px
-    width 28%
-    
     img
       margin-bottom 45px
       margin-top 30px
       width 65%
       
-    .white-box
+    .outgoing-box
       background white
       font-size 28px
       line-height 1.25
       margin-bottom 100px
       padding 30px 20px 30px 70px
-      position relative
-      text-align left
-      width 130%
-      z-index 2
     
   .image-part
     background-image url('../img/homepage_cover_divider_01.jpg')
-    flex-grow 1
-    position relative
-    z-index 1
     
 .homepage-contact-divider
   line-height 1.25
@@ -303,31 +287,24 @@
   .homepage-contact-divider
     margin 55px 20px
 
-  .homepage-cover-divider-1,
+  .homepage-cover-divider-1
+    .text-part
+      .outgoing-box
+        font-size 22px
+        margin-bottom 0
+        padding 30px 20px
+      img
+        max-width 280px
+      
   .homepage-cover-divider-2
     display block
     height auto
+    min-height auto
     
     .text-part,
     .image-part
       display block
       width 100%
-      
-  .homepage-cover-divider-1
-    .text-part
-      min-width auto
-
-      .white-box
-        font-size 22px
-        margin-bottom 0
-        padding 30px 20px
-        text-align center
-        width 100%
-      img
-        max-width 280px
-      
-  .homepage-cover-divider-2
-    min-height auto
 
     .text-part
       min-width auto
