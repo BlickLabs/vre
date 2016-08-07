@@ -11,6 +11,10 @@ urlpatterns = [
         view=views.HomepageView.as_view(),
         name='homepage'),
 
+    url(regex=r'^desarrollos$',
+        view=views.DevelopmentsView.as_view(),
+        name='developments'),
+
     url(regex=r'^contact/$',
         view=views.ContactView.as_view(),
         name='contact'),

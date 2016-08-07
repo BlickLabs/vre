@@ -17,6 +17,9 @@ import urlparse
 class HomepageView(TemplateView):
     template_name = 'landing/index.html'
 
+class DevelopmentsView(TemplateView):
+    template_name = 'landing/developments.html'
+
 
 class ContactView(FormView):
     template_name = 'landing/contact.html'
