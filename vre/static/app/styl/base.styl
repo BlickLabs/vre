@@ -6,6 +6,11 @@ a, a:hover, a:active
   text-decoration none !important
 
 .vre-button, .vre-inverse-button
+  display inline-block
+  padding 18px 50px
+  transition all 0.2s
+  width auto
+  
   &:focus, &:active
     outline none
 
@@ -13,10 +18,6 @@ a, a:hover, a:active
   background white
   simple-border('all', 2px, $orange)
   color $orange !important
-  display inline-block
-  padding 18px 50px
-  transition all 0.2s
-  width auto
   
   &:hover, &:active
     background $orange
@@ -25,11 +26,7 @@ a, a:hover, a:active
 .vre-inverse-button
   background $orange
   simple-border('all', 2px, white)
-  color qhite !important
-  display inline-block
-  padding 18px 50px
-  transition all 0.2s
-  width auto
+  color white !important
   
   &:hover, &:active
     background white
