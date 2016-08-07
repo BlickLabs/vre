@@ -23,7 +23,7 @@ a, a:hover, a:active
 
 footer
   color white
-  padding 75px 60px 50px 60px
+  padding 50px 75px
   
   &.orange-footer
     background $orange
@@ -55,19 +55,37 @@ footer
       font-size 16px
       
   #footer-newsletter-form
+    margin-bottom 50px
+
+    span
+      display block
+
     input[type="email"]
       background rgba(white, 0.3)
       simple-border('all', 1px, white)
-      display block
       font-weight $fontLight
       margin-top 8px
       max-width 272px
       padding 10px 16px 12px 16px
-      width 100%
       
       &::placeholder
         color white
         
+      &:focus, &:active
+        outline none
+
+    button
+      background #e5800f
+      simple-border('all', 1px, #f5a65b)
+      margin-top 8px
+      padding 10px 25px 12px 25px
+      transition all 0.2s
+      
+      &:hover, &:focus, &:active
+        background white
+        color #e5800f
+        outline none
+
 @media $smallBase
   footer
     padding 30px 0

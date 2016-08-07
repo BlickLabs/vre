@@ -1,19 +1,26 @@
 {% load static from staticfiles %}
 <footer class="{%if request.path == "/"%}orange-footer{%else%}gray-footer{%endif%}">
   <div class="footer-container">
-    <form class="footer-col" id="footer-newsletter-form">
-      Suscribete a nuestro Newsletter
-      <input type="email" name="email" placeholder="Correo electrónico" />
-	    {% csrf_token %}
-	    <button type="button" id="btn-newsletter">Suscribir!</button>
-    </form>
+    <div class="footer-col">
+      <form id="footer-newsletter-form">
+        <span>Suscribete a nuestro Newsletter</span>
+        <input type="email" name="email" placeholder="Correo electrónico" />
+        {% csrf_token %}
+        <button type="button" id="btn-newsletter">Enviar</button>
+      </form>
+      <div>
+        <a href="#">Aviso de privacidad</a> <br>
+        <a href="#">Términos y Condiciones</a>
+      </div>
+    </div>
     <div class="footer-col text-center">
       <img src="{% static "img/icons/icons-03.png" %}" alt="VRE Logo" class="footer-logo">
       <span class="footer-logo-legend">&copy; VRE 2016</span>
     </div>
-    <div class="footer-col text-right">
-      <a href="#">Aviso de privacidad</a> <br>
-      <a href="#">Términos y Condiciones</a>
+    <div class="footer-col">
+      contacto@vre.com.mx <br>
+      (52) 55 8852 7468 <br>
+      Metrópoli Patriotismo, Calle 11 de Abril #201, San Pedro de los Pinos, CDMX.
     </div>
   </div>
 </footer>
