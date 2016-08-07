@@ -4,8 +4,12 @@ body
   
 a, a:hover, a:active
   text-decoration none !important
-  
-.orange-button
+
+.vre-button, .vre-inverse-button
+  &:focus, &:active
+    outline none
+
+.vre-button
   background white
   simple-border('all', 2px, $orange)
   color $orange !important
@@ -18,8 +22,18 @@ a, a:hover, a:active
     background $orange
     color white !important
     
-  &:focus, &:active
-    outline none
+.vre-inverse-button
+  background $orange
+  simple-border('all', 2px, white)
+  color qhite !important
+  display inline-block
+  padding 18px 50px
+  transition all 0.2s
+  width auto
+  
+  &:hover, &:active
+    background white
+    color $orange !important
 
 .orange-cover-divider
   display flex
