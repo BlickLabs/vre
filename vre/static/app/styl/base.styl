@@ -47,6 +47,62 @@ a, a:hover, a:active
     .text-part .outgoing-box
       left -30%
 
+.navbar-menu
+  background white
+  box-shadow 0 0 5px #777
+  height 73px
+  left 0
+  padding-top 8px
+  position fixed
+  top 0
+  width 100%
+
+  &-logo
+    display inline-block
+    height 53px
+    margin-left 20px
+    vertical-align middle
+
+  &-list
+    display inline-block
+    font-size 15px
+    font-weight $fontSemiBold
+    list-style none
+    margin-left -10px
+    
+    li
+      display inline-block
+      
+      &:not(:first-child)
+        margin-left 12px
+      
+      a
+        color black
+        display inline-block
+        transition color 0.2s
+        
+        &:hover
+          color $orange
+
+  &-orange-box
+    background $orange
+    color white !important
+    display inline-block
+    float right
+    font-size 13px
+    margin-top -8px
+    padding 15px 40px
+    text-align center
+    
+    .big-text
+      display block
+      font-size 25px
+      font-weight $fontSemiBold
+      line-height 1
+
+#sections-content
+  margin-top 73px
+
 footer
   color white
   padding 50px 75px
