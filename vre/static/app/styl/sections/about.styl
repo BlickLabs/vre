@@ -30,7 +30,6 @@
       width 100%
       
       .image-part
-        margin-left -30px
         margin-top -70px
         
         img
@@ -38,10 +37,22 @@
         
       .text-part
         background white
+        color #848383
         display block
         flex-grow 1
-        padding 70px
+        padding 60px 160px 80px 70px
         height 100%
+        
+        p:first-child
+          line-height 1.85
+          
+        p:nth-child(2)
+          font-size 23px
+          font-weight $fontSemiBold
+          margin 30px 0
+          
+        p:nth-child(3)
+          line-height 1.6
     
     .secondary-cover
       background-image url('../img/homepage_cover.jpg')
