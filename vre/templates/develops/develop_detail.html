@@ -1,15 +1,16 @@
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Detalle del desarrollo</title>
-</head>
-<body>
-	<h1>
+{% extends "base.html" %}
+{% load static from staticfiles %}
+{% block title %}{{ develop.name }} | VRE México{% endblock %}
+{% block content %}
+{% include "sections_navbar.html" %}
+<main id="sections-content">
+  <div class="development-cover cover parallax" style="background-image: url('{% static "img/homepage_cover.jpg" %}')">
+  </div>
+  <h1>
 		{{ develop.name }}
 	</h1>
 	<a href="{% url 'developments:download_brochure' id=develop.id %}">
 		Descargar Brochure
 	</a>
-</body>
-</html>
+</main>
+{% endblock %}
