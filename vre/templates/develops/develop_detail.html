@@ -4,7 +4,18 @@
 {% block content %}
 {% include "sections_navbar.html" %}
 <main id="sections-content">
-  <div class="development-cover cover parallax" style="background-image: url('{% static "img/homepage_cover.jpg" %}')">
+  <div class="development-cover cover parallax" style="background-image: url('{% static "img/indiana-cover-temp.jpg" %}')">
+    <img src="{% static "img/indiana-temp.png" %}" >
+  </div>
+  <div class="development-header-text">
+    Nuestro desarrollo cuenta con 6 exclusivos condos y un increíble Roof Garden común.
+  </div>
+  <div class="gray-container development-download-brochure">
+    <div>
+      <span>Si quieres más información, descarga aquí nuestro brochure de ventas</span>
+      <input type="email" id="download-brochure-email" placeholder="Correo electrónico">
+      <a href="#" class="vre-inverse-button" id="download-brochure-button">Conoce más</a>
+    </div>
   </div>
   <h1>
 		{{ develop.name }}
