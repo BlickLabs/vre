@@ -134,6 +134,13 @@ footer
   
   &.gray-footer
     background $darkGray
+    
+    #footer-newsletter-form button
+      background lightness($darkGray, 30%)
+      border-color lightness($darkGray, 60%)
+      
+      &:hover, &:focus, &:active
+        color lightness($darkGray, 30%)
   
   .footer-container
     align-items center
