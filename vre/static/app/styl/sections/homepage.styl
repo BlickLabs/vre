@@ -39,7 +39,7 @@
   .homepage-menu
     center-block()
     margin-top 10px
-    max-width 500px
+    max-width 605px
     text-align center
     width 90%
     
@@ -64,8 +64,8 @@
       li
         display inline-block
         
-        &:not(:last-child)::after
-          content ' | '
+        &:not(:first-child)::before
+          content ' | ' !important
         
         a
           display inline-block
@@ -73,7 +73,6 @@
     
     &.fix-in-top
       background white
-      box-shadow 0 0 5px #333
       height 73px
       margin-top 0 !important
       max-width 100%
@@ -110,12 +109,9 @@
         margin-left -20px
         vertical-align middle
 
-        li
-          &::after
-            content '  '
-            
-          &:not(:first-child)
-            margin-left 12px
+        li 
+          &::before
+            color black
 
           a
             color black
