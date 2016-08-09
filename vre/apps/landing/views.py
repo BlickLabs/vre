@@ -13,6 +13,11 @@ class HomepageView(TemplateView):
 class DevelopmentsView(TemplateView):
     template_name = 'landing/developments.html'
 
+class AboutUsView(TemplateView):
+    template_name = 'landing/about.html'
+
+class PrivacyNoticeView(TemplateView):
+    template_name = 'landing/privacy_notice.html'
 
 class ContactView(FormView):
     template_name = 'landing/contact.html'
