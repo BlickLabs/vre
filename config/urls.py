@@ -13,6 +13,7 @@ from vre.apps.documents import  urls as documents_urls
 from vre.apps.xauth import urls as xauth_urls
 from vre.apps.landing import urls as landing_urls
 from vre.apps.developments import urls as developments_urls
+from vre.apps.newsletter import urls as newsletter_urls
 
 
 urlpatterns = [
@@ -25,6 +26,7 @@ urlpatterns = [
     url(r'', include(xauth_urls, namespace='xauth')),
     url(r'', include(landing_urls, namespace='landing')),
     url(r'', include(developments_urls, namespace='developments')),
+    url(r'', include(newsletter_urls, namespace='newsletter')),
 ]
 
 if settings.DEBUG:
