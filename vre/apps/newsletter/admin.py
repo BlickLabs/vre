@@ -6,6 +6,6 @@ from django.contrib import admin
 from . import models
 
 
-@admin.register(models.Suscriber)
+@admin.register(models.Subscriber)
 class SuscriberAdmin(admin.ModelAdmin):
     pass
