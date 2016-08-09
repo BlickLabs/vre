@@ -66,17 +66,51 @@
     
 .development-characteristics
   font-size $sectionTitleSize
-  center-block()
-  width 80%
+  margin-left 10%
+  width 90%
   
   .development-characteristics-items
     clear both
     display block
     font-size $mainFontSize
     list-style none
+    margin-bottom 80px
     margin-left -40px
-    margin-top 40px
+    margin-top 50px
 
     .development-characteristics-item
       display inline-block
+      margin 9px 0
       width 32.5%
+      
+.development-carousel
+  background white
+  
+.development-drawings
+  display flex
+  margin 10px 0
+  
+  .drawing-selectors
+    width 150px
+    
+    .drawing-selector
+      background transparent
+      color $darkGray
+      cursor pointer
+      font-size 33px
+      font-weight $fontBold
+      height 150px
+      line-height 150px
+      transition all .2s
+      width 150px
+      
+      &:hover, &.active
+        background $lightGray
+        color white
+      
+  .drawing-picture
+    background $orange
+    color white
+    flex-grow 1
+    font-size 24px
+    padding 40px 60px
