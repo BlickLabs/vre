@@ -20,12 +20,12 @@
 	<script src="{% static "js/app.min.js" %}"></script>
 	<script>
 		$(document).on("keypress", "form", function(event) {
-		    return event.keyCode != 13;s
+		    return event.keyCode != 13;
 		});
 
 		$('#btn-newsletter').click(function(){
 	    $.ajax({
-		    url: "{% url 'landing:suscribe' %}",
+		    url: "{% url 'newsletter:suscribe' %}",
 	      type : 'POST',
 		    data: $('#footer-newsletter-form').serialize(),
 		    success: function(data){
