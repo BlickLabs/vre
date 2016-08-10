@@ -23,11 +23,28 @@
 		    return event.keyCode != 13;
 		});
 
+		// Footer Form
 		$('#btn-newsletter').click(function(){
 	    $.ajax({
 		    url: "{% url 'newsletter:suscribe' %}",
 	      type : 'POST',
 		    data: $('#footer-newsletter-form').serialize(),
+		    success: function(data){
+			    console.log(data);
+			    alert('success!');
+			  },
+			  error: function(data){
+          console.log(data);
+			    alert('error!');
+			  }
+	    });
+		});
+
+		$('#btn-newsletter-big').click(function(){
+	    $.ajax({
+		    url: "{% url 'newsletter:suscribe' %}",
+	      type : 'POST',
+		    data: $('#homepage-special-form').serialize(),
 		    success: function(data){
 			    console.log(data);
 			    alert('success!');
