@@ -3,5 +3,23 @@
 {% block content %}
 {% include "sections_navbar.html" %}
 <main id="sections-content">
+  <div class="gray-container">
+    <form action="" class="visit-us-form">
+      <div class="title">Agenda una cita para visitar nuestro <b>Showroom</b></div>
+      <div class="form-columns">
+        <div class="form-column">
+          <input type="text" class="vre-input" placeholder="Nombre">
+          <input type="email" class="vre-input" placeholder="Correo electrónico">
+          <!-- Calendario -->
+        </div>
+        <div class="form-column">
+          <input type="number" class="vre-input" placeholder="Teléfono">
+          <textarea class="vre-input" placeholder="Mensaje (opcional)"></textarea>
+          <!-- Calendario -->
+        </div>
+      </div>
+      <button class="vre-inverse-button no-border">Envíar</button>
+    </form>
+  </div>
 </main>
 {% endblock %}
