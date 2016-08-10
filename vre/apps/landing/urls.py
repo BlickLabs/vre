@@ -15,6 +15,10 @@ urlpatterns = [
         view=views.DevelopmentsView.as_view(),
         name='developments'),
 
+    url(regex=r'^desarrollos/indiana/$',
+        view=views.DevelopmentDemoView.as_view(),
+        name='development_demo'),
+
     url(regex=r'^nosotros/$',
         view=views.AboutUsView.as_view(),
         name='about_us'),
