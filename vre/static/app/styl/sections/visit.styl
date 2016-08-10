@@ -24,13 +24,52 @@
         &::placeholder
           font-weight $fontLight
           
+      textarea.vre-input
+        height 300px
+          
       *:not(:first-child)
         margin-top 15px
         
-      #visit-us-datepicker table
+      #visit-us-datepicker div
         background #F1BC8B
         color white
+        padding-bottom 0
+        padding-top 3px
         
+        table
+          font-family 'Open Sans'
+          center-block()
+          width 80%
+          
+          thead tr:nth-child(2) th
+            line-height 2.2
+            
+          .next, .prev, .picker-switch
+            background transparent
+            
+            &:hover
+              background $orange
+              
+          .picker-switch
+            font-weight $fontNormal
+            font-size 20px
+
+          .decade, .year, .month, .day
+            background $orange
+            
+            &.active, &:hover
+              background lightness($orange, 50%)
+          
+          .day
+            simple-border('all', 5px, #F1BC8B)
+            border-radius 12px 12px 9px 12px !important
+            
+            &.old, &.new
+              background transparent
+              
+              &:hover
+                background lightness($orange, 70%)
+
   .vre-inverse-button
     margin-top 70px
     padding-bottom 10px
