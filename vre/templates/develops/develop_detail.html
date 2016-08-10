@@ -29,20 +29,50 @@
     Características<br>
     de los departamentos:
     <ul class="development-characteristics-items">
-      <li class="development-characteristics-item">Sala</li>
-      <li class="development-characteristics-item">Cuarto de servicio</li>
-      <li class="development-characteristics-item">Dos Baños completos</li>
-      <li class="development-characteristics-item">Comedor</li>
-      <li class="development-characteristics-item">Un Medio baño</li>
-      <li class="development-characteristics-item">Clóset</li>
-      <li class="development-characteristics-item">Vestidor</li>
-      <li class="development-characteristics-item">Cocina equipada</li>
-      <li class="development-characteristics-item">Dos recámaras</li>
-      <li class="development-characteristics-item">Uno o dos cajones de estacionamiento</li>
+      <li class="development-characteristics-item">
+        <img src="{% static "img/icons/living_room_icon.png" %}" alt="">
+        <span>Sala</span>
+      </li>
+      <li class="development-characteristics-item">
+        <img src="{% static "img/icons/service_room_icon.png" %}" alt="">
+        <span>Cuarto de servicio</span>
+      </li>
+      <li class="development-characteristics-item">
+        <img src="{% static "img/icons/full_bathroom_icon.png" %}" alt="">
+        <span>Dos Baños completos</span>
+      </li>
+      <li class="development-characteristics-item">
+        <img src="{% static "img/icons/dinning_room_icon.png" %}" alt="">
+        <span>Comedor</span>
+      </li>
+      <li class="development-characteristics-item">
+        <img src="{% static "img/icons/bathroom_icon.png" %}" alt="">
+        <span>Un Medio baño</span>
+      </li>
+      <li class="development-characteristics-item">
+        <img src="{% static "img/icons/closet_icon.png" %}" alt="">
+        <span>Clóset</span>
+      </li>
+      <li class="development-characteristics-item">
+        <img src="{% static "img/icons/dressing_room_icon.png" %}" alt="">
+        <span>Vestidor</span>
+      </li>
+      <li class="development-characteristics-item">
+        <img src="{% static "img/icons/kitchen_icon.png" %}" alt="">
+        <span>Cocina equipada</span>
+      </li>
+      <li class="development-characteristics-item">
+        <img src="{% static "img/icons/bedroom_icon.png" %}" alt="">
+        <span>Dos recámaras</span>
+      </li>
+      <li class="development-characteristics-item">
+        <img src="{% static "img/icons/parking_lot_icon.png" %}" alt="">
+        <span>Uno o dos cajones de estacionamiento</span>
+      </li>
     </ul>
   </div>
-  <div class="development-carousel">
-    
+  <div class="development-carousel text-center" style="padding: 200px 90px">
+  (Carrusel pendiente)
   </div>
   <div class="development-drawings gray-container text-center">
     <div class="drawing-selectors">
@@ -52,9 +82,11 @@
     </div>
     <div class="drawing-picture">
       Departamento 101
+      <img src="{% static "img/tmp/indiana_department_101.png" %}" alt="">
     </div>
     <div class="drawing-picture">
       Departamento 301
+      <img src="{% static "img/tmp/indiana_department_201_301.png" %}" alt="">
     </div>
     <div class="drawing-selectors">
       <div class="drawing-selector">202</div>
@@ -67,18 +99,39 @@
     <div class="points-of-interest">
       <span>Lugares de interés</span>
       <ul>
-        <li>Colegio británico: 3 min (500m)</li>
-        <li>Aqua Gym: 4 min (280m)</li>
-        <li>Hospital Star Médica HIP: 5 min (1.5 km)</li>
-        <li>Angel de la Independencia: 20 min (5.7 km)</li>
-        <li>Aeropuerto CDMX: 25 min (13.6 km)</li>
-        <li>Antara Fashion Hall: 30 min (7.7 km)</li>
-        <li>Centro Comercial Santa Fe: 45 min (14 km)</li>
+        <li>
+          <img src="{% static "img/tmp/icons/british_college_icon.png" %}" alt="">
+          <span>Colegio británico: 3 min (500m)</span>
+        </li>
+        <li>
+          <img src="{% static "img/tmp/icons/aqua_gym_icon.png" %}" alt="">
+          <span>Aqua Gym: 4 min (280m)</span>
+        </li>
+        <li>
+          <img src="{% static "img/tmp/icons/hip_icon.png" %}" alt="">
+          <span>Hospital Star Médica HIP: 5 min (1.5 km)</span>
+        </li>
+        <li>
+          <img src="{% static "img/tmp/icons/cdmx_icon.png" %}" alt="">
+          <span>Angel de la Independencia: 20 min (5.7 km)</span>
+        </li>
+        <li>
+          <img src="{% static "img/tmp/icons/aicm_icon.png" %}" alt="">
+          <span>Aeropuerto CDMX: 25 min (13.6 km)</span>
+        </li>
+        <li>
+          <img src="{% static "img/tmp/icons/antara_fashion_icon.png" %}" alt="">
+          <span>Antara Fashion Hall: 30 min (7.7 km)</span>
+        </li>
+        <li>
+          <img src="{% static "img/tmp/icons/santafe_icon.png" %}" alt="">
+          <span>Centro Comercial Santa Fe: 45 min (14 km)</span>
+        </li>
       </ul>
     </div>
   </div>
   <div class="development-public-transport gray-container">
-    <div class="transport-title text-center">Transporte Público</div>
+    <div class="transport-title text-center"><img src="{% static "img/icons/transport_icon.png" %}" alt="Transporte público">Transporte Público</div>
     <div class="transport-items-container">
       <div class="transport-items-column">
         <div class="transport-item">
@@ -107,13 +160,13 @@
           97 (Un paraíso para el peatón)
         </div>
         <div class="transport-item">
-          <span class="semibold">Descarga la App</span>
+          <span class="semibold">Descarga la App <img src="{% static "img/icons/appstore_icon.png" %}" alt=""></span>
         </div>
       </div>
     </div>
   </div>
   <div class="development-built-by">
-    Construido por <a href="http://www.grupozago.com.mx"></a>
+    Construido por <a href="http://www.grupozago.com.mx"></a> <img src="{% static "img/icons/zago-logo.png" %}" alt="">
   </div>
 </main>
 {% endblock %}
