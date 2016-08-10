@@ -27,11 +27,12 @@
     <div class="text-left">
     Suscribete a nuestro Newsletter para tener más <b>información:</b>
     </div>
-    <form action="" id="homepage-special-form">
-      <input type="text" placeholder="Nombre">
-      <input type="email" placeholder="Correo electrónico">
-      <input type="tel" placeholder="Teléfono">
-      <button class="vre-button">Enviar</button>
+    <form id="homepage-special-form">
+	    {% csrf_token %}
+      <input type="text" placeholder="Nombre" name="name">
+      <input type="email" placeholder="Correo electrónico" name="email">
+      <input type="tel" placeholder="Teléfono" name="phone">
+      <button type="button" class="vre-button" id="btn-newsletter-big">Enviar</button>
     </form>
   </div>
 </div>
