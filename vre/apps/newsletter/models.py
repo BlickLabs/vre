@@ -5,7 +5,7 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
 
-class Suscriber(models.Model):
+class Subscriber(models.Model):
     email = models.EmailField(
         _('Email'),
         blank=False,
@@ -24,8 +24,8 @@ class Suscriber(models.Model):
     )
 
     class Meta:
-        verbose_name = _('Susucriber')
-        verbose_name_plural = _('Suscribers')
+        verbose_name = _('Subscriber')
+        verbose_name_plural = _('Subscribers')
 
     def __unicode__(self):
         return self.email

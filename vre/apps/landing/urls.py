@@ -31,8 +31,4 @@ urlpatterns = [
         view=views.ContactSuccessView.as_view(),
         name='contact_success'),
 
-    url(regex=r'^suscribe/$',
-        view=views.NewsletterView.as_view(),
-        name='suscribe'),
-
 ]
