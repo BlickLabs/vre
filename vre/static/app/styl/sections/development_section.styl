@@ -80,8 +80,15 @@
 
     .development-characteristics-item
       display inline-block
-      margin 9px 0
+      margin 11px 0
       width 32.5%
+      
+      img
+        height 28px
+        margin-right 22px
+
+      span
+        flex-grow 1
       
 .development-carousel
   background white
@@ -115,6 +122,11 @@
     font-size 24px
     padding 40px 60px
     
+    img
+      display block
+      margin-top 15px
+      width 100%
+    
 .development-nearby-places
   display flex
   
@@ -134,8 +146,16 @@
       margin-left -40px
       margin-top 20px
       
-      li:not(:first-child)
-        margin-top 5px
+      li
+        &:not(:first-child)
+          margin-top 5px
+      
+        img
+          height 28px
+          margin-right 18px
+
+        span
+          flex-grow 1
         
 .development-public-transport
   padding 70px 20px 90px 20px
@@ -143,6 +163,10 @@
   .transport-title
     font-size $sectionTitleSize
     font-weight $fontSemiBold
+    
+    img
+      height 28px
+      margin-right 10px
     
   .transport-items-container
     center-block()
@@ -161,9 +185,17 @@
       
       .transport-item
         margin 8px 0
+        
+        .appstore-download
+          margin-top -6px
+          width 80px
 
 .development-built-by
   font-size 16px
   font-weight $fontBold
   text-align center
   padding 60px 20px
+  
+  img
+    margin-left 17px
+    width 250px
