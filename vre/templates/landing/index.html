@@ -17,11 +17,11 @@
     </div>
     <ul class="menu-list">
       <li><a href="#">INICIO</a></li>
-      <li><a href="#">DESARROLLOS</a></li>
-      <li><a href="#">NOSOTROS</a></li>
-      <li><a href="#">INVERSIONISTAS</a></li>
-      <li><a href="#">CONTACTO</a></li>
-      <li><a href="#">VISÍTANOS</a></li>
+      <li><a href="{% url 'landing:developments' %}">DESARROLLOS</a></li>
+      <li><a href="{% url 'landing:about_us' %}">NOSOTROS</a></li>
+      <li><a href="{% url 'xauth:login' %}">INVERSIONISTAS</a></li>
+      <li><a href="{% url 'landing:contact' %}">CONTACTO</a></li>
+      <li><a href="{% url 'landing:visit_us' %}">VISÍTANOS</a></li>
     </ul>
   </div>
   <div class="white-box text-center">
@@ -41,12 +41,16 @@
   Conoce nuestros desarrollos
   <div class="homepage-developments-items">
     <div class="item">
-      <img src="{% static "img/tmp/indiana_item_photo.jpg" %}" class="item-picture">
-      <img class="item-name" src="{% static "img/tmp/indiana_gray_name.png" %}" />
+      <a href="{% url 'landing:development_demo' %}">
+        <img src="{% static "img/tmp/indiana_item_photo.jpg" %}" class="item-picture">
+        <img class="item-name" src="{% static "img/tmp/indiana_gray_name.png" %}" />
+      </a>
     </div>
     <div class="item">
-      <img src="{% static "img/tmp/dakota_item_photo.jpg" %}" class="item-picture">
-      <img class="item-name" src="{% static "img/tmp/dakota_gray_name.png" %}" />
+      <a href="{% url 'landing:development_demo' %}">
+        <img src="{% static "img/tmp/dakota_item_photo.jpg" %}" class="item-picture">
+        <img class="item-name" src="{% static "img/tmp/dakota_gray_name.png" %}" />
+      </a>
     </div>
   </div>
 </div>
@@ -63,7 +67,7 @@
 <div class="homepage-contact-divider text-center">
   <span>Contáctanos para recibir más información <br>
   sobre nuestros desarrollos</span>
-  <a href="#" class="vre-button">Contáctanos</a>
+  <a href="{% url 'landing:contact' %}" class="vre-button">Contáctanos</a>
 </div>
 <div class="gray-container homepage-gray-divider text-center">
   Dale click sobre la imagen y vive el departamento
@@ -78,7 +82,7 @@
   <div class="text-part">
     <div>
       <span>Visita nuestro<br>Showroom</span>
-      <a href="#" class="vre-button">Contáctanos</a>
+      <a href="{% url 'landing:visit_us' %}" class="vre-button">Contáctanos</a>
     </div>
   </div>
 </div>
