@@ -66,7 +66,10 @@ module.exports = function (grunt) {
         },
         dependencies: {
           'bootstrap': 'jquery',
-          'jquery-validation': 'jquery'
+          'jquery-validation': 'jquery',
+          'moment': 'jquery',
+          'moment-timezone': 'moment',
+          'eonasdan-bootstrap-datetimepicker': 'moment-timezone'
         },
         mainFiles: {
           'bootstrap': ['dist/js/bootstrap.min.js', 'dist/css/bootstrap.min.css']
