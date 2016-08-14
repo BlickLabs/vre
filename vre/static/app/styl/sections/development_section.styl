@@ -6,12 +6,17 @@
   img
     bottom 15px
     display block
-    left 0.5%
+    left 50%
+    height auto
+    max-height 150px
+    max-width 99%
     position absolute
-    width 99%
+    transform translateX(-50%)
+    width auto
     
 .development-header-text
   font-size $sectionTitleSize
+  line-height 1.25
   center-block()
   max-width 450px
   min-width 280px
@@ -21,6 +26,7 @@
   
 .development-download-brochure
   simple-border('leftright', 10px, $orange)
+  line-height 1.25
   padding 40px 0
 
   div
@@ -38,9 +44,9 @@
       display block
       font-weight $fontLight
       center-block()
-      margin-top 30px
+      margin-top 40px
       min-width 280px
-      padding 10px
+      padding 14px 10px
       text-align center
       width 85%
       
@@ -50,8 +56,8 @@
     a
       border none !important
       display inline-block
-      margin-top 30px
-      padding 10px 20px !important
+      margin-top 40px
+      padding 12px 20px !important
       width 170px
       
 .development-360-video
@@ -67,6 +73,7 @@
 .development-characteristics
   font-size $sectionTitleSize
   margin-left 10%
+  margin-top 20px
   width 90%
   
   .development-characteristics-items
@@ -80,11 +87,11 @@
 
     .development-characteristics-item
       display inline-block
-      margin 11px 0
+      margin 9px 0
       width 32.5%
       
       img
-        height 28px
+        height 23px
         margin-right 22px
 
       span
@@ -105,7 +112,7 @@
       color $darkGray
       cursor pointer
       font-size 33px
-      font-weight $fontBold
+      font-weight $fontExtraBold
       height 150px
       line-height 150px
       transition all .2s
@@ -120,6 +127,7 @@
     color white
     flex-grow 1
     font-size 24px
+    font-weight $fontSemiBold
     padding 40px 60px
     
     img
@@ -140,24 +148,27 @@
     
     >span
       font-size $sectionTitleSize
+      font-weight $fontSemiBold
     
     ul
+      font-size 17px
       list-style none
       margin-left -40px
-      margin-top 20px
+      margin-top 28px
       
       li
         &:not(:first-child)
           margin-top 5px
       
         img
-          height 28px
+          height 25px
           margin-right 18px
 
         span
           flex-grow 1
         
 .development-public-transport
+  font-size 17px
   padding 70px 20px 90px 20px
   
   .transport-title
@@ -171,17 +182,15 @@
   .transport-items-container
     center-block()
     margin-top 35px
-    min-width 850px
-    max-width 90%
     text-align center
-    width auto
+    width 890px
     
     .transport-items-column
       display inline-block
       max-width auto
       text-align left
       vertical-align middle
-      width 500px
+      width 430px
       
       &:nth-child(2)
         float right
