@@ -74,7 +74,7 @@ module.exports = function (grunt) {
         },
         mainFiles: {
           'bootstrap': ['dist/js/bootstrap.min.js', 'dist/css/bootstrap.min.css'],
-          'slick-carousel' : ['slick/slick.min.js', 'slick/slick.css', 'slick/slick-theme.css']
+          'slick-carousel' : ['slick/slick.min.js', 'slick/slick.css']
         }
       }
     },
