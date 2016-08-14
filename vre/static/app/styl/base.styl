@@ -77,9 +77,9 @@ textarea.vre-input
 
 .navbar-menu
   background white
-  height 73px
+  height 65px
   left 0
-  padding-top 8px
+  padding-top 8.5px
   position fixed
   top 0
   width 100%
@@ -87,7 +87,7 @@ textarea.vre-input
 
   &-logo
     display inline-block
-    height 53px
+    height 46px
     margin-left 20px
     vertical-align middle
 
@@ -102,8 +102,9 @@ textarea.vre-input
       display inline-block
       
       &:not(:first-child)::before
-        content ' | '
+        content ' | ' !important
         font-size 18px
+        margin 0 3px
 
       a
         color black
@@ -123,13 +124,13 @@ textarea.vre-input
     float right
     font-size 25px
     font-weight $fontSemiBold
-    line-height 73px
+    line-height 65px
     margin-top -8px
     padding 0 40px
     text-align center
 
 #sections-content
-  margin-top 73px
+  margin-top 65px
 
 footer
   color white
