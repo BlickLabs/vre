@@ -25,6 +25,9 @@ class VisitUsView(TemplateView):
 class DevelopmentDemoView(TemplateView):
     template_name = 'develops/develop_detail.html'
 
+class DevelopmentDemo2View(TemplateView):
+    template_name = 'develops/develop_detail_2.html'
+
 class ContactView(FormView):
     template_name = 'landing/contact.html'
     form_class = ContactForm
