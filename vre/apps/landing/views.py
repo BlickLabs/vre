@@ -19,6 +19,9 @@ class AboutUsView(TemplateView):
 class PrivacyNoticeView(TemplateView):
     template_name = 'landing/privacy_notice.html'
 
+class ConditionsTermsView(TemplateView):
+    template_name = 'landing/conditions_terms.html'
+
 class VisitUsView(TemplateView):
     template_name = 'landing/visit.html'
 
