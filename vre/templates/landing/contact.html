@@ -1,13 +1,17 @@
-{% extends 'base.html' %}
-
-{% block title %}
-	Enviar un mensaje de contacto
-{% endblock %}
-
+{% extends "base.html" %}
+{% block title %}Contacto | VRE México{% endblock %}
 {% block content %}
-	<form action="." method="post">
-		{% csrf_token %}
-		{{ form.as_p }}
-		<button type="submit">Enviar</button>
-	</form>
+{% include "sections_navbar.html" %}
+<main id="sections-content">
+  <div class="gray-container">
+    <form action="." method="post" class="contact-form">
+      <div class="title">Escribenos para conocer <b>los desarrollos</b></div>
+      {% csrf_token %}
+      {{ form.name }}
+      {{ form.email }}
+      {{ form.message }}
+      <button class="vre-inverse-button no-border">Envíar</button>
+    </form>
+  </div>
+</main>
 {% endblock %}

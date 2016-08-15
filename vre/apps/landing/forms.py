@@ -14,7 +14,7 @@ class ContactForm(forms.Form):
         validators=[validators.eval_blank],
         widget=forms.TextInput(
             attrs={
-                'class': '',
+                'class': 'vre-input',
                 'placeholder': 'Nombre',
                 'required': 'true',
             }
@@ -24,7 +24,7 @@ class ContactForm(forms.Form):
         validators=[validators.eval_blank],
         widget=forms.EmailInput(
             attrs={
-                'class': '',
+                'class': 'vre-input',
                 'placeholder': 'Correo electrónico',
                 'required': 'true',
             }
@@ -34,9 +34,9 @@ class ContactForm(forms.Form):
         validators=[validators.eval_blank],
         widget=forms.Textarea(
             attrs={
-                'class': '',
-                'placeholder': 'Mensaje',
-                'required': 'true',
+                'class': 'vre-input',
+                'placeholder': 'Mensaje (opcional)',
+                'required': 'false',
             }
         ),
     )
