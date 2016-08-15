@@ -1,20 +1,21 @@
 {% extends "base.html" %}
 {% load static from staticfiles %}
-{% block title %}Indiana 176 | VRE México{% endblock %}
+{% block title %}Dakota 322 | VRE México{% endblock %}
 {% block content %}
 {% include "sections_navbar.html" %}
 <main id="sections-content">
-  <div class="development-cover cover parallax" style="background-image: url('{% static "img/tmp/indiana_cover.jpg" %}')">
-    <img src="{% static "img/tmp/indiana_full_white_name.png" %}" >
+  <div class="development-cover cover parallax" style="background-image: url('{% static "img/tmp/dakota_cover.jpg" %}')">
+    <img src="{% static "img/tmp/dakota_full_white_name.png" %}" >
   </div>
-  <div class="development-header-text">
-    Nuestro desarrollo cuenta con 6 exclusivos condos y un increíble Roof Garden común.
+  <div class="development-header-text text-center">
+  Vive a media cuadra del parque Alfonso Esparza.
+  Contamos con departamentos desde 74 a 114 m2.
   </div>
   <div class="gray-container development-download-brochure">
     <div>
       <span>Si quieres más información, descarga aquí nuestro brochure de ventas</span>
       <input type="email" id="download-brochure-email" placeholder="Correo electrónico">
-      <a href="{% url 'developments:download_brochure' id=1 %}" class="vre-inverse-button" id="download-brochure-button">Conoce más</a>
+      <a href="{% url 'developments:download_brochure' id=2 %}" class="vre-inverse-button" id="download-brochure-button">Conoce más</a>
     </div>
   </div>
   <div class="development-360-video text-center">
@@ -71,8 +72,11 @@
       </li>
     </ul>
   </div>
-  <div class="development-carousel text-center" style="padding: 200px 90px">
-  (Carrusel pendiente)
+  <div class="development-carousel-container text-center">
+    <div class="cover" style="background-image: url('{% static "img/tmp/indiana_cover.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/tmp/indiana_item_photo.jpg" %}')">
+    </div>
   </div>
   <div class="development-drawings gray-container text-center">
     <div class="drawing-selectors">
