@@ -1,0 +1,16 @@
+{% block content %}
+	<p>
+		Nombre del cliente: {{ name }}
+	</p>
+	<p>
+		Correo electronico: {{ email }}
+	</p>
+	<p>
+		Telefono: {{ phone }}
+	</p>
+	{% if message %}
+		<p>
+			Mensaje: {{ message }}
+		</p>
+	{% endif %}
+{% endblock %}
