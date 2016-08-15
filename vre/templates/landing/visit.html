@@ -4,20 +4,21 @@
 {% include "sections_navbar.html" %}
 <main id="sections-content">
   <div class="gray-container">
-    <form action="" class="visit-us-form">
+    <form action="." method="post" class="visit-us-form">
+	    {% csrf_token %}
       <div class="title">Agenda una cita para visitar nuestro <b>Showroom</b></div>
       <div class="form-columns">
         <div class="form-column">
-          <input type="text" class="vre-input" placeholder="Nombre">
-          <input type="email" class="vre-input" placeholder="Correo electrónico">
+          <input type="text" class="vre-input" placeholder="Nombre" name="name">
+          <input type="email" class="vre-input" placeholder="Correo electrónico" name="email">
           <div id="visit-us-datepicker"></div>
         </div>
         <div class="form-column">
-          <input type="number" class="vre-input" placeholder="Teléfono">
-          <textarea class="vre-input" placeholder="Mensaje (opcional)"></textarea>
+          <input type="number" class="vre-input" placeholder="Teléfono" name="phone">
+          <textarea class="vre-input" placeholder="Mensaje (opcional)" name="message"></textarea>
         </div>
       </div>
-      <button class="vre-inverse-button no-border">Envíar</button>
+      <button type="submit" class="vre-inverse-button no-border">Envíar</button>
     </form>
   </div>
 </main>
