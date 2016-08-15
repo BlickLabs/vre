@@ -1,10 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
+from django.conf import settings
 from django.core.urlresolvers import reverse_lazy
+from django.template.response import TemplateResponse
 from django.views.generic import FormView, TemplateView, View
 
 from vre.apps.landing.forms import ContactForm
+from vre.core.utils import send_email
 
 
 class HomepageView(TemplateView):
@@ -19,8 +21,29 @@ class AboutUsView(TemplateView):
 class PrivacyNoticeView(TemplateView):
     template_name = 'landing/privacy_notice.html'
 
-class VisitUsView(TemplateView):
-    template_name = 'landing/visit.html'
+class VisitUsView(View):
+    def get(self, request):
+        return TemplateResponse(request, 'landing/visit.html')
+    def post(self, request):
+        ctx = {
+            'name': request.POST.get('name'),
+            'email': request.POST.get('email'),
+            'message': request.POST.get('message'),
+            'phone': request.POST.get('phone'),
+        }
+        send_email(
+            subject='email/subjects/visit_showroom.txt',
+            body='email/visit_showroom.html',
+            from_email="VRE - Showroom <postmaster@%s>" % (
+                settings.MAILGUN_SERVER_NAME
+            ),
+            to_email=[settings.DEFAULT_EMAIL_TO],
+            context=ctx
+        )
+
+        return TemplateResponse(request, 'landing/visit.html',
+                                {'success': 'Mensaje Enviado'})
+
 
 class DevelopmentDemoView(TemplateView):
     template_name = 'develops/develop_detail.html'
