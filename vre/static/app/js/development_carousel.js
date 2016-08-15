@@ -1,4 +1,11 @@
 (function () {
   'use strict';
-  $('#development-carousel-container').slick({});
+  $(document).ready(function () {
+    $('.development-carousel-container').slick({
+      rows: 1,
+      prevArrow: '<a>aaa</a>',
+      infinite: false,
+      dots: false
+    });
+  });
 }());

@@ -97,8 +97,39 @@
       span
         flex-grow 1
       
-.development-carousel
+.development-carousel-container
   background white
+  height 70vh
+  max-height 500px
+  min-height 250px
+  position relative
+  
+  .slick-list
+    height 100%
+    width 100%
+    
+    .slick-track
+      height 100%
+      
+      .slick-slide
+        height 100%
+  
+  .slick-arrow
+    cursor pointer
+    display block !important
+    position absolute
+    top 50%
+    transform translateY(-50%)
+    z-index 10
+    
+    &.slick-prev
+      left 0
+    
+    &.slick-next
+      right 0
+      
+    &.slick-disabled
+      display none !important
   
 .development-drawings
   display flex
