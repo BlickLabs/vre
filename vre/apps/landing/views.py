@@ -12,14 +12,18 @@ from vre.core.utils import send_email
 class HomepageView(TemplateView):
     template_name = 'landing/index.html'
 
+
 class DevelopmentsView(TemplateView):
     template_name = 'landing/developments.html'
+
 
 class AboutUsView(TemplateView):
     template_name = 'landing/about.html'
 
+
 class PrivacyNoticeView(TemplateView):
     template_name = 'landing/privacy_notice.html'
+
 
 class VisitUsView(View):
     def get(self, request):
@@ -45,11 +49,27 @@ class VisitUsView(View):
                                 {'success': 'Mensaje Enviado'})
 
 
+class ConditionsTermsView(TemplateView):
+    template_name = 'landing/conditions_terms.html'
+
+
 class DevelopmentDemoView(TemplateView):
     template_name = 'develops/develop_detail.html'
 
+    def get_context_data(self, **kwargs):
+        context = super(DevelopmentDemoView, self).get_context_data(**kwargs)
+        context['develop'] = "indiana"
+        return context
+
+
 class DevelopmentDemo2View(TemplateView):
     template_name = 'develops/develop_detail_2.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(DevelopmentDemo2View, self).get_context_data(**kwargs)
+        context['develop'] = "dakota"
+        return context
+
 
 class ContactView(FormView):
     template_name = 'landing/contact.html'
