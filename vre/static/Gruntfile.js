@@ -66,13 +66,16 @@ module.exports = function (grunt) {
         },
         dependencies: {
           'bootstrap': 'jquery',
+          'slick-carousel': 'jquery',
           'jquery-validation': 'jquery',
           'moment': 'jquery',
           'moment-timezone': 'moment',
           'eonasdan-bootstrap-datetimepicker': 'moment-timezone'
         },
         mainFiles: {
-          'bootstrap': ['dist/js/bootstrap.min.js', 'dist/css/bootstrap.min.css']
+          'bootstrap': ['dist/js/bootstrap.min.js', 'dist/css/bootstrap.min.css'],
+          'slick-carousel' : ['slick/slick.min.js', 'slick/slick.css'],
+          'font-awesome': ['css/font-awesome.min.css']
         }
       }
     },
@@ -112,6 +115,14 @@ module.exports = function (grunt) {
           {
             src: 'app/favicon.png',
             dest: 'dist/favicon.png'
+          },
+          {
+            expand : true,
+            dest   : 'dist/fonts',
+            cwd    : 'bower_components/font-awesome/fonts',
+            src    : [
+              '**/*'
+            ]
           }
         ]
       }

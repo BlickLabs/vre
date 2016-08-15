@@ -31,6 +31,10 @@ urlpatterns = [
         view=views.PrivacyNoticeView.as_view(),
         name='privacy_notice'),
 
+    url(regex=r'^terminos/$',
+        view=views.ConditionsTermsView.as_view(),
+        name='conditions_terms'),
+
     url(regex=r'^visitanos/$',
         view=views.VisitUsView.as_view(),
         name='visit_us'),
