@@ -34,6 +34,7 @@ class VisitUsView(View):
             'email': request.POST.get('email'),
             'message': request.POST.get('message'),
             'phone': request.POST.get('phone'),
+            'date': request.POST.get('hidden_date'),
         }
         send_email(
             subject='email/subjects/visit_showroom.txt',
@@ -44,7 +45,6 @@ class VisitUsView(View):
             to_email=[settings.DEFAULT_EMAIL_TO],
             context=ctx
         )
-
         return TemplateResponse(request, 'landing/visit.html',
                                 {'success': 'Mensaje Enviado'})
 
