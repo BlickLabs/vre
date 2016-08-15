@@ -1,13 +1,18 @@
 {% load static from staticfiles %}
+{% url 'landing:about_us' as about_us %}
+{% url 'xauth:login' as login %}
+{% url 'landing:contact' as contact %}
+{% url 'landing:visit_us' as visit_us %}
+{% url 'landing:developments' as developments %}
 <div class="navbar-menu">
   <a href="/"><img class="navbar-menu-logo" src="{% static "img/icons/vre_orange_logo.png" %}" alt="VRE Logo" /></a>
   <ul class="navbar-menu-list">
-    <li><a href="/">INICIO</a></li>
-    <li><a href="{% url 'landing:developments' %}">DESARROLLOS</a></li>
-    <li><a href="{% url 'landing:about_us' %}">NOSOTROS</a></li>
-    <li><a href="{% url 'xauth:login' %}">INVERSIONISTAS</a></li>
-    <li><a href="{% url 'landing:contact' %}">CONTACTO</a></li>
-    <li><a href="{% url 'landing:visit_us' %}">VISÍTANOS</a></li>
+    <li {%if request.path == "/" %}class="active"{%endif%}><a href="/">INICIO</a></li>
+    <li {%if develop or request.path == developments %}class="active"{%endif%}><a href="{{developments}}">DESARROLLOS</a></li>
+    <li {%if request.path == about_us %}class="active"{%endif%}><a href="{{about_us}}">NOSOTROS</a></li>
+    <li {%if request.path == login %}class="active"{%endif%}><a href="{{login}}">INVERSIONISTAS</a></li>
+    <li {%if request.path == contact %}class="active"{%endif%}><a href="{{contact}}">CONTACTO</a></li>
+    <li {%if request.path == visit_us %}class="active"{%endif%}><a href="{{visit_us}}">VISÍTANOS</a></li>
   </ul>
   <div class="navbar-menu-orange-box">
     55 8852 7468

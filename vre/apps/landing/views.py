@@ -28,8 +28,18 @@ class VisitUsView(TemplateView):
 class DevelopmentDemoView(TemplateView):
     template_name = 'develops/develop_detail.html'
 
+    def get_context_data(self, **kwargs):
+        context = super(DevelopmentDemoView, self).get_context_data(**kwargs)
+        context['develop'] = "indiana"
+        return context
+
 class DevelopmentDemo2View(TemplateView):
     template_name = 'develops/develop_detail_2.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(DevelopmentDemo2View, self).get_context_data(**kwargs)
+        context['develop'] = "dakota"
+        return context
 
 class ContactView(FormView):
     template_name = 'landing/contact.html'
