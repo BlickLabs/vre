@@ -122,11 +122,16 @@
     transform translateY(-50%)
     z-index 10
     
-    &.slick-prev
-      left 0
+    &::before
+      color white
+      font-size 120px
+      text-shadow 0 0 10px $gray
     
+    &.slick-prev
+      left 20px
+
     &.slick-next
-      right 0
+      right 20px
       
     &.slick-disabled
       display none !important

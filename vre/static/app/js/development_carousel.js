@@ -1,11 +1,9 @@
 (function () {
   'use strict';
-  $(document).ready(function () {
-    $('.development-carousel-container').slick({
-      rows: 1,
-      prevArrow: '<a>aaa</a>',
-      infinite: false,
-      dots: false
-    });
+  $('.development-carousel-container').slick({
+    prevArrow: '<span class="fa fa-angle-left slick-prev"></span>',
+    nextArrow: '<span class="fa fa-angle-right slick-next"></span>',
+    infinite: false,
+    dots: false
   });
 }());
