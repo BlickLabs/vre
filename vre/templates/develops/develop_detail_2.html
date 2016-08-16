@@ -93,12 +93,16 @@
       <div class="drawing-selector">201</div>
     </div>
     <div class="drawing-picture">
-      Departamento 101
-      <img src="{% static "img/tmp/indiana_department_101.png" %}" alt="">
+      Departamento <span>101</span>
+      <img src="{% static "img/tmp/indiana_department_101.png" %}" class="show" data-department="101">
+      <img src="{% static "img/tmp/indiana_department_102.png" %}" class="hide" data-department="102">
+      <img src="{% static "img/tmp/indiana_department_201_301.png" %}" class="hide" data-department="201">
     </div>
     <div class="drawing-picture">
-      Departamento 301
-      <img src="{% static "img/tmp/indiana_department_201_301.png" %}" alt="">
+      Departamento <span>301</span>
+      <img src="{% static "img/tmp/indiana_department_202_302.png" %}" class="hide" data-department="202">
+      <img src="{% static "img/tmp/indiana_department_201_301.png" %}" class="show" data-department="301">
+      <img src="{% static "img/tmp/indiana_department_202_302.png" %}" class="hide" data-department="302">
     </div>
     <div class="drawing-selectors">
       <div class="drawing-selector">202</div>
