@@ -16,4 +16,5 @@ class DocumentAdmin(admin.ModelAdmin):
 
 @admin.register(models.Brochure)
 class BrochureAdmin(admin.ModelAdmin):
-    pass
+    actions = [export_as_xls]
+    export_as_xls.short_description = "Export selected objects to XLS"
