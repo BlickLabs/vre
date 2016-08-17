@@ -40,6 +40,9 @@
 		    url: "{% url 'newsletter:suscribe' %}",
 	      type : 'POST',
 		    data: $('#footer-newsletter-form').serialize(),
+		    beforeSend: function(){
+			    ga('send','event','NewsFoot','ok');
+        },
 		    success: function(data){
 			    console.log(data);
 			    alert('success!');
@@ -56,6 +59,9 @@
 		    url: "{% url 'newsletter:suscribe' %}",
 	      type : 'POST',
 		    data: $('#homepage-special-form').serialize(),
+		    beforeSend: function(){
+			    ga('send','event','NewsHead','ok');
+        },
 		    success: function(data){
 			    console.log(data);
 			    alert('success!');
