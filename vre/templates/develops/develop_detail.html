@@ -72,9 +72,21 @@
     </ul>
   </div>
   <div class="development-carousel-container text-center">
-    <div class="cover" style="background-image: url('{% static "img/tmp/indiana_cover.jpg" %}')">
+    <div class="cover" style="background-image: url('{% static "img/tmp/indiana_carousel_01.jpg" %}')">
     </div>
-    <div class="cover" style="background-image: url('{% static "img/tmp/indiana_item_photo.jpg" %}')">
+    <div class="cover" style="background-image: url('{% static "img/tmp/indiana_carousel_02.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/tmp/indiana_carousel_03.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/tmp/indiana_carousel_04.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/tmp/indiana_carousel_05.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/tmp/indiana_carousel_06.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/tmp/indiana_carousel_07.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/tmp/indiana_carousel_08.jpg" %}')">
     </div>
   </div>
   <div class="development-drawings gray-container text-center">
@@ -84,12 +96,16 @@
       <div class="drawing-selector">201</div>
     </div>
     <div class="drawing-picture">
-      Departamento 101
-      <img src="{% static "img/tmp/indiana_department_101.png" %}" alt="">
+      Departamento <span>101</span>
+      <img src="{% static "img/tmp/indiana_department_101.png" %}" class="show" data-department="101">
+      <img src="{% static "img/tmp/indiana_department_102.png" %}" class="hide" data-department="102">
+      <img src="{% static "img/tmp/indiana_department_201_301.png" %}" class="hide" data-department="201">
     </div>
     <div class="drawing-picture">
-      Departamento 301
-      <img src="{% static "img/tmp/indiana_department_201_301.png" %}" alt="">
+      Departamento <span>301</span>
+      <img src="{% static "img/tmp/indiana_department_202_302.png" %}" class="hide" data-department="202">
+      <img src="{% static "img/tmp/indiana_department_201_301.png" %}" class="show" data-department="301">
+      <img src="{% static "img/tmp/indiana_department_202_302.png" %}" class="hide" data-department="302">
     </div>
     <div class="drawing-selectors">
       <div class="drawing-selector">202</div>
@@ -98,7 +114,7 @@
     </div>
   </div>
   <div class="development-nearby-places">
-    <div class="location-map"></div>
+    <div id="location-map" class="location-map"></div>
     <div class="points-of-interest">
       <span>Lugares de interés</span>
       <ul>
@@ -172,4 +188,12 @@
     Construido por <a href="http://www.grupozago.com.mx"><img src="{% static "img/icons/zago-logo.png" %}" alt=""></a> 
   </div>
 </main>
+{% endblock %}
+{% block before_scripts %}
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYJxTs6nptICwPefTB_XR6yA2BUmUg-5A"></script>
+{% endblock %}
+{% block after_scripts %}
+<script>
+  insertMap([19.386183, -99.178583], 'Indiana 176');
+</script>
 {% endblock %}
