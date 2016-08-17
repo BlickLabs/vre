@@ -7,6 +7,7 @@ from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 
 from vre.apps.users.forms import UserChangeForm, UserCreationForm
 from vre.apps.users.models import CoolUser
+from vre.core.utils import export_as_xls
 
 
 @admin.register(CoolUser)
@@ -44,5 +45,7 @@ class UserAdmin(BaseUserAdmin):
     search_fields = ('email',)
     ordering = ('email',)
     filter_horizontal = ()
+    actions = [export_as_xls]
+    export_as_xls.short_description = "Export selected objects to XLS"
 
 admin.site.unregister(Group)
