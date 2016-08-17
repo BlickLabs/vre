@@ -1,11 +1,15 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+import json
+import urlparse
 
+import requests
 from django import forms
-from django.core.validators import RegexValidator
 from django.conf import settings
 
+from vre.apps.newsletter.models import Subscriber
 from vre.core import validators
+from vre.core.config import MailChimpConfig
 from vre.core.utils import send_email
 
 
@@ -40,6 +44,7 @@ class ContactForm(forms.Form):
             }
         ),
     )
+    source = forms.CharField()
 
     def save(self):
         cleaned_data = super(ContactForm, self).clean()
@@ -60,3 +65,22 @@ class ContactForm(forms.Form):
             to_email=[settings.DEFAULT_EMAIL_TO],
             context=ctx
         )
+        config = MailChimpConfig()
+        endpoint = urlparse.urljoin(config.api_root,
+                                    'lists/bf6cbe6ae7/members/')
+        data = {
+            "email_address": cleaned_data.get('email'),
+            "status": "subscribed",
+        }
+        data = json.dumps(data)
+        response = requests.post(endpoint, auth=('apikey', config.apikey),
+                                 data=data)
+        d = json.loads(response.content)
+        if d.get('status') == 'subscribed':
+            subscriber = Subscriber(
+                email=cleaned_data.get('email'),
+                name=cleaned_data.get('name'),
+                phone=cleaned_data.get('phone', None),
+                source=cleaned_data.get('source'),
+            )
+            subscriber.save()
