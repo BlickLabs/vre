@@ -29,7 +29,7 @@ class NewsletterView(View):
                 email=request.POST.get('email'),
                 name=request.POST.get('name', None),
                 phone=request.POST.get('phone', None),
-
+                source=request.POST.get('source'),
             )
             subscriber.save()
         return JsonResponse(response.json())
