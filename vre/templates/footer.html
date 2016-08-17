@@ -5,6 +5,7 @@
       <form id="footer-newsletter-form">
         <span>Suscribete a nuestro Newsletter</span>
         <input type="email" name="email" placeholder="Correo electrónico" />
+        <input type="hidden" name="source" value="newsletter"/>
         {% csrf_token %}
         <button type="button" id="btn-newsletter">Enviar</button>
       </form>
