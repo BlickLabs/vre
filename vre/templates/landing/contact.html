@@ -13,9 +13,17 @@
       {{ form.message }}
 	    <input type="hidden" name="source" value="contact"/>
       <div class="button-container">
-        <button class="vre-inverse-button no-border">Envíar</button>
+        <button class="vre-inverse-button no-border" id="contact_button">Envíar</button>
       </div>
     </form>
   </div>
 </main>
+{% endblock %}
+
+{% block after_scripts %}
+	<script>
+		$('#contact_button').on('click', function () {
+			ga('send','event','Contacto','ok');
+		})
+	</script>
 {% endblock %}
