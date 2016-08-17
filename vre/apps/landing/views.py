@@ -1,11 +1,17 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+import json
+import urlparse
+
+import requests
 from django.conf import settings
 from django.core.urlresolvers import reverse_lazy
 from django.template.response import TemplateResponse
 from django.views.generic import FormView, TemplateView, View
 
 from vre.apps.landing.forms import ContactForm
+from vre.apps.newsletter.models import Subscriber
+from vre.core.config import MailChimpConfig
 from vre.core.utils import send_email
 
 
@@ -45,6 +51,25 @@ class VisitUsView(View):
             to_email=[settings.DEFAULT_EMAIL_TO],
             context=ctx
         )
+        config = MailChimpConfig()
+        endpoint = urlparse.urljoin(config.api_root,
+                                    'lists/bf6cbe6ae7/members/')
+        data = {
+            "email_address": request.POST.get('email'),
+            "status": "subscribed",
+        }
+        data = json.dumps(data)
+        response = requests.post(endpoint, auth=('apikey', config.apikey),
+                                 data=data)
+        d = json.loads(response.content)
+        if d.get('status') == 'subscribed':
+            subscriber = Subscriber(
+                email=request.POST.get('email'),
+                name=request.POST.get('name', None),
+                phone=request.POST.get('phone', None),
+                source=request.POST.get('source'),
+            )
+            subscriber.save()
         return TemplateResponse(request, 'landing/visit.html',
                                 {'success': 'Mensaje Enviado'})
 
