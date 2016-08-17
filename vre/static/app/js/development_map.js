@@ -211,7 +211,7 @@ var insertMap = (function () {
         title: mapTitle
       });
       aux.push(marker);
-      aux = [];
+      aux = null;
     }
     google.maps.event.addDomListener(window, 'load', init);
   };

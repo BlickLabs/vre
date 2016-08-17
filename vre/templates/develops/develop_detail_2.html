@@ -111,7 +111,7 @@
     </div>
   </div>
   <div class="development-nearby-places">
-    <div class="location-map"></div>
+    <div id="location-map" class="location-map"></div>
     <div class="points-of-interest">
       <span>Lugares de interés</span>
       <ul>
@@ -185,4 +185,12 @@
     Construido por <a href="http://www.grupozago.com.mx"><img src="{% static "img/icons/zago-logo.png" %}" alt=""></a>
   </div>
 </main>
+{% endblock %}
+{% block before_scripts %}
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYJxTs6nptICwPefTB_XR6yA2BUmUg-5A"></script>
+{% endblock %}
+{% block after_scripts %}
+<script>
+  insertMap([19.388950, -99.178761], 'Dakota 322');
+</script>
 {% endblock %}
