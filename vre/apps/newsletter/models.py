@@ -17,10 +17,18 @@ class Subscriber(models.Model):
         blank=True,
         null=True
     )
-    phone = models.IntegerField(
+    phone = models.CharField(
         _('Phone'),
+        max_length=50,
         blank=True,
         null=True
+    )
+    source = models.CharField(
+        _('Source'),
+        max_length=50,
+        blank=False,
+        null=False,
+
     )
 
     class Meta:
