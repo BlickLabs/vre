@@ -34,6 +34,16 @@ class ContactForm(forms.Form):
             }
         ),
     )
+    phone = forms.CharField(
+        validators=[validators.eval_blank],
+        widget=forms.TextInput(
+            attrs={
+                'class': 'vre-input',
+                'placeholder': 'Teléfono',
+                'required': 'true',
+            }
+        ),
+    )
     message = forms.CharField(
         validators=[validators.eval_blank],
         widget=forms.Textarea(
@@ -51,9 +61,11 @@ class ContactForm(forms.Form):
         name = cleaned_data.get('name')
         email = cleaned_data.get('email')
         message = cleaned_data.get('message')
+        phone = cleaned_data.get('phone')
         ctx = {
             'name': name,
             'email': email,
+            'phone': phone,
             'message': message
         }
         send_email(
@@ -80,7 +92,7 @@ class ContactForm(forms.Form):
             subscriber = Subscriber(
                 email=cleaned_data.get('email'),
                 name=cleaned_data.get('name'),
-                phone=cleaned_data.get('phone', None),
+                phone=cleaned_data.get('phone'),
                 source=cleaned_data.get('source'),
             )
             subscriber.save()
