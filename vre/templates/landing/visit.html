@@ -20,8 +20,16 @@
       </div>
       <input type="hidden" id="hidden_date" name="hidden_date">
 	    <input type="hidden" name="source" value="newsletter"/>
-      <button class="vre-inverse-button no-border">Envíar</button>
+      <button class="vre-inverse-button no-border" id="showroom_button">Envíar</button>
     </form>
   </div>
 </main>
+{% endblock %}
+
+{% block after_scripts %}
+	<script>
+		$('#showroom_button').on('click', function () {
+			ga('send','event','Agenda','ok');
+		})
+	</script>
 {% endblock %}
