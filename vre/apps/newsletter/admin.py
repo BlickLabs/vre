@@ -8,4 +8,4 @@ from . import models
 
 @admin.register(models.Subscriber)
 class SuscriberAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('email', 'name', 'phone', 'source')
