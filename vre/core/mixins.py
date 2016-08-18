@@ -23,7 +23,7 @@ class AuthRedirectMixin(object):
     """
     def get(self, request, *args, **kwargs):
         if request.user.is_authenticated():
-            return redirect('/')
+            return redirect(reverse_lazy('documents:investor_document_download'))
         else:
             return super(AuthRedirectMixin, self).get(self, request, *args,
                                                       **kwargs)
