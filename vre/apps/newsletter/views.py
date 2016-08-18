@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+from django.conf import settings
 from django.http import JsonResponse
 from django.views.generic import View
 
@@ -16,7 +17,13 @@ import urlparse
 class NewsletterView(View):
     def post(self, request):
         config = MailChimpConfig()
-        endpoint = urlparse.urljoin(config.api_root, 'lists/bf6cbe6ae7/members/')
+        if request.POST.get('source') == 'indiana':
+            list_id = settings.MAILCHIMP_INDIANA_LIST
+        elif request.POST.get('source') == 'dakota':
+            list_id = settings.MAILCHIMP_DAKOTA_LIST
+        else :
+            list_id = settings.MAILCHIMP_NEWSLETTER_LIST
+        endpoint = urlparse.urljoin(config.api_root, 'lists/%s/members/' % list_id)
         data = {
             "email_address": request.POST.get('email'),
             "status": "subscribed",
