@@ -4,6 +4,38 @@ body
   
 a, a:hover, a:active
   text-decoration none !important
+  
+.vre-modal
+  .modal-dialog
+    height 100%
+    margin 0 auto
+
+  .modal-content
+    border none
+    border-radius 0
+    box-shadow none
+    text-align center
+    top 50%
+    transform translateY(-50%)
+    
+  .modal-header
+    color white
+
+  &.success .modal-header
+    background #76bb4a
+
+  &.error .modal-header
+    background #d43d3d
+    
+  .modal-body
+    padding 20px
+    
+  .modal-footer
+    text-align center
+    
+    .vre-button
+      font-size 15px
+      padding 10px 25px
 
 .vre-button, .vre-inverse-button
   display inline-block
