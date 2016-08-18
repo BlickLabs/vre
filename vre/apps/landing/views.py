@@ -6,6 +6,7 @@ import urlparse
 import requests
 from django.conf import settings
 from django.core.urlresolvers import reverse_lazy
+from django.shortcuts import redirect
 from django.template.response import TemplateResponse
 from django.views.generic import FormView, TemplateView, View
 
@@ -70,8 +71,7 @@ class VisitUsView(View):
                 source=request.POST.get('source'),
             )
             subscriber.save()
-        return TemplateResponse(request, 'landing/visit.html',
-                                {'success': 'Mensaje Enviado'})
+        return redirect(reverse_lazy('landing:visitanos_success'))
 
 
 class ConditionsTermsView(TemplateView):
