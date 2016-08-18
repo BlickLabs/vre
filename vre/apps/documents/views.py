@@ -11,22 +11,16 @@ from vre.apps.documents.models import Document
 from vre.core.mixins import LoginRequiredMixin
 
 
-class DownloadDocumentView(LoginRequiredMixin, View):
-    template_name = 'documents/download_file.html'
-
-    def get(self, request, slug):
-        # We validate the develop exist
-        develop = get_object_or_404(Develop, slug=slug)
+class DownloadDocumentListView(LoginRequiredMixin, View):
+    def get(self, request):
         # If the develop is in the user developments of the user we search the
         # documents, else, raise permission denied
-        if develop in request.user.developments.all():
-            try:
-                documents = Document.objects.filter(develop=develop)
-            except Document.DoesNotExist:
-                documents = None
-            ctx = {
-                'documents': documents
-            }
-            return TemplateResponse(request, self.template_name, ctx)
-        else:
-            raise PermissionDenied
+        developments = request.user.developments.all()
+        for develop in developments:
+            print develop.document_set.all()
+        documents = Document.objects.all()
+        ctx = {
+            # 'documents': documents,
+            'developments': developments
+        }
+        return TemplateResponse(request, 'documents/download_file.html', ctx)
