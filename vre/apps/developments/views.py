@@ -1,11 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
+from django.core.exceptions import PermissionDenied
 from django.http import HttpResponse
 from django.views.generic import DetailView, View
 
 from vre.apps.developments.models import Develop
-from vre.apps.documents.models import Brochure
+from vre.apps.documents.models import Brochure, Document
+from vre.core.mixins import LoginRequiredMixin
 
 
 class DevelopDetailView(DetailView):
@@ -26,3 +27,18 @@ class DownloadFileView(View):
         )
         response['Content-Disposition'] = 'attachment; filename=%s' % filename
         return response
+
+
+class DownloadDocumentView(LoginRequiredMixin, View):
+    def get(self, request, id):
+        document = Document.objects.get(id=id)
+        if request.user.developments.filter(id=document.develop.id).exists():
+            filename = document.file.name.split('/')[-1]
+            response = HttpResponse(
+                document.file,
+                content_type='application/force-download'
+            )
+            response['Content-Disposition'] = 'attachment; filename=%s' % filename
+            return response
+        else:
+            raise PermissionDenied
