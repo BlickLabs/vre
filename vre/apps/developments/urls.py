@@ -14,4 +14,8 @@ urlpatterns = [
     url(regex=r'^descargar-brochure/(?P<id>.*)/$',
         view=views.DownloadFileView.as_view(),
         name='download_brochure'),
+
+    url(regex=r'^descargar-documento/(?P<id>.*)/$',
+        view=views.DownloadDocumentView.as_view(),
+        name='download_document'),
 ]
