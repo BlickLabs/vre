@@ -9,7 +9,11 @@
 		Descargar un documeto
 	</h1>
 
-	<table>
+	{% for development in developments %}
+		<h2>
+			{{ development.name }}
+		</h2>
+		<table>
 		<tr>
 			<th>
 				Nombre
@@ -18,13 +22,14 @@
 				Archivo
 			</th>
 		</tr>
-		{% for document in documents %}
+
+		{% for document in development.document_set.all %}
 			<tr>
 				<td>
 					{{ document.title }}
 				</td>
 				<td>
-					<a href="{{ document.file.url }}" target="_blank">
+					<a href="{% url 'developments:download_document' id=document.id %}">
 						Archivo
 					</a>
 
@@ -33,5 +38,7 @@
 		{% endfor %}
 
 	</table>
+	{% endfor %}
+
 
 {% endblock %}
