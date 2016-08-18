@@ -47,4 +47,8 @@ urlpatterns = [
         view=views.ContactSuccessView.as_view(),
         name='contact_success'),
 
+    url(regex=r'^visitanos/success/$',
+        view=views.ContactSuccessView.as_view(),
+        name='visitanos_success'),
+
 ]
