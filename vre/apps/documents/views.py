@@ -19,7 +19,7 @@ class DownloadDocumentView(LoginRequiredMixin, View):
         develop = get_object_or_404(Develop, slug=slug)
         # If the develop is in the user developments of the user we search the
         # documents, else, raise permission denied
-        if develop in request.user.develops.all():
+        if develop in request.user.developments.all():
             try:
                 documents = Document.objects.filter(develop=develop)
             except Document.DoesNotExist:
