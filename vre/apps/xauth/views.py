@@ -14,7 +14,7 @@ from vre.core.mixins import NextUrlMixin, AuthRedirectMixin
 class LoginView(NextUrlMixin, AuthRedirectMixin, FormView):
     template_name = 'xauth/login.html'
     form_class = LoginForm
-    success_url = '/'
+    success_url = reverse_lazy('documents:investor_document_download')
 
     def form_valid(self, form):
         login(self.request, form.user_cache)
