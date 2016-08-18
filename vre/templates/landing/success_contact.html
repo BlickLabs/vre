@@ -1,11 +1,14 @@
 {% extends 'base.html' %}
-
-{% block title %}
-	Mensaje Enviado
-{% endblock %}
-
+{% block title %}Mensaje enviado | VRE{% endblock %}
 {% block content %}
-	<h1>
-		El mensaje ya fue enviado :)
-	</h1>
+{% include "sections_navbar.html" %}
+<main id="sections-content">
+<div class="gray-container">
+  <div class="privacy-notice-container text-center" style="padding-top: 120px">
+    <h2>Tu mensaje fue enviado con éxito</h2>
+    <a href="/">Volver a la página principal</a>
+  </div>
+</div>
+
+</main>
 {% endblock %}
