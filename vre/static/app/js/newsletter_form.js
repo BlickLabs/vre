@@ -33,5 +33,5 @@
     };
   }
   $('#btn-newsletter').click(ajaxPOST('#footer-newsletter-form'));
-  $('#btn-newsletter-big').click(ajaxPOST('homepage-special-form'));
+  $('#btn-newsletter-big').click(ajaxPOST('#homepage-special-form'));
 }());
