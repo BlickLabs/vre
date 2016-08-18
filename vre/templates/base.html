@@ -45,71 +45,16 @@
   {% include "footer.html" %}
   {% block before_scripts %}
   {% endblock %}
+  <script>
+    var djangoURLs = {
+      suscribeToNewsletter: '{% url 'newsletter:suscribe' %}'
+    };
+  </script>
   <script src="{% static "js/bower_dependencies.min.js" %}"></script>
 	<script src="{% static "js/app.min.js" %}"></script>
 	<script>
 		$(document).on("keypress", "form", function(event) {
-		    return event.keyCode != 13;
-		});
-		// Footer Form
-		$('#btn-newsletter').click(function(){
-	    $.ajax({
-		    url: "{% url 'newsletter:suscribe' %}",
-	      type : 'POST',
-		    data: $('#footer-newsletter-form').serialize(),
-		    beforeSend: function(){
-			    ga('send','event','NewsFoot','ok');
-        },
-		    success: function (data){
-          if (data.status == 400) {
-            $('#newsletter-modal').removeClass('success').addClass('error');
-            $('#newsletter-modal .modal-title').text('Ocurrió un error');
-            $('#newsletter-modal .modal-body').html('Tu suscripción no pudo llevarse a cabo debido al siguiente error: <br><span class="semibold">' + data.detail + "</span>");
-          } else {
-            $('#newsletter-modal').removeClass('error').addClass('success');
-            $('#newsletter-modal .modal-title').text('Suscripción realizada con éxito');
-            $('#newsletter-modal .modal-body').text('Ya estas suscrito a nuestro Newsletter.');
-          }
-			  },
-			  error: function (data){
-          $('#newsletter-modal').removeClass('success').addClass('error');
-          $('#newsletter-modal .modal-title').text('Ocurrió un error');
-          $('#newsletter-modal .modal-body').text('Ocurrió un error inesperado y tu suscripción no pudo llevarse a cabo.');
-			  },
-        complete: function (data) {
-          $('#newsletter-modal').modal('show');
-        }
-	    });
-		});
-
-		$('#btn-newsletter-big').click(function(){
-	    $.ajax({
-		    url: "{% url 'newsletter:suscribe' %}",
-	      type : 'POST',
-		    data: $('#homepage-special-form').serialize(),
-		    beforeSend: function(){
-			    ga('send','event','NewsHead','ok');
-        },
-		    success: function (data){
-          if (data.status == 400) {
-            $('#newsletter-modal').removeClass('success').addClass('error');
-            $('#newsletter-modal .modal-title').text('Ocurrió un error');
-            $('#newsletter-modal .modal-body').html('Tu suscripción no pudo llevarse a cabo debido al siguiente error: <br><span class="semibold">' + data.detail + "</span>");
-          } else {
-            $('#newsletter-modal').removeClass('error').addClass('success');
-            $('#newsletter-modal .modal-title').text('Suscripción realizada con éxito');
-            $('#newsletter-modal .modal-body').text('Ya estas suscrito a nuestro Newsletter.');
-          }
-        },
-        error: function (data){
-          $('#newsletter-modal').removeClass('success').addClass('error');
-          $('#newsletter-modal .modal-title').text('Ocurrió un error');
-          $('#newsletter-modal .modal-body').text('Ocurrió un error inesperado y tu suscripción no pudo llevarse a cabo.');
-        },
-        complete: function (data) {
-          $('#newsletter-modal').modal('show');
-        }
-	    });
+	    return event.keyCode != 13;
 		});
 	</script>
   <script type="text/javascript">(function(){var ldk=document.createElement('script'); ldk.type='text/javascript'; ldk.async=true; ldk.src='http://weboptimizer.leadaki.com/weboptimizer/57a4fe27e4b0c1912c3e8d4e/57a4fe38e4b0c1912c3e8d5e.js' ; var s=document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ldk, s);})();</script>
