@@ -7,7 +7,7 @@ from . import views
 
 urlpatterns = [
 
-    url(regex='^develop/(?P<slug>.*)/documents/$',
-        view=views.DownloadDocumentView.as_view(),
-        name='dashboard_adult'),
+    url(regex='^investor/documents/$',
+        view=views.DownloadDocumentListView.as_view(),
+        name='investor_document_download'),
 ]
