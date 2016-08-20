@@ -46,8 +46,10 @@
   {% block before_scripts %}
   {% endblock %}
   <script>
+    {% url "developments:download_brochure" id=1 as download_brochure %}
     var djangoURLs = {
-      suscribeToNewsletter: '{% url 'newsletter:suscribe' %}'
+      suscribeToNewsletter: '{% url "newsletter:suscribe" %}',
+      downloadBrochure: {{ download_brochure|slice:'-2' }}
     };
   </script>
   <script src="{% static "js/bower_dependencies.min.js" %}"></script>
