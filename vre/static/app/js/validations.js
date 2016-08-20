@@ -9,7 +9,6 @@
     weekdaysShort: ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'],
     weekdaysMin: ['D', 'L', 'M', 'M', 'J', 'V', 'S']
   });
-  moment().isoWeekday(1);
   $('#visit-us-datepicker').datetimepicker({
     format: 'DD/MM/YYYY',
     inline: true,
@@ -27,6 +26,7 @@
     minDate: moment().tz("America/Mexico_City")
   });
   $('.visit-us-form').submit(function () {
-    $('.visit-us-form #hidden_date').val($('#visit-us-datepicker').data('DateTimePicker').date()['_d']);
+    var dateValue = moment($('#visit-us-datepicker').data('DateTimePicker').date()['_d']);
+    $('.visit-us-form #hidden_date').val(dateValue.format('DD/MM/YYYY'));
   });
 }());
