@@ -326,6 +326,19 @@ footer
     display none
 
   .homepage-cover .homepage-menu.fix-in-top
+    .menu-trigger
+      background none
+      border none
+      color $orange
+      display block
+      float right
+      font-size 32px
+      margin-right 16px
+      margin-top 7px
+
+    #navbar-trigger:checked ~ .menu-list
+        right 0
+
     .logo-container
       display none !important
 
@@ -334,8 +347,9 @@ footer
       height 100vh
       overflow-y auto
       position fixed
-      right 0
+      right -280px
       top 0
+      transition right 0.2s
       width 280px
       z-index 11
 
