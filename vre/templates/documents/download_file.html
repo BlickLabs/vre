@@ -1,44 +1,36 @@
 {% extends 'base.html' %}
-
-{% block title %}
-	Descargar archivo
-{% endblock %}
-
+{% block title %}Descargar archivo | VRE México{% endblock %}
 {% block content %}
-	<h1>
-		Descargar un documeto
-	</h1>
-
-	{% for development in developments %}
+{% include "sections_navbar.html" %}
+<main id="sections-content">
+	<div class="gray-container investor-documents">
 		<h2>
-			{{ development.name }}
+			Lista de documentos
 		</h2>
-		<table>
-		<tr>
-			<th>
-				Nombre
-			</th>
-			<th>
-				Archivo
-			</th>
-		</tr>
-
-		{% for document in development.document_set.all %}
-			<tr>
-				<td>
-					{{ document.title }}
-				</td>
-				<td>
-					<a href="{% url 'developments:download_document' id=document.id %}">
-						Archivo
-					</a>
-
-				</td>
-			</tr>
-		{% endfor %}
-
-	</table>
-	{% endfor %}
-
-
+		<div class="table-responsive">
+	    <table class="table dashboard-history-table">
+	      <thead>
+	        <tr>
+	          <th>Desarrollo</th>
+	          <th>Nombre del archivo</th>
+	          <th></th>
+	        </tr>
+	      </thead>
+	      <tbody>
+				{% for development in developments %}
+					{% for document in development.document_set.all %}
+					<tr>
+						<td>{%if forloop.counter == 1%}<span class="semibold">{{ development.name }}</span>{%endif%}</td>
+						<td>{{ document.title }}</td>
+						<td><a class="fa fa-download download-document" href="{% url 'developments:download_document' id=document.id %}">
+							Descargar
+						</a></td>
+					</tr>
+					{% endfor %}
+				{% endfor %}
+		    </tbody>
+			</table>
+		</div>
+	</div>
+</main>
 {% endblock %}
