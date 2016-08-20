@@ -12,14 +12,17 @@
       <img class="hide-in-fixed" src="{% static "img/icons/vre_white_logo.png" %}" alt="VRE Logo" />
       <span>VERTICAL REAL ESTATE</span>
     </div>
-    <ul class="menu-list">
-      <li class="active"><a href="#">INICIO</a></li>
-      <li><a href="{% url 'landing:developments' %}">DESARROLLOS</a></li>
-      <li><a href="{% url 'landing:about_us' %}">NOSOTROS</a></li>
-      <li><a href="{% url 'xauth:login' %}">INVERSIONISTAS</a></li>
-      <li><a href="{% url 'landing:contact' %}">CONTACTO</a></li>
-      <li><a href="{% url 'landing:visit_us' %}">VISÍTANOS</a></li>
-    </ul>
+    <div class="menu-list">
+      <a href="/" class="responsive-menu-logo"><img src="{% static "img/icons/vre_orange_logo.png" %}" alt="VRE Logo" /></a>
+      <ul>
+        <li class="active"><a href="#">INICIO</a></li>
+        <li><a href="{% url 'landing:developments' %}">DESARROLLOS</a></li>
+        <li><a href="{% url 'landing:about_us' %}">NOSOTROS</a></li>
+        <li><a href="{% url 'xauth:login' %}">INVERSIONISTAS</a></li>
+        <li><a href="{% url 'landing:contact' %}">CONTACTO</a></li>
+        <li><a href="{% url 'landing:visit_us' %}">VISÍTANOS</a></li>
+      </ul>
+    </div>
   </div>
   <div class="white-box text-center">
     <div class="text-left">
