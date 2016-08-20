@@ -14,9 +14,12 @@
   <div class="gray-container development-download-brochure">
     <div>
       <span>Si quieres más información, descarga aquí nuestro brochure de ventas</span>
-      <input type="email" id="download-brochure-email" placeholder="Correo electrónico">
-      <input type="hidden" name="source" value="indiana">
-      <a href class="vre-inverse-button" id="download-brochure-button">Conoce más</a>
+      <form id="download-brochure-form">
+        {% csrf_token %}
+        <input type="email" id="download-brochure-email" placeholder="Correo electrónico" name="email">
+        <input type="hidden" name="source" value="dakota">
+        <a href class="vre-inverse-button" id="download-brochure-button">Conoce más</a>
+      </form>
     </div>
   </div>
   <div class="development-360-video text-center">
@@ -193,19 +196,6 @@
 {% block after_scripts %}
 <script>
   insertMap([19.388950, -99.178761], 'Dakota 322');
-	$("#download-brochure-button").on( "click", function(e) {
-	  e.preventDefault();
-	  $.ajax({
-	    url: "{% url 'newsletter:suscribe' %}",
-      type : 'POST',
-	    data: $('#indiana-brochure-form').serialize(),
-	    beforeSend: function() {
-		    ga('send','event','BrochureDakota','ok');
-	    },
-		  complete: function(data) {
-        window.location.href = "{% url 'developments:download_brochure' id=2 %}";
-      }
-	  });
-	});
+  addBrochureListener('BrochureDakota', 2);
 </script>
 {% endblock %}
