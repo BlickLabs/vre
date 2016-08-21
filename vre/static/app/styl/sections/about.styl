@@ -69,3 +69,57 @@
     .gray-container
       line-height 1.7
       padding 60px 130px 60px 60px
+      
+@media $multiSmall
+  .about-us-cover
+    font-size 22px
+    height auto
+    min-height auto
+
+    p
+      margin 0 auto
+      padding 90px 0
+      width 80%
+
+  .about-us-container .about-us-content
+    margin 0
+    
+    .introductory-text
+      .image-part
+        margin-top -90px
+        
+        img
+          width 80px
+          
+      .text-part
+        padding 40px
+        
+        p:nth-child(2)
+          font-size 20px
+    
+    .secondary-cover
+      height 20vh
+      min-height 150px
+      
+@media $extraSmall
+  .about-us-cover
+    font-size 20px
+
+    p
+      padding 40px 0
+
+  .about-us-container .about-us-content
+    margin 0
+    
+    .introductory-text
+      .image-part
+        display none
+          
+      .text-part
+        padding 40px
+        
+        p:nth-child(2)
+          font-size 18px
+
+    .gray-container
+      padding 40px
