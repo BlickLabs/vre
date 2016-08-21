@@ -3,7 +3,11 @@
   var mobile = window.matchMedia('(max-width: 1100px)');
 
   function detectTouch(e) {
-    if (!$(e.target).is('.homepage-cover .menu-list') && !$(e.target).closest('.homepage-cover .menu-list').length && !$(e.target).is('#navbar-trigger') && $('#navbar-trigger').prop('checked') === true) {
+    if ($('.homepage-cover').length) {
+      if (!$(e.target).is('.homepage-cover .menu-list') && !$(e.target).closest('.homepage-cover .menu-list').length && !$(e.target).is('#navbar-trigger') && $('#navbar-trigger').prop('checked') === true) {
+        $('#navbar-trigger').prop('checked', false);
+      }
+    } else if (!$(e.target).is('.navbar-menu-list') && !$(e.target).closest('.navbar-menu-list').length && !$(e.target).is('#navbar-trigger') && $('#navbar-trigger').prop('checked') === true) {
       $('#navbar-trigger').prop('checked', false);
     }
   }
@@ -28,6 +32,12 @@
       $(window).scroll(function () {
         checkScroll();
       });
+    } else {
+      if (mobile.matches) {
+        document.addEventListener('touchstart', detectTouch, false);
+      } else {
+        document.removeEventListener('touchstart', detectTouch, false);
+      }
     }
   }
 

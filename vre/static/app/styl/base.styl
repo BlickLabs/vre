@@ -124,6 +124,12 @@ textarea.vre-input
   top 0
   width 100%
   z-index 10
+  
+  #navbar-trigger
+    display none
+  
+  .menu-trigger
+    display none
 
   &-logo
     display inline-block
@@ -138,6 +144,9 @@ textarea.vre-input
     font-weight $fontSemiBold
     list-style none
     margin-left -20px
+    
+    .responsive-menu-logo
+      display none
     
     li
       display inline-block
@@ -379,6 +388,68 @@ footer
           
           a
             color white !important
+        &.phone
+          background $orange
+          
+        &:not(:first-child)::before
+          content '' !important
+          margin 0 !important
+          
+  .navbar-menu
+    .menu-trigger
+      background none
+      border none
+      color $orange
+      display block
+      float right
+      font-size 32px
+      margin-right 16px
+      margin-top 5.5px
+
+    #navbar-trigger:checked ~ .navbar-menu-list
+        right 0
+
+    &-orange-box, >a img
+      display none !important
+
+    &-list
+      background #fafafa
+      height 100vh
+      overflow-y auto
+      position fixed
+      right -280px
+      top 0
+      transition right 0.2s
+      width 280px
+      z-index 11
+
+      .responsive-menu-logo
+        display block !important
+        padding 20px 30px 30px 30px
+        text-align right
+        
+        img
+          height 60px
+          
+      ul
+        padding 0
+        margin-top 10px
+      
+      li
+        display block
+        font-size 14px
+        text-align right
+        
+        a
+          display block
+          padding 15px 30px
+        
+        &.active, &:hover
+          background rgba($orange, 0.8)
+          
+          a
+            color white !important
+            
         &.phone
           background $orange
           
