@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*
 
 from django.contrib import admin
+from django.conf import settings
 
 from vre.core.utils import export_as_xls
 from . import models
@@ -14,7 +15,8 @@ class DocumentAdmin(admin.ModelAdmin):
     export_as_xls.short_description = "Export selected objects to XLS"
 
 
-@admin.register(models.Brochure)
-class BrochureAdmin(admin.ModelAdmin):
-    actions = [export_as_xls]
-    export_as_xls.short_description = "Export selected objects to XLS"
+if settings.DEBUG:
+    @admin.register(models.Brochure)
+    class BrochureAdmin(admin.ModelAdmin):
+        actions = [export_as_xls]
+        export_as_xls.short_description = "Export selected objects to XLS"
