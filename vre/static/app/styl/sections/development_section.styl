@@ -125,7 +125,7 @@
     position absolute
     top 50%
     transform translateY(-50%)
-    z-index 10
+    z-index 9
     
     &::before
       color white
@@ -223,15 +223,16 @@
   .transport-items-container
     center-block()
     margin-top 35px
+    max-width 890px
     text-align center
-    width 890px
+    width 80%
     
     .transport-items-column
       display inline-block
-      max-width auto
+      max-width 430px
       text-align left
       vertical-align middle
-      width 430px
+      width 48.5%
       
       &:nth-child(2)
         float right
@@ -252,3 +253,95 @@
   img
     margin-left 5px
     width 180px
+    
+@media $multiSmall
+  .development-cover
+    min-height 300px
+    
+  .development-header-text
+    font-size 21px
+    margin-bottom 75px
+    margin-top 75px
+    width 80%
+    
+  .development-characteristics
+    font-size 19px
+
+  .development-drawings
+    display block
+    margin 0 0 10px 0
+    
+    .drawing-selectors
+      display flex
+      justify-content center
+      width 100%
+        
+    .drawing-picture
+      float left
+      height 430px
+      width 50%
+      
+  .development-nearby-places
+    display block
+    
+    .location-map
+      display block
+      height 50vh
+      min-height 400px
+      width 100%
+      
+    .points-of-interest
+      padding 30px
+      text-align center
+      
+      ul
+        font-size 14px
+        text-align left
+        
+        li
+          &:not(:first-child)
+            margin-top 10px
+
+          img
+            height 22px
+            
+  .development-public-transport
+    padding 40px 0
+
+    .transport-items-container
+      .transport-items-column
+        display block
+        width 100%
+        
+        &:nth-child(2)
+          float none
+          margin-top 15px
+          
+@media screen and (max-width: 767px)
+  .development-characteristics
+    .development-characteristics-items
+      .development-characteristics-item
+        display block
+        width 100%
+          
+@media $extraSmall
+  .development-header-text
+    font-size 19px
+    margin-bottom 50px
+    margin-top 50px
+    
+  .development-characteristics
+    font-size 17px
+
+  .development-drawings
+    .drawing-selectors
+      .drawing-selector
+        font-size 23px
+        height 100px
+        line-height 100px
+        
+    .drawing-picture
+      float none
+      height auto
+      padding-bottom 10px 0
+      width 100%
