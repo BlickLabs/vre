@@ -16,8 +16,6 @@ class DownloadDocumentListView(LoginRequiredMixin, View):
         # If the develop is in the user developments of the user we search the
         # documents, else, raise permission denied
         developments = request.user.developments.all()
-        for develop in developments:
-            print develop.document_set.all()
         documents = Document.objects.all()
         ctx = {
             # 'documents': documents,
