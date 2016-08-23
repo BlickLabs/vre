@@ -18,14 +18,16 @@
 	      </thead>
 	      <tbody>
 				{% for development in developments %}
-					{% for document in development.document_set.all %}
-					<tr>
-						<td>{%if forloop.counter == 1%}<span class="semibold">{{ development.name }}</span>{%endif%}</td>
-						<td>{{ document.title }}</td>
-						<td><a class="fa fa-download download-document" href="{% url 'developments:download_document' id=document.id %}">
-							Descargar
-						</a></td>
-					</tr>
+					{% for document in documents %}
+						{% if document.develop == development %}
+							<tr>
+								<td><span class="semibold">{{ development.name }}</span></td>
+								<td>{{ document.title }}</td>
+								<td><a class="fa fa-download download-document" href="{% url 'developments:download_document' id=document.id %}">
+									Descargar
+								</a></td>
+							</tr>
+						{% endif %}
 					{% endfor %}
 				{% endfor %}
 		    </tbody>
