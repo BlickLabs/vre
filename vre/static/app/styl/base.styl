@@ -430,10 +430,11 @@ footer
         &.phone
           background $orange
           color white
+          display block
           font-size 16px
           padding 18px 30px
           
-        &:not(:first-child)::before
+        &:not(:first-child):not(:last-child)::before
           content '' !important
           margin 0 !important
           
@@ -495,9 +496,10 @@ footer
         &.phone
           background $orange
           color white
+          display block
           font-size 16px
           padding 18px 30px
 
-        &:not(:first-child)::before
+        &:not(:first-child):not(:last-child)::before
           content '' !important
           margin 0 !important

@@ -75,8 +75,11 @@
 
       li
         display inline-block
+      
+        &.phone
+          display none
         
-        &:not(:first-child)::before
+        &:not(:first-child):not(:last-child)::before
           content ' | ' !important
         
         a
