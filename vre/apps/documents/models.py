@@ -11,6 +11,11 @@ from private_media.storages import PrivateMediaStorage
 from vre.apps.developments.models import Develop
 
 
+TYPE_CHOICES = (
+    ('client', _('Client')),
+    ('investor', _('Investor')),
+)
+
 def get_file_path(instance, filename):
     ext = filename.split('.')[-1]
     filename = "%s.%s" % (uuid.uuid4(), ext)
@@ -40,6 +45,13 @@ class Document(models.Model):
     develop = models.ForeignKey(
         Develop,
         verbose_name=_('Develop')
+    )
+    user_type = models.CharField(
+        _('User type'),
+        max_length=20,
+        choices=TYPE_CHOICES,
+        default='client',
+        blank=False,
     )
 
     class Meta:
