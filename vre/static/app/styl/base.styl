@@ -166,7 +166,10 @@ textarea.vre-input
     li
       display inline-block
       
-      &:not(:first-child)::before
+      &.phone
+        display none
+      
+      &:not(:first-child):not(:last-child)::before
         content ' | ' !important
         font-size 15px
         margin 0 3px
@@ -426,6 +429,9 @@ footer
 
         &.phone
           background $orange
+          color white
+          font-size 16px
+          padding 18px 30px
           
         &:not(:first-child)::before
           content '' !important
@@ -485,10 +491,13 @@ footer
           
           a
             color white !important
-            
+
         &.phone
           background $orange
-          
+          color white
+          font-size 16px
+          padding 18px 30px
+
         &:not(:first-child)::before
           content '' !important
           margin 0 !important
