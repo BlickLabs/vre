@@ -10,5 +10,6 @@ from . import models
 @admin.register(models.Subscriber)
 class SuscriberAdmin(admin.ModelAdmin):
     list_display = ('email', 'name', 'phone', 'source')
+    list_filter = ('source',)
     actions = [export_as_xls]
     export_as_xls.short_description = "Export selected objects to XLS"
