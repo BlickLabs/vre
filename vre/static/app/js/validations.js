@@ -73,7 +73,7 @@
         email: true
       },
       phone: {
-        required: true
+        required: false
       },
       message: {
         required: false
