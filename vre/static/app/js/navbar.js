@@ -1,6 +1,6 @@
 (function () {
   'use strict';
-  var mobile = window.matchMedia('(max-width: 1100px)');
+  var mobile = window.matchMedia('(max-width: 830px)');
 
   function detectTouch(e) {
     if ($('.homepage-cover').length) {
@@ -13,15 +13,18 @@
   }
 
   function checkScroll() {
-    if ($(window).scrollTop() >= 30) {
-      $('.phone-box').addClass('fix-in-top');
-      $('.homepage-menu').addClass('fix-in-top');
-      if (mobile.matches) {
-        document.addEventListener('touchstart', detectTouch, false);
-      }
-    } else {
+    if (mobile.matches) {
+      document.addEventListener('touchstart', detectTouch, false);
       $('.phone-box').removeClass('fix-in-top');
       $('.homepage-menu').removeClass('fix-in-top');
+    } else {
+      if ($(window).scrollTop() >= 30) {
+        $('.phone-box').addClass('fix-in-top');
+        $('.homepage-menu').addClass('fix-in-top');
+      } else {
+        $('.phone-box').removeClass('fix-in-top');
+        $('.homepage-menu').removeClass('fix-in-top');
+      }
       document.removeEventListener('touchstart', detectTouch, false);
     }
   }

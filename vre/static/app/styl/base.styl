@@ -370,19 +370,28 @@ footer
     height 70vh
     
 @media screen and (max-width: 830px)
-  .phone-box.fix-in-top
+  .phone-box
     display none
 
-  .homepage-cover .homepage-menu.fix-in-top
+  .homepage-cover .homepage-menu
+    background white
+    height 58px
+    margin-top 0 !important
+    max-width 100% !important
+    position fixed
+    top 0
+    width 100% !important
+    z-index 11
+
     .menu-trigger
       background none
       border none
       color $orange
-      display block
+      display inline-block !important
       float right
       font-size 32px
       margin-right 16px
-      margin-top 7px
+      margin-top 13px
 
     #navbar-trigger:checked ~ .menu-list
         right 0
@@ -393,6 +402,7 @@ footer
     .menu-list
       background #fafafa
       height 100vh
+      margin-top 0 !important
       overflow-y auto
       position fixed
       right -280px
@@ -410,16 +420,18 @@ footer
           height 60px
           
       ul
+        margin-top 10px
         padding 0
       
       li
-        display block
+        display block !important
         font-size 14px
         text-align right
         
         a
-          display block
-          padding 18px 30px
+          color black !important
+          padding 15px 30px
+          height 100%
         
         &.active, &:hover
           background rgba($orange, 0.8)
