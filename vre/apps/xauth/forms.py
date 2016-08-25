@@ -18,7 +18,7 @@ class LoginForm(forms.Form):
         widget=forms.TextInput(
             attrs={
                 'class': 'vre-input',
-                'placeholder': 'Correo electrónico',
+                'placeholder': 'Email',
                 'required': 'true',
             }
         ),
@@ -29,7 +29,7 @@ class LoginForm(forms.Form):
         widget=forms.PasswordInput(
             attrs={
                 'class': 'vre-input',
-                'placeholder': 'Contraseña',
+                'placeholder': 'Password',
                 'required': 'true',
             }
         ),
