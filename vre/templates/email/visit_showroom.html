@@ -5,9 +5,11 @@
 	<p>
 		Correo electronico: {{ email }}
 	</p>
-	<p>
-		Telefono: {{ phone }}
-	</p>
+	{% if phone %}
+		<p>
+			Telefono: {{ phone }}
+		</p>
+	{% endif %}
 	<p>
 	Fecha : {{ date }}
 	</p>
