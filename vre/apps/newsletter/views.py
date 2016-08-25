@@ -6,6 +6,7 @@ from django.http import JsonResponse
 from django.views.generic import View
 from django.conf import settings
 
+from vre.core.utils import send_email
 from .models import Subscriber
 
 import requests
@@ -15,6 +16,7 @@ import urlparse
 
 class NewsletterView(View):
     def post(self, request):
+        source = request.POST.get('source')
         list_id = self.get_list_id(request)
         endpoint = urlparse.urljoin(
             settings.MAILCHIMP_API_ROOT, 'lists/%s/members/' % list_id
@@ -35,6 +37,31 @@ class NewsletterView(View):
                 source=request.POST.get('source'),
             )
             subscriber.save()
+
+            if source == 'indiana' or source == 'dakota':
+                context = {
+                    'newsletter': 'False',
+                    'brochure': 'True',
+                    'brochure_title': source,
+                    'email': request.POST.get('email')
+                }
+            else:
+                context = {
+                    'newsletter': 'True',
+                    'brochure': 'False',
+                    'brochure_title': None,
+                    'email': request.POST.get('email')
+                }
+
+            send_email(
+                subject='email/subjects/newsletter.txt',
+                body='email/newsletter.html',
+                from_email="VRE - Notificacion <postmaster@%s>" % (
+                    settings.MAILGUN_SERVER_NAME
+                ),
+                to_email=[settings.DEFAULT_EMAIL_TO],
+                context=context
+            )
         return JsonResponse(response.json())
 
     def get_list_id(self, request):
