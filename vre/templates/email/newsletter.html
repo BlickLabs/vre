@@ -1,0 +1,12 @@
+{% block content %}
+	{% if newsletter == 'True' %}
+		<p>
+			Un usuario se registro al newsletter, su correo es {{ email }}
+		</p>
+	{% endif %}
+	{% if brochure == 'True'%}
+		<p>
+			Un usuario descargo el brochure de {{ brochure_title }}, su correo es {{ email }}
+		</p>
+	{% endif %}
+{% endblock %}
