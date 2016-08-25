@@ -38,10 +38,11 @@ class ContactForm(forms.Form):
         widget=forms.TextInput(
             attrs={
                 'class': 'vre-input',
-                'placeholder': 'Teléfono',
+                'placeholder': 'Teléfono (opcional)',
                 'required': 'true',
             }
         ),
+        required=False,
     )
     message = forms.CharField(
         validators=[validators.eval_blank],
