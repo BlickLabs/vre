@@ -294,6 +294,84 @@
     .white-box
       left 40px
 
+@media screen and (max-width: 830px)
+  .homepage-cover .homepage-menu
+    background white
+    height 58px
+    margin-top 0 !important
+    max-width 100%
+    position fixed
+    top 0
+    width 100%
+    z-index 11
+
+    .menu-trigger
+      background none
+      border none
+      color $orange
+      display inline-block
+      float right
+      font-size 32px
+      margin-right 16px
+      margin-top 13px
+
+    #navbar-trigger:checked ~ .menu-list
+        right 0
+
+    .logo-container
+      display none !important
+
+    .menu-list
+      background #fafafa
+      height 100vh
+      margin-top 0 !important
+      overflow-y auto
+      position fixed
+      right -280px
+      top 0
+      transition right 0.2s
+      width 280px
+      z-index 11
+
+      .responsive-menu-logo
+        display block !important
+        padding 20px 30px 30px 30px
+        text-align right
+        
+        img
+          height 60px
+          
+      ul
+        margin-top 10px
+        padding 0
+      
+      li
+        display block
+        font-size 14px
+        text-align right
+        
+        a
+          color black
+          padding 15px 30px
+          height 100%
+        
+        &.active, &:hover
+          background rgba($orange, 0.8)
+          
+          a
+            color white
+
+        &.phone
+          background $orange
+          color white
+          display block
+          font-size 16px
+          padding 18px 30px
+          
+        &:not(:first-child):not(:last-child)::before
+          content '' !important
+          margin 0 !important
+     
 @media $smallBase
   .homepage-developments,
   .homepage-contact-divider span
