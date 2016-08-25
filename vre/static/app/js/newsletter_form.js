@@ -11,7 +11,6 @@
           ga('send', 'event', gaEventName, 'ok');
         },
         success: function (data) {
-          console.log(data);
           if (data.status === 'suscribed') {
             $('#newsletter-modal').removeClass('error').addClass('success');
             $('#newsletter-modal .modal-title').text('Suscripción realizada con éxito');
