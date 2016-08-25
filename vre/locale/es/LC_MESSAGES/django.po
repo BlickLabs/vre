@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-02 11:00-0500\n"
+"POT-Creation-Date: 2016-08-23 17:20-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,15 +18,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: config/settings/base.py:89
+#: config/settings/base.py:90
 msgid "English"
 msgstr "Ingles"
 
-#: config/settings/base.py:90
+#: config/settings/base.py:91
 msgid "Spanish"
 msgstr "Español"
 
-#: vre/apps/developments/models.py:11
+#: vre/apps/developments/models.py:11 vre/apps/newsletter/models.py:15
 msgid "Name"
 msgstr "Nombre"
 
@@ -34,7 +34,8 @@ msgstr "Nombre"
 msgid "Slug"
 msgstr "Slug"
 
-#: vre/apps/developments/models.py:25 vre/apps/documents/models.py:36
+#: vre/apps/developments/models.py:25 vre/apps/documents/models.py:42
+#: vre/apps/documents/models.py:62
 msgid "Develop"
 msgstr "Desarrollo"
 
@@ -42,21 +43,49 @@ msgstr "Desarrollo"
 msgid "Developments"
 msgstr "Desarrollos"
 
-#: vre/apps/documents/models.py:22
+#: vre/apps/documents/models.py:28
 msgid "Title"
 msgstr "Titulo"
 
-#: vre/apps/documents/models.py:28
+#: vre/apps/documents/models.py:34 vre/apps/documents/models.py:55
 msgid "File"
 msgstr "Archivo"
 
-#: vre/apps/documents/models.py:40
+#: vre/apps/documents/models.py:46
 msgid "Document"
 msgstr "Documento"
 
-#: vre/apps/documents/models.py:41
+#: vre/apps/documents/models.py:47
 msgid "Documents"
 msgstr "Documentos"
+
+#: vre/apps/documents/models.py:66
+msgid "Brochure"
+msgstr "Brochure"
+
+#: vre/apps/documents/models.py:67
+msgid "Brochures"
+msgstr "Brochures"
+
+#: vre/apps/newsletter/models.py:10
+msgid "Email"
+msgstr "Correo electrónico"
+
+#: vre/apps/newsletter/models.py:21
+msgid "Phone"
+msgstr "Telefono"
+
+#: vre/apps/newsletter/models.py:27
+msgid "Source"
+msgstr "Origen"
+
+#: vre/apps/newsletter/models.py:35
+msgid "Subscriber"
+msgstr "Suscriptor"
+
+#: vre/apps/newsletter/models.py:36
+msgid "Subscribers"
+msgstr "Suscriptores"
 
 #: vre/apps/users/forms.py:12
 msgid "Password"
@@ -65,6 +94,16 @@ msgstr "Contraseña"
 #: vre/apps/users/forms.py:15
 msgid "Password confirmation"
 msgstr "Confirmar contraseña"
+
+#: vre/apps/users/forms.py:42
+msgid ""
+"Raw passwords are not stored, so there is no way to see this user's "
+"password, but you can change the password using <a href='../password/'>this "
+"form</a>."
+msgstr ""
+"Las contraseñas no se almacenan en texto plano por lo que no hay forma de verlas "
+"pero puedes cambiar la contraseña usando <a href='../password/'>este "
+"formulario</a>."
 
 #: vre/apps/users/models.py:13
 msgid "Client"
@@ -100,7 +139,7 @@ msgstr "Designa el usuario como activo en la plataforma"
 
 #: vre/apps/users/models.py:46
 msgid "Join Date"
-msgstr "Fecha de registor"
+msgstr "Fecha de registro"
 
 #: vre/apps/users/models.py:60
 msgid "User"

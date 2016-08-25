@@ -10,9 +10,10 @@ from . import models
 
 @admin.register(models.Document)
 class DocumentAdmin(admin.ModelAdmin):
-    list_display = ('title',)
+    list_display = ('title', 'develop', 'user_type')
     actions = [export_as_xls]
     export_as_xls.short_description = "Export selected objects to XLS"
+    list_filter = ('develop', 'user_type')
 
 
 if settings.DEBUG:
