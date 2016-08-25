@@ -4,8 +4,7 @@
 from django.conf import settings
 from django.http import JsonResponse
 from django.views.generic import View
-
-from vre.core.config import MailChimpConfig
+from django.conf import settings
 
 from .models import Subscriber
 
@@ -16,20 +15,17 @@ import urlparse
 
 class NewsletterView(View):
     def post(self, request):
-        config = MailChimpConfig()
-        if request.POST.get('source') == 'indiana':
-            list_id = settings.MAILCHIMP_INDIANA_LIST
-        elif request.POST.get('source') == 'dakota':
-            list_id = settings.MAILCHIMP_DAKOTA_LIST
-        else :
-            list_id = settings.MAILCHIMP_NEWSLETTER_LIST
-        endpoint = urlparse.urljoin(config.api_root, 'lists/%s/members/' % list_id)
+        list_id = self.get_list_id(request)
+        endpoint = urlparse.urljoin(
+            settings.MAILCHIMP_API_ROOT, 'lists/%s/members/' % list_id
+        )
         data = {
             "email_address": request.POST.get('email'),
             "status": "subscribed",
         }
         data = json.dumps(data)
-        response = requests.post(endpoint, auth=('apikey', config.apikey), data=data)
+        response = requests.post(
+            endpoint, auth=('apikey', settings.MAILCHIMP_API_KEY), data=data)
         d = json.loads(response.content)
         if d.get('status') == 'subscribed':
             subscriber = Subscriber(
@@ -40,3 +36,14 @@ class NewsletterView(View):
             )
             subscriber.save()
         return JsonResponse(response.json())
+
+    def get_list_id(self, request):
+        if request.POST.get('source') == 'indiana':
+            list_id = settings.MAILCHIMP_INDIANA_LIST
+        elif request.POST.get('source') == 'dakota':
+            list_id = settings.MAILCHIMP_DAKOTA_LIST
+        else:
+            list_id = settings.MAILCHIMP_NEWSLETTER_LIST
+
+        return list_id
+
