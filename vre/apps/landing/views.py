@@ -12,7 +12,6 @@ from django.views.generic import FormView, TemplateView, View
 
 from vre.apps.landing.forms import ContactForm
 from vre.apps.newsletter.models import Subscriber
-from vre.core.config import MailChimpConfig
 from vre.core.utils import send_email
 
 
@@ -52,16 +51,17 @@ class VisitUsView(View):
             to_email=[settings.DEFAULT_EMAIL_TO],
             context=ctx
         )
-        config = MailChimpConfig()
-        endpoint = urlparse.urljoin(config.api_root,
-                                    'lists/%s/members/' % settings.MAILCHIMP_NEWSLETTER_LIST)
+        endpoint = urlparse.urljoin(
+            settings.MAILCHIMP_API_ROOT,
+            'lists/%s/members/' % settings.MAILCHIMP_NEWSLETTER_LIST
+        )
         data = {
             "email_address": request.POST.get('email'),
             "status": "subscribed",
         }
         data = json.dumps(data)
-        response = requests.post(endpoint, auth=('apikey', config.apikey),
-                                 data=data)
+        response = requests.post(
+            endpoint, auth=('apikey', settings.MAILCHIMP_API_KEY), data=data)
         d = json.loads(response.content)
         if d.get('status') == 'subscribed':
             subscriber = Subscriber(
