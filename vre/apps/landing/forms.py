@@ -9,7 +9,6 @@ from django.conf import settings
 
 from vre.apps.newsletter.models import Subscriber
 from vre.core import validators
-from vre.core.config import MailChimpConfig
 from vre.core.utils import send_email
 
 
@@ -53,6 +52,7 @@ class ContactForm(forms.Form):
                 'required': 'false',
             }
         ),
+        required=False,
     )
     source = forms.CharField()
 
@@ -77,16 +77,17 @@ class ContactForm(forms.Form):
             to_email=[settings.DEFAULT_EMAIL_TO],
             context=ctx
         )
-        config = MailChimpConfig()
-        endpoint = urlparse.urljoin(config.api_root,
-                                    'lists/%s/members/' % settings.MAILCHIMP_NEWSLETTER_LIST )
+        endpoint = urlparse.urljoin(
+            settings.MAILCHIMP_API_ROOT,
+            'lists/%s/members/' % settings.MAILCHIMP_NEWSLETTER_LIST
+        )
         data = {
             "email_address": cleaned_data.get('email'),
             "status": "subscribed",
         }
         data = json.dumps(data)
-        response = requests.post(endpoint, auth=('apikey', config.apikey),
-                                 data=data)
+        response = requests.post(
+            endpoint, auth=('apikey', settings.MAILCHIMP_API_KEY), data=data)
         d = json.loads(response.content)
         if d.get('status') == 'subscribed':
             subscriber = Subscriber(
