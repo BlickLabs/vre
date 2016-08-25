@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static from staticfiles %}
-{% block title %}Dakota 322 | VRE México{% endblock %}
+{% block title %}Dakota 322 | VRE Mexico{% endblock %}
 {% block content %}
 {% include "sections_navbar.html" %}
 <main id="sections-content">
@@ -9,7 +9,7 @@
   </div>
   <div class="development-header-text">
   Vive a media cuadra del parque Alfonso Esparza.
-  Contamos con departamentos desde 74 a 114 m2.
+  Contamos con departamentos desde 74 a 114 m2
   </div>
   <div class="gray-container development-download-brochure">
     <div>
@@ -31,8 +31,7 @@
     </div>
   </div>
   <div class="development-characteristics">
-    Características<br>
-    de los departamentos:
+    <div class="text-center">Características de los departamentos</div>
     <ul class="development-characteristics-items">
       <li class="development-characteristics-item">
         <img src="{% static "img/icons/living_room_icon.png" %}" alt="">
@@ -44,15 +43,11 @@
       </li>
       <li class="development-characteristics-item">
         <img src="{% static "img/icons/full_bathroom_icon.png" %}" alt="">
-        <span>Dos Baños completos</span>
+        <span>Dos baños y medio</span>
       </li>
       <li class="development-characteristics-item">
         <img src="{% static "img/icons/dinning_room_icon.png" %}" alt="">
         <span>Comedor</span>
-      </li>
-      <li class="development-characteristics-item">
-        <img src="{% static "img/icons/bathroom_icon.png" %}" alt="">
-        <span>Un Medio baño</span>
       </li>
       <li class="development-characteristics-item">
         <img src="{% static "img/icons/closet_icon.png" %}" alt="">
@@ -75,6 +70,7 @@
         <span>Uno o dos cajones de estacionamiento</span>
       </li>
     </ul>
+    <div class="note">* Tiempo estimado a las 9:00 am entre semana</div>
   </div>
   <div class="development-carousel-container text-center">
     <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_01.jpg" %}')">
@@ -121,11 +117,11 @@
       <ul>
         <li>
           <img src="{% static "img/tmp/icons/british_college_icon.png" %}" alt="">
-          <span>Colegio británico: 3 min (500m)</span>
+          <span>Colegio británico: 3 min (500 m)</span>
         </li>
         <li>
           <img src="{% static "img/tmp/icons/aqua_gym_icon.png" %}" alt="">
-          <span>Aqua Gym: 4 min (280m)</span>
+          <span>Aqua Gym: 4 min (280 m)</span>
         </li>
         <li>
           <img src="{% static "img/tmp/icons/hip_icon.png" %}" alt="">
@@ -156,7 +152,7 @@
       <div class="transport-items-column">
         <div class="transport-item">
           <span class="semibold">Metrobús: </span>
-          Parada Colonia del Valle (450m)
+          Parada Colonia del Valle (450 m)
         </div>
         <div class="transport-item">
           <span class="semibold">Metro: </span>
@@ -166,27 +162,24 @@
           <span class="semibold">Ecobici: </span>
           Estación 349 (350 m)
         </div>
-        <div class="transport-item">
-          <span class="semibold">Ciclovía: </span>
-          Calle Dakota (200 m)
-        </div>
       </div>
       <div class="transport-items-column">
-        <div class="transport-item">
-          Vida diaria no requiere el uso del coche
-        </div>
         <div class="transport-item">
           <span class="semibold">Walking Score ® : </span>
           97 (Un paraíso para el peatón)
         </div>
         <div class="transport-item">
-          <span class="semibold">Descarga la App <img class="appstore-download" src="{% static "img/icons/appstore_icon.png" %}" alt=""></span>
+          <span class="semibold">Ciclovía: </span>
+          Calle Dakota (200 m)
         </div>
       </div>
     </div>
+    <div class="transport-separated-text">
+      Vida diaria no requiere el uso del coche
+    </div>
   </div>
   <div class="development-built-by">
-    Construido por <a href="http://www.grupozago.com.mx"><img src="{% static "img/icons/zago-logo.png" %}" alt=""></a>
+    Construido por <img src="{% static "img/icons/zago-logo.png" %}" alt="">
   </div>
 </main>
 {% endblock %}
