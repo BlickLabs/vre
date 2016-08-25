@@ -48,7 +48,7 @@ class VisitUsView(View):
             from_email="VRE - Showroom <postmaster@%s>" % (
                 settings.MAILGUN_SERVER_NAME
             ),
-            to_email=[settings.DEFAULT_EMAIL_TO],
+            to_email=[settings.DEFAULT_EMAIL_TO, 'pamela.piedras@vre.com.mx'],
             context=ctx
         )
         endpoint = urlparse.urljoin(
