@@ -1,14 +1,14 @@
 (function () {
   'use strict';
   /*global djangoURLs, ga*/
-  function ajaxPOST(formElement) {
+  function ajaxPOST(formElement, gaEventName) {
     return function () {
       $.ajax({
         url: djangoURLs.suscribeToNewsletter,
         type : 'POST',
         data: $(formElement).serialize(),
         beforeSend: function () {
-          ga('send', 'event', 'NewsFoot', 'ok');
+          ga('send', 'event', gaEventName, 'ok');
         },
         success: function (data) {
           if (data.status === 400) {
@@ -32,6 +32,6 @@
       });
     };
   }
-  $('#btn-newsletter').click(ajaxPOST('#footer-newsletter-form'));
-  $('#btn-newsletter-big').click(ajaxPOST('#homepage-special-form'));
+  $('#btn-newsletter').click(ajaxPOST('#footer-newsletter-form', 'NewsFoot'));
+  $('#btn-newsletter-big').click(ajaxPOST('#homepage-special-form', 'NewsHead'));
 }());
