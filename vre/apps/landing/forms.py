@@ -78,6 +78,15 @@ class ContactForm(forms.Form):
             to_email=[settings.DEFAULT_EMAIL_TO],
             context=ctx
         )
+        send_email(
+            subject='email/subjects/contact_user.txt',
+            body='email/contact_user.html',
+            from_email="VRE - Notificaciones <postmaster@%s>" % (
+                settings.MAILGUN_SERVER_NAME
+            ),
+            to_email=[settings.DEFAULT_EMAIL_TO],
+            context=ctx
+        )
         endpoint = urlparse.urljoin(
             settings.MAILCHIMP_API_ROOT,
             'lists/%s/members/' % settings.MAILCHIMP_NEWSLETTER_LIST

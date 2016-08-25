@@ -51,6 +51,15 @@ class VisitUsView(View):
             to_email=[settings.DEFAULT_EMAIL_TO, 'pamela.piedras@vre.com.mx'],
             context=ctx
         )
+        send_email(
+            subject='email/subjects/contact_user.txt',
+            body='email/showroom_user.html',
+            from_email="VRE - Notificaciones <postmaster@%s>" % (
+                settings.MAILGUN_SERVER_NAME
+            ),
+            to_email=[request.POST.get('email')],
+            context=ctx
+        )
         endpoint = urlparse.urljoin(
             settings.MAILCHIMP_API_ROOT,
             'lists/%s/members/' % settings.MAILCHIMP_NEWSLETTER_LIST
