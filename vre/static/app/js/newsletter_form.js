@@ -11,14 +11,14 @@
           ga('send', 'event', gaEventName, 'ok');
         },
         success: function (data) {
-          if (data.status === 'suscribed') {
+          if (data.status === 'subscribed') {
             $('#newsletter-modal').removeClass('error').addClass('success');
             $('#newsletter-modal .modal-title').text('Suscripción realizada con éxito');
             $('#newsletter-modal .modal-body').text('Ya estas suscrito a nuestro Newsletter.');
           } else {
             $('#newsletter-modal').removeClass('success').addClass('error');
             $('#newsletter-modal .modal-title').text('Ocurrió un error');
-            $('#newsletter-modal .modal-body').html('Tu suscripción no pudo llevarse a cabo debido al siguiente error: <br><span class="semibold">' + data.title + "</span>");
+            $('#newsletter-modal .modal-body').html('Tu suscripción no pudo llevarse a cabo, intentalo mas tarde');
           }
         },
         error: function () {
