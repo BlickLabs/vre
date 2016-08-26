@@ -29,39 +29,38 @@ class NewsletterView(View):
         response = requests.post(
             endpoint, auth=('apikey', settings.MAILCHIMP_API_KEY), data=data)
         d = json.loads(response.content)
-        if d.get('status') == 'subscribed':
-            subscriber = Subscriber(
-                email=request.POST.get('email'),
-                name=request.POST.get('name', None),
-                phone=request.POST.get('phone', None),
-                source=request.POST.get('source'),
-            )
-            subscriber.save()
+        subscriber = Subscriber(
+            email=request.POST.get('email'),
+            name=request.POST.get('name', None),
+            phone=request.POST.get('phone', None),
+            source=request.POST.get('source'),
+        )
+        subscriber.save()
 
-            if source == 'indiana' or source == 'dakota':
-                context = {
-                    'newsletter': 'False',
-                    'brochure': 'True',
-                    'brochure_title': source,
-                    'email': request.POST.get('email')
-                }
-            else:
-                context = {
-                    'newsletter': 'True',
-                    'brochure': 'False',
-                    'brochure_title': None,
-                    'email': request.POST.get('email')
-                }
+        if source == 'indiana' or source == 'dakota':
+            context = {
+                'newsletter': 'False',
+                'brochure': 'True',
+                'brochure_title': source,
+                'email': request.POST.get('email')
+            }
+        else:
+            context = {
+                'newsletter': 'True',
+                'brochure': 'False',
+                'brochure_title': None,
+                'email': request.POST.get('email')
+            }
 
-            send_email(
-                subject='email/subjects/newsletter.txt',
-                body='email/newsletter.html',
-                from_email="VRE - Notificacion <postmaster@%s>" % (
-                    settings.MAILGUN_SERVER_NAME
-                ),
-                to_email=[settings.DEFAULT_EMAIL_TO],
-                context=context
-            )
+        send_email(
+            subject='email/subjects/newsletter.txt',
+            body='email/newsletter.html',
+            from_email="VRE - Notificacion <postmaster@%s>" % (
+                settings.MAILGUN_SERVER_NAME
+            ),
+            to_email=[settings.DEFAULT_EMAIL_TO],
+            context=context
+        )
         return JsonResponse(response.json())
 
     def get_list_id(self, request):
