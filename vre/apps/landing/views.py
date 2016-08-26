@@ -70,16 +70,14 @@ class VisitUsView(View):
         }
         data = json.dumps(data)
         response = requests.post(
-            endpoint, auth=('apikey', settings.MAILCHIMP_API_KEY), data=data)
-        d = json.loads(response.content)
-        if d.get('status') == 'subscribed':
-            subscriber = Subscriber(
-                email=request.POST.get('email'),
-                name=request.POST.get('name', None),
-                phone=request.POST.get('phone', None),
-                source=request.POST.get('source'),
-            )
-            subscriber.save()
+        endpoint, auth=('apikey', settings.MAILCHIMP_API_KEY), data=data)
+        subscriber = Subscriber(
+            email=request.POST.get('email'),
+            name=request.POST.get('name', None),
+            phone=request.POST.get('phone', None),
+            source=request.POST.get('source'),
+        )
+        subscriber.save()
         return redirect(reverse_lazy('landing:visitanos_success'))
 
 
