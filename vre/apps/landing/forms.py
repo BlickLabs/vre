@@ -98,12 +98,10 @@ class ContactForm(forms.Form):
         data = json.dumps(data)
         response = requests.post(
             endpoint, auth=('apikey', settings.MAILCHIMP_API_KEY), data=data)
-        d = json.loads(response.content)
-        if d.get('status') == 'subscribed':
-            subscriber = Subscriber(
-                email=cleaned_data.get('email'),
-                name=cleaned_data.get('name'),
-                phone=cleaned_data.get('phone'),
-                source=cleaned_data.get('source'),
-            )
-            subscriber.save()
+        subscriber = Subscriber(
+            email=cleaned_data.get('email'),
+            name=cleaned_data.get('name'),
+            phone=cleaned_data.get('phone'),
+            source=cleaned_data.get('source'),
+        )
+        subscriber.save()
