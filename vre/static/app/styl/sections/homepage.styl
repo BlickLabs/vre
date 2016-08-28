@@ -33,7 +33,22 @@
       
       .phone-box-content
         font-size 20px
-  
+
+  .homepage-mobile-logo
+    display none
+    center-block()
+    font-family 'Oswald'
+    font-size 42px
+    min-width 280px
+    padding-top 100px
+    text-align center
+    width 60%
+    
+    img
+      display block
+      height 58px
+      center-block()
+
   .homepage-menu
     center-block()
     margin-top 10px
@@ -295,93 +310,97 @@
       left 40px
 
 @media screen and (max-width: 830px)
-  .homepage-cover .homepage-menu
-    background white
-    height 58px
-    margin-top 0 !important
-    max-width 100%
-    position fixed
-    top 0
-    width 100%
-    z-index 11
+  .homepage-cover
+    .homepage-mobile-logo
+      display block
 
-    .menu-trigger
-      background none
-      border none
-      color $orange
-      display inline-block
-      float left
-      font-size 32px
-      margin-left 16px
-      margin-top 13px
-
-    #navbar-trigger:checked ~ .menu-list
-        left 0
-
-    .logo-container
-      display none !important
-
-    .menu-list
-      background #fafafa
-      height 100vh
-      margin-left 0
+    .homepage-menu
+      background white
+      height 58px
       margin-top 0 !important
-      overflow-y auto
+      max-width 100%
       position fixed
-      left -280px
-      text-align left
       top 0
-      transition left 0.2s
-      width 280px
+      width 100%
       z-index 11
 
-      .responsive-menu-logo
-        display inline-block !important
-        padding 20px 30px 30px 30px
-        width auto
-        
-        img
-          height 60px
+      .menu-trigger
+        background none
+        border none
+        color $orange
+        display inline-block
+        float left
+        font-size 32px
+        margin-left 16px
+        margin-top 13px
+
+      #navbar-trigger:checked ~ .menu-list
+          left 0
+
+      .logo-container
+        display none !important
+
+      .menu-list
+        background #fafafa
+        height 100vh
+        margin-left 0
+        margin-top 0 !important
+        overflow-y auto
+        position fixed
+        left -280px
+        text-align left
+        top 0
+        transition left 0.2s
+        width 280px
+        z-index 11
+
+        .responsive-menu-logo
+          display inline-block !important
+          padding 20px 30px 30px 30px
+          width auto
           
-      ul
-        margin-top 10px
-        padding 0
-      
-      li
-        display block
-        font-size 14px
+          img
+            height 60px
+            
+        ul
+          margin-top 10px
+          padding 0
         
-        a
-          color black
+        li
           display block
-          padding 15px 30px
-        
-        &:not(.phone).active, &:not(.phone):hover
-          background $orange
+          font-size 14px
           
           a
-            color white
-
-        &.phone
-          color darken($orange, 10%)
-          display block
-          font-size 16px
-          margin-top 10px
-          padding 18px 30px
-          position relative
-          
-          &::before
-            simple-border('top', 2px, darken($orange, 10%))
-            content ' '
+            color black
             display block
-            position absolute
-            left 30px
-            top 0
-            width 50px
+            padding 15px 30px
           
-        &:not(:first-child):not(:last-child)::before
-          content '' !important
-          margin 0 !important
+          &:not(.phone).active, &:not(.phone):hover
+            background $orange
+            
+            a
+              color white
+
+          &.phone
+            color darken($orange, 10%)
+            display block
+            font-size 16px
+            margin-top 10px
+            padding 18px 30px
+            position relative
+            
+            &::before
+              simple-border('top', 2px, darken($orange, 10%))
+              content ' '
+              display block
+              position absolute
+              left 30px
+              top 0
+              width 50px
+            
+          &:not(:first-child):not(:last-child)::before
+            content '' !important
+            margin 0 !important
      
 @media $smallBase
   .homepage-developments,
@@ -448,7 +467,7 @@
     height 70vh
 
 @media screen and (max-width: 480px)
-  .homepage-cover .homepage-menu .logo-container
+  .homepage-cover .homepage-mobile-logo
     font-size 30px
     
     img
