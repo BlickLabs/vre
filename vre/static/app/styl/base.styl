@@ -252,6 +252,7 @@ footer
               height 16px
               margin-right 18px
               margin-top 2px
+              width 20px
               
             p
               flex-grow 1
@@ -364,6 +365,16 @@ footer
 @media $smallBase
   footer
     padding 30px 0
+    
+    .footer-container
+      .footer-col
+        &:last-child
+          .footer-contact
+            .footer-contact-element
+              img
+                height 13px !important
+                margin-top 4px
+                width 17px !important
           
 @media $smallPortrait
   .orange-cover-divider .image-part
