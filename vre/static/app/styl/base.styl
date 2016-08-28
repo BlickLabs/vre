@@ -360,6 +360,10 @@ footer
 
 #converse-chat
   z-index 10 !important
+  
+@media $smallBase
+  footer
+    padding 30px 0
           
 @media $smallPortrait
   .orange-cover-divider .image-part
@@ -419,10 +423,12 @@ footer
         font-size 14px
         
         a
+          color black
           display block
           padding 15px 30px
         
-        &:not(.phone).active, &:not(.phone):hover
+        &:not(.phone).active,
+        &:not(.phone):hover
           background $orange
           
           a
