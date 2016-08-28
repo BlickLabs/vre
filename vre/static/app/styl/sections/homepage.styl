@@ -310,13 +310,13 @@
       border none
       color $orange
       display inline-block
-      float right
+      float left
       font-size 32px
-      margin-right 16px
+      margin-left 16px
       margin-top 13px
 
     #navbar-trigger:checked ~ .menu-list
-        right 0
+        left 0
 
     .logo-container
       display none !important
@@ -324,19 +324,21 @@
     .menu-list
       background #fafafa
       height 100vh
+      margin-left 0
       margin-top 0 !important
       overflow-y auto
       position fixed
-      right -280px
+      left -280px
+      text-align left
       top 0
-      transition right 0.2s
+      transition left 0.2s
       width 280px
       z-index 11
 
       .responsive-menu-logo
-        display block !important
+        display inline-block !important
         padding 20px 30px 30px 30px
-        text-align right
+        width auto
         
         img
           height 60px
@@ -348,25 +350,34 @@
       li
         display block
         font-size 14px
-        text-align right
         
         a
           color black
+          display block
           padding 15px 30px
-          height 100%
         
-        &.active, &:hover
-          background rgba($orange, 0.8)
+        &:not(.phone).active, &:not(.phone):hover
+          background $orange
           
           a
             color white
 
         &.phone
-          background $orange
-          color white
+          color darken($orange, 10%)
           display block
           font-size 16px
+          margin-top 10px
           padding 18px 30px
+          position relative
+          
+          &::before
+            simple-border('top', 2px, darken($orange, 10%))
+            content ' '
+            display block
+            position absolute
+            left 30px
+            top 0
+            width 50px
           
         &:not(:first-child):not(:last-child)::before
           content '' !important

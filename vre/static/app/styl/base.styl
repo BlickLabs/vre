@@ -379,13 +379,13 @@ footer
       border none
       color $orange
       display block
-      float right
+      float left
       font-size 32px
-      margin-right 16px
+      margin-left 16px
       margin-top 5.5px
 
     #navbar-trigger:checked ~ .navbar-menu-list
-        right 0
+        left 0
 
     &-orange-box, >a img
       display none !important
@@ -393,18 +393,19 @@ footer
     &-list
       background #fafafa
       height 100vh
+      margin-left 0
       overflow-y auto
       position fixed
-      right -280px
+      left -280px
+      text-align left
       top 0
-      transition right 0.2s
+      transition left 0.2s
       width 280px
       z-index 11
 
       .responsive-menu-logo
-        display block !important
+        display inline-block !important
         padding 20px 30px 30px 30px
-        text-align right
         
         img
           height 60px
@@ -416,24 +417,33 @@ footer
       li
         display block
         font-size 14px
-        text-align right
         
         a
           display block
           padding 15px 30px
         
-        &.active, &:hover
-          background rgba($orange, 0.8)
+        &:not(.phone).active, &:not(.phone):hover
+          background $orange
           
           a
             color white !important
 
         &.phone
-          background $orange
-          color white
+          color darken($orange, 10%)
           display block
           font-size 16px
+          margin-top 10px
           padding 18px 30px
+          position relative
+          
+          &::before
+            simple-border('top', 2px, darken($orange, 10%))
+            content ' '
+            display block
+            position absolute
+            left 30px
+            top 0
+            width 50px
 
         &:not(:first-child):not(:last-child)::before
           content '' !important
