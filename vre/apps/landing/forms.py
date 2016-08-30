@@ -89,7 +89,7 @@ class ContactForm(forms.Form):
         )
         endpoint = urlparse.urljoin(
             settings.MAILCHIMP_API_ROOT,
-            'lists/%s/members/' % settings.MAILCHIMP_NEWSLETTER_LIST
+            'lists/%s/members/' % settings.MAILCHIMP_CONTACT_LIST
         )
         data = {
             "email_address": cleaned_data.get('email'),
