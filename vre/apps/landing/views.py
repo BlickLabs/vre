@@ -62,7 +62,7 @@ class VisitUsView(View):
         )
         endpoint = urlparse.urljoin(
             settings.MAILCHIMP_API_ROOT,
-            'lists/%s/members/' % settings.MAILCHIMP_NEWSLETTER_LIST
+            'lists/%s/members/' % settings.MAILCHIMP_VISIT_LIST
         )
         data = {
             "email_address": request.POST.get('email'),

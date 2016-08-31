@@ -19,7 +19,8 @@ class DevelopDetailView(DetailView):
 class DownloadFileView(View):
     def get(self, request, id):
         brochure = Brochure.objects.get(id=id)
-        filename = brochure.file.name.split('/')[-1]
+        ext = brochure.file.name.split('.')[-1]
+        filename = '%s.%s' % (brochure.develop.name, ext)
         response = HttpResponse(
             brochure.file,
             content_type='application/force-download'
@@ -33,7 +34,6 @@ class DownloadDocumentView(LoginRequiredMixin, View):
         document = Document.objects.get(id=id)
         if request.user.developments.filter(id=document.develop.id).exists():
             ext = document.file.name.split('.')[-1]
-            print ext
             filename = '%s.%s' % (document.title, ext)
             response = HttpResponse(
                 document.file,
