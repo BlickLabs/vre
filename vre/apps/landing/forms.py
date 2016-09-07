@@ -84,7 +84,7 @@ class ContactForm(forms.Form):
             from_email="VRE - Notificaciones <postmaster@%s>" % (
                 settings.MAILGUN_SERVER_NAME
             ),
-            to_email=[settings.DEFAULT_EMAIL_TO],
+            to_email=[email],
             context=ctx
         )
         endpoint = urlparse.urljoin(
