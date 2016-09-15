@@ -9,6 +9,7 @@
         data: $(formElement).serialize(),
         beforeSend: function () {
           ga('send', 'event', gaEventName, 'ok');
+          $($(formElement).find('button')).attr('disabled', 'disabled');
         },
         success: function (data) {
           if (data.status === 'subscribed') {
@@ -28,6 +29,7 @@
         },
         complete: function () {
           $('#newsletter-modal').modal('show');
+          $($(formElement).find('button')).removeAttr('disabled');
         }
       });
     };
