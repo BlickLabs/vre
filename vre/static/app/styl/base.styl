@@ -69,10 +69,12 @@ body #converse-chat
   &:focus, &:active
     outline none
     
-  &:disabled, &:disabled:focus, &:disabled:hover, &:disabled:active
-    background darken($orange, 20%)
-    simple-border('all', 2px, darken($orange, 20%))
-    color white !important
+  &:disabled, &.disabled
+    &, &:focus, &:hover, &:active
+      background darken($orange, 20%)
+      simple-border('all', 2px, darken($orange, 20%))
+      color white !important
+      pointer-events none
 
 .vre-button
   background white
