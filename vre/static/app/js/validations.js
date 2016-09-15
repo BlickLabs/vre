@@ -23,6 +23,13 @@
     min: jQuery.validator.format("Ingresa un valor mayor o igual que {0}")
   });
 
+  jQuery.validator.setDefaults({
+    submitHandler: function (form) {
+      $($(form).find('button')).attr('disabled', 'disabled');
+      form.submit();
+    }
+  });
+
   moment.updateLocale('en', {
     months: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
     monthsShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
