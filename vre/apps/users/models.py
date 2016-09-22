@@ -15,10 +15,11 @@ TYPE_CHOICES = (
 )
 
 class CoolUser(PermissionsMixin, AbstractBaseUser):
-    email = models.EmailField(
-        _('Email address'),
+    email = models.CharField(
+        _('Username'),
         blank=False,
         unique=True,
+        max_length=30,
     )
     first_name = models.CharField(
         _('First name'),
