@@ -3,6 +3,8 @@
 
 from django.conf import settings
 from django.http import JsonResponse
+from django.utils.decorators import method_decorator
+from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import View
 from django.conf import settings
 
@@ -15,6 +17,9 @@ import urlparse
 
 
 class NewsletterView(View):
+    @method_decorator(csrf_exempt)
+    def dispatch(self, request, *args, **kwargs):
+        return super(NewsletterView, self).dispatch(request, *args, **kwargs)
     def post(self, request):
         source = request.POST.get('source')
         email = request.POST.get('email')
