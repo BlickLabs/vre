@@ -30,6 +30,13 @@ DATABASES = {
     'default': dj_database_url.config()
 }
 
+CACHES = {
+    'default': {
+        'BACKEND': 'redis_cache.RedisCache',
+        'LOCATION': 'localhost:6379',
+    },
+}
+
 # STATIC FILE CONFIGURATION
 # -----------------------------------------------------------------------------
 STATIC_ROOT = str(PROJECT_DIR('staticfiles'))
