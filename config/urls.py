@@ -9,6 +9,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.views import defaults as error_views
 from django.contrib.sitemaps.views import sitemap
+from django.views.generic import TemplateView
 
 from vre.apps.documents import  urls as documents_urls
 from vre.apps.xauth import urls as xauth_urls
@@ -26,6 +27,8 @@ urlpatterns = [
     url(r'', include('private_media.urls')),
     url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps},
     name='django.contrib.sitemaps.views.sitemap'),
+    url(r'^robots\.txt/$', TemplateView.as_view(template_name="robots.txt",
+                                                content_type='text/plain')),
 
     # Custom urls
     # url(r'', include(module_urls, namespace='module')),
