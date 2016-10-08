@@ -8,17 +8,24 @@ from django.conf.urls import include, url
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.views import defaults as error_views
+from django.contrib.sitemaps.views import sitemap
 
 from vre.apps.documents import  urls as documents_urls
 from vre.apps.xauth import urls as xauth_urls
 from vre.apps.landing import urls as landing_urls
 from vre.apps.developments import urls as developments_urls
 from vre.apps.newsletter import urls as newsletter_urls
+from vre.core.sitemaps import StaticViewSitemap
 
+sitemaps = {
+    'static': StaticViewSitemap,
+}
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('private_media.urls')),
+    url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps},
+    name='django.contrib.sitemaps.views.sitemap'),
 
     # Custom urls
     # url(r'', include(module_urls, namespace='module')),
