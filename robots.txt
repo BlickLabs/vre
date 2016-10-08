@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /*.pdf$
+Disallow: /login/
+Disallow: /logout/
+Disallow: /investor
+Disallow: /suscribe/
+Disallow: /descargar-documento
+Disallow: /descargar-brochure
+Disallow: /desarrollos
