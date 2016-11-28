@@ -13,8 +13,7 @@
     margin-bottom 25px
     margin-top 5px
 
-.developments-cover-divider-1,
-.developments-cover-divider-2
+.developments-cover-divider
   min-height 500px
 
   .text-part
@@ -30,9 +29,15 @@
       padding-bottom 14px
       padding-top 14px
   
-.developments-cover-divider-2
-  flex-direction row-reverse
-  margin-top 120px
+  &:nth-child(2n)
+    flex-direction row-reverse
+    
+  &:nth-child(2n + 1)
+    .cover
+      background-position left
+    
+  &:not(:first-child)
+    margin-top 120px
   
 @media $smallBase
   .developments-gray-divider
@@ -41,5 +46,5 @@
     p .title
       font-size 24px
       
-  .developments-cover-divider-2
+  .developments-cover-divider
     margin-top 70px
