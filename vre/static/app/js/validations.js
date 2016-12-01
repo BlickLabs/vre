@@ -61,7 +61,7 @@
   $('.login-form').validate({
     rules: {
       'username': {
-        required: true,
+        required: true
       },
       'password': {
         required: true
