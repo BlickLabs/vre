@@ -40,9 +40,11 @@ urlpatterns = [
 ]
 
 if settings.DEBUG:
+    import debug_toolbar
     # This allows the error pages to be debugged during development, visit
     # these url in browser to see how these error pages look like.
     urlpatterns += [
+        url(r'^__debug__/', include(debug_toolbar.urls)),
         url(r'^400/$', error_views.bad_request, kwargs={
             'exception': Exception("Bad Request!")}),
         url(r'^403/$', error_views.permission_denied, kwargs={
