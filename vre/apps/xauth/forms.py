@@ -12,13 +12,10 @@ from vre.core.messages import error_messages
 class LoginForm(forms.Form):
 
     username = forms.CharField(
-        validators=[RegexValidator(
-            regex=validators.regex_sentences['email']
-        )],
         widget=forms.TextInput(
             attrs={
                 'class': 'vre-input',
-                'placeholder': 'Email',
+                'placeholder': 'Username',
                 'required': 'true',
             }
         ),
