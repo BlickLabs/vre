@@ -102,6 +102,13 @@ class DevelopmentDemo2View(TemplateView):
         context['develop'] = "dakota"
         return context
 
+class DevelopmentDemo3View(TemplateView):
+    template_name = 'develops/develop_detail_3.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(DevelopmentDemo3View, self).get_context_data(**kwargs)
+        context['develop'] = "dakota"
+        return context
 
 class ContactView(FormView):
     template_name = 'landing/contact.html'

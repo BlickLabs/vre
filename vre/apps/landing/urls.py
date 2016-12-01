@@ -23,6 +23,10 @@ urlpatterns = [
         view=views.DevelopmentDemo2View.as_view(),
         name='development_demo2'),
 
+    url(regex=r'^tlacotalpan146/$',
+        view=views.DevelopmentDemo3View.as_view(),
+        name='development_demo3'),
+
     url(regex=r'^nosotros/$',
         view=views.AboutUsView.as_view(),
         name='about_us'),
