@@ -65,4 +65,7 @@ target/
 vre/media
 
 .idea/
-db.sqlite3
+db.
+
+.venv/
+*.sqlite3
