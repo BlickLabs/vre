@@ -12,3 +12,9 @@
 
 </main>
 {% endblock %}
+
+{% block after_scripts %}
+  <script>
+    fbq('track', 'CompleteRegistration');
+  </script>
+{% endblock %}

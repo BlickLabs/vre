@@ -64,8 +64,6 @@
 	    return event.keyCode != 13;
 		});
 	</script>
-  {% block after_scripts %}
-  {% endblock %}
   <!-- Start of Async HubSpot Analytics Code -->
   <script type="text/javascript">
     (function(d,s,i,r) {
@@ -110,5 +108,7 @@
 	/* custom configuration goes here (www.olark.com/documentation) */
 	olark.identify('8266-915-10-7362');/*]]>*/</script><noscript><a href="https://www.olark.com/site/8266-915-10-7362/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript>
 	<!-- end olark code -->
+  {% block after_scripts %}
+  {% endblock %}
 </body>
 </html>
