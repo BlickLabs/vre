@@ -4,7 +4,7 @@
   height 60vh
   min-height 450px
   position relative
-  
+
   img
     bottom 15px
     display block
@@ -15,7 +15,7 @@
     position absolute
     transform translateX(-50%)
     width auto
-    
+
 .development-header-text
   font-size $sectionTitleSize
   line-height 1.25
@@ -25,8 +25,11 @@
   margin-bottom 90px
   margin-top 90px
   text-align center
-  width 50%
-  
+  width 70%
+
+  &.tlacotalpan
+    max-width 700px
+
 .development-download-brochure
   simple-border('leftright', 10px, $orange)
   line-height 1.25
@@ -38,11 +41,11 @@
     min-width 280px
     text-align center
     width 50%
-    
+
     span
       display block
       font-size $mainFontSize
-      
+
     input
       display block
       font-weight $fontLight
@@ -52,34 +55,34 @@
       padding 14px 10px
       text-align center
       width 85%
-      
+
       &:focus
         outline none
-    
+
     a
       border none !important
       display inline-block
       margin-top 40px
       padding 12px 20px !important
       width 170px
-      
+
 .development-360-video
   padding 60px 20px
-  
+
   .container-360
     center-block()
     margin-top 20px
     max-width 900px
     min-width 280px
     width 80%
-    
+
 .development-characteristics
   font-size $sectionTitleSize
   margin-left 10%
   margin-top 10px
   padding-right 10%
   width 90%
-  
+
   .development-characteristics-items
     display block
     font-size 14px
@@ -88,7 +91,7 @@
     margin-left -40px
     margin-top 40px
     text-align right
-    
+
     div
       margin-top 30px
       text-align left
@@ -99,31 +102,31 @@
       text-align left
       vertical-align top
       width 32.5%
-      
+
       img
         height 20px
         margin-right 17px
 
       span
         flex-grow 1
-      
+
 .development-carousel-container
   background white
   height 70vh
   max-height 500px
   min-height 250px
   position relative
-  
+
   .slick-list
     height 100%
     width 100%
-    
+
     .slick-track
       height 100%
-      
+
       .slick-slide
         height 100%
-  
+
   .slick-arrow
     cursor pointer
     display block !important
@@ -131,28 +134,28 @@
     top 50%
     transform translateY(-50%)
     z-index 9
-    
+
     &::before
       color white
       font-size 120px
       text-shadow 0 0 10px $gray
-    
+
     &.slick-prev
       left 20px
 
     &.slick-next
       right 20px
-      
+
     &.slick-disabled
       display none !important
-  
+
 .development-drawings
   display flex
   margin 0 0 10px 0
-  
+
   .drawing-selectors
     width 150px
-    
+
     .drawing-selector
       background transparent
       color $darkGray
@@ -163,11 +166,11 @@
       line-height 150px
       transition all .2s
       width 150px
-      
+
       &:hover, &.active
         background $lightGray
         color white
-      
+
   .drawing-picture
     background $orange
     color white
@@ -175,86 +178,86 @@
     font-size 24px
     font-weight $fontSemiBold
     padding 40px 60px
-    
+
     img
       display block
       margin-top 20px
       width 100%
-    
+
 .development-nearby-places
   display flex
-  
+
   .location-map
     background $lighterGray
     flex-grow 1
-    
+
   .points-of-interest
     padding 60px 60px 40px 60px
     width auto
-    
+
     >span
       font-size $sectionTitleSize
       font-weight $fontSemiBold
-    
+
     ul
       font-size 17px
       list-style none
       margin-left -40px
       margin-top 28px
-      
+
       li
         &:not(:first-child)
           margin-top 5px
-      
+
         img
           height 25px
           margin-right 18px
 
         span
           flex-grow 1
-    
+
     .note
       font-size 16px
       margin-top 60px
-        
+
 .development-public-transport
   font-size 17px
   padding 70px 20px 90px 20px
-  
+
   .transport-title
     font-size $sectionTitleSize
     font-weight $fontSemiBold
-    
+
     img
       height 28px
       margin-right 10px
-      
+
   .transport-separated-text
     margin-top 40px
     center-block()
     text-align center
     width 90%
-    
+
   .transport-items-container
     center-block()
     margin-top 35px
     max-width 890px
     text-align center
     width 80%
-    
+
     .transport-items-column
       display inline-block
       max-width 430px
       text-align left
       vertical-align middle
       width 48.5%
-      
+
       &:nth-child(2)
         float right
-      
+
       .transport-item
         margin 8px 0
-        
+
         .appstore-download
           margin-top -6px
           width 80px
@@ -264,68 +267,68 @@
   font-weight $fontBold
   text-align center
   padding 60px 20px
-  
+
   img
     margin-left 5px
     width 180px
-    
+
 @media $multiSmall
   .development-cover
     min-height 300px
-    
+
   .development-header-text
     font-size 21px
     margin-bottom 75px
     margin-top 75px
-    width 80%
-    
+    width 90%
+
   .development-download-brochure div span
     font-size 16px
-    
+
   .development-characteristics
     font-size 19px
 
   .development-drawings
     display block
     margin 0 0 10px 0
-    
+
     .drawing-selectors
       display flex
       justify-content center
       width 100%
-        
+
     .drawing-picture
       float left
       height 430px
       width 50%
-      
+
   .development-nearby-places
     display block
-    
+
     .location-map
       display block
       height 50vh
       min-height 400px
       width 100%
-      
+
     .points-of-interest
       padding 30px
       text-align center
-      
+
       ul
         font-size 14px
         text-align left
-        
+
         li
           &:not(:first-child)
             margin-top 10px
 
           img
             height 22px
-            
+
       .note
         font-size 12px
-            
+
   .development-public-transport
     padding 40px 0
 
@@ -333,11 +336,11 @@
       .transport-items-column
         display block
         width 100%
-        
+
         &:nth-child(2)
           float none
           margin-top 15px
-          
+
 @media screen and (max-width: 767px)
   .development-characteristics
     .development-characteristics-items
@@ -354,7 +357,7 @@
     font-size 19px
     margin-bottom 50px
     margin-top 50px
-    
+
   .development-characteristics
     font-size 17px
 
@@ -364,7 +367,7 @@
         font-size 23px
         height 100px
         line-height 100px
-        
+
     .drawing-picture
       float none
       height auto
