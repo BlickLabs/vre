@@ -6,12 +6,12 @@
   min-height 480px
   position relative
   width 100%
-  
+
   .phone-box
     position relative
     text-align right
     width 100%
-    
+
     .phone-box-content
       background $orange
       color white !important
@@ -23,19 +23,19 @@
       text-align center
       top 0
       width 240px
-      
+
       .small-text
         display block
         // font-size 10.5px
         line-height 1.2
-      
+
         img
           height 15px
-      
+
       .big-text
         // font-size 23px
         line-height 1.3
-        
+
     &.fix-in-top
       height 63px
       position fixed
@@ -53,12 +53,12 @@
     padding-top 100px
     text-align center
     width 60%
-    
+
     h1
       display inline-block
       font-size inherit
       margin 0
-    
+
     img
       display block
       height 63px
@@ -70,30 +70,30 @@
     max-width 605px
     text-align center
     width 90%
-    
+
     &:not(.fix-in-top) .menu-list
       margin-top 10px
-      
+
     #navbar-trigger
       position absolute
       top -1000px
       right -100px
-      
+
     .menu-trigger
       display none
-    
+
     .logo-container
       font-family 'Oswald'
       font-size 44px
-      
+
       img
         height 63px
         margin-right 10px
         vertical-align top
-        
+
       .show-in-fixed
         display none
-        
+
       h1
         display inline-block
         font-size inherit
@@ -104,23 +104,23 @@
       font-weight $fontSemiBold
       list-style none
       margin-left -40px
-      
+
       .responsive-menu-logo
         display none
 
       li
         display inline-block
-      
+
         &.phone
           display none
-        
+
         &:not(:first-child):not(:last-child)::before
           content ' | ' !important
-        
+
         a
           display inline-block
           color white
-    
+
     &.fix-in-top
       background white
       height 63px
@@ -132,23 +132,23 @@
       top 0
       width 100%
       z-index 10
-      
+
       .logo-container
         display inline-block
         height 42px
         margin-left 20px
         vertical-align middle
-        
+
         h1
           display none
-          
+
         .show-in-fixed
           display inline-block
           height 100%
-          
+
           img
             height 100%
-          
+
         .hide-in-fixed
           display none
 
@@ -159,11 +159,11 @@
         margin-bottom 0
         margin-left -30px
         vertical-align middle
-        
+
         ul
           margin-top 10px
 
-        li 
+        li
           &:not(:first-child)::before
             color black
             font-size 15px
@@ -171,13 +171,13 @@
           a
             color black
             transition color 0.2s
-            
+
             &:hover
               color $orange
 
           &.active a
             color $orange
-        
+
   .white-box
     background white
     bottom -70px
@@ -187,10 +187,10 @@
     max-width 302px
     padding 28px 35px 10px 35px
     position absolute
-    
+
     div
       line-height 1.25
-    
+
     #homepage-special-form
       font-size 13.8px
       margin-top 15px
@@ -201,16 +201,16 @@
         display block
         padding 7px 8px
         width 97.5%
-        
+
         &:focus
           outline none
-          
+
         &:not(:first-child)
           margin-top 10px
-          
+
         &::placeholder
           font-weight $fontLight
-          
+
       button
         margin-top 36px
         padding 8px 28px
@@ -222,78 +222,73 @@
   margin-top 80px
   text-align center
   width 90%
-  
+
   h2
     font-size inherit
     margin 0
-  
+
   &-items
     center-block()
     margin-top 10px
     text-align center
-    
+
     .item
       display inline-block
-      width 45% !important
-      
-      &:nth-child(even)
-        margin-left 20px
-        
-      &:nth-child(n + 3)
-        margin-top 25px
+      margin 25px 10px 0 10px
+      width 30% !important
 
       &-name
         margin-top 10px
-        width 30%
+        width 40%
 
       &-picture
         height auto
         width 100%
-        
+
 .homepage-cover-divider-1
   .text-part
     img
       margin-bottom 45px
       margin-top 30px
       width 65%
-      
+
     .outgoing-box
       background white
       font-size $mainTitle
       line-height 1.25
       margin-bottom 100px
       padding 30px 20px 30px 70px
-    
+
   .image-part
     background-image url('../img/homepage_cover_divider_01.jpg')
-    
+
 .homepage-contact-divider
   line-height 1.25
   margin 80px 20px
-  
+
   h2
     font-size $sectionTitleSize
     margin 0
-    
+
   .vre-button
     margin-top 40px
 
 .homepage-gray-divider
   padding 60px 20px
-  
+
   .container-360
     center-block()
     margin-top 20px
     max-width 900px
     min-width 280px
     width 80%
-    
+
 .homepage-cover-divider-2
   align-items shrink
   display flex
   height 50vh
   min-height 450px
-  
+
   .image-part
     background-image url('../img/homepage_cover_divider_02.jpg')
     flex-grow 1
@@ -303,7 +298,7 @@
     text-align right
     min-width 500px
     width 35%
-    
+
     div
       bottom 60px
       position absolute
@@ -313,21 +308,21 @@
         font-size inherit
         line-height 1.5
         margin 0
-      
+
       .vre-button
         margin-top 20px
-        
+
 // Media queries
 @media $mediumWindow
   .homepage-cover-divider-2 .text-part
     min-width 400px
-    
+
 @media $hybridMobileTablet
   .homepage-cover
     .phone-box .phone-box-content
       font-size 16px
       padding 9px 21px
-      
+
       .big-text
         font-size 20px
 
@@ -383,27 +378,27 @@
           display inline-block !important
           padding 20px 30px 30px 30px
           width auto
-          
+
           img
             height 60px
-            
+
         ul
           margin-top 10px
           padding 0
-        
+
         li
           display block
           font-size 14px
-          
+
           a
             color black
             display block
             padding 15px 30px
-          
+
           &:not(.phone).active,
           &:not(.phone):hover
             background $orange
-            
+
             a
               color white !important
 
@@ -414,7 +409,7 @@
             margin-top 10px
             padding 18px 30px
             position relative
-            
+
             &::before
               simple-border('top', 2px, darken($orange, 10%))
               content ' '
@@ -423,11 +418,11 @@
               left 30px
               top 0
               width 50px
-            
+
           &:not(:first-child):not(:last-child)::before
             content '' !important
             margin 0 !important
-     
+
 @media $smallBase
   .homepage-developments,
   .homepage-contact-divider span
@@ -439,13 +434,13 @@
   .homepage-developments .item
     width 100% !important
     margin-left 0 !important
-    
+
     &:not(:first-child)
       margin-top 30px
-      
+
     &:first-child
       margin-top 20px
-  
+
   .homepage-contact-divider
     margin 55px 20px
 
@@ -457,12 +452,12 @@
         padding 30px 20px
       img
         max-width 280px
-      
+
   .homepage-cover-divider-2
     display block
     height auto
     min-height auto
-    
+
     .text-part,
     .image-part
       display block
@@ -486,7 +481,7 @@
   .homepage-cover-divider-1 .image-part,
   .homepage-cover-divider-2 .image-part
     height 40vh
-    
+
 @media $smallLandscape
   .homepage-cover-divider-1 .image-part,
   .homepage-cover-divider-2 .image-part
@@ -495,16 +490,16 @@
 @media screen and (max-width: 480px)
   .homepage-cover .homepage-mobile-logo
     font-size 30px
-    
+
     img
       height 45px
-      
+
   .homepage-cover .white-box
     left 50%
     padding 23px
     width 280px
     transform translateX(-50%)
-    
+
 @media screen and (max-width: 320px)
   .homepage-cover
     height 60vh
