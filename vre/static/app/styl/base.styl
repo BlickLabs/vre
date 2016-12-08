@@ -1,7 +1,7 @@
 body
   font-size $mainFontSize
   font-family 'Open Sans'
-  
+
 a, a:hover, a:active
   text-decoration none !important
 
@@ -14,14 +14,14 @@ label.error
   height 100%
   overflow-x hidden
   width 100%
-  
-body #converse-chat 
+
+body #converse-chat
   *
     font-family 'Open Sans' !important
-  
+
   #pop-up-message-body
     min-width 130px
-  
+
   #pop-up-message #pop-up-message-icon
     width 20px
     height 20px
@@ -40,7 +40,7 @@ body #converse-chat
     text-align center
     top 50%
     transform translateY(-50%)
-    
+
   .modal-header
     color white
 
@@ -49,13 +49,13 @@ body #converse-chat
 
   &.error .modal-header
     background #d43d3d
-    
+
   .modal-body
     padding 20px
-    
+
   .modal-footer
     text-align center
-    
+
     .vre-button
       font-size 15px
       padding 10px 25px
@@ -65,10 +65,10 @@ body #converse-chat
   padding 18px 50px
   transition all 0.2s
   width auto
-  
+
   &:focus, &:active
     outline none
-    
+
   &:disabled, &.disabled
     &, &:focus, &:hover, &:active
       background darken($orange, 20%)
@@ -80,20 +80,20 @@ body #converse-chat
   background white
   simple-border('all', 2px, $orange)
   color $orange !important
-  
+
   &:hover, &:active
     background $orange
     color white !important
-    
+
 .vre-inverse-button
   background $orange
   simple-border('all', 2px, white)
   color white !important
-  
+
   &:hover, &:active
     background white
     color $orange !important
-    
+
   &.no-border
     border none
 
@@ -101,10 +101,10 @@ body #converse-chat
   background white
   border none
   padding 0.8em 1em
-  
+
   &:focus
     outline none
-    
+
 textarea.vre-input
   resize none
 
@@ -112,24 +112,24 @@ textarea.vre-input
   display flex
   height auto
   min-height 50vh
-  
+
   .text-part
     background $orange
     text-align center
     min-width 350px
     width 28%
-    
+
     .outgoing-box
       position relative
       text-align left
       width 130%
       z-index 2
-      
+
   .image-part
     flex-grow 1
     position relative
     z-index 1
-    
+
   &.inverse-order
     .text-part .outgoing-box
       left -30%
@@ -146,10 +146,10 @@ textarea.vre-input
   top 0
   width 100%
   z-index 10
-  
+
   #navbar-trigger
     display none
-  
+
   .menu-trigger
     display none
 
@@ -166,16 +166,16 @@ textarea.vre-input
     font-weight $fontSemiBold
     list-style none
     margin-left -20px
-    
+
     .responsive-menu-logo
       display none
-    
+
     li
       display inline-block
-      
+
       &.phone
         display none
-      
+
       &:not(:first-child):not(:last-child)::before
         content ' | ' !important
         font-size 15px
@@ -185,10 +185,10 @@ textarea.vre-input
         color black
         display inline-block
         transition color 0.2s
-        
+
         &:hover
           color $orange
-          
+
       &.active a
         color $orange
 
@@ -203,15 +203,15 @@ textarea.vre-input
     padding 7px 20px
     text-align center
     width 240px
-    
+
     .small-text
       display block
       // font-size 10.5px
       line-height 1.2
-      
+
       img
         height 15px
-    
+
     .big-text
       // font-size 23px
       line-height 1.3
@@ -224,78 +224,78 @@ footer
   font-size 14px
   font-weight $fontSemiBold
   padding 40px 50px
-  
+
   &.orange-footer
     background $orange
-  
+
   &.gray-footer
     background $darkGray
-    
+
     #footer-newsletter-form button
       background lightness($darkGray, 30%)
       border-color lightness($darkGray, 60%)
-      
+
       &:hover, &:focus, &:active
         color lightness($darkGray, 30%)
-  
+
   .footer-container
     align-items center
     display flex
-    
+
     .footer-col
       width 33.333333%
-    
+
       &:first-child
         margin-right 30px
-        
+
       &:first-child form, &:nth-child(2)
         font-size 15.5px
         font-weight $fontNormal
-        
+
       &:last-child
         margin-left 30px
         text-align right
-        
+
         .footer-contact
           display inline-block
           text-align left
           width 85%
-          
+
           .footer-contact-element
             display flex
-            
+
             &:not(:first-child)
               margin-top 9px
-            
+
             img
               height 16px
               margin-right 18px
               margin-top 2px
               width 20px
-              
+
             .fa
               display inline-block
               font-size 19px
               margin-right 20px
-              
+
             p
               flex-grow 1
               margin 0
-              
+
               span
                 display block
-      
+
       a
         color white
-        
+
     .footer-logo
       max-width 300px
       width 60%
-      
+
     .footer-logo-legend
       display block
       font-size 16px
-      
+
   #footer-newsletter-form
     margin-bottom 50px
 
@@ -309,10 +309,10 @@ footer
       margin-top 8px
       max-width 230px
       padding 9px 16px 11px 16px
-      
+
       &::placeholder
         color white
-        
+
       &:focus, &:active
         outline none
 
@@ -323,7 +323,7 @@ footer
       margin-top 8px
       padding 10px 23px 12px 23px
       transition all 0.2s
-      
+
       &:hover, &:focus, &:active
         background white
         color #e5800f
@@ -336,7 +336,7 @@ footer
   .orange-cover-divider
     display block
     height auto
-    
+
     .text-part,
     .image-part
       display block
@@ -349,32 +349,44 @@ footer
         left 0 !important
         text-align center
         width 100%
+        
+    &.developments-cover-divider
+      min-height initial
 
+      &:not(:first-child)
+        margin-top 80px
+
+      .text-part
+        padding 40px 0
+
+        img
+          max-width 250px
+          width 50%
   footer
     padding 60px 0
 
     .footer-container
       display block
-      
+
       .footer-col
         display block
         center-block()
         text-align center
         width 90%
-        
+
         &:not(:first-child)
           margin-top 60px
-        
+
         &#footer-newsletter-form input
           center-block()
-        
+
         .footer-logo
           max-width 400px
           min-width 240px
-          
+
         &:first-child
           margin-right 5%
-          
+
         &:last-child
           margin-left 10%
           text-align left
@@ -385,11 +397,11 @@ footer
 
 #converse-chat
   z-index 10 !important
-  
+
 @media $smallBase
   footer
     padding 30px 0
-    
+
     .footer-container
       .footer-col
         &:last-child
@@ -399,19 +411,19 @@ footer
                 height 13px !important
                 margin-top 4px
                 width 17px !important
-          
+
 @media $smallPortrait
   .orange-cover-divider .image-part
     height 40vh
-    
+
 @media $smallLandscape
   .orange-cover-divider .image-part
     height 70vh
-    
+
 @media screen and (max-width: 830px)
   .phone-box
     display none
-  
+
   .navbar-menu
     .menu-trigger
       background none
@@ -445,27 +457,27 @@ footer
       .responsive-menu-logo
         display inline-block !important
         padding 20px 30px 30px 30px
-        
+
         img
           height 60px
-          
+
       ul
         padding 0
         margin-top 10px
-      
+
       li
         display block
         font-size 14px
-        
+
         a
           color black
           display block
           padding 15px 30px
-        
+
         &:not(.phone).active,
         &:not(.phone):hover
           background $orange
-          
+
           a
             color white !important
 
@@ -476,7 +488,7 @@ footer
           margin-top 10px
           padding 18px 30px
           position relative
-          
+
           &::before
             simple-border('top', 2px, darken($orange, 10%))
             content ' '
