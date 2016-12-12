@@ -489,18 +489,43 @@ footer
           color darken($orange, 10%)
           display block
           font-size 16px
-          margin-top 10px
-          padding 18px 30px
           position relative
 
-          &::before
-            simple-border('top', 2px, darken($orange, 10%))
-            content ' '
-            display block
-            position absolute
-            left 30px
-            top 0
-            width 50px
+          a
+            color inherit
+            display initial
+            padding 0
+
+          span, .fa, img
+            display inline-block
+            vertical-align middle
+
+          .fa, img
+            margin-right 10px
+
+          img
+            display inline-block
+            width 20px
+
+          .fa
+            font-size 20px
+
+          &.whatsapp
+            margin-top 0
+            padding 10px 30px
+
+          &.office
+            margin-top 10px
+            padding 18px 30px
+
+            &::before
+              simple-border('top', 2px, darken($orange, 10%))
+              content ' '
+              display block
+              position absolute
+              left 30px
+              top 0
+              width 50px
 
         &:not(:first-child):not(:last-child)::before
           content '' !important
