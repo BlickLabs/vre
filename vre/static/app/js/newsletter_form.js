@@ -14,7 +14,7 @@
         success: function (data) {
           if (data.status === 'subscribed') {
             $('#newsletter-modal').removeClass('error').addClass('success');
-            $('#newsletter-modal .modal-title').text('Suscripción realizada con éxito');
+            $('#newsletter-modal .modal-title').text('Nos pondremos en contacto contigo a la brevedad.');
             $('#newsletter-modal .modal-body').text('Ya estas suscrito a nuestro Newsletter.');
           } else {
             $('#newsletter-modal').removeClass('success').addClass('error');
