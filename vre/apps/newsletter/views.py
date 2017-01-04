@@ -75,6 +75,15 @@ class NewsletterView(View):
                     to_email=[settings.DEFAULT_EMAIL_TO],
                     context=context
                 )
+                send_email(
+                    subject='email/subjects/contact_user.txt',
+                    body='email/contact_user.html',
+                    from_email="VRE - Notificaciones <postmaster@%s>" % (
+                        settings.MAILGUN_SERVER_NAME
+                    ),
+                    to_email=[email],
+                    context={'name': request.POST.get('name'),}
+                )
         return JsonResponse(response.json())
 
     def get_list_id(self, request):
