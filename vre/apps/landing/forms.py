@@ -38,7 +38,7 @@ class ContactForm(forms.Form):
         widget=forms.TextInput(
             attrs={
                 'class': 'vre-input',
-                'placeholder': 'Teléfono (opcional)',
+                'placeholder': 'Teléfono',
                 'required': 'true',
             }
         ),

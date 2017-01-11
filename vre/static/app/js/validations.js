@@ -79,7 +79,7 @@
         email: true
       },
       phone: {
-        required: false
+        required: true
       },
       message: {
         required: false
