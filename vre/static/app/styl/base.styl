@@ -64,7 +64,8 @@ body #converse-chat
       font-size 15px
       padding 10px 25px
 
-.vre-button, .vre-inverse-button
+.vre-button, .vre-inverse-button,
+.hs-button.primary
   display inline-block
   padding 18px 50px
   transition all 0.2s
@@ -89,7 +90,8 @@ body #converse-chat
     background $orange
     color white !important
 
-.vre-inverse-button
+.vre-inverse-button,
+.hs-button
   background $orange
   simple-border('all', 2px, white)
   color white !important
@@ -101,7 +103,8 @@ body #converse-chat
   &.no-border
     border none
 
-.vre-input
+.vre-input,
+.hs-input
   background white
   border none
   padding 0.8em 1em
@@ -109,7 +112,8 @@ body #converse-chat
   &:focus
     outline none
 
-textarea.vre-input
+textarea.vre-input,
+textarea.hs-input
   resize none
 
 .orange-cover-divider

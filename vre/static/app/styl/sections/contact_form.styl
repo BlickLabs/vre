@@ -5,42 +5,52 @@
   padding-bottom 80px
   padding-top 60px
   width 40%
-  
+
+.hs-form-field label
+  display none
+
+.contact-form,
+.hbspt-form
   .title
     font-size 23px
     line-height inherit
     margin-bottom 40px
     margin-top 0
     min-width 280px
-    width 60% 
-    
-  .vre-input
+    width 60%
+
+  .vre-input,
+  .hs-input
     margin-top 15px
     min-width 280px
     width 80%
 
     &::placeholder
       font-weight $fontLight
-      
-  textarea.vre-input
+
+  textarea.vre-input,
+  textarea.hs-input
     height 200px
     width 100%
-    
-  .button-container
+
+  .button-container,
+  .hs_submit
     margin-top 30px
     min-width 280px
     text-align center
     width 80%
 
-  .vre-inverse-button
+  .vre-inverse-button,
+  .hs-button.primary
+    border none
     padding-bottom 10px
     padding-top 10px
-    
+
 @media screen and (max-width: 767px)
   .contact-form
     padding-bottom 40px
     padding-top 30px
-    
+
     .title
       font-size 20px
       margin-bottom 30px
