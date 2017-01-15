@@ -6,8 +6,11 @@ import urlparse
 import requests
 from django.conf import settings
 from django.core.urlresolvers import reverse_lazy
+from django.http import HttpResponse
 from django.shortcuts import redirect
 from django.template.response import TemplateResponse
+from django.utils.decorators import method_decorator
+from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import FormView, TemplateView, View
 
 from vre.apps.landing.forms import ContactForm
@@ -110,7 +113,7 @@ class DevelopmentDemo3View(TemplateView):
         context['develop'] = "dakota"
         return context
 
-class ContactView(FormView):
+class ContactViewOld(FormView):
     template_name = 'landing/contact.html'
     form_class = ContactForm
     success_url = reverse_lazy('landing:contact_success')
@@ -122,6 +125,64 @@ class ContactView(FormView):
     def form_invalid(self, form):
         return self.render_to_response(self.get_context_data())
 
+
+class ContactView(View):
+    @method_decorator(csrf_exempt)
+    def dispatch(self, request, *args, **kwargs):
+        return super(ContactView, self) \
+            .dispatch(request, *args, **kwargs)
+
+    def get(self, request):
+        return TemplateResponse(request, 'landing/contact.html')
+
+    def post(self, request):
+        name = request.POST.get('firstname')
+        email = request.POST.get('email')
+        message = request.POST.get('message')
+        phone = request.POST.get('phone')
+        ctx = {
+            'name': name,
+            'email': email,
+            'phone': phone,
+            'message': message
+        }
+        send_email(
+            subject='email/subjects/contact.txt',
+            body='email/contact.html',
+            from_email="VRE - Contacto <postmaster@%s>" % (
+                settings.MAILGUN_SERVER_NAME
+            ),
+            to_email=[settings.DEFAULT_EMAIL_TO],
+            context=ctx
+        )
+        send_email(
+            subject='email/subjects/contact_user.txt',
+            body='email/contact_user.html',
+            from_email="VRE - Notificaciones <postmaster@%s>" % (
+                settings.MAILGUN_SERVER_NAME
+            ),
+            to_email=[email],
+            context=ctx
+        )
+        endpoint = urlparse.urljoin(
+            settings.MAILCHIMP_API_ROOT,
+            'lists/%s/members/' % settings.MAILCHIMP_CONTACT_LIST
+        )
+        data = {
+            "email_address": email,
+            "status": "subscribed",
+        }
+        data = json.dumps(data)
+        response = requests.post(
+            endpoint, auth=('apikey', settings.MAILCHIMP_API_KEY), data=data)
+        subscriber = Subscriber(
+            email=email,
+            name=name,
+            phone=phone,
+            source='contact',
+        )
+        subscriber.save()
+        return HttpResponse('1')
 
 class ContactSuccessView(TemplateView):
     template_name = 'landing/success_contact.html'

@@ -15,7 +15,22 @@
         css: '',
         portalId: '2469317',
         formId: '437eb028-52df-4023-81d1-cb3542d7add9',
-        cssClass: 'custom-form'
+        cssClass: 'custom-form',
+        onFormSubmit: function($form) {
+          data = $form.serializeArray();
+          $.ajax({
+            url : "/contact/",
+            type: "POST",
+            data : data,
+            success: function(data, textStatus, jqXHR) {
+              console.log('Success')
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+              console.log('Error en el form')
+            }
+          });
+
+        }
       });
     </script>
     </div>
