@@ -23,12 +23,17 @@ class NewsletterView(View):
     def post(self, request):
         source = request.POST.get('source')
         email = request.POST.get('email')
+        if 'name' in request.POST:
+            name = request.POST.get('name')
+        else:
+            name = request.POST.get('firstname')
+        phone = request.POST.get('phone')
         list_id = self.get_list_id(request)
         endpoint = urlparse.urljoin(
             settings.MAILCHIMP_API_ROOT, 'lists/%s/members/' % list_id
         )
         data = {
-            "email_address": request.POST.get('email'),
+            "email_address": email,
             "status": "subscribed",
         }
         data = json.dumps(data)
@@ -38,14 +43,14 @@ class NewsletterView(View):
         if email:
             try:
                 subscriber = Subscriber.objects.get(
-                    email=request.POST.get('email'),
+                    email=email,
                     source=request.POST.get('source')
                 )
             except Subscriber.DoesNotExist:
                 subscriber = Subscriber(
-                    email=request.POST.get('email'),
-                    name=request.POST.get('name', None),
-                    phone=request.POST.get('phone', None),
+                    email=email,
+                    name=name,
+                    phone=phone,
                     source=request.POST.get('source'),
                 )
                 subscriber.save()
@@ -55,14 +60,14 @@ class NewsletterView(View):
                     'newsletter': 'False',
                     'brochure': 'True',
                     'brochure_title': source,
-                    'email': request.POST.get('email')
+                    'email': email
                 }
             else:
                 context = {
                     'newsletter': 'True',
                     'brochure': 'False',
                     'brochure_title': None,
-                    'email': request.POST.get('email')
+                    'email': email
                 }
 
             if d.get('status') == 'subscribed':

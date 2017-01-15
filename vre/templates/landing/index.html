@@ -41,10 +41,54 @@
       </ul>
     </div>
   </div>
-  <div class="white-box text-center">
+  <div class="white-box text-center" id="form-head-container">
     <div class="text-left">
     Recibe más <b>información</b> sobre nuestros proyectos:
     </div>
+    <!--[if lte IE 8]>
+    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+    <![endif]-->
+    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+    <script>
+      hbspt.forms.create({
+        css: '',
+        portalId: '2469317',
+        formId: '164c1c19-bd40-4fd7-8a35-d026ec847bb9',
+        onFormSubmit: function($form) {
+          $("#form-head-container").hide();
+          var data = $form.serializeArray();
+          data.push({name: 'source', value: 'newsletter'});
+          $.ajax({
+            url: '{% url "newsletter:suscribe" %}',
+            type : 'POST',
+            data: data,
+            beforeSend: function () {
+              ga('send', 'event', 'NewsHead', 'ok');
+            },
+            success: function (data) {
+              if (data.status === 'subscribed') {
+                $('#newsletter-modal').removeClass('error').addClass('success');
+                $('#newsletter-modal .modal-title').text('Nos pondremos en contacto contigo a la brevedad.');
+                $('#newsletter-modal .modal-body').text('Ya estas suscrito a nuestro Newsletter.');
+              } else {
+                $('#newsletter-modal').removeClass('success').addClass('error');
+                $('#newsletter-modal .modal-title').text('Ocurrió un error');
+                $('#newsletter-modal .modal-body').html('Tu suscripción no pudo llevarse a cabo, intentalo mas tarde');
+              }
+            },
+            error: function () {
+              $('#newsletter-modal').removeClass('success').addClass('error');
+              $('#newsletter-modal .modal-title').text('Ocurrió un error');
+              $('#newsletter-modal .modal-body').text('Ocurrió un error inesperado y tu suscripción no pudo llevarse a cabo.');
+            },
+            complete: function () {
+              $('#newsletter-modal').modal('show');
+            }
+          });
+        }
+      });
+    </script>
+    <!--
     <form id="homepage-special-form">
 	    {% csrf_token %}
       <input type="text" placeholder="Nombre" name="name">
@@ -53,6 +97,7 @@
 	    <input type="hidden" name="source" value="newsletter"/>
       <button type="button" class="vre-button" id="btn-newsletter-big">Enviar</button>
     </form>
+    -->
   </div>
 </div>
 <div class="homepage-developments">
