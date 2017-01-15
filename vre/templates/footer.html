@@ -1,7 +1,8 @@
 {% load static from staticfiles %}
-<footer class="{%if request.path == "/"%}orange-footer{%else%}gray-footer{%endif%}">
+<footer class="{% if request.path == "/" %}orange-footer{% else %}gray-footer{% endif %}">
   <div class="footer-container">
     <div class="footer-col">
+      <!--
       <form id="footer-newsletter-form">
         <span>Suscribete a nuestro newsletter</span>
         <input type="email" name="email" placeholder="Correo electrónico" />
@@ -9,6 +10,50 @@
         {% csrf_token %}
         <button type="button" id="btn-newsletter">Enviar</button>
       </form>
+      -->
+      <!--[if lte IE 8]>
+      <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+      <![endif]-->
+      <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+      <script>
+        hbspt.forms.create({
+          css: '',
+          portalId: '2469317',
+          formId: '91b63c0e-33bc-459c-bf47-0e6819c792d7',
+          onFormSubmit: function ($form) {
+            var data = $form.serializeArray();
+            data.push({name: 'source', value: 'newsletter'});
+            $.ajax({
+              url: '{% url "newsletter:suscribe" %}',
+              type: 'POST',
+              data: data,
+              beforeSend: function () {
+                ga('send', 'event', 'NewsFoot', 'ok');
+              },
+              success: function (data) {
+                if (data.status === 'subscribed') {
+                  $('#newsletter-modal').removeClass('error').addClass('success');
+                  $('#newsletter-modal .modal-title').text('Nos pondremos en contacto contigo a la brevedad.');
+                  $('#newsletter-modal .modal-body').text('Ya estas suscrito a nuestro Newsletter.');
+                } else {
+                  $('#newsletter-modal').removeClass('success').addClass('error');
+                  $('#newsletter-modal .modal-title').text('Ocurrió un error');
+                  $('#newsletter-modal .modal-body').html('Tu suscripción no pudo llevarse a cabo, intentalo mas tarde');
+                }
+              },
+              error: function () {
+                $('#newsletter-modal').removeClass('success').addClass('error');
+                $('#newsletter-modal .modal-title').text('Ocurrió un error');
+                $('#newsletter-modal .modal-body').text('Ocurrió un error inesperado y tu suscripción no pudo llevarse a cabo.');
+              },
+              complete: function () {
+                $('#newsletter-modal').modal('show');
+              }
+            });
+          }
+        });
+      </script>
+
       <div>
         <a href="{% url 'landing:privacy_notice' %}">Aviso de privacidad</a> <br>
         <a href="{% url 'landing:conditions_terms' %}">Términos y condiciones</a>
@@ -39,12 +84,13 @@
             <span>Calle 11 de Abril #201, </span>
             <span>San Pedro de los Pinos, CDMX.</span></p>
         </div>
-	      <div class="footer-contact-element">
-		      <i class="fa fa-facebook" style="font-size: 17px; height: 16px;margin-right: 18px;margin-top: 2px;width: 20px;"></i>
+        <div class="footer-contact-element">
+          <i class="fa fa-facebook"
+             style="font-size: 17px; height: 16px;margin-right: 18px;margin-top: 2px;width: 20px;"></i>
           <p>
-	          <a href="https://www.facebook.com/vremexico">
-		          /VREMEXICO
-	          </a>
+            <a href="https://www.facebook.com/vremexico">
+              /VREMEXICO
+            </a>
           </p>
         </div>
       </div>
