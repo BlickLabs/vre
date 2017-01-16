@@ -244,7 +244,8 @@ footer
   &.gray-footer
     background $darkGray
 
-    #footer-newsletter-form button
+    #footer-newsletter-form button,
+    #footer-newsletter-form [type="submit"]
       background lightness($darkGray, 30%)
       border-color lightness($darkGray, 60%)
 
@@ -261,7 +262,8 @@ footer
       &:first-child
         margin-right 30px
 
-      &:first-child form, &:nth-child(2)
+      &:first-child form, &:nth-child(2),
+      &:first-child .newsletter-span
         font-size 15.5px
         font-weight $fontNormal
 
@@ -309,19 +311,35 @@ footer
       display block
       font-size 16px
 
-  #footer-newsletter-form
+  .newsletter-span
+    display block
+
+  #footer-newsletter-form,
+  .hbspt-form
     margin-bottom 50px
 
-    span
-      display block
+    form > div
+      display inline-block
+      min-width 0 !important
+      vertical-align top
+      width auto !important
+
+    .hs_email
+      margin-top 8px
+      max-width 230px
+
+    .hs_submit
+      margin-top 8px
+      margin-left 7px
 
     input[type="email"]
       background rgba(white, 0.3)
       simple-border('all', 1px, white)
       font-weight $fontLight
-      margin-top 8px
-      max-width 230px
+      margin-top 0
       padding 9px 16px 11px 16px
+      width 100%
+      min-width 0
 
       &::placeholder
         color white
@@ -329,16 +347,17 @@ footer
       &:focus, &:active
         outline none
 
-    button
+    button,
+    [type="submit"]
       background #e5800f
-      simple-border('all', 1px, #f5a65b)
-      margin-left 2px
-      margin-top 8px
+      border 1px #f5a65b solid !important
+      margin-top 0
       padding 10px 23px 12px 23px
       transition all 0.2s
 
       &:hover, &:focus, &:active
         background white
+        border-color white !important
         color #e5800f
         outline none
 

@@ -188,19 +188,21 @@
     padding 28px 35px 10px 35px
     position absolute
 
-    div
+    .text-left
       line-height 1.25
 
-    #homepage-special-form
+    #homepage-special-form,
+    .hbspt-form
       font-size 13.8px
       margin-top 15px
 
-      input
+      input:not([type="submit"])
         background none
         simple-border('bottom', 1px, $orange)
         display block
         padding 7px 8px
         width 97.5%
+        min-width 0
 
         &:focus
           outline none
@@ -211,9 +213,24 @@
         &::placeholder
           font-weight $fontLight
 
-      button
+      .hs_submit
+        min-width 0
+        width 100%
+        margin-top 0
+
+      button,
+      [type="submit"]
         margin-top 36px
         padding 8px 28px
+        background white
+        simple-border('all', 2px, $orange)
+        color $orange !important
+
+        &:hover,
+        &:active,
+        &:focus
+          background $orange
+          color white !important
 
 .homepage-developments
   font-size $sectionTitleSize
