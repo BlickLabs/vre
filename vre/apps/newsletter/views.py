@@ -96,6 +96,8 @@ class NewsletterView(View):
             list_id = settings.MAILCHIMP_INDIANA_LIST
         elif request.POST.get('source') == 'dakota':
             list_id = settings.MAILCHIMP_DAKOTA_LIST
+        elif request.POST.get('source') == 'tlacotalpan':
+            list_id = settings.MAILCHIMP_TLACOTALPAN_LIST
         else:
             list_id = settings.MAILCHIMP_NEWSLETTER_LIST
 
