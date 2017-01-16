@@ -245,12 +245,13 @@ footer
     background $darkGray
 
     #footer-newsletter-form button,
-    #footer-newsletter-form [type="submit"]
+    .hbspt-form input[type="submit"]
       background lightness($darkGray, 30%)
-      border-color lightness($darkGray, 60%)
+      border-color lightness($darkGray, 60%) !important
 
       &:hover, &:focus, &:active
-        color lightness($darkGray, 30%)
+        background white
+        color lightness($darkGray, 30%) !important
 
   .footer-container
     align-items center
@@ -350,7 +351,9 @@ footer
     button,
     [type="submit"]
       background #e5800f
-      border 1px #f5a65b solid !important
+      border-width 1px !important
+      border-color #f5a65b !important
+      border-style solid !important
       margin-top 0
       padding 10px 23px 12px 23px
       transition all 0.2s
