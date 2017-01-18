@@ -40,6 +40,10 @@ class NewsletterView(View):
         response = requests.post(
             endpoint, auth=('apikey', settings.MAILCHIMP_API_KEY), data=data)
         d = json.loads(response.content)
+        if name:
+            ctx_user_email = {'name': request.POST.get('name'), }
+        else:
+            ctx_user_email = {'name': '', }
         if email:
             try:
                 subscriber = Subscriber.objects.get(
@@ -87,7 +91,7 @@ class NewsletterView(View):
                         settings.MAILGUN_SERVER_NAME
                     ),
                     to_email=[email],
-                    context={'name': request.POST.get('name'),}
+                    context=ctx_user_email
                 )
         return JsonResponse(response.json())
 
