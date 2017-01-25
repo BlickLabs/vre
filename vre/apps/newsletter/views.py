@@ -59,7 +59,8 @@ class NewsletterView(View):
                 )
                 subscriber.save()
 
-            if source == 'indiana' or source == 'dakota':
+            if source == 'indiana' or source == 'dakota' or \
+                            source == 'tlacotalpan':
                 context = {
                     'newsletter': 'False',
                     'brochure': 'True',
@@ -75,24 +76,50 @@ class NewsletterView(View):
                 }
 
             if d.get('status') == 'subscribed':
-                send_email(
-                    subject='email/subjects/newsletter.txt',
-                    body='email/newsletter.html',
-                    from_email="VRE - Notificacion <postmaster@%s>" % (
-                        settings.MAILGUN_SERVER_NAME
-                    ),
-                    to_email=[settings.DEFAULT_EMAIL_TO],
-                    context=context
-                )
-                send_email(
-                    subject='email/subjects/contact_user.txt',
-                    body='email/contact_user.html',
-                    from_email="VRE - Notificaciones <postmaster@%s>" % (
-                        settings.MAILGUN_SERVER_NAME
-                    ),
-                    to_email=[email],
-                    context=ctx_user_email
-                )
+                if source == 'contact':
+                    ctx = {
+                        'name': name,
+                        'email': email,
+                        'phone': phone,
+                        'message': None
+                    }
+                    send_email(
+                        subject='email/subjects/contact.txt',
+                        body='email/contact.html',
+                        from_email="VRE - Contacto <hola@%s>" % (
+                            settings.MAILGUN_SERVER_NAME
+                        ),
+                        to_email=[settings.DEFAULT_EMAIL_TO],
+                        context=ctx
+                    )
+                    send_email(
+                        subject='email/subjects/contact_user.txt',
+                        body='email/contact_user.html',
+                        from_email="VRE - Notificaciones <hola@%s>" % (
+                            settings.MAILGUN_SERVER_NAME
+                        ),
+                        to_email=[email],
+                        context=ctx
+                    )
+                else:
+                    send_email(
+                        subject='email/subjects/newsletter.txt',
+                        body='email/newsletter.html',
+                        from_email="VRE - Notificacion <postmaster@%s>" % (
+                            settings.MAILGUN_SERVER_NAME
+                        ),
+                        to_email=[settings.DEFAULT_EMAIL_TO],
+                        context=context
+                    )
+                    send_email(
+                        subject='email/subjects/contact_user.txt',
+                        body='email/contact_user.html',
+                        from_email="VRE - Notificaciones <postmaster@%s>" % (
+                            settings.MAILGUN_SERVER_NAME
+                        ),
+                        to_email=[email],
+                        context=ctx_user_email
+                    )
         return JsonResponse(response.json())
 
     def get_list_id(self, request):
@@ -102,6 +129,8 @@ class NewsletterView(View):
             list_id = settings.MAILCHIMP_DAKOTA_LIST
         elif request.POST.get('source') == 'tlacotalpan':
             list_id = settings.MAILCHIMP_TLACOTALPAN_LIST
+        elif request.POST.get('source') == 'contact':
+            list_id = settings.MAILCHIMP_CONTACT_LIST
         else:
             list_id = settings.MAILCHIMP_NEWSLETTER_LIST
 
