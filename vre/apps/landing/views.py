@@ -48,7 +48,7 @@ class VisitUsView(View):
         send_email(
             subject='email/subjects/visit_showroom.txt',
             body='email/visit_showroom.html',
-            from_email="VRE - Showroom <postmaster@%s>" % (
+            from_email="VRE - Showroom <hola@%s>" % (
                 settings.MAILGUN_SERVER_NAME
             ),
             to_email=[settings.DEFAULT_EMAIL_TO, 'pamela.piedras@vre.com.mx'],
@@ -57,7 +57,7 @@ class VisitUsView(View):
         send_email(
             subject='email/subjects/contact_user.txt',
             body='email/showroom_user.html',
-            from_email="VRE - Notificaciones <postmaster@%s>" % (
+            from_email="VRE - Notificaciones <hola@%s>" % (
                 settings.MAILGUN_SERVER_NAME
             ),
             to_email=[request.POST.get('email')],
@@ -149,7 +149,7 @@ class ContactView(View):
         send_email(
             subject='email/subjects/contact.txt',
             body='email/contact.html',
-            from_email="VRE - Contacto <postmaster@%s>" % (
+            from_email="VRE - Contacto <hola@%s>" % (
                 settings.MAILGUN_SERVER_NAME
             ),
             to_email=[settings.DEFAULT_EMAIL_TO],
@@ -158,7 +158,7 @@ class ContactView(View):
         send_email(
             subject='email/subjects/contact_user.txt',
             body='email/contact_user.html',
-            from_email="VRE - Notificaciones <postmaster@%s>" % (
+            from_email="VRE - Notificaciones <hola@%s>" % (
                 settings.MAILGUN_SERVER_NAME
             ),
             to_email=[email],

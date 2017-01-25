@@ -9,7 +9,7 @@ from django.template import loader
 
 from pyExcelerator import *
 
-DEFAULT_NOTIFICATION_EMAIL_FROM = "VRE - Notificaciones <postmaster@%s>" % (
+DEFAULT_NOTIFICATION_EMAIL_FROM = "VRE - Notificaciones <hola@%s>" % (
     settings.MAILGUN_SERVER_NAME
 )
 

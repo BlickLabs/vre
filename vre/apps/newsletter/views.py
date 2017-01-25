@@ -105,7 +105,7 @@ class NewsletterView(View):
                     send_email(
                         subject='email/subjects/newsletter.txt',
                         body='email/newsletter.html',
-                        from_email="VRE - Notificacion <postmaster@%s>" % (
+                        from_email="VRE - Notificacion <hola@%s>" % (
                             settings.MAILGUN_SERVER_NAME
                         ),
                         to_email=[settings.DEFAULT_EMAIL_TO],
@@ -114,7 +114,7 @@ class NewsletterView(View):
                     send_email(
                         subject='email/subjects/contact_user.txt',
                         body='email/contact_user.html',
-                        from_email="VRE - Notificaciones <postmaster@%s>" % (
+                        from_email="VRE - Notificaciones <hola@%s>" % (
                             settings.MAILGUN_SERVER_NAME
                         ),
                         to_email=[email],
