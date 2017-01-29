@@ -245,22 +245,37 @@
     margin 0
 
   &-items
+    display flex
+    justify-content space-around
+    flex-wrap wrap
+    height auto
     center-block()
     margin-top 10px
-    text-align center
+    max-width 900px
 
     .item
-      display inline-block
-      margin 25px 10px 0 10px
-      width 30% !important
+      margin 0
+      margin-top 25px
+      width 204px
 
       &-name
-        margin-top 10px
-        width 40%
+        margin-top 20px
+        width 140px
 
       &-picture
-        height auto
-        width 100%
+        background-position center
+        background-size cover
+        height 242px
+        center-block()
+        padding-bottom 0%
+        width 204px
+
+  .vre-button
+    border-width 1px
+    font-size 13px
+    margin-top 3.5em
+    padding 0.9em 1.5em
+    font-weight $fontSemiBold
 
 .homepage-cover-divider-1
   .text-part
@@ -473,16 +488,6 @@
   .homepage-cover
     min-height 460px
 
-  .homepage-developments .item
-    width 100% !important
-    margin-left 0 !important
-
-    &:not(:first-child)
-      margin-top 30px
-
-    &:first-child
-      margin-top 20px
-
   .homepage-contact-divider
     margin 55px 20px
 
@@ -516,6 +521,10 @@
         right initial
         text-align center
 
+@media screen and (max-width: 980px)
+  .homepage-developments-items .item
+    width 45%
+
 @media $smallPortrait
   .homepage-cover
     height 50vh
@@ -528,6 +537,10 @@
   .homepage-cover-divider-1 .image-part,
   .homepage-cover-divider-2 .image-part
     height 70vh
+
+@media screen and (max-width: 500px)
+  .homepage-developments-items .item
+    width 100%
 
 @media screen and (max-width: 480px)
   .homepage-cover .homepage-mobile-logo

@@ -104,24 +104,31 @@
   <h2>Conoce nuestros departamentos en venta</h2>
   <div class="homepage-developments-items">
     <div class="item">
-      <a href="{% url 'landing:development_demo3' %}">
-        <img src="{% static "img/tmp/tlacotalpan_item_photo_small.jpg" %}" class="item-picture" alt="Tlacotalpan picture">
-        <img class="item-name" src="{% static "img/tmp/tlacotalpan_gray_name.png" %}" alt="Tlacotalpan picture" />
-      </a>
-    </div>
-    <div class="item">
       <a href="{% url 'landing:development_demo' %}">
-        <img src="{% static "img/tmp/indiana_item_photo_small.jpg" %}" class="item-picture" alt="inidiana picture">
+        <div class="item-picture" style="background-image: url({% static "img/tmp/indiana_item_photo_small.jpg" %})"></div>
         <img class="item-name" src="{% static "img/tmp/indiana_gray_name.png" %}" alt="indiana picture" />
       </a>
     </div>
     <div class="item">
       <a href="{% url 'landing:development_demo2' %}">
-        <img src="{% static "img/tmp/dakota_item_photo_small.jpg" %}" class="item-picture" alt="dakota picture">
+        <div class="item-picture" style="background-image: url({% static "img/tmp/dakota_item_photo_small.jpg" %})"></div>
         <img class="item-name" src="{% static "img/tmp/dakota_gray_name.png" %}" alt="dakota picture" />
       </a>
     </div>
+    <div class="item">
+      <a href="{% url 'landing:development_demo3' %}">
+        <div class="item-picture" style="background-image: url({% static "img/tmp/tlacotalpan_item_photo_small.jpg" %})"></div>
+        <img class="item-name" src="{% static "img/tmp/tlacotalpan_gray_name.png" %}" alt="Tlacotalpan picture" />
+      </a>
+    </div>
+    <div class="item">
+      <a href="{% url 'landing:development_demo3' %}">
+        <div class="item-picture" style="background-image: url({% static "img/tmp/tlacotalpan_item_photo_small.jpg" %})"></div>
+        <img class="item-name" src="{% static "img/tmp/tlacotalpan_gray_name.png" %}" alt="Tlacotalpan picture" />
+      </a>
+    </div>
   </div>
+  <a class="vre-button" href="#">Conoce más desarrollos</a>
 </div>
 <div class="orange-cover-divider homepage-cover-divider-1">
   <div class="text-part">
