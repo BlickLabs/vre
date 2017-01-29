@@ -306,11 +306,39 @@
     margin-top 40px
 
 .homepage-gray-divider
-  padding 60px 20px
+  padding-bottom 60px
+
+  .iframe-selector
+    background white
+    display flex
+    flex-wrap wrap
+    justify-content center
+    simple-border('topbottom', 1px, #cecdce)
+
+  .iframe-option
+    color #4a4a4a
+    font-size 14px
+    padding 1.5em 3.7em
+    simple-border('leftright', 1px, #cecdce)
+    max-width 50%
+
+    &:hover,
+    &:active,
+    &.active
+      border none
+      background $orange
+      color white
+      font-weight $fontBold
+
+  span
+    display block
+    margin-top 45px
+    width 90%
+    center-block()
 
   .container-360
     center-block()
-    margin-top 20px
+    margin-top 30px
     max-width 900px
     min-width 280px
     width 80%

@@ -124,7 +124,7 @@
     <div class="item">
       <a href="{% url 'landing:development_demo3' %}">
         <div class="item-picture" style="background-image: url({% static "img/tmp/tlacotalpan_item_photo_small.jpg" %})"></div>
-        <img class="item-name" src="{% static "img/tmp/tlacotalpan_gray_name.png" %}" alt="Tlacotalpan picture" />
+        <img class="item-name" src="{% static "img/tmp/tlacotalpan_gray_name.png" %}" alt="Nebraska picture" />
       </a>
     </div>
   </div>
@@ -146,7 +146,13 @@
   <a href="{% url 'landing:contact' %}" class="vre-button">Contáctanos</a>
 </div>
 <div class="gray-container homepage-gray-divider text-center">
-  Dale click sobre la imagen y vive el departamento
+  <div class="iframe-selector">
+    <a class="iframe-option active" href="#" data-iframe-url="">Indiana</a>
+    <a class="iframe-option" href="#" data-iframe-url="">Dakota</a>
+    <a class="iframe-option" href="#" data-iframe-url="">Tlacotalpan</a>
+    <a class="iframe-option" href="#" data-iframe-url="">Nebraska</a>
+  </div>
+  <span>Dale click sobre la imagen y vive el departamento</span>
   <div class="container-360">
     <div class="embed-responsive embed-responsive-16by9">
       <iframe src="http://dwmx.com/VRE/Indiana/" frameborder="0" class="embed-responsive-item"></iframe>
