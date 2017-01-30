@@ -4,37 +4,48 @@
 {% block content %}
 {% include "sections_navbar.html" %}
 <main id="sections-content">
-  <div class="gray-container developments-gray-divider text-center">
+  <div class="developments-gray-divider text-center">
     <h1>Nuestros <b>Desarrollos</b></h1>
     <p>
     Cada espacio que diseñamos y construimos es terminado con la mejor selección de acabados y materiales.
     </p>
   </div>
-  <div class="developments">
-    <div class="orange-cover-divider developments-cover-divider">
-      <div class="text-part">
-        <div>
-          <img src="{% static "img/tmp/tlacotalpan_white_name.png" %}" alt="Tlacotalpan logo">
-          <a href="{% url 'landing:development_demo3' %}" class="vre-inverse-button">Conoce más</a>
-        </div>
+  <div class="developments-items">
+    <div class="development-item">
+      <a href="{% url 'landing:development_demo' %}" class="development-item-cover cover" style="background-image: url({% static "img/tmp/indiana_item_photo_small.jpg" %})"></a>
+      <div class="development-item-info">
+        <a href="{% url 'landing:development_demo' %}">
+          <img src="{% static "img/tmp/indiana_full_white_name.png" %}" class="development-item-name" alt="Indiana 176">
+        </a>
+        <span class="development-item-location">Colonia <strong>Nápoles</strong></span>
       </div>
-      <div class="image-part cover simple-parallax" style="background-image: url('{% static "img/tmp/tlacotalpan_item_photo.jpg" %}')"></div>
     </div>
-    <div class="orange-cover-divider developments-cover-divider">
-      <div class="text-part">
-        <div>
-          <img src="{% static "img/tmp/indiana_white_name.png" %}" alt="Indiana logo">
-          <a href="{% url 'landing:development_demo' %}" class="vre-inverse-button">Conoce más</a>
-        </div>
+    <div class="development-item">
+      <a href="{% url 'landing:development_demo2' %}" class="development-item-cover cover" style="background-image: url({% static "img/tmp/dakota_item_photo_small.jpg" %})"></a>
+      <div class="development-item-info">
+        <a href="{% url 'landing:development_demo2' %}">
+          <img src="{% static "img/tmp/dakota_full_white_name.png" %}" class="development-item-name" alt="Dakota 322">
+        </a>
+        <span class="development-item-location">Colonia <strong>Roma</strong></span>
       </div>
-      <div class="image-part cover simple-parallax" style="background-image: url('{% static "img/tmp/indiana_item_photo.jpg" %}')"></div>
     </div>
-    <div class="orange-cover-divider developments-cover-divider">
-      <div class="text-part">
-        <img src="{% static "img/tmp/dakota_white_name.png" %}" alt="Dakota logo">
-        <a href="{% url 'landing:development_demo2' %}" class="vre-inverse-button">Conoce más</a>
+    <div class="development-item">
+      <a href="{% url 'landing:development_demo3' %}" class="development-item-cover cover" style="background-image: url({% static "img/tmp/tlacotalpan_item_photo_small.jpg" %})"></a>
+      <div class="development-item-info">
+        <a href="{% url 'landing:development_demo3' %}">
+          <img src="{% static "img/tmp/tlacotalpan_full_white_name.png" %}" class="development-item-name" alt="Tlacotalpan 146">
+        </a>
+        <span class="development-item-location">Colonia <strong>Nápoles</strong></span>
       </div>
-      <div class="image-part cover simple-parallax" style="background-image: url('{% static "img/tmp/dakota_item_photo.jpg" %}')"></div>
+    </div>
+    <div class="development-item">
+      <a href="{% url 'landing:development_demo' %}" class="development-item-cover cover" style="background-image: url({% static "img/tmp/indiana_item_photo_small.jpg" %})"></a>
+      <div class="development-item-info">
+        <a href="{% url 'landing:development_demo' %}">
+          <img src="{% static "img/tmp/indiana_full_white_name.png" %}" class="development-item-name" alt="Indiana 176">
+        </a>
+        <span class="development-item-location">Colonia <strong>Roma</strong></span>
+      </div>
     </div>
   </div>
 </main>
