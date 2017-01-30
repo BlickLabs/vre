@@ -110,7 +110,15 @@ class DevelopmentDemo3View(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(DevelopmentDemo3View, self).get_context_data(**kwargs)
-        context['develop'] = "dakota"
+        context['develop'] = "tlacotalpan"
+        return context
+
+class DevelopmentDemo4View(TemplateView):
+    template_name = 'develops/develop_detail_4.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(DevelopmentDemo4View, self).get_context_data(**kwargs)
+        context['develop'] = "nebraska"
         return context
 
 class ContactViewOld(FormView):
