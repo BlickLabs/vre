@@ -317,16 +317,23 @@
     simple-border('topbottom', 1px, #cecdce)
 
   .iframe-option
+    box-sizing initial
     color #4a4a4a
     font-size 14px
-    padding 1.5em 3.7em
-    simple-border('leftright', 1px, #cecdce)
-    max-width 50%
+    padding 1.5em 0
+    border-color #cecdce
+    border-width 0 1px 0 0
+    border-style solid
+    text-align center
+    width 157px
+
+    &:first-child
+      border-left-width 1px
 
     &:hover,
     &:active,
     &.active
-      border none
+      border-color $orange
       background $orange
       color white
       font-weight $fontBold
@@ -567,6 +574,22 @@
   .homepage-cover-divider-1 .image-part,
   .homepage-cover-divider-2 .image-part
     height 70vh
+
+@media screen and (max-width: 630px)
+  .homepage-gray-divider .iframe-option
+    box-sizing border-box
+    border-width 0
+    width 50%
+
+    &:first-child
+      border-left-width 0
+
+    &:nth-child(n+3)
+      border-top-width 1px
+      border-top-color #cecdce
+
+    &:nth-child(2n)
+      border-left-width 1px
 
 @media screen and (max-width: 500px)
   .homepage-developments-items .item
