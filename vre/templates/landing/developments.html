@@ -48,5 +48,33 @@
       </div>
     </div>
   </div>
+  <div id="location-map">
+
+  </div>
 </main>
+{% endblock %}
+{% block before_scripts %}
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYJxTs6nptICwPefTB_XR6yA2BUmUg-5A"></script>
+{% endblock %}
+{% block after_scripts %}
+<script>
+  insertMap([19.395001, -99.176670], 'Desarrollos', 14, [
+    {
+      coordinates: [19.386183, -99.178583],
+      title: 'Indiana 176'
+    },
+    {
+      coordinates: [19.388950, -99.178761],
+      title: 'Dakota 322'
+    },
+    {
+      coordinates: [19.402214, -99.165347],
+      title: 'Tlacotalpan 146'
+    },
+    {
+      coordinates: [19.395001, -99.176670],
+      title: 'Nebraska 159'
+    }
+  ]);
+</script>
 {% endblock %}

@@ -1,14 +1,14 @@
 var insertMap = (function () {
   'use strict';
   /*global google*/
-  return function (latLng, mapTitle, zoom) {
+  return function (latLng, mapTitle, zoom, locations) {
     function init() {
       var mapZoom = zoom !== undefined ? zoom : 13,
         mapDOM = document.getElementById('location-map'),
         mapOptions,
         map,
         marker,
-        aux = [];
+        markers = [];
       mapOptions = {
         zoom: mapZoom,
         center: new google.maps.LatLng(latLng[0], latLng[1]),
@@ -123,13 +123,23 @@ var insertMap = (function () {
         }]
       };
       map = new google.maps.Map(mapDOM, mapOptions);
-      marker = new google.maps.Marker({
-        position: new google.maps.LatLng(latLng[0], latLng[1]),
-        map: map,
-        title: mapTitle
-      });
-      aux.push(marker);
-      aux = null;
+      if (!locations) {
+        marker = new google.maps.Marker({
+          position: new google.maps.LatLng(latLng[0], latLng[1]),
+          map: map,
+          title: mapTitle
+        });
+        markers.push(marker);
+      } else {
+        locations.forEach(function (item) {
+          var item_marker = new google.maps.Marker({
+            position: new google.maps.LatLng(item.coordinates[0], item.coordinates[1]),
+            map: map,
+            title: item.title
+          });
+          markers.push(item_marker);
+        });
+      }
     }
     google.maps.event.addDomListener(window, 'load', init);
   };
