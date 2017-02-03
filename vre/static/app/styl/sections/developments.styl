@@ -30,11 +30,11 @@
   text-align center
   margin-top 3.21em
 
-  &:nth-child(2n + 1)
-    background $orange
-
-  &:nth-child(2n)
+  &.type-b
     background #f4b183
+
+  &:not(.type-b)
+    background $orange
 
 .development-item-cover
   display block
