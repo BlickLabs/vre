@@ -1,18 +1,18 @@
 This Guide is for distributions based on Debian
 ------
 
-##<a name="index"></a> Index
+## <a name="index"></a> Index
 
 * [Prerequirements](#pre-requirements)
 * [OS Requirements](#os-requirements)
 * [Setting up the project](#project-setup)
 
-###<a name="pre-requirements"></a> Prerequirements.<sub><sub><sub><sub>[Index](#index)</sub></sub></sub></sub>
+### <a name="pre-requirements"></a> Prerequirements.<sub><sub><sub><sub>[Index](#index)</sub></sub></sub></sub>
 
 1. Python 2.7
 2. Git
 
-###<a name="os-requirements"></a> OS Requirements.<sub><sub><sub><sub>[Index](#index)</sub></sub></sub></sub>
+### <a name="os-requirements"></a> OS Requirements.<sub><sub><sub><sub>[Index](#index)</sub></sub></sub></sub>
 
 Installing Dependencies
 
@@ -20,7 +20,7 @@ Installing Dependencies
 $ sudo apt-get install python-pip python-dev libjpeg-dev
 ```
 
-###<a name="project-setup"></a> Setting up the project.<sub><sub><sub><sub>[Index](#index)</sub></sub></sub></sub>
+### <a name="project-setup"></a> Setting up the project.<sub><sub><sub><sub>[Index](#index)</sub></sub></sub></sub>
 
 ```bash
 $ git clone <code_repository>
