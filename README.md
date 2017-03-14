@@ -55,6 +55,8 @@ Create a superuser for the admin site
 $ ./manage.py createsuperuser
 ```
 
+NOTE: On 'user type' option use 'investor'
+
 Finally run the project using
 
 ```bash
