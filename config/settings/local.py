@@ -30,15 +30,6 @@ CACHES = {
     }
 }
 
-# DATABASE
-# -----------------------------------------------------------------------------
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(str(ROOT_DIR), 'db.sqlite3'),
-    }
-}
-
 # django-debug-toolbar
 # -----------------------------------------------------------------------------
 MIDDLEWARE_CLASSES += ('debug_toolbar.middleware.DebugToolbarMiddleware',)
