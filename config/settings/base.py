@@ -10,6 +10,7 @@ https://docs.djangoproject.com/en/dev/ref/settings/
 
 from __future__ import absolute_import, unicode_literals
 
+import dj_database_url
 import environ
 
 from django.utils.translation import ugettext_lazy as _
@@ -129,6 +130,12 @@ TEMPLATES = [
         },
     },
 ]
+
+#x DATABASE
+# -----------------------------------------------------------------------------
+DATABASES = {
+    'default': dj_database_url.config()
+}
 
 # URL Configuration
 # -----------------------------------------------------------------------------

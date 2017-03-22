@@ -16,6 +16,11 @@ Pillow==3.3.0
 # -----------------------------------------------------------------------------
 django-suit==0.2.19
 
+# Python-PostgreSQL Database Adapter
+# ------------------------------------------------
+dj_database_url==0.4.1
+psycopg2==2.6.1
+
 # Your custom requirements go here
 # -----------------------------------------------------------------------------
 git+https://github.com/RacingTadpole/django-private-media.git

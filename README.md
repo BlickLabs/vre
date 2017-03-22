@@ -5,6 +5,7 @@ Local Develop (This Guide is for distributions based on Debian)
 
 * [Prerequirements](#pre-requirements)
 * [OS Requirements](#os-requirements)
+* [Installing PostgreSQL dependences](#install-psql)
 * [Setting up the project](#project-setup)
 
 ### <a name="pre-requirements"></a> Prerequirements.<sub><sub><sub><sub>[Index](#index)</sub></sub></sub></sub>
@@ -19,6 +20,26 @@ Installing Dependencies
 ```bash
 $ sudo apt-get install python-pip python-dev libjpeg-dev
 ```
+
+### <a name="install-psql"></a> Installing PostgreSQL dependences.<sub><sub><sub><sub>[Index](#index)</sub></sub></sub></sub>
+
+```bash
+$ sudo apt-get install postgresql postgresql-contrib libpq-dev
+```
+
+
+<a name="database-setup"></a> Setting up the database
+
+```bash
+$ sudo su postgres
+$ createdb <db_name>
+$ createuser -P <db_username>
+$ psql
+=# GRANT ALL PRIVILEGES ON DATABASE <db_name> TO <db_username>;
+=# \q
+$ $ exit
+```
+
 
 ### <a name="project-setup"></a> Setting up the project.<sub><sub><sub><sub>[Index](#index)</sub></sub></sub></sub>
 

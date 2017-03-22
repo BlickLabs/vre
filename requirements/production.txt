@@ -2,11 +2,6 @@
 #	production that isn't in development.
 -r base.txt
 
-# Python-PostgreSQL Database Adapter
-# ------------------------------------------------
-psycopg2==2.6.1
-dj_database_url==0.4.1
-
 # WSGI Adapter
 # -----------------------------------------------------------------------------
 gunicorn==19.4.5
