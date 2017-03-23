@@ -1,0 +1,188 @@
+{% extends "base.html" %}
+{% load static from staticfiles %}
+{% block title %}Nebraska 159 | VRE Mexico{% endblock %}
+{% block content %}
+{% include "sections_navbar.html" %}
+<main id="sections-content">
+  <div class="development-cover cover parallax" style="background-image: url('{% static "img/tmp/nebraska_cover.jpg" %}')">
+    <img src="{% static "img/tmp/nebraska_full_white_name.png" %}" alt="Nebraska logo">
+  </div>
+  <div class="development-header-text">
+  Vive a unas cuadras el WTC. <br>
+  Departamentos desde 74m2.
+  </div>
+  <div class="gray-container development-download-brochure">
+    <div>
+      <span>Si quieres más información, descarga aquí nuestro brochure de ventas</span>
+      <form id="download-brochure-form">
+        {% csrf_token %}
+        <input type="email" id="download-brochure-email" placeholder="Correo electrónico" name="email">
+        <input type="hidden" name="source" value="nebraska">
+	      <span id="download-brochure-span" style="display:block;"></span>
+        <a href class="vre-inverse-button" id="download-brochure-button">Conoce más</a>
+      </form>
+    </div>
+  </div>
+  <div class="development-360-video text-center">
+    Dale click sobre la imagen y vive el departamento
+    <div class="container-360">
+      <div class="embed-responsive embed-responsive-16by9">
+        <div class="help-360">Click para comenzar</div>
+        <iframe src="http://www.dwmx.com/VRE/Nebraska/" frameborder="0" class="embed-responsive-item"></iframe>
+      </div>
+    </div>
+  </div>
+  <div class="development-characteristics">
+    <div class="text-center">Características de los departamentos</div>
+    <ul class="development-characteristics-items">
+      <li class="development-characteristics-item">
+        <img src="{% static "img/icons/living_room_icon.png" %}" alt="living room icon">
+        <span>Sala</span>
+      </li>
+      <li class="development-characteristics-item">
+        <img src="{% static "img/icons/service_room_icon.png" %}" alt="service room icon">
+        <span>Cuarto de servicio</span>
+      </li>
+      <li class="development-characteristics-item">
+        <img src="{% static "img/icons/full_bathroom_icon.png" %}" alt="bathroom icon">
+        <span>Dos baños a dos baños y medio</span>
+      </li>
+      <li class="development-characteristics-item">
+        <img src="{% static "img/icons/dinning_room_icon.png" %}" alt="dinning room icon">
+        <span>Comedor</span>
+      </li>
+      <li class="development-characteristics-item">
+        <img src="{% static "img/icons/closet_icon.png" %}" alt="closet icon">
+        <span>Clóset</span>
+      </li>
+      <li class="development-characteristics-item">
+        <img src="{% static "img/icons/dressing_room_icon.png" %}" alt="dressing room icon">
+        <span>Vestidor</span>
+      </li>
+      <li class="development-characteristics-item">
+        <img src="{% static "img/icons/kitchen_icon.png" %}" alt="kitchen icon">
+        <span>Cocina equipada</span>
+      </li>
+      <li class="development-characteristics-item">
+        <img src="{% static "img/icons/bedroom_icon.png" %}" alt="bedroom icon">
+        <span>Dos recámaras</span>
+      </li>
+      <li class="development-characteristics-item">
+        <img src="{% static "img/icons/parking_lot_icon.png" %}" alt="parking icon">
+        <span>Uno o dos cajones de estacionamiento</span>
+      </li>
+    </ul>
+  </div>
+  <div class="development-carousel-container text-center">
+    <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_02.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/tmp/tlacotalpan_carousel_02.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_05.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_04.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/tmp/tlacotalpan_carousel_06.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/tmp/nebraska_carousel_01.jpg" %}')">
+    </div>
+  </div>
+  <div class="development-drawings gray-container text-center">
+    <div class="drawing-selectors">
+      <div class="drawing-selector active">101</div>
+      <div class="drawing-selector">201</div>
+      <div class="drawing-selector">301</div>
+    </div>
+    <div class="drawing-picture">
+      Departamento <span>101</span>
+      <img src="{% static "img/tmp/nebraska_department_101.png" %}" class="show" data-department="101" alt="nebraska department 101">
+      <img src="{% static "img/tmp/nebraska_department_201.png" %}" class="hide" data-department="201" alt="nebraska department 201">
+      <img src="{% static "img/tmp/nebraska_department_201.png" %}" class="hide" data-department="301" alt="nebraska department 301">
+    </div>
+    <div class="drawing-picture">
+      Departamento <span>202</span>
+      <img src="{% static "img/tmp/nebraska_department_102.png" %}" class="hide" data-department="102" alt="nebraska department 102 ">
+      <img src="{% static "img/tmp/nebraska_department_202.png" %}" class="show" data-department="202" alt="nebraska department 202">
+      <img src="{% static "img/tmp/nebraska_department_202.png" %}" class="hide" data-department="302" alt="nebraska department 302">
+    </div>
+    <div class="drawing-selectors">
+      <div class="drawing-selector">102</div>
+      <div class="drawing-selector active">202</div>
+      <div class="drawing-selector">302</div>
+    </div>
+  </div>
+  <div class="development-nearby-places">
+    <div id="location-map" class="location-map"></div>
+    <div class="points-of-interest">
+      <span>Lugares de interés</span>
+      <ul>
+        <li>
+          <img src="{% static "img/tmp/icons/hip_icon.png" %}" alt="hip icon">
+          <span>Hospital Star Médica HIP: 5 min (450m)</span>
+        </li>
+        <li>
+          <img src="{% static "img/tmp/icons/cdmx_icon.png" %}" alt="cdmx icon">
+          <span>Angel de la Independencia: 19 min (5 km)</span>
+        </li>
+        <li>
+          <img src="{% static "img/tmp/icons/aicm_icon.png" %}" alt="aicm icon">
+          <span>Aeropuerto CDMX: 26 min (12.2 km)</span>
+        </li>
+        <li>
+          <img src="{% static "img/tmp/icons/antara_fashion_icon.png" %}" alt="antara fashion icon">
+          <span>Antara Fashion Hall: 15 min (7.3 km)</span>
+        </li>
+        <li>
+          <img src="{% static "img/tmp/icons/santafe_icon.png" %}" alt="santafe icon">
+          <span>Centro Comercial Santa Fe: 19 min (23.3 km)</span>
+        </li>
+      </ul>
+      <div class="note">* Tiempo estimado a las 9:00 am entre semana</div>
+    </div>
+  </div>
+  <div class="development-public-transport gray-container">
+    <div class="transport-title text-center"><img src="{% static "img/icons/transport_icon.png" %}" alt="Transporte público">Transporte Público</div>
+    <div class="transport-items-container">
+      <div class="transport-items-column">
+        <div class="transport-item">
+          <span class="semibold">Metrobús: </span>
+          Parada Colonia del Valle (450 m)
+        </div>
+        <div class="transport-item">
+          <span class="semibold">Metro: </span>
+          Estación San Antonio (1 km)
+        </div>
+        <div class="transport-item">
+          <span class="semibold">Ecobici: </span>
+          Estación 349 (350 m)
+        </div>
+      </div>
+      <div class="transport-items-column">
+        <div class="transport-item">
+          <span class="semibold">Walking Score ® : </span>
+          97 (Un paraíso para el peatón)
+        </div>
+        <div class="transport-item">
+          <span class="semibold">Ciclovía: </span>
+          Calle Dakota (200 m)
+        </div>
+      </div>
+    </div>
+    <div class="transport-separated-text">
+      Vida diaria no requiere el uso del coche
+    </div>
+  </div>
+  <div class="development-built-by">
+    Construido por <img src="{% static "img/icons/zago-logo.png" %}" alt="zago logo">
+  </div>
+</main>
+{% endblock %}
+{% block before_scripts %}
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYJxTs6nptICwPefTB_XR6yA2BUmUg-5A"></script>
+{% endblock %}
+{% block after_scripts %}
+<script>
+  insertMap([19.395001, -99.176670], 'Nebraska 159');
+  addBrochureListener('BrochureNebraska', 4);
+</script>
+{% endblock %}
