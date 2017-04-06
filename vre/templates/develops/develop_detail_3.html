@@ -14,13 +14,30 @@
   <div class="gray-container development-download-brochure">
     <div>
       <span>Si quieres más información, descarga aquí nuestro brochure de ventas</span>
-      <form id="download-brochure-form">
-        {% csrf_token %}
-        <input type="email" id="download-brochure-email" placeholder="Correo electrónico" name="email">
-        <input type="hidden" name="source" value="tlacotalpan">
-        <span id="download-brochure-span" style="display:block;"></span>
-        <a href class="vre-inverse-button" id="download-brochure-button">Conoce más</a>
-      </form>
+
+      <!--[if lte IE 8]>
+      <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+      <![endif]-->
+      <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+      <script>
+        hbspt.forms.create({
+          css: '',
+          portalId: '2469317',
+          formId: '0c4378ea-24a3-48f1-a343-808b2382b645',
+          onFormSubmit: function($form) {
+            var data = $form.serializeArray();
+            data.push({name: 'source', value: 'tlacotalpan'});
+            ga('send', 'event', 'BrochureTlacotalpan', 'ok');
+            $.ajax({
+              url: '{% url 'newsletter:suscribe' %}',
+              type : 'POST',
+              data: data
+            });
+            $form.hide()
+          }
+
+        });
+      </script>
     </div>
   </div>
   <div class="development-360-video text-center">
