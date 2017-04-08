@@ -14,30 +14,7 @@
   <div class="gray-container development-download-brochure">
     <div>
       <span>Si quieres más información, descarga aquí nuestro brochure de ventas</span>
-
-      <!--[if lte IE 8]>
-      <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-      <![endif]-->
-      <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-      <script>
-        hbspt.forms.create({
-          css: '',
-          portalId: '2469317',
-          formId: '0c4378ea-24a3-48f1-a343-808b2382b645',
-          onFormSubmit: function($form) {
-            var data = $form.serializeArray();
-            data.push({name: 'source', value: 'tlacotalpan'});
-            ga('send', 'event', 'BrochureTlacotalpan', 'ok');
-            $.ajax({
-              url: '{% url 'newsletter:suscribe' %}',
-              type : 'POST',
-              data: data
-            });
-            $form.hide()
-          }
-
-        });
-      </script>
+      <div id="brochure-form-wrapper"></div>
     </div>
   </div>
   <div class="development-360-video text-center">
@@ -197,10 +174,14 @@
 {% endblock %}
 {% block before_scripts %}
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYJxTs6nptICwPefTB_XR6yA2BUmUg-5A"></script>
+<!--[if lte IE 8]>
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+<![endif]-->
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
 {% endblock %}
 {% block after_scripts %}
 <script>
   insertMap([19.402214, -99.165347], 'Tlacotalpan 146');
-  addBrochureListener('BrochureTlacotalpan', 3);
+  addBrochureListener('Tlacotalpan', '0c4378ea-24a3-48f1-a343-808b2382b645');
 </script>
 {% endblock %}

@@ -14,28 +14,7 @@
   <div class="gray-container development-download-brochure">
     <div>
       <span>Si quieres más información, descarga aquí nuestro brochure de ventas</span>
-      <!--[if lte IE 8]>
-      <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-      <![endif]-->
-      <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-      <script>
-        hbspt.forms.create({
-          css: '',
-          portalId: '2469317',
-          formId: '6e83c89a-ffd8-4063-ba0b-8d4d34aeaeab',
-          onFormSubmit: function($form) {
-            var data = $form.serializeArray();
-            data.push({name: 'source', value: 'dakota'});
-            ga('send', 'event', 'BrochureDakota', 'ok');
-            $.ajax({
-              url: '{% url 'newsletter:suscribe' %}',
-              type : 'POST',
-              data: data
-            });
-            $form.hide()
-          }
-        });
-      </script>
+      <div id="brochure-form-wrapper"></div>
     </div>
   </div>
   <div class="development-360-video text-center">
@@ -202,10 +181,14 @@
 {% endblock %}
 {% block before_scripts %}
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYJxTs6nptICwPefTB_XR6yA2BUmUg-5A"></script>
+<!--[if lte IE 8]>
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+<![endif]-->
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
 {% endblock %}
 {% block after_scripts %}
 <script>
   insertMap([19.388950, -99.178761], 'Dakota 322');
-  addBrochureListener('BrochureDakota', 2);
+  addBrochureListener('Dakota', '6e83c89a-ffd8-4063-ba0b-8d4d34aeaeab');
 </script>
 {% endblock %}
