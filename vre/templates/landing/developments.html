@@ -47,6 +47,15 @@
         </a>
       </div>
     </div>
+    <div class="development-item type-b">
+      <a href="{% url 'landing:development_demo5' %}" class="development-item-cover cover" style="background-image: url({% static "img/tmp/chicago_item_photo_small.jpg" %})"></a>
+      <div class="development-item-info">
+        <a href="{% url 'landing:development_demo5' %}">
+          <img src="{% static "img/tmp/chicago_full_white_name.png" %}" class="development-item-name" alt="Chicago 61">
+          <span class="development-item-location">Colonia <strong>Nápoles</strong></span>
+        </a>
+      </div>
+    </div>
   </div>
   <div class="developments-map">
     <h2>Ubicación</h2>
@@ -76,6 +85,10 @@
     {
       coordinates: [19.395001, -99.176670],
       title: 'Nebraska 159'
+    },
+    {
+      coordinates: [19.397481, -99.174528],
+      title: 'Chicago 61'
     }
   ]);
 </script>

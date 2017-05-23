@@ -35,36 +35,46 @@
   line-height 1.25
   padding 50px 0 43px 0
 
-  div
+  .development-download-brochure__inner
     center-block()
     max-width 450px
     min-width 280px
     text-align center
     width 50%
 
-    span
-      display block
-      font-size $mainFontSize
+  .hs-error-msgs
+    font-size $mainFontSize
+    margin-top 20px
+    margin-bottom 0
 
-    input
-      display block
-      font-weight $fontLight
-      center-block()
-      margin-top 40px
-      min-width 280px
-      padding 14px 10px
-      text-align center
-      width 85%
+    label
+      font-weight normal
+      margin 0
 
-      &:focus
-        outline none
+  span
+    display block
+    font-size $mainFontSize
 
-    a
-      border none !important
-      display inline-block
-      margin-top 40px
-      padding 12px 20px !important
-      width 170px
+  [type="email"]
+    display block
+    simple-border('all', 1px, #a9a9a9)
+    font-weight $fontLight
+    center-block()
+    margin-top 40px
+    min-width 280px
+    padding 14px 10px
+    text-align center
+    width 85%
+
+    &:focus
+      outline none
+
+  [type="submit"]
+    border none !important
+    display inline-block
+    margin-top 40px
+    padding 12px 20px !important
+    width 170px
 
 .development-360-video
   padding 60px 0
@@ -283,7 +293,7 @@
     margin-top 75px
     width 90%
 
-  .development-download-brochure div span
+  .development-download-brochure span
     font-size 16px
 
   .development-characteristics

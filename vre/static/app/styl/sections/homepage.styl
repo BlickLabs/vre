@@ -247,15 +247,15 @@
 
   &-items
     display flex
-    justify-content space-around
+    justify-content center
     flex-wrap wrap
     height auto
     center-block()
     margin-top 10px
-    max-width 900px
+    max-width 710px
 
     .item
-      margin 0
+      margin 0 11px
       margin-top 25px
       width 204px
 
@@ -575,7 +575,7 @@
   .homepage-cover-divider-2 .image-part
     height 70vh
 
-@media screen and (max-width: 630px)
+@media screen and (max-width: 800px)
   .homepage-gray-divider .iframe-option
     box-sizing border-box
     border-width 0
@@ -590,6 +590,9 @@
 
     &:nth-child(2n)
       border-left-width 1px
+
+    &:last-child
+      width 100%
 
 @media screen and (max-width: 500px)
   .homepage-developments-items .item

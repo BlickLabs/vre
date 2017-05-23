@@ -11,15 +11,9 @@
     Nuestro desarrollo cuenta con 6 exclusivos condos y un increíble Roof Garden común
   </div>
   <div class="gray-container development-download-brochure">
-    <div>
+    <div class="development-download-brochure__inner">
 	    <span>Si quieres más información, descarga aquí nuestro brochure de ventas</span>
-	    <form id="download-brochure-form">
-		    {% csrf_token %}
-		    <input type="email" id="download-brochure-email" placeholder="Correo electrónico" name="email">
-		    <input type="hidden" name="source" value="indiana">
-        <span id="download-brochure-span" style="display:block;"></span>
-		    <a href class="vre-inverse-button" id="download-brochure-button">Conoce más</a>
-	    </form>
+      <div id="brochure-form-wrapper"></div>
     </div>
   </div>
   <div class="development-360-video text-center">
@@ -27,7 +21,7 @@
     <div class="container-360">
       <div class="embed-responsive embed-responsive-16by9">
         <div class="help-360">Click para comenzar</div>
-        <iframe src="http://dwmx.com/VRE/Indiana/" frameborder="0" class="embed-responsive-item"></iframe>
+        <iframe src="https://dwmx.com/VRE/Indiana/" frameborder="0" class="embed-responsive-item"></iframe>
       </div>
     </div>
   </div>
@@ -190,10 +184,14 @@
 {% endblock %}
 {% block before_scripts %}
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYJxTs6nptICwPefTB_XR6yA2BUmUg-5A"></script>
+<!--[if lte IE 8]>
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+<![endif]-->
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
 {% endblock %}
 {% block after_scripts %}
 <script>
   insertMap([19.386183, -99.178583], 'Indiana 176');
-  addBrochureListener('BrochureIndiana', 1);
+  addBrochureListener('Indiana', '94dd328c-3178-4316-b6f6-18ef6eaffa58');
 </script>
 {% endblock %}
