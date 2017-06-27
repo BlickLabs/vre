@@ -1,15 +1,15 @@
 {% extends "base.html" %}
 {% load static from staticfiles %}
-{% block title %}Chicago 61 | VRE Mexico{% endblock %}
+{% block title %}Carolina 149 | VRE Mexico{% endblock %}
 {% block content %}
 {% include "sections_navbar.html" %}
 <main id="sections-content">
-  <div class="development-cover cover parallax" style="background-image: url('{% static "img/tmp/chicago_cover.jpg" %}')">
-    <img src="{% static "img/tmp/chicago_full_white_name.png" %}" alt="Chicago logo">
+  <div class="development-cover cover parallax" style="background-image: url('{% static "img/tmp/carolina_cover.jpg" %}')">
+    <img src="{% static "img/tmp/carolina_full_white_name.png" %}" alt="Chicago logo">
   </div>
   <div class="development-header-text">
-    Increíbles departamentos en el corazón<br>
-    de la colonia Nápoles, désde 62 m2.
+    Aprovecha nuestra primera etapa de preventa<br>
+    exclusivos condos y un íncreible Roof Garden
   </div>
   <div class="gray-container development-download-brochure">
     <div class="development-download-brochure__inner">
@@ -17,6 +17,7 @@
       <div id="brochure-form-wrapper"></div>
     </div>
   </div>
+  {% comment %}
   <div class="development-360-video text-center">
     Dale click sobre la imagen y vive el departamento
     <div class="container-360">
@@ -26,6 +27,7 @@
       </div>
     </div>
   </div>
+  {% endcomment %}
   <div class="development-characteristics">
     <div class="text-center">Características de los departamentos</div>
     <ul class="development-characteristics-items">
@@ -50,8 +52,8 @@
         <span>Clóset</span>
       </li>
       <li class="development-characteristics-item">
-        <img src="{% static "img/icons/dressing_room_icon.png" %}" alt="dressing room icon">
-        <span>Vestidor</span>
+        <!-- <img src="{% static "img/icons/dressing_room_icon.png" %}" alt="dressing room icon"> -->
+        <span>Bodega privada</span>
       </li>
       <li class="development-characteristics-item">
         <img src="{% static "img/icons/kitchen_icon.png" %}" alt="kitchen icon">
@@ -59,14 +61,15 @@
       </li>
       <li class="development-characteristics-item">
         <img src="{% static "img/icons/bedroom_icon.png" %}" alt="bedroom icon">
-        <span>Dos recámaras</span>
+        <span>3 o 2 recámaras</span>
       </li>
       <li class="development-characteristics-item">
         <img src="{% static "img/icons/parking_lot_icon.png" %}" alt="parking icon">
-        <span>Un cajón de estacionamiento</span>
+        <span>2 o 1 cajón de estacionamiento</span>
       </li>
     </ul>
   </div>
+  {% comment %}
   <div class="development-carousel-container text-center">
     <div class="cover" style="background-image: url('{% static "img/tmp/chicago_carousel_01.jpg" %}')">
     </div>
@@ -75,27 +78,28 @@
     <div class="cover" style="background-image: url('{% static "img/tmp/chicago_carousel_02.jpg" %}')">
     </div>
   </div>
+  {% endcomment %}
   <div class="development-drawings gray-container text-center">
     <div class="drawing-selectors">
       <div class="drawing-selector active">101</div>
+      <div class="drawing-selector">102</div>
       <div class="drawing-selector">201</div>
-      <div class="drawing-selector">301</div>
     </div>
     <div class="drawing-picture">
       Departamento <span>101</span>
       <img src="{% static "img/tmp/chicago_department_101.png" %}" class="show" data-department="101" alt="chicago department 101">
+      <img src="{% static "img/tmp/chicago_department_102.png" %}" class="hide" data-department="102" alt="chicago department 102">
       <img src="{% static "img/tmp/chicago_department_201_301.png" %}" class="hide" data-department="201" alt="chicago department 201">
-      <img src="{% static "img/tmp/chicago_department_201_301.png" %}" class="hide" data-department="301" alt="chicago department 301">
     </div>
     <div class="drawing-picture">
       Departamento <span>202</span>
-      <img src="{% static "img/tmp/chicago_department_102.png" %}" class="hide" data-department="102" alt="chicago department 102 ">
-      <img src="{% static "img/tmp/chicago_department_202_302.png" %}" class="show" data-department="202" alt="chicago department 202">
+      <img src="{% static "img/tmp/chicago_department_202_302.png" %}" class="hide" data-department="202" alt="chicago department 202 ">
+      <img src="{% static "img/tmp/chicago_department_201_301.png" %}" class="show" data-department="301" alt="chicago department 301">
       <img src="{% static "img/tmp/chicago_department_202_302.png" %}" class="hide" data-department="302" alt="chicago department 302">
     </div>
     <div class="drawing-selectors">
-      <div class="drawing-selector">102</div>
-      <div class="drawing-selector active">202</div>
+      <div class="drawing-selector">202</div>
+      <div class="drawing-selector active">301</div>
       <div class="drawing-selector">302</div>
     </div>
   </div>
@@ -105,24 +109,32 @@
       <span>Lugares de interés</span>
       <ul>
         <li>
-          <img src="{% static "img/tmp/icons/hip_icon.png" %}" alt="hip icon">
-          <span>Hospital Star Médica HIP: 9 min (700m)</span>
+          <!-- <img src="{% static "img/tmp/icons/hip_icon.png" %}" alt="hip icon"> -->
+          <span>Superama: 5 min (650 m) Caminando</span>
         </li>
         <li>
-          <img src="{% static "img/tmp/icons/cdmx_icon.png" %}" alt="cdmx icon">
-          <span>Angel de la Independencia: 19 min (4.6 km)</span>
+          <!-- <img src="{% static "img/tmp/icons/cdmx_icon.png" %}" alt="cdmx icon"> -->
+          <span>Ego´s Gym: 4 min (550 m) Caminando</span>
         </li>
         <li>
-          <img src="{% static "img/tmp/icons/aicm_icon.png" %}" alt="aicm icon">
-          <span>Aeropuerto CDMX: 26 min (12.4 km)</span>
+          <img src="{% static "img/tmp/icons/hip_icon.png" %}" alt="aicm icon">
+          <span>Hospital Star Médica HIP: 5 min (1.5 km)</span>
+        </li>
+        <li>
+          <img src="{% static "img/tmp/icons/cdmx_icon.png" %}" alt="antara fashion icon">
+          <span>Angel de la Independencia: 27 min (6 km)</span>
+        </li>
+        <li>
+          <img src="{% static "img/tmp/icons/aicm_icon.png" %}" alt="santafe icon">
+          <span>Aeropuerto CDMX: 28 min (14 km)</span>
         </li>
         <li>
           <img src="{% static "img/tmp/icons/antara_fashion_icon.png" %}" alt="antara fashion icon">
-          <span>Antara Fashion Hall: 16 min (17.5 km)</span>
+          <span>Antara Fashion Hall: 35 min (10 km)</span>
         </li>
         <li>
           <img src="{% static "img/tmp/icons/santafe_icon.png" %}" alt="santafe icon">
-          <span>Centro Comercial Santa Fe: 19 min (12.4 km)</span>
+          <span>Centro Comercial Santa Fe: 45 min (17 km)</span>
         </li>
       </ul>
       <div class="note">* Tiempo estimado a las 9:00 am entre semana</div>
@@ -134,25 +146,25 @@
       <div class="transport-items-column">
         <div class="transport-item">
           <span class="semibold">Metrobús: </span>
-          Parada Colonia del Valle (450 m)
+          Parada Parque Hundido (200 m)
         </div>
         <div class="transport-item">
           <span class="semibold">Metro: </span>
-          Estación San Antonio (1 km)
+          Estación San Antonio (1.1 km)
         </div>
         <div class="transport-item">
           <span class="semibold">Ecobici: </span>
-          Estación 349 (350 m)
+          Estación 367 (290 m)
         </div>
       </div>
       <div class="transport-items-column">
         <div class="transport-item">
           <span class="semibold">Walking Score ® : </span>
-          97 (Un paraíso para el peatón)
+          98 (Un paraíso para el peatón)
         </div>
         <div class="transport-item">
           <span class="semibold">Ciclovía: </span>
-          Calle Dakota (200 m)
+          Cto interior (800 m)
         </div>
       </div>
     </div>
@@ -174,7 +186,7 @@
 {% endblock %}
 {% block after_scripts %}
 <script>
-  insertMap([19.397481, -99.174528], 'Chicago 61');
-  addBrochureListener('Chicago', 'db5268b5-d4d5-44b9-906a-207dc8c181f8');
+  insertMap([19.380275, -99.177901], 'Carolina 149');
+  addBrochureListener('Carolina', 'db5268b5-d4d5-44b9-906a-207dc8c181f8');
 </script>
 {% endblock %}
