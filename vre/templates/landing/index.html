@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static from staticfiles %}
-{% block title %}VRE Mexico{% endblock %}
+{% block title %}VRE México{% endblock %}
 {% block content %}
 <div class="homepage-cover cover simple-parallax">
   <div class="phone-box">
@@ -32,11 +32,11 @@
       <ul>
         <li class="active"><a href="#">INICIO</a></li>
         <li><a href="{% url 'landing:developments' %}">DESARROLLOS</a></li>
+        <li><a href="{% url 'landing:visit_us' %}">VISÍTANOS</a></li>
+        <li><a href="{% url 'landing:contact' %}">CONTACTO</a></li>
+        <li><a href="http://blog.vre.com.mx">BLOG</a></li>
         <li><a href="{% url 'landing:about_us' %}">NOSOTROS</a></li>
         <li><a href="{% url 'xauth:login' %}">INVERSIONISTAS</a></li>
-        <li><a href="{% url 'landing:contact' %}">CONTACTO</a></li>
-        <li><a href="{% url 'landing:visit_us' %}">VISÍTANOS</a></li>
-	<li><a href="http://blog.vre.com.mx">BLOG</a></li>
         <li class="phone office"><a href="tel:+525588527468"><img src="{% static "img/icons/orange_phone_icon.png" %}" alt="Phone icon"><span>(52) 55 8852 7468</span></a></li>
         <li class="phone whatsapp"><i class="fa fa-whatsapp"></i><span>+52 1 55 5939 6716</span></li>
       </ul>
@@ -102,7 +102,7 @@
   </div>
 </div>
 <div class="homepage-developments">
-  <h2>Conoce nuestros departamentos en venta</h2>
+  <h2>Conoce nuestros departamentos en venta en la CDMX</h2>
   <div class="homepage-developments-items">
     <div class="item">
       <a href="{% url 'landing:development_carolina' %}">
@@ -129,34 +129,13 @@
       </a>
     </div>
     <div class="item">
-      <a href="{% url 'landing:development_demo2' %}">
-        <div class="item-picture" style="background-image: url({% static "img/tmp/dakota_item_photo_small.jpg" %})"></div>
-        <img class="item-name" src="{% static "img/tmp/dakota_gray_name.png" %}" alt="dakota picture" />
-      </a>
-    </div>
-    <div class="item">
-      <a href="{% url 'landing:development_demo' %}">
-        <div class="item-picture" style="background-image: url({% static "img/tmp/indiana_item_photo_small.jpg" %})"></div>
-        <img class="item-name" src="{% static "img/tmp/indiana_gray_name.png" %}" alt="indiana picture" />
+      <a href="{% url 'landing:development_atlanta' %}">
+        <div class="item-picture" style="background-image: url({% static "img/tmp/atlanta186_home.png" %})"></div>
+        <img class="item-name" src="{% static "img/tmp/atlanta186_name_home.png" %}" alt="Atlanta picture" />
       </a>
     </div>
   </div>
   <a class="vre-button" href="{% url 'landing:developments' %}">Conoce más desarrollos</a>
-</div>
-<div class="orange-cover-divider homepage-cover-divider-1">
-  <div class="text-part">
-    <img src="{% static "img/icons/vre_full_white_logo.png" %}" alt="VRE White logo"/>
-    <div class="outgoing-box">
-      Construyendo <br>
-      <b>calidad</b> de <b>vida</b>
-    </div>
-  </div>
-  <div class="image-part cover simple-parallax"></div>
-</div>
-<div class="homepage-contact-divider text-center">
-  <h2>Contáctanos para recibir más información <br>
-  sobre nuestros desarrollos</h2>
-  <a href="{% url 'landing:contact' %}" class="vre-button">Contáctanos</a>
 </div>
 <div class="gray-container homepage-gray-divider text-center">
   <div class="iframe-selector">
@@ -174,13 +153,19 @@
     </div>
   </div>
 </div>
-<div class="homepage-cover-divider-2">
-  <div class="image-part cover simple-parallax"></div>
+<div class="homepage-contact-divider text-center">
+  <h2>Contáctanos para recibir más información <br>
+  sobre nuestros desarrollos</h2>
+  <a href="{% url 'landing:contact' %}" class="vre-button">Contáctanos</a>
+</div>
+<div class="orange-cover-divider homepage-cover-divider-1">
   <div class="text-part">
-    <div>
-      <h2>Visita nuestro<br>showroom</h2>
-      <a href="{% url 'landing:visit_us' %}" class="vre-button">Contáctanos</a>
+    <img src="{% static "img/icons/vre_full_white_logo.png" %}" alt="VRE White logo"/>
+    <div class="outgoing-box">
+      Construyendo <br>
+      <b>calidad</b> de <b>vida</b>
     </div>
   </div>
+  <div class="image-part cover simple-parallax"></div>
 </div>
 {% endblock %}
