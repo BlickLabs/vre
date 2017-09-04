@@ -26,6 +26,38 @@
       </div>
     </div>
   </div>
+  <div class="development-drawings gray-container text-center">
+    <div class="drawing-selectors">
+      <div class="drawing-selector active">101</div>
+      <div class="drawing-selector">201</div>
+      <div class="drawing-selector">301</div>
+    </div>
+    <div class="drawing-picture">
+      Departamento <span>101</span>
+      <img src="{% static "img/tmp/chicago_department_101.png" %}" class="show" data-department="101" alt="chicago department 101">
+      <img src="{% static "img/tmp/chicago_department_201_301.png" %}" class="hide" data-department="201" alt="chicago department 201">
+      <img src="{% static "img/tmp/chicago_department_201_301.png" %}" class="hide" data-department="301" alt="chicago department 301">
+    </div>
+    <div class="drawing-picture">
+      Departamento <span>202</span>
+      <img src="{% static "img/tmp/chicago_department_102.png" %}" class="hide" data-department="102" alt="chicago department 102 ">
+      <img src="{% static "img/tmp/chicago_department_202_302.png" %}" class="show" data-department="202" alt="chicago department 202">
+      <img src="{% static "img/tmp/chicago_department_202_302.png" %}" class="hide" data-department="302" alt="chicago department 302">
+    </div>
+    <div class="drawing-selectors">
+      <div class="drawing-selector">102</div>
+      <div class="drawing-selector active">202</div>
+      <div class="drawing-selector">302</div>
+    </div>
+  </div>
+  <div class="development-carousel-container text-center">
+    <div class="cover" style="background-image: url('{% static "img/tmp/chicago_carousel_01.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/tmp/chicago_cover.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/tmp/chicago_carousel_02.jpg" %}')">
+    </div>
+  </div>
   <div class="development-characteristics">
     <div class="text-center">Características de los departamentos</div>
     <ul class="development-characteristics-items">
@@ -66,38 +98,6 @@
         <span>Un cajón de estacionamiento</span>
       </li>
     </ul>
-  </div>
-  <div class="development-carousel-container text-center">
-    <div class="cover" style="background-image: url('{% static "img/tmp/chicago_carousel_01.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/tmp/chicago_cover.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/tmp/chicago_carousel_02.jpg" %}')">
-    </div>
-  </div>
-  <div class="development-drawings gray-container text-center">
-    <div class="drawing-selectors">
-      <div class="drawing-selector active">101</div>
-      <div class="drawing-selector">201</div>
-      <div class="drawing-selector">301</div>
-    </div>
-    <div class="drawing-picture">
-      Departamento <span>101</span>
-      <img src="{% static "img/tmp/chicago_department_101.png" %}" class="show" data-department="101" alt="chicago department 101">
-      <img src="{% static "img/tmp/chicago_department_201_301.png" %}" class="hide" data-department="201" alt="chicago department 201">
-      <img src="{% static "img/tmp/chicago_department_201_301.png" %}" class="hide" data-department="301" alt="chicago department 301">
-    </div>
-    <div class="drawing-picture">
-      Departamento <span>202</span>
-      <img src="{% static "img/tmp/chicago_department_102.png" %}" class="hide" data-department="102" alt="chicago department 102 ">
-      <img src="{% static "img/tmp/chicago_department_202_302.png" %}" class="show" data-department="202" alt="chicago department 202">
-      <img src="{% static "img/tmp/chicago_department_202_302.png" %}" class="hide" data-department="302" alt="chicago department 302">
-    </div>
-    <div class="drawing-selectors">
-      <div class="drawing-selector">102</div>
-      <div class="drawing-selector active">202</div>
-      <div class="drawing-selector">302</div>
-    </div>
   </div>
   <div class="development-nearby-places">
     <div id="location-map" class="location-map"></div>

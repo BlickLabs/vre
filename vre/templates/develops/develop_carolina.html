@@ -28,6 +28,40 @@
     </div>
   </div>
   {% endcomment %}
+  {% comment %}
+  <div class="development-carousel-container text-center">
+    <div class="cover" style="background-image: url('{% static "img/tmp/carolina_carousel_01.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/tmp/carolina_cover.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/tmp/carolina_carousel_02.jpg" %}')">
+    </div>
+  </div>
+  {% endcomment %}
+  <div class="development-drawings gray-container text-center">
+    <div class="drawing-selectors">
+      <div class="drawing-selector active">101</div>
+      <div class="drawing-selector">102</div>
+      <div class="drawing-selector">201</div>
+    </div>
+    <div class="drawing-picture">
+      Departamento <span>101</span>
+      <img src="{% static "img/tmp/carolina_department_101.png" %}" class="show" data-department="101" alt="carolina department 101">
+      <img src="{% static "img/tmp/carolina_department_102.png" %}" class="hide" data-department="102" alt="carolina department 102">
+      <img src="{% static "img/tmp/carolina_department_201_301.png" %}" class="hide" data-department="201" alt="carolina department 201">
+    </div>
+    <div class="drawing-picture">
+      Departamento <span>202</span>
+      <img src="{% static "img/tmp/carolina_department_202_302.png" %}" class="hide" data-department="202" alt="carolina department 202 ">
+      <img src="{% static "img/tmp/carolina_department_201_301.png" %}" class="show" data-department="301" alt="carolina department 301">
+      <img src="{% static "img/tmp/carolina_department_202_302.png" %}" class="hide" data-department="302" alt="carolina department 302">
+    </div>
+    <div class="drawing-selectors">
+      <div class="drawing-selector">202</div>
+      <div class="drawing-selector active">301</div>
+      <div class="drawing-selector">302</div>
+    </div>
+  </div>
   <div class="development-characteristics">
     <div class="text-center">Características de los departamentos</div>
     <ul class="development-characteristics-items">
@@ -77,40 +111,6 @@
       </li>
       <div>*Aplica solamente en departamentos 301 y 302</div>
     </ul>
-  </div>
-  {% comment %}
-  <div class="development-carousel-container text-center">
-    <div class="cover" style="background-image: url('{% static "img/tmp/carolina_carousel_01.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/tmp/carolina_cover.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/tmp/carolina_carousel_02.jpg" %}')">
-    </div>
-  </div>
-  {% endcomment %}
-  <div class="development-drawings gray-container text-center">
-    <div class="drawing-selectors">
-      <div class="drawing-selector active">101</div>
-      <div class="drawing-selector">102</div>
-      <div class="drawing-selector">201</div>
-    </div>
-    <div class="drawing-picture">
-      Departamento <span>101</span>
-      <img src="{% static "img/tmp/carolina_department_101.png" %}" class="show" data-department="101" alt="carolina department 101">
-      <img src="{% static "img/tmp/carolina_department_102.png" %}" class="hide" data-department="102" alt="carolina department 102">
-      <img src="{% static "img/tmp/carolina_department_201_301.png" %}" class="hide" data-department="201" alt="carolina department 201">
-    </div>
-    <div class="drawing-picture">
-      Departamento <span>202</span>
-      <img src="{% static "img/tmp/carolina_department_202_302.png" %}" class="hide" data-department="202" alt="carolina department 202 ">
-      <img src="{% static "img/tmp/carolina_department_201_301.png" %}" class="show" data-department="301" alt="carolina department 301">
-      <img src="{% static "img/tmp/carolina_department_202_302.png" %}" class="hide" data-department="302" alt="carolina department 302">
-    </div>
-    <div class="drawing-selectors">
-      <div class="drawing-selector">202</div>
-      <div class="drawing-selector active">301</div>
-      <div class="drawing-selector">302</div>
-    </div>
   </div>
   <div class="development-nearby-places">
     <div id="location-map" class="location-map"></div>
