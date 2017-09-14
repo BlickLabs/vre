@@ -3,7 +3,7 @@
 {% block title %}VRE México{% endblock %}
 {% block content %}
 <div class="homepage-cover cover simple-parallax">
-  <div class="phone-box">
+  <div class="phone-box fix-in-top">
     <div class="phone-box-content">
       <span class="small-text">
         <img src="{% static "img/icons/phone_icon.png" %}" alt="Phone icon">
@@ -13,13 +13,23 @@
         <span class="fa fa-whatsapp"></span>
         <span>+52 1 55 5939 6716</span>
       </span>
+      <div class="vre-triangulo"></div>
     </div>
   </div>
   <div class="homepage-mobile-logo">
     <img class="hide-in-fixed" src="{% static "img/icons/vre_white_logo.png" %}" alt="VRE Logo" />
       <h1>VERTICAL REAL ESTATE</h1>
   </div>
-  <div class="homepage-menu">
+  <div class="homepage-desktop">
+    <div class="homepage-desktop-logo">
+      <img src="{% static "img/icons/vre_white_logo.png" %}" alt="VRE Logo" />
+      <h1>VERTICAL REAL ESTATE</h1>
+    </div>
+    <div class="homepage-desktop-text">
+      <p>Diseñamos, desarrollamos y vendemos departamentos en el corazón de la CDMX</p>
+    </div>
+  </div>
+  <div class="homepage-menu fix-in-top">
     <input type="checkbox" id="navbar-trigger">
     <label for="navbar-trigger" class="menu-trigger fa fa-bars"></label>
     <div class="logo-container">
@@ -44,7 +54,7 @@
   </div>
   <div class="white-box text-center" id="form-head-container">
     <div class="text-left">
-    Recibe más <b>información</b> sobre nuestros proyectos:
+    Recibe más <b>información:</b>
     </div>
     <!--[if lte IE 8]>
     <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
@@ -105,33 +115,38 @@
   <h2>Conoce nuestros departamentos en venta en la CDMX</h2>
   <div class="homepage-developments-items">
     <div class="item">
+      <div class="vre-filtro preventa"><span>Preventa</span></div>
       <a href="{% url 'landing:development_carolina' %}">
-        <div class="item-picture" style="background-image: url({% static "img/tmp/carolina_fachada_home.jpg" %})"></div>
-        <img class="item-name" src="{% static "img/tmp/carolina_gray_name.png" %}" alt="Carolina picture" />
+        <div class="item-picture" style="background-image: url({% static "img/carolina149.jpg" %})"></div>
+        <img class="item-name" src="{% static "img/Carolina.jpg" %}" alt="Carolina picture" />
       </a>
     </div>
     <div class="item">
+      <div class="vre-filtro inmediata"><span>Entrega Inmediata</span></div>
       <a href="{% url 'landing:development_demo5' %}">
-        <div class="item-picture" style="background-image: url({% static "img/tmp/chicago_item_photo_small.jpg" %})"></div>
-        <img class="item-name" src="{% static "img/tmp/chicago_gray_name.png" %}" alt="Chicago picture" />
+        <div class="item-picture" style="background-image: url({% static "img/chicago61.jpg" %})"></div>
+        <img class="item-name" src="{% static "img/Chicago.jpg" %}" alt="Chicago picture" />
       </a>
     </div>
     <div class="item">
+      <div class="vre-filtro vendido"><span>Vendido</span></div>
       <a href="{% url 'landing:development_demo3' %}">
-        <div class="item-picture" style="background-image: url({% static "img/tmp/tlacotalpan_item_photo_small.jpg" %})"></div>
-        <img class="item-name" src="{% static "img/tmp/tlacotalpan_gray_name.png" %}" alt="Tlacotalpan picture" />
+        <div class="item-picture" style="background-image: url({% static "img/tlaco146.jpg" %})"></div>
+        <img class="item-name" src="{% static "img/Tlacotal.jpg" %}" alt="Tlacotalpan picture" />
       </a>
     </div>
     <div class="item">
+      <div class="vre-filtro vendido"><span>Vendido</span></div>
       <a href="{% url 'landing:development_demo4' %}">
-        <div class="item-picture" style="background-image: url({% static "img/tmp/nebraska_item_photo_small.jpg" %})"></div>
-        <img class="item-name" src="{% static "img/tmp/nebraska_gray_name.png" %}" alt="Nebraska picture" />
+        <div class="item-picture" style="background-image: url({% static "img/nebraska159.jpg" %})"></div>
+        <img class="item-name" src="{% static "img/Nebraska.jpg" %}" alt="Nebraska picture" />
       </a>
     </div>
     <div class="item">
+      <div class="vre-filtro vendido"><span>Vendido</span></div>
       <a href="{% url 'landing:development_atlanta' %}">
-        <div class="item-picture" style="background-image: url({% static "img/tmp/atlanta186_home.png" %})"></div>
-        <img class="item-name" src="{% static "img/tmp/atlanta186_name_home.png" %}" alt="Atlanta picture" />
+        <div class="item-picture" style="background-image: url({% static "img/atlanta186.jpg" %})"></div>
+        <img class="item-name" src="{% static "img/Atlanta.jpg" %}" alt="Atlanta picture" />
       </a>
     </div>
   </div>
@@ -139,12 +154,11 @@
 </div>
 <div class="gray-container homepage-gray-divider text-center">
   <div id="experiencia360" class="iframe-selector">
-    <a class="iframe-option active" href="#" data-iframe-url="https://dwmx.com/VRE/Indiana/">Indiana</a>
+    <a class="iframe-option active" href="#" data-iframe-url="https://www.dwmx.com/VRE/Nebraska/">Nebraska</a>
+    <a class="iframe-option" href="#" data-iframe-url="https://dwmx.com/VRE/Indiana/">Indiana</a>
     <a class="iframe-option" href="#" data-iframe-url="https://www.dwmx.com/VRE/Dakota/">Dakota</a>
     <a class="iframe-option" href="#" data-iframe-url="https://www.dwmx.com/VRE/Tlacotalpan/">Tlacotalpan</a>
-    <a class="iframe-option" href="#" data-iframe-url="https://www.dwmx.com/VRE/Nebraska/">Nebraska</a>
-    <a class="iframe-option" href="#" data-iframe-url="https://www.dwmx.com/VRE/Chicago/">Chicago</a>
-    <a class="iframe-option" href="#" data-iframe-url="https://dwmx.com/VRE/Carolina/">Carolina</a>
+    <a class="iframe-option" href="#" data-iframe-url="https://dwmx.com/VRE/Carolina/">Atlanta | Carolina</a>
   </div>
   <span>Dale click sobre la imagen y vive el departamento</span>
   <div class="container-360">
@@ -165,8 +179,11 @@
     <div class="outgoing-box">
       Construyendo <br>
       <b>calidad</b> de <b>vida</b>
-    </div>
+    </div>  
   </div>
   <div class="image-part cover simple-parallax"></div>
+</div>
+<div class="vre-division">
+  <div class="right"></div>
 </div>
 {% endblock %}
