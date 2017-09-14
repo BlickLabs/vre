@@ -18,12 +18,12 @@
       $('.phone-box').removeClass('fix-in-top');
       $('.homepage-menu').removeClass('fix-in-top');
     } else {
-      if ($(window).scrollTop() >= 30) {
+      if ($(window).scrollTop() == 0) {
         $('.phone-box').addClass('fix-in-top');
         $('.homepage-menu').addClass('fix-in-top');
       } else {
-        $('.phone-box').removeClass('fix-in-top');
-        $('.homepage-menu').removeClass('fix-in-top');
+//        $('.phone-box').removeClass('fix-in-top');
+  //      $('.homepage-menu').removeClass('fix-in-top');
       }
       document.removeEventListener('touchstart', detectTouch, false);
     }
