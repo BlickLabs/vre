@@ -5,7 +5,7 @@
   
   if (exp360 === '#experiencia360') {
     $('html, body').animate({
-      scrollTop: $("#experiencia360").offset().top - navBarHeight;
+      scrollTop: $("#experiencia360").offset().top - navBarHeight
     }, 'slow');
   }
 
