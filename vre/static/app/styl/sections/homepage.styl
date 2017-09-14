@@ -254,6 +254,7 @@
         margin-right auto !important
         left 0 !important
         right 0 !important
+        width 74.78px !important
 
     .text-left
       line-height 1.25
@@ -291,14 +292,14 @@
       button,
       [type="submit"]
         margin-top 8px
-        padding 5px 18px
+        padding 5px 29px 5px 12px
         background $orange
         simple-border('all', 1px, $orange)
         color white
         text-align left
         background-image url('../img/send.svg')
         background-repeat no-repeat
-        background-position center right 
+        background-position 82% 51%
 
         &:hover,
         &:active,
@@ -307,7 +308,7 @@
           color white !important
           background-image url('../img/send.svg')
           background-repeat no-repeat
-          background-position center right
+          background-position 82% 51%
 
 .homepage-developments
   font-size $sectionTitleSize
@@ -356,7 +357,6 @@
     max-width 710px
 
     .item
-      position relative
       margin 0 11px
       margin-top 25px
       width 204px
@@ -372,6 +372,7 @@
         center-block()
         padding-bottom 0%
         width 204px
+        position relative
 
   .vre-button
     border-width 1px
@@ -664,6 +665,25 @@
   .homepage-developments-items .item
     width 45%
 
+  .homepage-cover
+    display block
+    padding-top 100px
+
+    & .homepage-desktop
+      display block
+      margin-left auto
+      margin-right auto
+
+    & .homepage-desktop-logo h1
+      font-size 20px
+    
+    & .homepage-desktop-logo img
+      width 40px
+
+    & .homepage-desktop-text
+      font-size 15px
+      line-height 20px
+
 @media $smallPortrait
   .homepage-cover
     height 50vh
@@ -696,26 +716,95 @@
     &:last-child
       width 100%
 
+  .homepage-cover
+    display block
+    padding-top 100px
+    
+
+    & .homepage-desktop
+      display block
+      margin-left auto
+      margin-right auto
+
+    & .homepage-desktop-logo h1
+      font-size 20px
+    
+    & .homepage-desktop-logo img
+      width 40px
+
+    & .homepage-desktop-text
+      font-size 15px
+      line-height 20px
+
 @media screen and (max-width: 500px)
   .homepage-developments-items .item
     width 100%
 
-@media screen and (max-width: 480px)
-  .homepage-cover .homepage-mobile-logo
-    font-size 30px
+  .homepage-cover
+    display block
+    padding-top 100px
 
-    img
-      height 45px
+    & .homepage-desktop
+      display block
+      margin-left auto
+      margin-right auto
+
+    & .homepage-desktop-logo h1
+      font-size 20px
+    
+    & .homepage-desktop-logo img
+      width 40px
+
+    & .homepage-desktop-text
+      font-size 15px
+      line-height 20px
+
+@media screen and (max-width: 480px)
+  .homepage-cover
+    display block
+    padding-top 100px
+
+    & .homepage-desktop
+      display block
+      margin-left auto
+      margin-right auto
+
+    & .homepage-desktop-logo h1
+      font-size 20px
+    
+    & .homepage-desktop-logo img
+      width 40px
+
+    & .homepage-desktop-text
+      font-size 15px
+      line-height 20px
 
   .homepage-cover .white-box
     left 50%
-    padding 23px
+    padding 18px
     width 280px
     transform translateX(-50%)
 
 @media screen and (max-width: 320px)
   .homepage-cover
     height 60vh
+    display block
+    padding-top 100px
+
+    & .homepage-desktop
+      display block
+      margin-left auto
+      margin-right auto
+
+    & .homepage-desktop-logo h1
+      font-size 20px
+    
+    & .homepage-desktop-logo img
+      width 40px
+
+    & .homepage-desktop-text
+      font-size 15px
+      line-height 20px
 
     .homepage-menu
       margin-top 20px
