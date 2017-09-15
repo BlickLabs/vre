@@ -10,67 +10,52 @@
     Cada espacio que diseñamos y construimos es terminado con la mejor selección de acabados y materiales.
     </p>
   </div>
-  <div class="developments-items">
-    <div class="development-item type-c">
-      <a href="{% url 'landing:development_carolina' %}" class="development-item-cover cover" style="background-image: url({% static "img/tmp/carolina_item_photo_small.jpg" %})"></a>
-      <div class="development-item-info">
+  <div class="homepage-gray-divider text-center">
+    <div class="iframe-selector">
+      <a name="todos" class="vre-btntabs-develop iframe-option active">Todos</a>
+      <a name="preventa" class="vre-btntabs-develop iframe-option">Preventa</a>
+      <a name="inmediata" class="vre-btntabs-develop iframe-option">Entrega inmediata</a>
+      <a name="vendido" class="vre-btntabs-develop iframe-option">Vendidos</a>
+    </div>
+    <div class="homepage-developments-items">
+      <div class="item vre-develop-todos vre-develop-preventa">
         <a href="{% url 'landing:development_carolina' %}">
-          <img src="{% static "img/tmp/carolina_full_white_name.png" %}" class="development-item-name" alt="Carolina 149">
-          <span class="development-item-location">Colonia <strong>Noche Buena</strong></span>
+          <div class="item-picture" style="background-image: url({% static "img/carolina149.jpg" %})">
+            <div class="vre-filtro preventa"><span class="vre-filtro-text">Preventa</span></div>
+          </div>
+          <img class="item-name" src="{% static "img/Carolina.jpg" %}" alt="Carolina picture" />
         </a>
       </div>
-    </div>
-    <div class="development-item type-b">
-      <a href="{% url 'landing:development_demo5' %}" class="development-item-cover cover" style="background-image: url({% static "img/tmp/chicago_item_photo_small.jpg" %})"></a>
-      <div class="development-item-info">
+      <div class="item vre-develop-todos vre-develop-inmediata">
         <a href="{% url 'landing:development_demo5' %}">
-          <img src="{% static "img/tmp/chicago_full_white_name.png" %}" class="development-item-name" alt="Chicago 61">
-          <span class="development-item-location">Colonia <strong>Nápoles</strong></span>
+          <div class="item-picture" style="background-image: url({% static "img/chicago61.jpg" %})">
+            <div class="vre-filtro inmediata"><span class="vre-filtro-text">Entrega Inmediata</span></div>
+          </div>
+          <img class="item-name" src="{% static "img/Chicago.jpg" %}" alt="Chicago picture" />
         </a>
       </div>
-    </div>
-    <div class="development-item type-a">
-      <a href="{% url 'landing:development_demo3' %}" class="development-item-cover cover" style="background-image: url({% static "img/tmp/tlacotalpan_item_photo_small.jpg" %})"></a>
-      <div class="development-item-info">
+      <div class="item vre-develop-todos vre-develop-vendido">
         <a href="{% url 'landing:development_demo3' %}">
-          <img src="{% static "img/tmp/tlacotalpan_full_white_name.png" %}" class="development-item-name" alt="Tlacotalpan 146">
-          <span class="development-item-location">Colonia <strong>Roma</strong></span>
+          <div class="item-picture" style="background-image: url({% static "img/tlaco146.jpg" %})">
+            <div class="vre-filtro vendido"><span class="vre-filtro-text">Vendido</span></div>
+          </div>
+          <img class="item-name" src="{% static "img/Tlacotal.jpg" %}" alt="Tlacotalpan picture" />
         </a>
       </div>
-    </div>
-    <div class="development-item type-b">
-      <a href="{% url 'landing:development_demo4' %}" class="development-item-cover cover" style="background-image: url({% static "img/tmp/nebraska_item_photo_small.jpg" %})"></a>
-      <div class="development-item-info">
+      <div class="item vre-develop-todos vre-develop-vendido">
         <a href="{% url 'landing:development_demo4' %}">
-          <img src="{% static "img/tmp/nebraska_full_white_name.png" %}" class="development-item-name" alt="Nebraska 159">
-          <span class="development-item-location">Colonia <strong>Nápoles</strong></span>
+          <div class="item-picture" style="background-image: url({% static "img/nebraska159.jpg" %})">
+            <div class="vre-filtro vendido"><span class="vre-filtro-text">Vendido</span></div>
+          </div>
+          <img class="item-name" src="{% static "img/Nebraska.jpg" %}" alt="Nebraska picture" />
         </a>
       </div>
-    </div>
-    <div class="development-item type-b">
-      <a href="{% url 'landing:development_demo2' %}" class="development-item-cover cover" style="background-image: url({% static "img/tmp/dakota_item_photo_small.jpg" %})"></a>
-      <div class="development-item-info">
-        <a href="{% url 'landing:development_demo2' %}">
-          <img src="{% static "img/tmp/dakota_full_white_name.png" %}" class="development-item-name" alt="Dakota 322">
-          <span class="development-item-location">Colonia <strong>Nápoles</strong></span>
-        </a>
-      </div>
-    </div>
-    <div class="development-item type-b">
-      <a href="{% url 'landing:development_demo' %}" class="development-item-cover cover" style="background-image: url({% static "img/tmp/indiana_item_photo_small.jpg" %})"></a>
-      <div class="development-item-info">
-        <a href="{% url 'landing:development_demo' %}">
-          <img src="{% static "img/tmp/indiana_full_white_name.png" %}" class="development-item-name" alt="Indiana 176">
-          <span class="development-item-location">Colonia <strong>Nápoles</strong></span>
-        </a>
-      </div>
-    </div>
-    <div class="development-item type-b">
-      <a href="{% url 'landing:development_atlanta' %}" class="development-item-cover cover" style="background-image: url({% static "img/atlanta186_small.jpg" %})"></a>
-      <div class="development-item-info">
+      <div class="item vre-develop-todos vre-develop-vendido">
         <a href="{% url 'landing:development_atlanta' %}">
-          <img src="{% static "img/tmp/atlanta186_name.png" %}" class="development-item-name" alt="Atlanta 186">
-          <span class="development-item-location">Colonia <strong>Noche Buena</strong></span>
+          <div class="item-picture" style="background-image: url({% static "img/atlanta186.jpg" %})">
+            <div class="vre-filtro vendido"><span class="vre-filtro-text">Vendido</span></div>
+          </div>
+          <img class="item-name" src="{% static "img/Atlanta.jpg" %}" alt="Atlanta picture" />
         </a>
       </div>
     </div>
