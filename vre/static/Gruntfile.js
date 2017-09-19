@@ -135,7 +135,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-bower-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.registerTask('default', ['stylus', 'jslint', 'concat', 'bower_concat', 'uglify', 'copy']);
+  grunt.registerTask('default', ['stylus', 'concat', 'bower_concat', 'uglify', 'copy']);
   grunt.registerTask('watch', ['default', 'watch']);
   grunt.registerTask('compileStylus', ['stylus']);
   grunt.registerTask('compileJavascript', ['jslint', 'concat', 'uglify:app']);
