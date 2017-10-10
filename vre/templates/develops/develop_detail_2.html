@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 {% load static from staticfiles %}
-{% block title %}Dakota 322 | VRE Mexico{% endblock %}
+{% block description %}Vive a media cuadra del parque Alfonso Esparza{% endblock %}
+{% block title %}Dakota 322, tu nuevo hogar con los mejores acabados | VRE México{% endblock %}
 {% block content %}
 {% include "sections_navbar.html" %}
 <main id="sections-content">
   <div class="development-cover cover parallax" style="background-image: url('{% static "img/tmp/dakota_cover.jpg" %}')">
-    <img src="{% static "img/tmp/dakota_full_white_name.png" %}" alt="dakota logo">
+    <img src="{% static "img/tmp/dakota_full_white_name.png" %}" alt="Departamentos Dakota 322">
   </div>
   <div class="development-header-text">
   Vive a media cuadra del parque Alfonso Esparza.
@@ -24,6 +25,46 @@
         <div class="help-360">Click para comenzar</div>
         <iframe src="https://www.dwmx.com/VRE/Dakota/" frameborder="0" class="embed-responsive-item"></iframe>
       </div>
+    </div>
+  </div>
+  <div class="development-drawings gray-container text-center">
+    <div class="drawing-selectors">
+      <div class="drawing-selector active">101</div>
+      <div class="drawing-selector">102</div>
+      <div class="drawing-selector">201</div>
+    </div>
+    <div class="drawing-picture">
+      Departamento <span>101</span>
+      <img src="{% static "img/tmp/dakota_department_101.png" %}" class="show" data-department="101" alt="dakota department 101">
+      <img src="{% static "img/tmp/dakota_department_102.png" %}" class="hide" data-department="102" alt="dakota department 102">
+      <img src="{% static "img/tmp/dakota_department_201.png" %}" class="hide" data-department="201" alt="dakota department 201">
+    </div>
+    <div class="drawing-picture">
+      Departamento <span>301</span>
+      <img src="{% static "img/tmp/dakota_department_202.png" %}" class="hide" data-department="202" alt="dakota department 202 ">
+      <img src="{% static "img/tmp/dakota_department_301.png" %}" class="show" data-department="301" alt="dakota department 301">
+      <img src="{% static "img/tmp/dakota_department_302.png" %}" class="hide" data-department="302" alt="dakota department 302">
+    </div>
+    <div class="drawing-selectors">
+      <div class="drawing-selector">202</div>
+      <div class="drawing-selector active">301</div>
+      <div class="drawing-selector">302</div>
+    </div>
+  </div>
+  <div class="development-carousel-container text-center">
+    <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_00.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_01.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_02.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_03.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_04.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_05.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_06.jpg" %}')">
     </div>
   </div>
   <div class="development-characteristics">
@@ -66,44 +107,6 @@
         <span>Uno o dos cajones de estacionamiento</span>
       </li>
     </ul>
-  </div>
-  <div class="development-carousel-container text-center">
-    <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_01.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_02.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_03.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_04.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_05.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_06.jpg" %}')">
-    </div>
-  </div>
-  <div class="development-drawings gray-container text-center">
-    <div class="drawing-selectors">
-      <div class="drawing-selector active">101</div>
-      <div class="drawing-selector">102</div>
-      <div class="drawing-selector">201</div>
-    </div>
-    <div class="drawing-picture">
-      Departamento <span>101</span>
-      <img src="{% static "img/tmp/dakota_department_101.png" %}" class="show" data-department="101" alt="dakota department 101">
-      <img src="{% static "img/tmp/dakota_department_102.png" %}" class="hide" data-department="102" alt="dakota department 102">
-      <img src="{% static "img/tmp/dakota_department_201.png" %}" class="hide" data-department="201" alt="dakota department 201">
-    </div>
-    <div class="drawing-picture">
-      Departamento <span>301</span>
-      <img src="{% static "img/tmp/dakota_department_202.png" %}" class="hide" data-department="202" alt="dakota department 202 ">
-      <img src="{% static "img/tmp/dakota_department_301.png" %}" class="show" data-department="301" alt="dakota department 301">
-      <img src="{% static "img/tmp/dakota_department_302.png" %}" class="hide" data-department="302" alt="dakota department 302">
-    </div>
-    <div class="drawing-selectors">
-      <div class="drawing-selector">202</div>
-      <div class="drawing-selector active">301</div>
-      <div class="drawing-selector">302</div>
-    </div>
   </div>
   <div class="development-nearby-places">
     <div id="location-map" class="location-map"></div>

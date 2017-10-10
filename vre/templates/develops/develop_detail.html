@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 {% load static from staticfiles %}
-{% block title %}Indiana 176 | VRE Mexico{% endblock %}
+{% block description %}Departamento céntrico con un hermoso Roof Garden{% endblock %}
+{% block title %}Indiana 176, departamento céntrico en la CDMX | VRE México{% endblock %}
 {% block content %}
 {% include "sections_navbar.html" %}
 <main id="sections-content">
   <div class="development-cover cover parallax" style="background-image: url('{% static "img/tmp/indiana_cover.jpg" %}')">
-    <img src="{% static "img/tmp/indiana_full_white_name.png" %}" alt="indiana logo">
+    <img src="{% static "img/tmp/indiana_full_white_name.png" %}" alt="Departamentos Indiana 176">
   </div>
   <div class="development-header-text">
     Nuestro desarrollo cuenta con 6 exclusivos condos y un increíble Roof Garden común
@@ -23,6 +24,50 @@
         <div class="help-360">Click para comenzar</div>
         <iframe src="https://dwmx.com/VRE/Indiana/" frameborder="0" class="embed-responsive-item"></iframe>
       </div>
+    </div>
+  </div>
+  <div class="development-drawings gray-container text-center">
+    <div class="drawing-selectors">
+      <div class="drawing-selector active">101</div>
+      <div class="drawing-selector">102</div>
+      <div class="drawing-selector">201</div>
+    </div>
+    <div class="drawing-picture">
+      Departamento <span>101</span>
+      <img src="{% static "img/tmp/indiana_department_101.png" %}" class="show" data-department="101" alt="indiana departament 101">
+      <img src="{% static "img/tmp/indiana_department_102.png" %}" class="hide" data-department="102" alt="indiana departament 102">
+      <img src="{% static "img/tmp/indiana_department_201_301.png" %}" class="hide" data-department="201" alt="indiana departament 201">
+    </div>
+    <div class="drawing-picture">
+      Departamento <span>301</span>
+      <img src="{% static "img/tmp/indiana_department_202_302.png" %}" class="hide" data-department="202" alt="indiana departament 202">
+      <img src="{% static "img/tmp/indiana_department_201_301.png" %}" class="show" data-department="301" alt="indiana departament 201">
+      <img src="{% static "img/tmp/indiana_department_202_302.png" %}" class="hide" data-department="302" alt="indiana departament 302">
+    </div>
+    <div class="drawing-selectors">
+      <div class="drawing-selector">202</div>
+      <div class="drawing-selector active">301</div>
+      <div class="drawing-selector">302</div>
+    </div>
+  </div>
+  <div class="development-carousel-container text-center">
+    <div class="cover" style="background-image: url('{% static "img/tmp/indiana_carousel_00.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/tmp/indiana_carousel_01.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/tmp/indiana_carousel_02.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/tmp/indiana_carousel_03.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/tmp/indiana_carousel_04.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/tmp/indiana_carousel_05.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/tmp/indiana_carousel_06.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/tmp/indiana_carousel_07.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/tmp/indiana_carousel_08.jpg" %}')">
     </div>
   </div>
   <div class="development-characteristics">
@@ -65,48 +110,6 @@
         <span>Uno o dos cajones de estacionamiento</span>
       </li>
     </ul>
-  </div>
-  <div class="development-carousel-container text-center">
-    <div class="cover" style="background-image: url('{% static "img/tmp/indiana_carousel_01.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/tmp/indiana_carousel_02.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/tmp/indiana_carousel_03.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/tmp/indiana_carousel_04.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/tmp/indiana_carousel_05.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/tmp/indiana_carousel_06.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/tmp/indiana_carousel_07.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/tmp/indiana_carousel_08.jpg" %}')">
-    </div>
-  </div>
-  <div class="development-drawings gray-container text-center">
-    <div class="drawing-selectors">
-      <div class="drawing-selector active">101</div>
-      <div class="drawing-selector">102</div>
-      <div class="drawing-selector">201</div>
-    </div>
-    <div class="drawing-picture">
-      Departamento <span>101</span>
-      <img src="{% static "img/tmp/indiana_department_101.png" %}" class="show" data-department="101" alt="indiana departament 101">
-      <img src="{% static "img/tmp/indiana_department_102.png" %}" class="hide" data-department="102" alt="indiana departament 102">
-      <img src="{% static "img/tmp/indiana_department_201_301.png" %}" class="hide" data-department="201" alt="indiana departament 201">
-    </div>
-    <div class="drawing-picture">
-      Departamento <span>301</span>
-      <img src="{% static "img/tmp/indiana_department_202_302.png" %}" class="hide" data-department="202" alt="indiana departament 202">
-      <img src="{% static "img/tmp/indiana_department_201_301.png" %}" class="show" data-department="301" alt="indiana departament 201">
-      <img src="{% static "img/tmp/indiana_department_202_302.png" %}" class="hide" data-department="302" alt="indiana departament 302">
-    </div>
-    <div class="drawing-selectors">
-      <div class="drawing-selector">202</div>
-      <div class="drawing-selector active">301</div>
-      <div class="drawing-selector">302</div>
-    </div>
   </div>
   <div class="development-nearby-places">
     <div id="location-map" class="location-map"></div>

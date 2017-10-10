@@ -130,6 +130,22 @@ class DevelopmentDemo5View(TemplateView):
         context['develop'] = "chicago"
         return context
 
+class DevelopmentCarolinaView(TemplateView):
+    template_name = 'develops/develop_carolina.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(DevelopmentCarolinaView, self).get_context_data(**kwargs)
+        context['develop'] = "carolina"
+        return context
+
+class DevelopmentAtlantaView(TemplateView):
+    template_name = 'develops/develop_atlanta186.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(DevelopmentAtlantaView, self).get_context_data(**kwargs)
+        context['develop'] = "atlanta"
+        return context
+
 class ContactViewOld(FormView):
     template_name = 'landing/contact.html'
     form_class = ContactForm

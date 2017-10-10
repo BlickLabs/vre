@@ -2,12 +2,13 @@
 <!doctype html>
 <html lang="es">
 <head>
+  <script src='//code.tidio.co/jq8gtjlwcd6x6ir5ajbngqkx2enyu0lt.js'></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
   <meta name="keywords"
-        content="bienes raices df, +bienes +raices, bienes raices napoles, mexico city real estate, mexico real estate, mexico real estate for sale, real estate for sale in mexico, real estate in mexico, real estate mexico, apartamento napoles, departamento colonia napoles, departamento napoles, +apartamento +colonia +napoles, +condo +colonia +napoles, +condominio +colonia +napoles, +departamento +colonia +napoles, +departamentos +colonia +napoles, +residencia +colonia +napoles, auri.com.mx, class.com.mx, puntodestino, comprar departamento, departamentos para comprar, paginas para comprar departamentos, +comprar +apartamento, +comprar +departamento, departamentos a estrenar, +departamentos +estrenar, +departamentos +nuevos, +venta +departamento +nuevo, departamentos df venta nuevos, departamentos en venta df nuevos, departamentos en venta nuevos, departamentos nuevos, departamentos nuevos df, departamentos nuevos en df, departamentos nuevos en venta, departamentos nuevos en venta df, desarrollos nuevos departamentos df, venta departamentos nuevos, venta departamentos nuevos df, inmobiliaria df departamentos, +inmobiliaria +df, +inmobiliaria +napoles, agencias inmobiliarias df, desarrolladoras inmobiliarias df, desarrollos inmobiliarios df, inmobiliarias df, inmobiliarias df departamentos nuevos, inmobiliarias en el df, donde invertir, +inversiones +rentables, departamentos como inversion, hacer dinero con bienes raices, hacer dinero de los bienes raices, inversion en bienes raices, inversion en departamentos, inversion en inmuebles, inversion inmobiliaria, inversion real state, inversiones con retorno, invertir en bienes raices, invertir en departamentos, invertir en inmuebles, invertir en propiedades, invertir en residencias, quiero invertir en bienes raices, quiero invertir en departamentos, departamentos pre venta, +departamentos +preventa, +preventa +departamentos, departamentos en venta, venta de departamentos, +departamento +venta +df, +departamento en +venta +napoles, +venta +apartamentos, +venta +departamentos, casas y departamentos en venta, apartamentos en World Trade Center, departamentos en World Trade Center, +condominio world trade center, +inmobiliaria world trade center, +inmuebles en world trade center, real estate world trade center, Bienes Raices, Colonia Napoles, Competencia, Compra, Departamentos Nuevos, Inmobiliaria, Invertir, Pre Venta, Venta, World Trade Center">
+        content="departamento propio, departamento nuevo, nuevo hogar, cambio de departamento, departamentos entrega inmediata, apartar departamento, departamentos preventa, credito hipotecario, corazon de la ciudad de mexico, departamentos con roof garden, vre mexico, vre atlanta, vre carolina, vre chicago, vre tlacotalpan, vre nebraska, vre dakota, vre indiana, atlanta 186, carolina 149, chicago 61, tlacotalpan 146, nebraska 159, dakota 322, indiana 176, departamentos en la colonia napoles, departamentos en la colonia roma, departamentos en la delegacion benito juarez, departamentos venta df, venta departamentos cdmx, vertical real estate mexico">
   <meta name="description"
-        content="Cada espacio que diseñamos y construimos es terminado con la mejor selección de acabados y materiales.">
+        content="{% block description %}{% endblock%}">
   <meta name="google-site-verification" content="qUX5VS-ZAmvmlZH4VsR-wuhQVFROfNky0gmeSvWwvHc"/>
   <link href="{% static "css/bower_dependencies.min.css" %}"
         rel="stylesheet"/>
@@ -28,13 +29,6 @@
           e.parentNode.insertBefore(n, e);
       })(document, "script", "hs-analytics", 300000);
   </script>
-  <!-- End Husbpot Analitics Code -->
-
-  <!-- Start of Yahoo Code -->
-  <script type="application/javascript">(function(w,d,t,r,u){w[u]=w[u]||[];w[u].push({'projectId':'10000','properties':{'pixelId':'10031225'}});var s=d.createElement(t);s.src=r;s.async=true;s.onload=s.onreadystatechange=function(){var y,rs=this.readyState,c=w[u];if(rs&&rs!="complete"&&rs!="loaded"){return}try{y=YAHOO.ywa.I13N.fireBeacon;w[u]=[];w[u].push=function(p){y([p])};y(c)}catch(e){}};var scr=d.getElementsByTagName(t)[0],par=scr.parentNode;par.insertBefore(s,scr)})(window,document,"script","https://s.yimg.com/wi/ytc.js","dotq");</script>
-  <img src="https://sp.analytics.yahoo.com/spp.pl?a=10000&.yp=10031225" hidden/>
-  <!-- End Yahoo Code -->
-
   <!-- Google Analytics -->
   <script>
       (function (i, s, o, g, r, a, m) {
@@ -156,25 +150,6 @@
                src="https://www.facebook.com/tr?id=1400993483246310&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Facebook Pixel Code -->
-<script type='text/javascript' data-cfasync='false'>window.purechatApi = {
-    l: [], t: [], on: function () {
-        this.l.push(arguments);
-    }
-};
-(function () {
-    var done = false;
-    var script = document.createElement('script');
-    script.async = true;
-    script.type = 'text/javascript';
-    script.src = 'https://app.purechat.com/VisitorWidget/WidgetScript';
-    document.getElementsByTagName('HEAD').item(0).appendChild(script);
-    script.onreadystatechange = script.onload = function (e) {
-        if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) {
-            var w = new PCWidget({c: '5fce6a50-52b2-4c9a-ab09-ecb225fb33e2', f: true});
-            done = true;
-        }
-    };
-})();</script>
 {% block after_scripts %}
 {% endblock %}
 </body>

@@ -1,58 +1,78 @@
 {% extends "base.html" %}
 {% load static from staticfiles %}
-{% block title %}Desarrollos | VRE Mexico{% endblock %}
+{% block description %}Conoce todos nuestros departamentos en preventa y entrega inmediata en la Ciudad de México{% endblock %}
+{% block title %}Departamentos en preventa y entrega inmediata | VRE México{% endblock %}
 {% block content %}
 {% include "sections_navbar.html" %}
-<main id="sections-content">
+<main id="sections-content" class="develops">
   <div class="developments-gray-divider text-center">
     <h1>Nuestros <b>Desarrollos</b></h1>
     <p>
     Cada espacio que diseñamos y construimos es terminado con la mejor selección de acabados y materiales.
     </p>
   </div>
-  <div class="developments-items">
-    <div class="development-item type-b">
-      <a href="{% url 'landing:development_demo' %}" class="development-item-cover cover" style="background-image: url({% static "img/tmp/indiana_item_photo_small.jpg" %})"></a>
-      <div class="development-item-info">
-        <a href="{% url 'landing:development_demo' %}">
-          <img src="{% static "img/tmp/indiana_full_white_name.png" %}" class="development-item-name" alt="Indiana 176">
-          <span class="development-item-location">Colonia <strong>Nápoles</strong></span>
+  <div class="homepage-gray-divider text-center vre-develops">
+    <div class="iframe-selector">
+      <a name="todos" class="vre-btntabs-develop iframe-option active">Todos</a>
+      <a name="preventa" class="vre-btntabs-develop iframe-option">Preventa</a>
+      <a name="inmediata" class="vre-btntabs-develop iframe-option vre-tabs-full">Entrega inmediata</a>
+      <a name="vendido" class="vre-btntabs-develop iframe-option">Vendidos</a>
+    </div>
+    <div class="homepage-developments-items vre-items-develop">
+      <div class="item vre-item-develop vre-develop-todos vre-develop-preventa">
+        <a href="{% url 'landing:development_atlanta' %}">
+          <div class="item-picture vre-item-picture" style="background-image: url({% static "img/atlanta186.jpg" %})">
+            <div class="vre-filtro preventa"><span class="vre-filtro-text">Preventa</span></div>
+          </div>
+          <img class="item-name" src="{% static "img/Atlanta.jpg" %}" alt="Atlanta 186" />
         </a>
       </div>
-    </div>
-    <div class="development-item type-b">
-      <a href="{% url 'landing:development_demo2' %}" class="development-item-cover cover" style="background-image: url({% static "img/tmp/dakota_item_photo_small.jpg" %})"></a>
-      <div class="development-item-info">
-        <a href="{% url 'landing:development_demo2' %}">
-          <img src="{% static "img/tmp/dakota_full_white_name.png" %}" class="development-item-name" alt="Dakota 322">
-          <span class="development-item-location">Colonia <strong>Nápoles</strong></span>
+      <div class="item vre-item-develop vre-develop-todos vre-develop-preventa">
+        <a href="{% url 'landing:development_carolina' %}">
+          <div class="item-picture vre-item-picture" style="background-image: url({% static "img/carolina149.jpg" %})">
+            <div class="vre-filtro preventa"><span class="vre-filtro-text">Preventa</span></div>
+          </div>
+          <img class="item-name" src="{% static "img/Carolina.jpg" %}" alt="Carolina 149" />
         </a>
       </div>
-    </div>
-    <div class="development-item">
-      <a href="{% url 'landing:development_demo3' %}" class="development-item-cover cover" style="background-image: url({% static "img/tmp/tlacotalpan_item_photo_small.jpg" %})"></a>
-      <div class="development-item-info">
-        <a href="{% url 'landing:development_demo3' %}">
-          <img src="{% static "img/tmp/tlacotalpan_full_white_name.png" %}" class="development-item-name" alt="Tlacotalpan 146">
-          <span class="development-item-location">Colonia <strong>Roma</strong></span>
-        </a>
-      </div>
-    </div>
-    <div class="development-item type-b">
-      <a href="{% url 'landing:development_demo4' %}" class="development-item-cover cover" style="background-image: url({% static "img/tmp/nebraska_item_photo_small.jpg" %})"></a>
-      <div class="development-item-info">
-        <a href="{% url 'landing:development_demo4' %}">
-          <img src="{% static "img/tmp/nebraska_full_white_name.png" %}" class="development-item-name" alt="Nebraska 159">
-          <span class="development-item-location">Colonia <strong>Nápoles</strong></span>
-        </a>
-      </div>
-    </div>
-    <div class="development-item type-b">
-      <a href="{% url 'landing:development_demo5' %}" class="development-item-cover cover" style="background-image: url({% static "img/tmp/chicago_item_photo_small.jpg" %})"></a>
-      <div class="development-item-info">
+      <div class="item vre-item-develop vre-develop-todos vre-develop-inmediata">
         <a href="{% url 'landing:development_demo5' %}">
-          <img src="{% static "img/tmp/chicago_full_white_name.png" %}" class="development-item-name" alt="Chicago 61">
-          <span class="development-item-location">Colonia <strong>Nápoles</strong></span>
+          <div class="item-picture vre-item-picture" style="background-image: url({% static "img/chicago61.jpg" %})">
+            <div class="vre-filtro inmediata"><span class="vre-filtro-text">Entrega Inmediata</span></div>
+          </div>
+          <img class="item-name" src="{% static "img/Chicago.jpg" %}" alt="Chicago 61" />
+        </a>
+      </div>
+      <div class="item vre-item-develop vre-develop-todos vre-develop-inmediata">
+        <a href="{% url 'landing:development_demo4' %}">
+          <div class="item-picture vre-item-picture" style="background-image: url({% static "img/nebraska159.jpg" %})">
+            <div class="vre-filtro inmediata"><span class="vre-filtro-text">Entrega Inmediata</span></div>
+          </div>
+          <img class="item-name" src="{% static "img/Nebraska.jpg" %}" alt="Nebraska 159" />
+        </a>
+      </div>
+      <div class="item vre-item-develop vre-develop-todos vre-develop-inmediata">
+        <a href="{% url 'landing:development_demo3' %}">
+          <div class="item-picture vre-item-picture" style="background-image: url({% static "img/tlaco146.jpg" %})">
+            <div class="vre-filtro inmediata"><span class="vre-filtro-text">Entrega Inmediata</span></div>
+          </div>
+          <img class="item-name" src="{% static "img/Tlacotal.jpg" %}" alt="Tlacotalpan 146" />
+        </a>
+      </div>
+      <div class="item vre-item-develop vre-develop-todos vre-develop-vendido">
+        <a href="{% url 'landing:development_demo2' %}">
+          <div class="item-picture vre-item-picture" style="background-image: url({% static "img/tmp/dakota_item_photo_small.jpg" %})">
+            <div class="vre-filtro vendido"><span class="vre-filtro-text">Vendido</span></div>
+          </div>
+          <img class="item-name" src="{% static "img/Dakota.jpg" %}" alt="Dakota 322" />
+        </a>
+      </div>
+      <div class="item vre-item-develop vre-develop-todos vre-develop-vendido">
+        <a href="{% url 'landing:development_demo' %}">
+          <div class="item-picture vre-item-picture" style="background-image: url({% static "img/indiana176.jpg" %})">
+            <div class="vre-filtro vendido"><span class="vre-filtro-text">Vendido</span></div>
+          </div>
+          <img class="item-name" src="{% static "img/Indiana.jpg" %}" alt="Indiana 176" />
         </a>
       </div>
     </div>
@@ -89,6 +109,10 @@
     {
       coordinates: [19.397481, -99.174528],
       title: 'Chicago 61'
+    },
+    {
+      coordinates: [19.380275, -99.177901],
+      title: 'Carolina 149'
     }
   ]);
 </script>

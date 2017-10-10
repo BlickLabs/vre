@@ -1,0 +1,189 @@
+{% extends "base.html" %}
+{% load static from staticfiles %}
+{% block description %}Acabados de calidad, cocina equipada y excelente ubicación, todo lo que buscas en un departamento{% endblock %}
+{% block title %}Atlanta 186, departamento con excelente ubicación | VRE México{% endblock %}
+{% block content %}
+{% include "sections_navbar.html" %}
+<main id="sections-content">
+  <div class="development-cover cover parallax" style="background-image: url('{% static "img/tmp/atlanta186.jpg" %}')">
+    <img src="{% static "img/tmp/atlanta186_name.png" %}" alt="Departamentos Carolina 149">
+  </div>
+  <div class="development-header-text">
+    Vive a media cuadra del Parque Hundido, en la colonia Noche Buena.
+  </div>
+  <div class="gray-container development-download-brochure">
+    <div class="development-download-brochure__inner">
+      <span>Si quieres más información, descarga aquí nuestro brochure de ventas</span>
+      <div id="brochure-form-wrapper"></div>
+    </div>
+  </div>
+  {% comment %}
+  <div class="development-360-video text-center">
+    Dale click sobre la imagen y vive el departamento
+    <div class="container-360">
+      <div class="embed-responsive embed-responsive-16by9">
+        <div class="help-360">Click para comenzar</div>
+        <iframe src="https://www.dwmx.com/VRE/Chicago/" frameborder="0" class="embed-responsive-item"></iframe>
+      </div>
+    </div>
+  </div>
+  {% endcomment %}
+  {% comment %}
+  <div class="development-carousel-container text-center">
+    <div class="cover" style="background-image: url('{% static "img/tmp/carolina_carousel_01.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/tmp/carolina_cover.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/tmp/carolina_carousel_02.jpg" %}')">
+    </div>
+  </div>
+  {% endcomment %}
+  <div class="development-360-video text-center">
+    Dale click sobre la imagen y vive el departamento
+    <div class="container-360">
+      <div class="embed-responsive embed-responsive-16by9">
+        <div class="help-360">Click para comenzar</div>
+        <iframe src="https://dwmx.com/VRE/Carolina/" frameborder="0" class="embed-responsive-item"></iframe>
+      </div>
+    </div>
+  </div>
+  <div style="position: relative; padding-bottom:56.25%; padding-top: 30px; height: 0; overflow: hidden;">
+    <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://spaces.archilogic.com/3d/tequeremos/dukkqwyg?modelResourceId=d832e129-f479-4449-9ebb-3e45261e9082&mode=view&autostart=true&view-menu=none&main-menu=interior&presentation=loop" height="400" width="640" frameBorder="0" onmousewheel="false" allowfullscreen mozallowfullscreen webkitallowfullscreen></iframe>
+  </div>
+  <div class="development-characteristics">
+    <div class="text-center">Características de los departamentos</div>
+    <ul class="development-characteristics-items">
+      <li class="development-characteristics-item">
+        <img src="{% static "img/icons/living_room_icon.png" %}" alt="living room icon">
+        <span>Sala</span>
+      </li>
+      <li class="development-characteristics-item">
+        <img src="{% static "img/icons/service_room_icon.png" %}" alt="service room icon">
+        <span>Cuarto de servicio</span>
+      </li>
+      <li class="development-characteristics-item">
+        <img src="{% static "img/icons/full_bathroom_icon.png" %}" alt="bathroom icon">
+        <span>Dos baños</span>
+      </li>
+      <li class="development-characteristics-item">
+        <img src="{% static "img/icons/dinning_room_icon.png" %}" alt="dinning room icon">
+        <span>Comedor</span>
+      </li>
+      <li class="development-characteristics-item">
+        <img src="{% static "img/icons/closet_icon.png" %}" alt="closet icon">
+        <span>Clóset</span>
+      </li>
+      <li class="development-characteristics-item">
+        <img src="{% static "img/icons/private_cellar_icon.png" %}" alt="private cellar icon">
+        <span>Bodega privada</span>
+      </li>
+      <li class="development-characteristics-item">
+        <img src="{% static "img/icons/kitchen_icon.png" %}" alt="kitchen icon">
+        <span>Cocina equipada</span>
+      </li>
+      <li class="development-characteristics-item">
+        <img src="{% static "img/icons/bedroom_icon.png" %}" alt="bedroom icon">
+        <span>3 o 2 recámaras</span>
+      </li>
+      <li class="development-characteristics-item">
+        <img src="{% static "img/icons/parking_lot_icon.png" %}" alt="parking icon">
+        <span>2 o 1 cajón de estacionamiento</span>
+      </li>
+      <li class="development-characteristics-item">
+        <img src="{% static "img/icons/flat_room_icon.png" %}" alt="dinning room icon">
+        <span>Roof Garden privado*</span>
+      </li>
+      <li class="development-characteristics-item">
+      </li>
+      <li class="development-characteristics-item">
+      </li>
+      <div>*Aplica solamente en departamentos 301 y 302</div>
+    </ul>
+  </div>
+  <div class="development-nearby-places">
+    <div id="location-map" class="location-map"></div>
+    <div class="points-of-interest">
+      <span>Lugares de interés</span>
+      <ul>
+        <li>
+          <!-- <img src="{% static "img/tmp/icons/hip_icon.png" %}" alt="hip icon"> -->
+          <span>Superama: 5 min (650 m) Caminando</span>
+        </li>
+        <li>
+          <!-- <img src="{% static "img/tmp/icons/cdmx_icon.png" %}" alt="cdmx icon"> -->
+          <span>Ego´s Gym: 4 min (550 m) Caminando</span>
+        </li>
+        <li>
+          <img src="{% static "img/tmp/icons/hip_icon.png" %}" alt="aicm icon">
+          <span>Hospital Star Médica HIP: 5 min (1.5 km)</span>
+        </li>
+        <li>
+          <img src="{% static "img/tmp/icons/cdmx_icon.png" %}" alt="antara fashion icon">
+          <span>Angel de la Independencia: 27 min (6 km)</span>
+        </li>
+        <li>
+          <img src="{% static "img/tmp/icons/aicm_icon.png" %}" alt="santafe icon">
+          <span>Aeropuerto CDMX: 28 min (14 km)</span>
+        </li>
+        <li>
+          <img src="{% static "img/tmp/icons/antara_fashion_icon.png" %}" alt="antara fashion icon">
+          <span>Antara Fashion Hall: 35 min (10 km)</span>
+        </li>
+        <li>
+          <img src="{% static "img/tmp/icons/santafe_icon.png" %}" alt="santafe icon">
+          <span>Centro Comercial Santa Fe: 45 min (17 km)</span>
+        </li>
+      </ul>
+      <div class="note">* Tiempo estimado a las 9:00 am entre semana</div>
+    </div>
+  </div>
+  <div class="development-public-transport gray-container">
+    <div class="transport-title text-center"><img src="{% static "img/icons/transport_icon.png" %}" alt="Transporte público">Transporte Público</div>
+    <div class="transport-items-container">
+      <div class="transport-items-column">
+        <div class="transport-item">
+          <span class="semibold">Metrobús: </span>
+          Parada Parque Hundido (200 m)
+        </div>
+        <div class="transport-item">
+          <span class="semibold">Metro: </span>
+          Estación San Antonio (1.1 km)
+        </div>
+        <div class="transport-item">
+          <span class="semibold">Ecobici: </span>
+          Estación 367 (290 m)
+        </div>
+      </div>
+      <div class="transport-items-column">
+        <div class="transport-item">
+          <span class="semibold">Walking Score ® : </span>
+          98 (Un paraíso para el peatón)
+        </div>
+        <div class="transport-item">
+          <span class="semibold">Ciclovía: </span>
+          Cto interior (800 m)
+        </div>
+      </div>
+    </div>
+    <div class="transport-separated-text">
+      Vida diaria no requiere el uso del coche
+    </div>
+  </div>
+  <div class="development-built-by">
+    Construido por <img src="{% static "img/icons/zago-logo.png" %}" alt="zago logo">
+  </div>
+</main>
+{% endblock %}
+{% block before_scripts %}
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYJxTs6nptICwPefTB_XR6yA2BUmUg-5A"></script>
+<!--[if lte IE 8]>
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+<![endif]-->
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+{% endblock %}
+{% block after_scripts %}
+<script>
+  insertMap([19.380275, -99.177901], 'Atlanta');
+  addBrochureListener('Atlanta', 'bf7cf5ee-292f-48ca-ab84-21226d0fe7ad');
+</script>
+{% endblock %}
