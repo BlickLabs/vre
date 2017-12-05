@@ -138,6 +138,14 @@ class DevelopmentCarolinaView(TemplateView):
         context['develop'] = "carolina"
         return context
 
+class DevelopmentBeisteguiView(TemplateView):
+    template_name = 'develops/develop_beistegui.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(DevelopmentBeisteguiView, self).get_context_data(**kwargs)
+        context['develop'] = "beistegui"
+        return context
+
 class DevelopmentAtlantaView(TemplateView):
     template_name = 'develops/develop_atlanta186.html'
 
