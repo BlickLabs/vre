@@ -17,8 +17,16 @@
       <a name="preventa" class="vre-btntabs-develop iframe-option">Preventa</a>
       <a name="inmediata" class="vre-btntabs-develop iframe-option vre-tabs-full">Entrega inmediata</a>
       <a name="vendido" class="vre-btntabs-develop iframe-option">Vendidos</a>
-    </div>
+    </div>      
     <div class="homepage-developments-items vre-items-develop">
+      <div class="item vre-item-develop vre-develop-todos vre-develop-preventa">
+        <a href="{% url 'landing:development_beistegui' %}">
+          <div class="item-picture vre-item-picture" style="background-image: url({% static "img/previa_beistegui.png" %})">
+            <div class="vre-filtro preventa"><span class="vre-filtro-text">Preventa</span></div>
+          </div>
+          <img class="item-name" src="{% static "img/beistegui512.jpg" %}" alt="Concepción Beistegui 512" />
+        </a>
+      </div>
       <div class="item vre-item-develop vre-develop-todos vre-develop-preventa">
         <a href="{% url 'landing:development_atlanta' %}">
           <div class="item-picture vre-item-picture" style="background-image: url({% static "img/atlanta186.jpg" %})">
