@@ -5,11 +5,11 @@
 {% block content %}
 {% include "sections_navbar.html" %}
 <main id="sections-content">
-  <div class="development-cover cover parallax" style="background-image: url('{% static "img/tmp/carolina_cover.jpg" %}')">
-    <img src="{% static "img/tmp/beistegui512.png" %}" alt="Departamentos Concepción Beistegui 512">
+  <div class="development-cover cover parallax" style="background-image: url('{% static "img/tmp/beistegui512_cover.jpg" %}')">
+    <img src="{% static "img/tmp/beistegui512_name.png" %}" alt="Departamentos Concepción Beistegui 512">
   </div>
   <div class="development-header-text">
-    Vive en la colonia del valle norte<br>
+    Vive en la colonia del Valle Norte, <br>
     increíbles departamentos de hasta 249.5 m2
   </div>
   <div class="gray-container development-download-brochure">
@@ -193,6 +193,6 @@
 {% block after_scripts %}
 <script>
   insertMap([19.380275, -99.177901], 'Carolina 149');
-  addBrochureListener('Carolina', '0da32bde-9150-4094-bb4a-e49c6126795b');
+  addBrochureListener('Beistegui', '81ee6c84-f8ed-4fdc-a6d4-44911a8ec010');
 </script>
 {% endblock %}
