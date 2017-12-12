@@ -39,6 +39,10 @@ urlpatterns = [
         view=views.DevelopmentCarolinaView.as_view(),
         name='development_carolina'),
 
+    url(regex=r'^beistegui512/$',
+        view=views.DevelopmentBeisteguiView.as_view(),
+        name='development_beistegui'),
+
     url(regex=r'^atlanta186/$',
         view=views.DevelopmentAtlantaView.as_view(),
         name='development_atlanta'),

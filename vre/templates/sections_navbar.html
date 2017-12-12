@@ -19,14 +19,14 @@
       <li {%if request.path == about_us %}class="active"{%endif%}><a href="{{about_us}}">NOSOTROS</a></li>
       <li {%if request.path == login %}class="active"{%endif%}><a href="{{login}}">INVERSIONISTAS</a></li>
       {%if request.user.is_authenticated%}<li><a href="{% url 'xauth:logout' %}">LOGOUT</a></li>{%endif%}
-      <li class="phone office"><a href="tel:+525588527468"><img src="{% static "img/icons/orange_phone_icon.png" %}" alt="Phone icon"><span>(52) 55 8852 7468</span></a></li>
+      <li class="phone office"><a href="tel:+525588527468"><img src="{% static "img/icons/orange_phone_icon.png" %}" alt="Phone icon"><span>(52) 55 8437 2040</span></a></li>
       <li class="phone whatsapp"><i class="fa fa-whatsapp"></i><span>+52 1 55 5939 6716</span></li>
     </ul>
   </div>
   <div class="navbar-menu-orange-box">
     <span class="small-text">
       <img src="{% static "img/icons/phone_icon.png" %}" alt="Phone icon">
-      <span>(52) 55 8852 7468</span>
+      <span>(52) 55 8437 2040</span>
     </span>
     <span class="big-text">
       <span class="fa fa-whatsapp"></span>

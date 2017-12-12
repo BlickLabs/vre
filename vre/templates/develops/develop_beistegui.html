@@ -1,16 +1,15 @@
 {% extends "base.html" %}
 {% load static from staticfiles %}
-{% block description %}Vive a media cuadra del parque Alfonso Esparza{% endblock %}
-{% block title %}Dakota 322, tu nuevo hogar con los mejores acabados | VRE México{% endblock %}
+{% block description %}Vive en la colonia del valle norte, increibles departamentos{% endblock %}
+{% block title %}Concepción Beistegui 512 | VRE México{% endblock %}
 {% block content %}
 {% include "sections_navbar.html" %}
 <main id="sections-content">
-  <div class="development-cover cover parallax" style="background-image: url('{% static "img/tmp/dakota_cover.jpg" %}')">
-    <img src="{% static "img/tmp/dakota_full_white_name.png" %}" alt="Departamentos Dakota 322">
+  <div class="development-cover cover parallax" style="background-image: url('{% static "img/tmp/beistegui512_cover.jpg" %}')">
+    <img src="{% static "img/tmp/beistegui512_name.png" %}" alt="Departamentos Concepción Beistegui 512">
   </div>
   <div class="development-header-text">
-  Vive a media cuadra del parque Alfonso Esparza.
-  Contamos con departamentos desde 74 a 114 m2
+    Vive en la colonia del Valle Norte.<br />Increíbles departamentos de hasta 249.5 m2.
   </div>
   <div class="gray-container development-download-brochure">
     <div class="development-download-brochure__inner">
@@ -18,53 +17,43 @@
       <div id="brochure-form-wrapper"></div>
     </div>
   </div>
+  {% comment %}
   <div class="development-360-video text-center">
     Dale click sobre la imagen y vive el departamento
     <div class="container-360">
       <div class="embed-responsive embed-responsive-16by9">
         <div class="help-360">Click para comenzar</div>
-        <iframe src="https://www.dwmx.com/VRE/Dakota/" frameborder="0" class="embed-responsive-item"></iframe>
+        <iframe src="https://www.dwmx.com/VRE/Chicago/" frameborder="0" class="embed-responsive-item"></iframe>
       </div>
     </div>
   </div>
-  <div class="development-drawings gray-container text-center">
-    <div class="drawing-selectors">
-      <div class="drawing-selector active">101</div>
-      <div class="drawing-selector">102</div>
-      <div class="drawing-selector">201</div>
+  {% endcomment %}
+  {% comment %}
+  <div class="development-carousel-container text-center">
+    <div class="cover" style="background-image: url('{% static "img/tmp/carolina_carousel_01.jpg" %}')">
     </div>
-    <div class="drawing-picture">
-      Departamento <span>101</span>
-      <img src="{% static "img/tmp/dakota_department_101.png" %}" class="show" data-department="101" alt="dakota department 101">
-      <img src="{% static "img/tmp/dakota_department_102.png" %}" class="hide" data-department="102" alt="dakota department 102">
-      <img src="{% static "img/tmp/dakota_department_201.png" %}" class="hide" data-department="201" alt="dakota department 201">
+    <div class="cover" style="background-image: url('{% static "img/tmp/carolina_cover.jpg" %}')">
     </div>
-    <div class="drawing-picture">
-      Departamento <span>301</span>
-      <img src="{% static "img/tmp/dakota_department_202.png" %}" class="hide" data-department="202" alt="dakota department 202 ">
-      <img src="{% static "img/tmp/dakota_department_301.png" %}" class="show" data-department="301" alt="dakota department 301">
-      <img src="{% static "img/tmp/dakota_department_302.png" %}" class="hide" data-department="302" alt="dakota department 302">
-    </div>
-    <div class="drawing-selectors">
-      <div class="drawing-selector">202</div>
-      <div class="drawing-selector active">301</div>
-      <div class="drawing-selector">302</div>
+    <div class="cover" style="background-image: url('{% static "img/tmp/carolina_carousel_02.jpg" %}')">
     </div>
   </div>
-  <div class="development-carousel-container text-center">
-    <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_00.jpg" %}')">
+  {% endcomment %}
+    {% comment %}
+
+  <div class="development-360-video text-center">
+    Dale click sobre la imagen y vive el departamento
+    <div class="container-360">
+      <div class="embed-responsive embed-responsive-16by9">
+        <div class="help-360">Click para comenzar</div>
+        <iframe src="https://dwmx.com/VRE/Carolina/" frameborder="0" class="embed-responsive-item"></iframe>
+      </div>
     </div>
-    <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_01.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_02.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_03.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_04.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_05.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_06.jpg" %}')">
+  </div>
+    {% endcomment %}
+
+  <div class="vre-develop-3d">
+    <div style="position: relative; padding-bottom:56.25%; padding-top: 30px; height: 0; overflow: hidden;">
+      <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://spaces.archilogic.com/3d/!30e88a42-2bbf-4eae-bfe5-139c8b2e542c?mode=view&main-menu=none&view-menu=none&presentation=once&editable=false" width="400" height="640" frameBorder="0" onmousewheel="false" allowfullscreen mozallowfullscreen webkitallowfullscreen></iframe>
     </div>
   </div>
   <div class="development-characteristics">
@@ -80,7 +69,7 @@
       </li>
       <li class="development-characteristics-item">
         <img src="{% static "img/icons/full_bathroom_icon.png" %}" alt="bathroom icon">
-        <span>Dos baños y medio</span>
+        <span>Dos baños</span>
       </li>
       <li class="development-characteristics-item">
         <img src="{% static "img/icons/dinning_room_icon.png" %}" alt="dinning room icon">
@@ -91,8 +80,8 @@
         <span>Clóset</span>
       </li>
       <li class="development-characteristics-item">
-        <img src="{% static "img/icons/dressing_room_icon.png" %}" alt="dressing room icon">
-        <span>Vestidor</span>
+        <img src="{% static "img/icons/private_cellar_icon.png" %}" alt="private cellar icon">
+        <span>Bodega privada</span>
       </li>
       <li class="development-characteristics-item">
         <img src="{% static "img/icons/kitchen_icon.png" %}" alt="kitchen icon">
@@ -100,12 +89,21 @@
       </li>
       <li class="development-characteristics-item">
         <img src="{% static "img/icons/bedroom_icon.png" %}" alt="bedroom icon">
-        <span>Dos recámaras</span>
+        <span>3 o 2 recámaras</span>
       </li>
       <li class="development-characteristics-item">
         <img src="{% static "img/icons/parking_lot_icon.png" %}" alt="parking icon">
-        <span>Uno o dos cajones de estacionamiento</span>
+        <span>3 o 1 cajón de estacionamiento</span>
       </li>
+      <li class="development-characteristics-item">
+        <img src="{% static "img/icons/flat_room_icon.png" %}" alt="dinning room icon">
+        <span>Roof Garden privado*</span>
+      </li>
+      <li class="development-characteristics-item">
+      </li>
+      <li class="development-characteristics-item">
+      </li>
+      <div>*Aplica solamente en departamentos 401 y 402</div>
     </ul>
   </div>
   <div class="development-nearby-places">
@@ -114,32 +112,30 @@
       <span>Lugares de interés</span>
       <ul>
         <li>
-          <img src="{% static "img/tmp/icons/british_college_icon.png" %}" alt="british college icon">
-          <span>Colegio británico: 3 min (500 m)</span>
+          <span>Superama: 5 min (650 m) Caminando</span>
         </li>
         <li>
-          <img src="{% static "img/tmp/icons/aqua_gym_icon.png" %}" alt="aqua gym icon">
-          <span>Aqua Gym: 4 min (280 m)</span>
+          <span>Ego´s Gym: 4 min (550 m) Caminando</span>
         </li>
         <li>
-          <img src="{% static "img/tmp/icons/hip_icon.png" %}" alt="hip icon">
-          <span>Hospital Star Médica HIP: 5 min (1.5 km)</span>
+          <img src="{% static "img/tmp/icons/hip_icon.png" %}" alt="aicm icon">
+          <span>Hospital Star Médica HIP: 8 min (1.7 km)</span>
         </li>
         <li>
-          <img src="{% static "img/tmp/icons/cdmx_icon.png" %}" alt="cdmx icon">
-          <span>Angel de la Independencia: 20 min (5.7 km)</span>
+          <img src="{% static "img/tmp/icons/cdmx_icon.png" %}" alt="antara fashion icon">
+          <span>Angel de la Independencia: 18 min (4.5 km)</span>
         </li>
         <li>
-          <img src="{% static "img/tmp/icons/aicm_icon.png" %}" alt="aicm icon">
-          <span>Aeropuerto CDMX: 25 min (13.6 km)</span>
+          <img src="{% static "img/tmp/icons/aicm_icon.png" %}" alt="santafe icon">
+          <span>Aeropuerto CDMX: 20 min (12.7 km)</span>
         </li>
         <li>
           <img src="{% static "img/tmp/icons/antara_fashion_icon.png" %}" alt="antara fashion icon">
-          <span>Antara Fashion Hall: 30 min (7.7 km)</span>
+          <span>Antara Fashion Hall: 20 min (9 km)</span>
         </li>
         <li>
           <img src="{% static "img/tmp/icons/santafe_icon.png" %}" alt="santafe icon">
-          <span>Centro Comercial Santa Fe: 45 min (14 km)</span>
+          <span>Centro Comercial Santa Fe: 35 min (15 km)</span>
         </li>
       </ul>
       <div class="note">* Tiempo estimado a las 9:00 am entre semana</div>
@@ -151,25 +147,25 @@
       <div class="transport-items-column">
         <div class="transport-item">
           <span class="semibold">Metrobús: </span>
-          Parada Colonia del Valle (450 m)
+          Parada Poliforum (650 m)
         </div>
         <div class="transport-item">
           <span class="semibold">Metro: </span>
-          Estación San Antonio (1 km)
+          Estación Eugenia (1.4 km)
         </div>
         <div class="transport-item">
           <span class="semibold">Ecobici: </span>
-          Estación 349 (350 m)
+          Estación #316 (300 m)
         </div>
       </div>
       <div class="transport-items-column">
         <div class="transport-item">
           <span class="semibold">Walking Score ® : </span>
-          97 (Un paraíso para el peatón)
+          98 (Un paraíso para el peatón)
         </div>
         <div class="transport-item">
           <span class="semibold">Ciclovía: </span>
-          Calle Dakota (200 m)
+          Cto interior (800 m)
         </div>
       </div>
     </div>
@@ -193,7 +189,7 @@
 {% endblock %}
 {% block after_scripts %}
 <script>
-  insertMap([19.388950, -99.178761], 'Dakota 322');
-  addBrochureListener('Dakota', '6e83c89a-ffd8-4063-ba0b-8d4d34aeaeab');
+  insertMap([19.380275, -99.177901], 'Carolina 149');
+  addBrochureListener('Beistegui', '81ee6c84-f8ed-4fdc-a6d4-44911a8ec010');
 </script>
 {% endblock %}
