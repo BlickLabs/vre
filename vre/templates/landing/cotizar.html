@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+{% load static from staticfiles %}
+{% block description %}Conoce todos nuestros departamentos en preventa y entrega inmediata en la Ciudad de México{% endblock %}
+{% block title %}Departamentos en preventa y entrega inmediata | VRE México{% endblock %}
+{% block content %}
+{% include "sections_navbar.html" %}
+<main id="sections-content" class="develops">
+  <div class="developments-gray-divider text-center">
+    <h1>Nuestros <b>Desarrollos</b></h1>
+    <p>
+    Cada espacio que diseñamos y construimos es terminado con la mejor selección de acabados y materiales.
+    </p>
+  </div>
+  <div class="homepage-gray-divider text-center vre-develops">
+    <div class="iframe-selector">
+      <a name="todos" class="vre-btntabs-develop iframe-option active">Todos</a>
+      <a name="preventa" class="vre-btntabs-develop iframe-option">Preventa</a>
+      <a name="inmediata" class="vre-btntabs-develop iframe-option vre-tabs-full">Entrega inmediata</a>
+    </div>      
+    <div class="homepage-developments-items vre-items-develop">
+      <div class="item vre-item-develop vre-develop-todos vre-develop-preventa">
+        <a href="https://vremexico.myshopify.com/collections/c-beistegui-512">
+          <div class="item-picture vre-item-picture" style="background-image: url({% static "img/beistegui512_preview.jpg" %})">
+            <div class="vre-filtro preventa"><span class="vre-filtro-text">Preventa</span></div>
+          </div>
+          <img class="item-name" src="{% static "img/beistegui512_name.jpg" %}" alt="Concepción Beistegui 512" />
+        </a>
+      </div>
+      <div class="item vre-item-develop vre-develop-todos vre-develop-preventa">
+        <a href="https://vremexico.myshopify.com/collections/atlanta-186">
+          <div class="item-picture vre-item-picture" style="background-image: url({% static "img/atlanta186.jpg" %})">
+            <div class="vre-filtro preventa"><span class="vre-filtro-text">Preventa</span></div>
+          </div>
+          <img class="item-name" src="{% static "img/Atlanta.jpg" %}" alt="Atlanta 186" />
+        </a>
+      </div>
+      <div class="item vre-item-develop vre-develop-todos vre-develop-preventa">
+        <a href="https://vremexico.myshopify.com/collections/carolina-149">
+          <div class="item-picture vre-item-picture" style="background-image: url({% static "img/carolina149.jpg" %})">
+            <div class="vre-filtro preventa"><span class="vre-filtro-text">Preventa</span></div>
+          </div>
+          <img class="item-name" src="{% static "img/Carolina.jpg" %}" alt="Carolina 149" />
+        </a>
+      </div>
+      <div class="item vre-item-develop vre-develop-todos vre-develop-inmediata">
+        <a href="https://vremexico.myshopify.com/collections/chicago-61">
+          <div class="item-picture vre-item-picture" style="background-image: url({% static "img/chicago61.jpg" %})">
+            <div class="vre-filtro inmediata"><span class="vre-filtro-text">Entrega Inmediata</span></div>
+          </div>
+          <img class="item-name" src="{% static "img/Chicago.jpg" %}" alt="Chicago 61" />
+        </a>
+      </div>
+      <div class="item vre-item-develop vre-develop-todos vre-develop-inmediata">
+        <a href="https://vremexico.myshopify.com/collections/nebraska-159">
+          <div class="item-picture vre-item-picture" style="background-image: url({% static "img/nebraska159.jpg" %})">
+            <div class="vre-filtro inmediata"><span class="vre-filtro-text">Entrega Inmediata</span></div>
+          </div>
+          <img class="item-name" src="{% static "img/Nebraska.jpg" %}" alt="Nebraska 159" />
+        </a>
+      </div>
+      <div class="item vre-item-develop vre-develop-todos vre-develop-inmediata">
+        <a href="https://vremexico.myshopify.com/collections/tlacotalpan-147">
+          <div class="item-picture vre-item-picture" style="background-image: url({% static "img/tlaco146.jpg" %})">
+            <div class="vre-filtro inmediata"><span class="vre-filtro-text">Entrega Inmediata</span></div>
+          </div>
+          <img class="item-name" src="{% static "img/Tlacotal.jpg" %}" alt="Tlacotalpan 146" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="developments-map">
+    <h2>Ubicación</h2>
+    <div class="embed-responsive embed-responsive-16by9" id="location-map">
+    </div>
+  </div>
+</main>
+{% endblock %}
+{% block before_scripts %}
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYJxTs6nptICwPefTB_XR6yA2BUmUg-5A"></script>
+{% endblock %}
+{% block after_scripts %}
+<script>
+  insertMap([19.395001, -99.176670], 'Desarrollos', 14, [
+    {
+      coordinates: [19.386183, -99.178583],
+      title: 'Indiana 176'
+    },
+    {
+      coordinates: [19.388950, -99.178761],
+      title: 'Dakota 322'
+    },
+    {
+      coordinates: [19.402214, -99.165347],
+      title: 'Tlacotalpan 146'
+    },
+    {
+      coordinates: [19.395001, -99.176670],
+      title: 'Nebraska 159'
+    },
+    {
+      coordinates: [19.397481, -99.174528],
+      title: 'Chicago 61'
+    },
+    {
+      coordinates: [19.380275, -99.177901],
+      title: 'Carolina 149'
+    }
+  ]);
+</script>
+{% endblock %}
