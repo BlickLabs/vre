@@ -4,6 +4,8 @@
 {% url 'landing:contact' as contact %}
 {% url 'landing:visit_us' as visit_us %}
 {% url 'landing:developments' as developments %}
+{% url 'landing:cotizar' as cotizar %}
+
 <div class="navbar-menu">
   <input type="checkbox" id="navbar-trigger">
   <label for="navbar-trigger" class="menu-trigger fa fa-bars"></label>
@@ -13,6 +15,7 @@
     <ul>
       <li {%if request.path == "/" %}class="active"{%endif%}><a href="/">INICIO</a></li>
       <li {%if develop or request.path == developments %}class="active"{%endif%}><a href="{{developments}}">DESARROLLOS</a></li>
+      <li {%if request.path == cotizar %}class="active"{%endif%}><a href="{{cotizar}}">COTIZAR</a></li>
       <li {%if request.path == visit_us %}class="active"{%endif%}><a href="{{visit_us}}">VISÍTANOS</a></li>
       <li {%if request.path == contact %}class="active"{%endif%}><a href="{{contact}}">CONTACTO</a></li>
       <li><a href="http://blog.vre.com.mx">BLOG</a></li>
