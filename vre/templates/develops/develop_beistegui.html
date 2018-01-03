@@ -13,8 +13,9 @@
   </div>
   <div class="gray-container development-download-brochure">
     <div class="development-download-brochure__inner">
-      <span>Si quieres más información, descarga aquí nuestro brochure de ventas</span>
-      <div id="brochure-form-wrapper"></div>
+      <span>Si quieres más información, puedes cotizar nuestros departamentos aquí</span>
+      <a class="vre-button vre-btn-cotizarH" href="{% url 'landing:cotizar' %}">Cotizar</a>
+      <!-- <div id="brochure-form-wrapper"></div> -->
     </div>
   </div>
   {% comment %}
@@ -103,7 +104,10 @@
       </li>
       <li class="development-characteristics-item">
       </li>
-      <div>*Aplica solamente en departamentos 401 y 402</div>
+      <div class="vre-container-relative">
+        *Aplica solamente en departamentos 401 y 402
+        <a class="vre-button vre-btn-cotizarH vre-center-absolute" href="{% url 'landing:cotizar' %}">Cotizar</a>
+      </div>
     </ul>
   </div>
   <div class="development-nearby-places">
@@ -141,6 +145,7 @@
         </li>
       </ul>
       <div class="note">* Tiempo estimado a las 9:00 am entre semana</div>
+      <a class="vre-button vre-btn-cotizarH" href="{% url 'landing:cotizar' %}">Cotizar</a>
     </div>
   </div>
   <div class="development-public-transport gray-container">
