@@ -15,7 +15,8 @@
     <ul>
       <li {%if request.path == "/" %}class="active"{%endif%}><a href="/">INICIO</a></li>
       <li {%if develop or request.path == developments %}class="active"{%endif%}><a href="{{developments}}">DESARROLLOS</a></li>
-      <li {%if request.path == cotizar %}class="active"{%endif%}><a href="{{cotizar}}">COTIZAR</a></li>
+      <li {%if request.path == cotizar %}class="active"{%endif%}><a href="https://cotiza.vre.com.mx/">COTIZAR</a></li>
+      {# <li {%if request.path == cotizar %}class="active"{%endif%}><a href="{{cotizar}}">COTIZAR</a></li> #}
       <li {%if request.path == visit_us %}class="active"{%endif%}><a href="{{visit_us}}">VISÍTANOS</a></li>
       <li {%if request.path == contact %}class="active"{%endif%}><a href="{{contact}}">CONTACTO</a></li>
       <li><a href="http://blog.vre.com.mx">BLOG</a></li>
