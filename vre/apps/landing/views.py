@@ -26,6 +26,10 @@ class DevelopmentsView(TemplateView):
     template_name = 'landing/developments.html'
 
 
+class CotizarView(TemplateView):
+    template_name = 'landing/cotizar.html'
+
+
 class AboutUsView(TemplateView):
     template_name = 'landing/about.html'
 
