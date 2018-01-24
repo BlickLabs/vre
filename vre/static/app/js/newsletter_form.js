@@ -13,13 +13,14 @@
         },
         success: function (data) {
           if (data.status === 'subscribed') {
+            console.log(data);
             $('#newsletter-modal').removeClass('error').addClass('success');
             $('#newsletter-modal .modal-title').text('Nos pondremos en contacto contigo a la brevedad.');
             $('#newsletter-modal .modal-body').text('Ya estas suscrito a nuestro Newsletter.');
           } else {
-            $('#newsletter-modal').removeClass('success').addClass('error');
-            $('#newsletter-modal .modal-title').text('Ocurrió un error');
-            $('#newsletter-modal .modal-body').html('Tu suscripción no pudo llevarse a cabo, intentalo mas tarde');
+            $('#newsletter-modal').removeClass('error').addClass('success');
+            $('#newsletter-modal .modal-title').text('Ya estas suscrito a nuestro Newsletter.');
+            $('#newsletter-modal .modal-body').html('Gracias por estar suscrito a nuestro Newsletter.');
           }
         },
         error: function () {
