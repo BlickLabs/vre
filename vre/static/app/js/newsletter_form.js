@@ -13,7 +13,6 @@
         },
         success: function (data) {
           if (data.status === 'subscribed') {
-            console.log(data);
             $('#newsletter-modal').removeClass('error').addClass('success');
             $('#newsletter-modal .modal-title').text('Nos pondremos en contacto contigo a la brevedad.');
             $('#newsletter-modal .modal-body').text('Ya estas suscrito a nuestro Newsletter.');
