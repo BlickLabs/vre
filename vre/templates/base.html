@@ -8,12 +8,9 @@
   <meta name="keywords" content="departamento propio, departamento nuevo, nuevo hogar, cambio de departamento, departamentos entrega inmediata, apartar departamento, departamentos preventa, credito hipotecario, corazon de la ciudad de mexico, departamentos con roof garden, vre mexico, vre atlanta, vre carolina, vre chicago, vre tlacotalpan, vre nebraska, vre dakota, vre indiana, atlanta 186, carolina 149, chicago 61, tlacotalpan 146, nebraska 159, dakota 322, indiana 176, departamentos en la colonia napoles, departamentos en la colonia roma, departamentos en la delegacion benito juarez, departamentos venta df, venta departamentos cdmx, vertical real estate mexico">
   <meta name="description" content="{% block description %}{% endblock%}">
   <meta name="google-site-verification" content="qUX5VS-ZAmvmlZH4VsR-wuhQVFROfNky0gmeSvWwvHc"/>
-  <link href="{% static "css/bower_dependencies.min.css" %}" rel="stylesheet"/>
-  <link href="{% static "css/main.min.css" %}" rel="stylesheet"/>
-  <link href="{% static "css/fonts.min.css" %}" rel="stylesheet">
   <link rel="icon" type="image/png" href="{% static "favicon.png" %}"/>
   <title>{% block title %}{% endblock %}</title>
-  <script src="{% static "js/bower_dependencies.min.js" %}"></script>
+  <link href="{% static "css/main.min.css" %}" rel="stylesheet"/>
 </head>
 <body>
 <div id="page-wrapper">
@@ -38,6 +35,9 @@
   </div>
 </div>
 {% include "footer.html" %}
+<link href="{% static "css/bower_dependencies.min.css" %}" rel="stylesheet"/>
+<link href="{% static "css/fonts.min.css" %}" rel="stylesheet">
+<script src="{% static "js/bower_dependencies.min.js" %}"></script>
 {% block before_scripts %}
 {% endblock %}
 <script>
