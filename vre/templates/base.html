@@ -10,28 +10,12 @@
   <meta name="google-site-verification" content="qUX5VS-ZAmvmlZH4VsR-wuhQVFROfNky0gmeSvWwvHc"/>
   <link href="{% static "css/bower_dependencies.min.css" %}" rel="stylesheet"/>
   <link href="{% static "css/main.min.css" %}" rel="stylesheet"/>
+  <link href="{% static "css/fonts.min.css" %}" rel="stylesheet">
   <link rel="icon" type="image/png" href="{% static "favicon.png" %}"/>
   <title>{% block title %}{% endblock %}</title>
+  <script src="{% static "js/bower_dependencies.min.js" %}"></script>
 </head>
 <body>
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId            : '1140711269365279',
-      autoLogAppEvents : true,
-      xfbml            : true,
-      version          : 'v2.11'
-    });
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "https://connect.facebook.net/es_LA/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
 <div id="page-wrapper">
   {% block content %}
   {% endblock %}
@@ -53,7 +37,6 @@
     </div>
   </div>
 </div>
-
 {% include "footer.html" %}
 {% block before_scripts %}
 {% endblock %}
@@ -64,23 +47,21 @@
         downloadBrochure: {{ download_brochure|slice:'-2' }}
     };
 </script>
-<script src="{% static "js/bower_dependencies.min.js" %}"></script>
+
+<noscript>
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1400993483246310&ev=PageView&noscript=1" />
+</noscript>
+<script >
+    $(document).on("keypress", "form", function (event) {
+        return event.keyCode != 13;
+    });
+</script>
+
 <script src="{% static "js/app.min.js" %}"></script>
- <!-- Start of Async HubSpot Analytics Code -->
-  <script type="text/javascript">
-      (function (d, s, i, r) {
-          if (d.getElementById(i)) {
-              return;
-          }
-          var n = d.createElement(s), e = d.getElementsByTagName(s)[0];
-          n.id = i;
-          n.src = '//js.hs-analytics.net/analytics/' + (Math.ceil(new Date() / r) * r) + '/2469317.js';
-          e.parentNode.insertBefore(n, e);
-      })(document, "script", "hs-analytics", 300000);
-  </script>
-  <!-- Google Analytics -->
-  <script>
-      (function (i, s, o, g, r, a, m) {
+
+<!-- Google Analytics -->
+<script>
+  (function (i, s, o, g, r, a, m) {
           i['GoogleAnalyticsObject'] = r;
           i[r] = i[r] || function () {
                   (i[r].q = i[r].q || []).push(arguments)
@@ -93,56 +74,28 @@
       })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
       ga('create', 'UA-22082118-58', 'auto');
       ga('send', 'pageview');
-  </script>
-  <!-- Global site tag (gtag.js) - AdWords: 847156921 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-847156921"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+</script>
 
-  gtag('config', 'AW-847156921');
-</script>
+<!-- SDK Facebook -->
 <script>
-    $(document).on("keypress", "form", function (event) {
-        return event.keyCode != 13;
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId            : '1140711269365279',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v2.11'
     });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/es_LA/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
 </script>
-<!-- Lightning Bolt Begins -->
-<script type="text/javascript">
-    var lbTrans = '[TRANSACTION ID]';
-    var lbValue = '[TRANSACTION VALUE]';
-    var lbData = '[Attribute/Value Pairs for Custom Data]';
-    var lb_rn = new String(Math.random());
-    var lb_rns = lb_rn.substring(2, 12);
-    var boltProtocol = ('https:' == document.location.protocol) ? 'https://' : 'http://';
-    try {
-        var newScript = document.createElement('script');
-        var scriptElement = document.getElementsByTagName('script')[0];
-        newScript.type = 'text/javascript';
-        newScript.id = 'lightning_bolt_' + lb_rns;
-        newScript.src = boltProtocol + 'b3.mookie1.com/2/LB/' + lb_rns + '@x96?';
-        scriptElement.parentNode.insertBefore(newScript, scriptElement);
-        scriptElement = null;
-        newScript = null;
-    } catch (e) {
-    }
-</script>
-<!-- Lightning Bolt Ends -->
-<!-- Hotjar Tracking Code for www.vre.com.mx -->
-<script>
-    (function (h, o, t, j, a, r) {
-        h.hj = h.hj || function () {
-                (h.hj.q = h.hj.q || []).push(arguments)
-            };
-        h._hjSettings = {hjid: 337000, hjsv: 5};
-        a = o.getElementsByTagName('head')[0];
-        r = o.createElement('script');
-        r.async = 1;
-        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window, document, '//static.hotjar.com/c/hotjar-', '.js?sv=');
-</script>
+
 <!-- Facebook Pixel Code -->
 <script>
     !function (f, b, e, v, n, t, s) {
@@ -168,11 +121,65 @@
     fbq('track', "PageView");
     fbq('track', "ViewContent");
 </script>
-<noscript>
-    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1400993483246310&ev=PageView&noscript=1" />
-</noscript>
-<!-- End Facebook Pixel Code -->
+
+<!-- Global site tag (gtag.js) - AdWords: 847156921 -->
+<script src="https://www.googletagmanager.com/gtag/js?id=AW-847156921"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-847156921');
+</script>
+
+<!-- Start of Async HubSpot Analytics Code -->
+  <script type="text/javascript">
+      (function (d, s, i, r) {
+          if (d.getElementById(i)) {
+              return;
+          }
+          var n = d.createElement(s), e = d.getElementsByTagName(s)[0];
+          n.id = i;
+          n.src = '//js.hs-analytics.net/analytics/' + (Math.ceil(new Date() / r) * r) + '/2469317.js';
+          e.parentNode.insertBefore(n, e);
+      })(document, "script", "hs-analytics", 300000);
+  </script>
+
+<!-- Hotjar Tracking Code for www.vre.com.mx -->
+<script>
+    (function (h, o, t, j, a, r) {
+        h.hj = h.hj || function () {
+                (h.hj.q = h.hj.q || []).push(arguments)
+            };
+        h._hjSettings = {hjid: 337000, hjsv: 5};
+        a = o.getElementsByTagName('head')[0];
+        r = o.createElement('script');
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window, document, '//static.hotjar.com/c/hotjar-', '.js?sv=');
+</script>
 {% block after_scripts %}
 {% endblock %}
+<!-- Lightning Bolt Begins -->
+<script type="text/javascript">
+    var lbTrans = '[TRANSACTION ID]';
+    var lbValue = '[TRANSACTION VALUE]';
+    var lbData = '[Attribute/Value Pairs for Custom Data]';
+    var lb_rn = new String(Math.random());
+    var lb_rns = lb_rn.substring(2, 12);
+    var boltProtocol = ('https:' == document.location.protocol) ? 'https://' : 'http://';
+    try {
+        var newScript = document.createElement('script');
+        var scriptElement = document.getElementsByTagName('script')[0];
+        newScript.type = 'text/javascript';
+        newScript.id = 'lightning_bolt_' + lb_rns;
+        newScript.src = boltProtocol + 'b3.mookie1.com/2/LB/' + lb_rns + '@x96?';
+        scriptElement.parentNode.insertBefore(newScript, scriptElement);
+        scriptElement = null;
+        newScript = null;
+    } catch (e) {
+    }
+</script>
 </body>
 </html>
