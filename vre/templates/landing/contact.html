@@ -7,67 +7,49 @@
   <div class="gray-container">
     <div class="contact-form">
       <h1 class="title">Escríbenos para conocer <b>los desarrollos</b></h1>
-    <!--[if lte IE 8]>
-    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-    <![endif]-->
-    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-    <script>
-      hbspt.forms.create({
-        css: '',
-        portalId: '2469317',
-        formId: '437eb028-52df-4023-81d1-cb3542d7add9',
-        cssClass: 'custom-form',
-        onFormSubmit: function($form) {
-          data = $form.serializeArray();
-          $.ajax({
-            url : "/contact/",
-            type: "POST",
-            data : data,
-            success: function(data, textStatus, jqXHR) {
-              console.log('Success')
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-              console.log('Error en el form')
-            }
-          });
-
-        }
-      });
-    </script>
+      <!--[if lte IE 8]>
+      <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+      <![endif]-->
+      <script src="//js.hsforms.net/forms/v2.js"></script>
+      <script>
+        hbspt.forms.create({
+          css: '',
+          portalId: '2469317',
+          formId: '437eb028-52df-4023-81d1-cb3542d7add9',
+          cssClass: 'custom-form',
+          onFormSubmit: function($form) {
+            data = $form.serializeArray();
+              $.ajax({
+                url : "/contact/",
+                type: "POST",
+                data : data,
+                  success: function(data, textStatus, jqXHR) {},
+                  error: function (jqXHR, textStatus, errorThrown) {}
+              });
+          }
+        });
+      </script>
     </div>
-    <!--
-    <form action="." method="post" class="contact-form">
-      <h1 class="title">Escríbenos para conocer <b>los desarrollos</b></h1>
-      {% csrf_token %}
-      {{ form.name }}
-      {{ form.email }}
-      {{ form.phone }}
-      {{ form.message }}
-	    <input type="hidden" name="source" value="contact"/>
-      <div class="button-container">
-        <button class="vre-inverse-button no-border" id="contact_button">Envíar</button>
-      </div>
-    </form>
-    -->
   </div>
 </main>
 {% endblock %}
-
+{% block before_scripts %}
+<script >
+  $('#contact_button').on('click', function () {
+    ga('send','event','Contacto','ok');
+	})
+</script>
+{% endblock %}
 {% block after_scripts %}
-	<script>
-		$('#contact_button').on('click', function () {
-			ga('send','event','Contacto','ok');
-		})
-	</script>
-  <script>
+<script>
     //Google Analytics in Contact
-    (function(i,s,o,g,r,a,m){i[‘GoogleAnalyticsObject’]=r;i[r]=i[r]||function(){
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,‘script’,‘//www.google-analytics.com/analytics.js’,‘ga’);
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-   ga(‘create’, ‘UA-102526915-1’, ‘auto’);
-    ga(‘send’, ‘pageview’);
+   ga('create', 'UA-102526915-1', 'auto');
+    ga('send', 'pageview');
 
   </script>
 {% endblock %}

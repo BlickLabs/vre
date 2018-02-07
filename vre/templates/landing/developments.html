@@ -93,11 +93,12 @@
 </main>
 {% endblock %}
 {% block before_scripts %}
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYJxTs6nptICwPefTB_XR6yA2BUmUg-5A"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYJxTs6nptICwPefTB_XR6yA2BUmUg-5A"></script>
 {% endblock %}
 {% block after_scripts %}
 <script>
-  insertMap([19.395001, -99.176670], 'Desarrollos', 14, [
+
+  window.onload = insertMap([19.395001, -99.176670], 'Desarrollos', 14, [
     {
       coordinates: [19.386183, -99.178583],
       title: 'Indiana 176'
@@ -129,7 +130,6 @@
     {
       coordinates: [19.3801826, -99.17853129999997],
       title: 'Atlanta 186'
-    }
-  ]);
+    }]);
 </script>
 {% endblock %}
