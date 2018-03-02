@@ -248,3 +248,61 @@
         img:hover
           -webkit-animation: pulse 1s;
           animation: pulse 1s;
+
+// Gallery
+.vre-gallery
+  padding-top 4rem
+
+  ul
+    padding 0
+    list-style none
+    display flex
+    flex-wrap wrap
+    justify-content center
+    align-items center
+
+    li
+      flex-basis 28%
+      margin 1.5rem
+
+      img
+        display block
+        width 100%
+        cursor pointer
+
+      img:hover
+        animation pulse 1s
+        opacity .75
+
+// Gallery
+.vre-gallery-modal
+  display none
+  z-index 100
+  position fixed
+  top 0
+  left 0
+  right 0
+  width 100vw
+  height 100vh
+  background-color rgba(0, 0, 0, 0.85)
+  justify-content center
+  align-items center
+
+  .modal-close
+    color #ffffff
+    font-size 4rem
+    position absolute
+    top 1%
+    right 5%
+    cursor pointer
+
+  .modal-content
+    display block
+    width 80%
+    max-width 700px
+
+    img
+      display block
+      width 100%
+
+
