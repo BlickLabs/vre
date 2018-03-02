@@ -110,6 +110,60 @@
       <div id="brochure-form-wrapper"></div>
     </div>
   </div>
+
+  <div class="vre-gallery">
+    <ul>
+      <li><img class="js-gallery-item" src="{% static "img/vre/beistegui/beistegui-comedor-cocina.jpg" %}" alt=""></li>
+      <li><img class="js-gallery-item" src="{% static "img/vre/beistegui/beistegui-fachada.jpg" %}" alt=""></li>
+      <li><img class="js-gallery-item" src="{% static "img/vre/beistegui/beistegui-recamara.jpg" %}" alt=""></li>
+      <li><img class="js-gallery-item" src="{% static "img/vre/beistegui/beistegui-sala-comerdor-cocina.jpg" %}" alt=""></li>
+      <li><img class="js-gallery-item" src="{% static "img/vre/beistegui/beistegui-comedor-cocina.jpg" %}" alt=""></li>
+      <li><img class="js-gallery-item" src="{% static "img/vre/beistegui/beistegui-comedor-cocina.jpg" %}" alt=""></li>
+    </ul>
+  </div>
+
+  <div id="js-gallery-modal" class="vre-gallery-modal">
+    <span id="js-modal-close" class="modal-close">&times;</span>
+    <div class="modal-content">
+      <img id="js-img" src="{% static "img/vre/beistegui/beistegui-comedor-cocina.jpg" %}" alt="">
+    </div>
+  </div>
+
+  <script>
+
+  // Actions & Events for Modal
+
+   window.onload = () => {
+
+     let btnClose = document.querySelector('#js-modal-close');
+     let galleryModal = document.querySelector('#js-gallery-modal');
+     let galleryImages = document.querySelectorAll('.js-gallery-item');
+
+    
+    // Actions
+    let closeModal = () => {
+      galleryModal.style.display = 'none';
+    }
+
+    let openModal = (imgSrc) => {
+      let img = document.querySelector('#js-img');
+
+      galleryModal.style.display = 'flex';
+      img.src = imgSrc;
+    }
+
+    // Events
+    btnClose.addEventListener('click', closeModal);
+
+    [].forEach.call(document.querySelectorAll('.js-gallery-item'), (el) => {
+      el.addEventListener('click', (e) => {
+        openModal(e.target.src)
+      });
+    });
+   }
+  
+  </script>
+  
   <div class="development-360-video text-center">
     Dale click sobre la imagen y vive el departamento
     <div class="container-360">
