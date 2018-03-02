@@ -32,8 +32,9 @@
 
   .btn--cotizar:hover
     background-color #ffffff
+    outline 2px solid #dedede
     color #de7c27
-    transition all .5s
+    transition all 1s
 
 // Cover
 .vre-develop-cover
@@ -106,9 +107,12 @@
       img 
         max-width 17px
         display block
-        vertical-align middle
         margin-left auto
         margin-right auto
+
+      img:hover
+        -webkit-animation: pulse 1s;
+        animation: pulse 1s;
 
       p
         margin-top 3px 
@@ -133,7 +137,7 @@
         flex-direction column
 
         li
-          border 1px solid #dedede
+          outline 1px solid #dedede
           padding 7px 9px
           text-align center
           margin-bottom 7px
@@ -141,6 +145,13 @@
           letter-spacing 0.3px
           font-size 11px
           cursor pointer
+
+        li:hover
+          color #ffffff
+          background-color #e18a3e
+          box-shadow 0 1px 9px 0 rgba(0, 0, 0, 0.32)
+          border none
+          animation pulse 1s
 
         li.active
           color #ffffff
@@ -169,3 +180,71 @@
     
     .location-map
       height 100%
+
+// Characteristics
+.vre-characteristics-wrapper
+  margin-top 3rem
+
+  .vre-characteristics
+    padding-top 3rem
+    padding-bottom 5rem 
+    border-top 1px solid #e8e8e8
+    width 95%;
+    margin-left auto
+    margin-right auto
+
+    .line
+      margin-left auto
+      margin-right auto
+      margin-top 3rem
+      margin-bottom 3rem
+
+    h4
+      color #444444
+      letter-spacing 1.8px
+      font-size 20px
+      text-align center
+      text-transform uppercase
+
+      span
+        font-weight bold
+    
+    ul
+      padding 0
+      list-style none
+      display flex
+      justify-content center
+      align-items center
+
+      li
+        
+        width 91px
+        height 91px
+        margin-left 39px
+
+        .img-wrapper
+          width: 76px
+          height 76px
+          border 1px solid #f1f1f1
+          display flex
+          justify-content center
+          align-items center
+          margin-left auto
+          margin-right auto
+
+        p
+          color #444444
+          font-size 11px
+          letter-spacing 0.3px
+          text-align center
+          margin-top 10px
+          font-weight 600
+
+        
+
+        img 
+          display block
+
+        img:hover
+          -webkit-animation: pulse 1s;
+          animation: pulse 1s;
