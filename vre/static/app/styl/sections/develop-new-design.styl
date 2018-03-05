@@ -10,6 +10,10 @@
 
 // Global styles.
 
+.show-mobile,
+.development-carousel-container
+  display none !important
+
 .line
   width 58px
   border-bottom 3px solid #dedede
@@ -323,4 +327,57 @@
       display block
       width 100%
 
+@media screen and (max-width: 768px)
+  .vre-develop-department-ubication
+    flex-direction column
 
+    .develop-department,
+    .develop-ubication
+      flex-basis 100%
+      max-width 100%
+      padding-left 20px
+      padding-right 20px
+
+    .develop-ubication
+      height 45vh
+      margin-top 3rem
+
+      h3
+        text-align left
+
+        .line
+          margin-left 0
+
+
+    .department-num-img
+      flex-direction column-reverse
+
+      .department-num
+        flex-basis 100%
+        width 100%
+
+        .num-list
+          flex-direction row
+          justify-content space-around
+          margin-top 2rem
+
+  .vre-characteristics-wrapper .vre-characteristics ul
+    flex-wrap wrap
+    justify-content center
+
+    li
+      margin-bottom 4.5rem
+
+  .development-360-video
+    border 1rem solid #fff
+
+@media screen and (max-width: 425px)
+  .hide-mobile
+    display none
+
+  .show-mobile
+    display block !important
+
+  .development-carousel-container
+    margin-top 3rem
+    
