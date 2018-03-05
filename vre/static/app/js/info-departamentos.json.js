@@ -23,12 +23,13 @@
   var departamentos_text = JSON.stringify({
     "departamentos": {
       "iconos": {
-        "metros": "",
+        "metros": "metros.png",
         "recamaras": "",
         "banio": "",
         "estacionamiento": "",
         "terraza": "",
-        "balcon": ""
+        "balcon": "",
+        "roof": ""
       },
       "indiana": {
         "depa101": {
@@ -92,7 +93,8 @@
             "banio": "2.5 Baños",
             "estacionamiento": "1 Lugar Estacionamiento",
             "terraza": "Terraza",
-            "balcon": "Balcón"
+            "balcon": "Balcón",
+            "plano": "beistegui-plano-101.png"
           }
         },
         "depa102": {
@@ -102,7 +104,8 @@
             "banio": "3.5 Baños",
             "estacionamiento": "3 Lugares Estacionamiento",
             "terraza": "Terraza",
-            "balcon": "Balcón"
+            "balcon": "Balcón",
+            "plano": "beistegui-plano-102.png"
           }
         },
         "depa201": {
@@ -111,7 +114,8 @@
             "recamaras": "2 Recámaras",
             "banio": "2.5 Baños",
             "estacionamiento": "1 Lugar Estacionamiento",
-            "balcon": "Balcón"
+            "balcon": "Balcón",
+            "plano": "beistegui-plano-201.png"
           }
         },
         "depa202": {
@@ -120,7 +124,8 @@
             "recamaras": "3 Recámaras",
             "banio": "3.5 Baños",
             "estacionamiento": "3 Lugares Estacionamiento",
-            "balcon": "Balcón"
+            "balcon": "Balcón",
+            "plano": "beistegui-plano-202.png"
           }
         },
         "depa301": {
@@ -129,7 +134,8 @@
             "recamaras": "2 Recámaras",
             "banio": "2.5 Baños",
             "estacionamiento": "1 Lugar Estacionamiento",
-            "balcon": "Balcón"
+            "balcon": "Balcón",
+            "plano": "beistegui-plano-301.png"
           }
         },
         "depa302": {
@@ -138,7 +144,8 @@
             "recamaras": "3 Recámaras",
             "banio": "3.5 Baños",
             "estacionamiento": "3 Lugares Estacionamiento",
-            "balcon": "Balcón"
+            "balcon": "Balcón",
+            "plano": "beistegui-plano-302.png"
           }
         },
         "depa401": {
@@ -148,7 +155,8 @@
             "banio": "2.5 Baños",
             "estacionamiento": "2 Lugares Estacionamiento",
             "roof": "Roof Garden Privado",
-            "balcon": "Balcón"
+            "balcon": "Balcón",
+            "plano": "beistegui-plano-401.png"
           }
         },
         "depa402": {
@@ -158,7 +166,8 @@
             "banio": "3.5 Baños",
             "estacionamiento": "3 Lugares Estacionamiento",
             "roof": "Roof Garden Privado",
-            "balcon": "Balcón"
+            "balcon": "Balcón",
+            "plano": "beistegui-plano-402.png"
           }
         }
       },
