@@ -58,7 +58,7 @@ var caracteristicas = function(depa, desa) {
       var p   = document.createElement('p');
 
       li.className = 'list-item';
-      img.src      = caracteristica;
+      img.src      = '/static/img/vre/' + caracteristica + '.png';
       p.innerHTML  = caracteristicas[caracteristica];
       
       li.appendChild(img);
