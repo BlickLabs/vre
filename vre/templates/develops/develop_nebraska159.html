@@ -22,27 +22,27 @@
       <div class="department-icons">
         <ul class="icons-list">
           <li class="list-item">
-            <img src="{% static "img/vre/vre-metros.svg" %}" alt="" />
+            <img src="{% static "img/vre/metros.png" %}" alt="" />
             <p>168.2 m&sup2;</p>
           </li>
           <li class="list-item">
-            <img src="{% static "img/vre/vre-cuartos.svg" %}" alt="" />
+            <img src="{% static "img/vre/recamaras.png" %}" alt="" />
             <p>2 Cuartos</p>
           </li>
           <li class="list-item">
-            <img src="{% static "img/vre/vre-banios.svg" %}" alt="" />
+            <img src="{% static "img/vre/banio.png" %}" alt="" />
             <p>2.5 Baños</p>
           </li>
           <li class="list-item">
-            <img src="{% static "img/vre/vre-estacionamiento.svg" %}" alt="" />
+            <img src="{% static "img/vre/estacionamiento.png" %}" alt="" />
             <p>1 Lugar Estacionamiento</p>
           </li>
           <li class="list-item">
-            <img src="{% static "img/vre/vre-estacionamiento.svg" %}" alt="" />
+            <img src="{% static "img/vre/terraza.png" %}" alt="" />
             <p>Terraza</p>
           </li>
           <li class="list-item">
-            <img src="{% static "img/vre/vre-estacionamiento.svg" %}" alt="" />
+            <img src="{% static "img/vre/balcon.png" %}" alt="" />
             <p>Balcón</p>
           </li>
         </ul>
@@ -119,7 +119,7 @@
     </div>
   </div>
 
-  <div class="vre-gallery">
+  <div class="vre-gallery hide-mobile">
     <ul>
       <li><img class="js-gallery-item" src="{% static "img/vre/beistegui/beistegui-comedor-cocina.jpg" %}" alt=""></li>
       <li><img class="js-gallery-item" src="{% static "img/vre/beistegui/beistegui-fachada.jpg" %}" alt=""></li>
@@ -130,47 +130,27 @@
     </ul>
   </div>
 
+  <div class="development-carousel-container text-center show-mobile">
+    <div class="cover" style="background-image: url('{% static "img/vre/beistegui/beistegui-comedor-cocina.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/vre/beistegui/beistegui-fachada.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/vre/beistegui/beistegui-recamara.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/vre/beistegui/beistegui-sala-comerdor-cocina.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/vre/beistegui/beistegui-comedor-cocina.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/vre/beistegui/beistegui-comedor-cocina.jpg" %}')">
+    </div>
+  </div>
+
   <div id="js-gallery-modal" class="vre-gallery-modal">
     <span id="js-modal-close" class="modal-close">&times;</span>
     <div class="modal-content">
       <img id="js-img" src="{% static "img/vre/beistegui/beistegui-comedor-cocina.jpg" %}" alt="">
     </div>
   </div>
-
-  <script>
-
-  // Actions & Events for Modal
-
-   window.onload = () => {
-
-     let btnClose = document.querySelector('#js-modal-close');
-     let galleryModal = document.querySelector('#js-gallery-modal');
-     let galleryImages = document.querySelectorAll('.js-gallery-item');
-
-    
-    // Actions
-    let closeModal = () => {
-      galleryModal.style.display = 'none';
-    }
-
-    let openModal = (imgSrc) => {
-      let img = document.querySelector('#js-img');
-
-      galleryModal.style.display = 'flex';
-      img.src = imgSrc;
-    }
-
-    // Events
-    btnClose.addEventListener('click', closeModal);
-
-    [].forEach.call(document.querySelectorAll('.js-gallery-item'), (el) => {
-      el.addEventListener('click', (e) => {
-        openModal(e.target.src)
-      });
-    });
-   }
-  
-  </script>
   
   <div class="development-360-video text-center">
     Dale click sobre la imagen y vive el departamento
@@ -181,20 +161,6 @@
       </div>
     </div>
     <a class="btn--cotizar" href="">Cotizar o Apartar</a>
-  </div>
-  <div class="development-carousel-container text-center">
-    <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_02.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/tmp/tlacotalpan_carousel_02.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_05.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_04.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/tmp/tlacotalpan_carousel_06.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/tmp/nebraska_carousel_01.jpg" %}')">
-    </div>
   </div>
 </main>
 {% endblock %}
@@ -207,8 +173,8 @@
 {% endblock %}
 {% block after_scripts %}
 <script>
-  insertMap([19.395001, -99.176670], 'Nebraska 159');
-  addBrochureListener('Nebraska', 'c97949a2-82c8-4deb-bc2a-179495e321e0');
+  insertMap([19.3901418, -99.16869600000001], 'Beistegui 512');
+  addBrochureListener('Beistegui', '81ee6c84-f8ed-4fdc-a6d4-44911a8ec010');
 </script>
 <script>
 
@@ -223,6 +189,32 @@ window.onload = () => {
     });
   });
 
+
+  let btnClose = document.querySelector('#js-modal-close');
+  let galleryModal = document.querySelector('#js-gallery-modal');
+  let galleryImages = document.querySelectorAll('.js-gallery-item');
+
+    
+  // Actions
+  let closeModal = () => {
+    galleryModal.style.display = 'none';
+  }
+
+  let openModal = (imgSrc) => {
+    let img = document.querySelector('#js-img');
+    
+    galleryModal.style.display = 'flex';
+    img.src = imgSrc;
+  }
+
+  // Events
+  btnClose.addEventListener('click', closeModal);
+
+  [].forEach.call(document.querySelectorAll('.js-gallery-item'), (el) => {
+    el.addEventListener('click', (e) => {
+      openModal(e.target.src)
+    });
+  });
 } 
 
 </script>
