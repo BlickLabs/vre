@@ -22,15 +22,6 @@
 
   var departamentos_text = JSON.stringify({
     "departamentos": {
-      "iconos": {
-        "metros": "metros.png",
-        "recamaras": "",
-        "banio": "",
-        "estacionamiento": "",
-        "terraza": "",
-        "balcon": "",
-        "roof": ""
-      },
       "indiana": {
         "depa101": {
           "caracteristicas": {
@@ -81,7 +72,7 @@
             "recamaras": "2 Recámaras",
             "banio": "2.5 Baños",
             "estacionamiento": "1 Lugar Estacionamiento",
-            "roof": "Roof Garden Privado"
+            "roof": "Roof Privado"
           }
         }
       },
@@ -154,7 +145,7 @@
             "recamaras": "2 Recámaras",
             "banio": "2.5 Baños",
             "estacionamiento": "2 Lugares Estacionamiento",
-            "roof": "Roof Garden Privado",
+            "roof": "Roof Privado",
             "balcon": "Balcón",
             "plano": "beistegui-plano-401.png"
           }
@@ -165,7 +156,7 @@
             "recamaras": "3 Recámaras",
             "banio": "3.5 Baños",
             "estacionamiento": "3 Lugares Estacionamiento",
-            "roof": "Roof Garden Privado",
+            "roof": "Roof Privado",
             "balcon": "Balcón",
             "plano": "beistegui-plano-402.png"
           }
