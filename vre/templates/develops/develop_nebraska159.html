@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static from staticfiles %}
-{% block description %}Vive en una de las mejores zonas de la ciudad, a unas cuadras del WTC{% endblock %}
-{% block title %}Nebraska 159, vive en la mejor zona de la ciudad | VRE México{% endblock %}
+{% block description %}Vive en la colonia del valle norte, increibles departamentos{% endblock %}
+{% block title %}Concepción Beistegui 512 | VRE México{% endblock %}
 {% block content %}
 {% include "sections_navbar.html" %}
 
@@ -23,7 +23,7 @@
         <ul class="icons-list">
           <li class="list-item">
             <img src="{% static "img/vre/vre-metros.svg" %}" alt="" />
-            <p>68.2 m&sup2;</p>
+            <p>168.2 m&sup2;</p>
           </li>
           <li class="list-item">
             <img src="{% static "img/vre/vre-cuartos.svg" %}" alt="" />
@@ -31,28 +31,36 @@
           </li>
           <li class="list-item">
             <img src="{% static "img/vre/vre-banios.svg" %}" alt="" />
-            <p>2 Baños</p>
+            <p>2.5 Baños</p>
           </li>
           <li class="list-item">
             <img src="{% static "img/vre/vre-estacionamiento.svg" %}" alt="" />
-            <p>2 Lugares Estacionamiento</p>
+            <p>1 Lugar Estacionamiento</p>
+          </li>
+          <li class="list-item">
+            <img src="{% static "img/vre/vre-estacionamiento.svg" %}" alt="" />
+            <p>Terraza</p>
+          </li>
+          <li class="list-item">
+            <img src="{% static "img/vre/vre-estacionamiento.svg" %}" alt="" />
+            <p>Balcón</p>
           </li>
         </ul>
       </div>
       <div class="department-num-img">
         <div class="department-num">
           <ul class="num-list">
-            <li data-id= "depa101" class="active">101</li>
-            <li data-id= "depa101">102</li>
-            <li data-id= "depa201">201</li>
-            <li data-id= "depa202">202</li>
-            <li data-id= "depa301">301</li>
-            <li data-id= "depa302">302</li>
-            <li data-id= "depa401">401</li>
+            <li data-id= "depa101" class="item active">101</li>
+            <li data-id= "depa102" class="item">102</li>
+            <li data-id= "depa201" class="item">201</li>
+            <li data-id= "depa202" class="item">202</li>
+            <li data-id= "depa301" class="item">301</li>
+            <li data-id= "depa302" class="item">302</li>
+            <li data-id= "depa401" class="item">401</li>
           </ul>
         </div>
         <div class="department-img">
-          <img src="{% static "img/vre/beistegui/beistegui101.jpg" %}" alt="">
+          <img src="{% static "img/vre/beistegui/beistegui-plano-101.png" %}" alt="">
         </div>
       </div>
     </div>
@@ -174,30 +182,6 @@
     </div>
     <a class="btn--cotizar" href="">Cotizar o Apartar</a>
   </div>
-  <div class="development-drawings gray-container text-center">
-    <div class="drawing-selectors">
-      <div class="drawing-selector active">101</div>
-      <div class="drawing-selector">201</div>
-      <div class="drawing-selector">301</div>
-    </div>
-    <div class="drawing-picture">
-      Departamento <span>101</span>
-      <img src="{% static "img/tmp/nebraska_department_101.png" %}" class="show" data-department="101" alt="nebraska department 101">
-      <img src="{% static "img/tmp/nebraska_department_201.png" %}" class="hide" data-department="201" alt="nebraska department 201">
-      <img src="{% static "img/tmp/nebraska_department_201.png" %}" class="hide" data-department="301" alt="nebraska department 301">
-    </div>
-    <div class="drawing-picture">
-      Departamento <span>202</span>
-      <img src="{% static "img/tmp/nebraska_department_102.png" %}" class="hide" data-department="102" alt="nebraska department 102 ">
-      <img src="{% static "img/tmp/nebraska_department_202.png" %}" class="show" data-department="202" alt="nebraska department 202">
-      <img src="{% static "img/tmp/nebraska_department_202.png" %}" class="hide" data-department="302" alt="nebraska department 302">
-    </div>
-    <div class="drawing-selectors">
-      <div class="drawing-selector">102</div>
-      <div class="drawing-selector active">202</div>
-      <div class="drawing-selector">302</div>
-    </div>
-  </div>
   <div class="development-carousel-container text-center">
     <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_02.jpg" %}')">
     </div>
@@ -225,5 +209,21 @@
 <script>
   insertMap([19.395001, -99.176670], 'Nebraska 159');
   addBrochureListener('Nebraska', 'c97949a2-82c8-4deb-bc2a-179495e321e0');
+</script>
+<script>
+
+window.onload = () => {
+ 
+  const desarrollo = "beistegui";
+  
+  // Events
+  [].forEach.call(document.querySelectorAll('li.item'), (el) => {
+    el.addEventListener('click', () => {
+      actualizar_caracteristicas(el, desarrollo);
+    });
+  });
+
+} 
+
 </script>
 {% endblock %}
