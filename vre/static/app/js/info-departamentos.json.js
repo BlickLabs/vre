@@ -28,7 +28,7 @@
             "metros": "77.5",
             "recamaras": "2 Recámaras",
             "banio": "2.5 Baños",
-            "estacionamiento": "1 Lugar Estacionamiento"
+            "estacionamiento": "1 Lugar E."
           }
         },
         "depa102": {
@@ -36,7 +36,7 @@
             "metros": "105.6",
             "recamaras": "2 Recámaras",
             "banio": "2.5 Baños",
-            "estacionamiento": "2 Lugares Estacionamiento",
+            "estacionamiento": "2 Lugares E.",
             "terraza": "Terraza"
           }
         },
@@ -45,7 +45,7 @@
             "metros": "86.87",
             "recamaras": "2 Recámaras",
             "banio": "2.5 Baños",
-            "estacionamiento": "1 Lugar Estacionamiento",
+            "estacionamiento": "1 Lugar E.",
             "balcon": "Balcón"
           }
         },
@@ -54,7 +54,7 @@
             "metros": "81.6",
             "recamaras": "2 Recaámaras",
             "banio": "2.5 Baños",
-            "estacionamiento": "2 Lugares Estacionamiento"
+            "estacionamiento": "2 Lugares E."
           }
         },
         "depa301": {
@@ -62,7 +62,7 @@
             "metros": "86.87",
             "recamaras": "2 Recámaras",
             "banio": "2.5 Baños",
-            "estacionamiento": "2 Lugares Estacionamiento",
+            "estacionamiento": "2 Lugares E.",
             "balcon": "Balcón"
           }
         },
@@ -71,7 +71,7 @@
             "metros": "81.6",
             "recamaras": "2 Recámaras",
             "banio": "2.5 Baños",
-            "estacionamiento": "1 Lugar Estacionamiento",
+            "estacionamiento": "1 Lugar E.",
             "roof": "Roof Privado"
           }
         }
@@ -82,7 +82,7 @@
             "metros": "168.2 m&sup2;",
             "recamaras": "2 Recámaras",
             "banio": "2.5 Baños",
-            "estacionamiento": "1 Lugar Estacionamiento",
+            "estacionamiento": "1 Lugar E.",
             "terraza": "Terraza",
             "balcon": "Balcón",
             "plano": "beistegui-plano-101.png"
@@ -93,7 +93,7 @@
             "metros": "221.7 m&sup2;",
             "recamaras": "3 Recámaras",
             "banio": "3.5 Baños",
-            "estacionamiento": "3 Lugares Estacionamiento",
+            "estacionamiento": "3 Lugares E.",
             "terraza": "Terraza",
             "balcon": "Balcón",
             "plano": "beistegui-plano-102.png"
@@ -104,7 +104,7 @@
             "metros": "129.3 m&sup2;",
             "recamaras": "2 Recámaras",
             "banio": "2.5 Baños",
-            "estacionamiento": "1 Lugar Estacionamiento",
+            "estacionamiento": "1 Lugar E.",
             "balcon": "Balcón",
             "plano": "beistegui-plano-201.png"
           }
@@ -114,7 +114,7 @@
             "metros": "188.0 m&sup2;",
             "recamaras": "3 Recámaras",
             "banio": "3.5 Baños",
-            "estacionamiento": "3 Lugares Estacionamiento",
+            "estacionamiento": "3 Lugares E.",
             "balcon": "Balcón",
             "plano": "beistegui-plano-202.png"
           }
@@ -124,7 +124,7 @@
             "metros": "129.3 m&sup2;",
             "recamaras": "2 Recámaras",
             "banio": "2.5 Baños",
-            "estacionamiento": "1 Lugar Estacionamiento",
+            "estacionamiento": "1 Lugar E.",
             "balcon": "Balcón",
             "plano": "beistegui-plano-301.png"
           }
@@ -134,7 +134,7 @@
             "metros": "188.0 m&sup2;",
             "recamaras": "3 Recámaras",
             "banio": "3.5 Baños",
-            "estacionamiento": "3 Lugares Estacionamiento",
+            "estacionamiento": "3 Lugares E.",
             "balcon": "Balcón",
             "plano": "beistegui-plano-302.png"
           }
@@ -144,7 +144,7 @@
             "metros": "179.8 m&sup2;",
             "recamaras": "2 Recámaras",
             "banio": "2.5 Baños",
-            "estacionamiento": "2 Lugares Estacionamiento",
+            "estacionamiento": "2 Lugares E.",
             "roof": "Roof Privado",
             "balcon": "Balcón",
             "plano": "beistegui-plano-401.png"
@@ -155,7 +155,7 @@
             "metros": "233.4 m&sup2;",
             "recamaras": "3 Recámaras",
             "banio": "3.5 Baños",
-            "estacionamiento": "3 Lugares Estacionamiento",
+            "estacionamiento": "3 Lugares E.",
             "roof": "Roof Privado",
             "balcon": "Balcón",
             "plano": "beistegui-plano-402.png"
