@@ -25,7 +25,6 @@
     max-width 150px
     color #ffffff
     font-size 12px
-    font-weight 600
     letter-spacing 0.3px
     padding 12px 21px
     background-color #de7c27
@@ -42,7 +41,7 @@
 
 // Cover
 .vre-develop-cover
-  background-image url('../img/vre/vre-desarrollo-beistegui.png')
+  background-image url('../img/vre/beistegui/vre-desarrollo-beistegui.jpg')
   background-repeat no-repeat
   background-position center
   background-size cover
@@ -67,7 +66,7 @@
 
 // Department & ubication
 .vre-develop-department-ubication
-  padding-top 5rem
+  padding-top 2rem
   padding-bottom 5rem
   display flex
 
@@ -91,27 +90,32 @@
     max-width 50%
 
   .department-icons
+    margin-bottom 0
 
     .icons-list
       padding 0
       list-style none
       display flex
-      justify-content space-between
+      justify-content flex-end
       align-items center
     
     .list-item
       background-color #676767
-      width 65px
-      height 53px
+      width 75px
+      height 63px
       padding-left .3rem
       padding-right .3rem
+      margin-right 1.571rem
       display flex
       flex-direction column
       justify-content center
-      align-items center 
+      align-items center
+
+      .list-item:last-child
+        margin-right 0 
 
       img 
-        max-width 17px
+        max-width 20px
         display block
         margin-left auto
         margin-right auto
@@ -124,7 +128,7 @@
         margin-top 3px 
         margin-bottom 0
         color #ffffff
-        font-size 8px
+        font-size 9px
         letter-spacing 0.2px
         text-align center
 
@@ -132,6 +136,7 @@
     display flex
     align-items center
     justify-content space-between
+    margin-top 3rem
 
     .department-num
       flex-basis 13%
@@ -192,7 +197,7 @@
   margin-top 3rem
 
   .vre-characteristics
-    padding-top 3rem
+    padding-top 7rem
     padding-bottom 5rem 
     border-top 1px solid #e8e8e8
     width 95%;
@@ -221,6 +226,9 @@
       display flex
       justify-content space-around
       align-items center
+      margin-left auto
+      margin-right auto
+      max-width 50%
 
       li
         
@@ -239,11 +247,10 @@
 
         p
           color #444444
-          font-size 11px
+          font-size 13px
           letter-spacing 0.3px
           text-align center
           margin-top 10px
-          font-weight 600
 
         
 
@@ -263,17 +270,19 @@
 .development-360-video
   border 4rem solid #ffffff
   background-color #f5f5f5
-  font-weight 600
   font-size 18px
   letter-spacing: 0.1px
   color #2b2b2b
+  margin-bottom 0 !important
 
   .btn--cotizar
-    margin-bottom 2rem    
+    margin-bottom 2rem
 
 // Gallery
 .vre-gallery
   padding-top 4rem
+  padding-left 6rem 
+  padding-right 6rem
 
   ul
     padding 0
@@ -285,7 +294,7 @@
 
     li
       flex-basis 28%
-      margin 1.5rem
+      margin .8rem
 
       img
         display block
@@ -330,6 +339,7 @@
 @media screen and (max-width: 768px)
   .vre-develop-department-ubication
     flex-direction column
+    padding-top 1rem
 
     .develop-department,
     .develop-ubication
@@ -364,6 +374,7 @@
   .vre-characteristics-wrapper .vre-characteristics ul
     flex-wrap wrap
     justify-content center
+    max-width 80%
 
     li
       margin-bottom 4.5rem
@@ -372,12 +383,24 @@
     border 1rem solid #fff
 
 @media screen and (max-width: 425px)
+  .vre-develop-department-ubication
+    padding-top 0
+
+  .vre-develop-department-ubication .department-icons .list-item
+    margin-right .5rem
+
+  .vre-develop-department-ubication .department-num-img .department-num .num-list li
+    padding 7px 12px
+
+  .development-360-video .help-360
+    font-size 1rem
+
   .hide-mobile
     display none
 
   .show-mobile
     display block !important
 
-  .development-carousel-container
-    margin-top 3rem
+    .slick-arrow:before
+      font-size 50px !important
     
