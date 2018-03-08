@@ -29,7 +29,7 @@
             "recamaras": "2 Recámaras",
             "banio": "2.5 Baños",
             "estacionamiento": "1 Lugar E.",
-            "plano": "indiana-plano-101.png"
+            "plano": "indiana-plano-101.jpg"
           }
         },
         "depa102": {
@@ -39,7 +39,7 @@
             "banio": "2.5 Baños",
             "estacionamiento": "2 Lugares E.",
             "terraza": "Terraza",
-            "plano": "indiana-plano-102.png"
+            "plano": "indiana-plano-102.jpg"
           }
         },
         "depa201": {
@@ -49,7 +49,7 @@
             "banio": "2.5 Baños",
             "estacionamiento": "1 Lugar E.",
             "balcon": "Balcón",
-            "plano": "indiana-plano-201.png"
+            "plano": "indiana-plano-201.jpg"
           }
         },
         "depa202": {
@@ -58,7 +58,7 @@
             "recamaras": "2 Recaámaras",
             "banio": "2.5 Baños",
             "estacionamiento": "2 Lugares E.",
-            "plano": "indiana-plano-202.png"
+            "plano": "indiana-plano-202.jpg"
           }
         },
         "depa301": {
@@ -68,7 +68,7 @@
             "banio": "2.5 Baños",
             "estacionamiento": "2 Lugares E.",
             "balcon": "Balcón",
-            "plano": "indiana-plano-301.png"
+            "plano": "indiana-plano-301.jpg"
           }
         },
         "depa302": {
@@ -78,7 +78,7 @@
             "banio": "2.5 Baños",
             "estacionamiento": "1 Lugar E.",
             "roof": "Roof Privado",
-            "plano": "indiana-plano-302.png"
+            "plano": "indiana-plano-302.jpg"
           }
         }
       },
@@ -89,7 +89,7 @@
             "recamaras": "2 Recámaras",
             "banio": "2.5 Baños",
             "estacionamiento": "1 Lugar E.",
-            "plano": "dakota-plano-101.png"
+            "plano": "dakota-plano-101.jpg"
           }
         },
         "depa102": {
@@ -99,7 +99,7 @@
             "banio": "2.5 Baños",
             "estacionamiento": "2 Lugares E.",
             "terraza": "Terraza",
-            "plano": "dakota-plano-102.png"
+            "plano": "dakota-plano-102.jpg"
           }
         },
         "depa201": {
@@ -109,7 +109,7 @@
             "banio": "2.5 Baños",
             "estacionamiento": "2 Lugares E.",
             "balcon": "Balcón",
-            "plano": "dakota-plano-201.png"
+            "plano": "dakota-plano-201.jpg"
           }
         },
         "depa202": {
@@ -118,7 +118,7 @@
             "recamaras": "2 Recámaras",
             "banio": "2.5 Baños",
             "estacionamiento": "1 Lugar E.",
-            "plano": "dakota-plano-202.png"
+            "plano": "dakota-plano-202.jpg"
           }
         },
         "depa301": {
@@ -128,7 +128,7 @@
             "banio": "2.5 Baños",
             "estacionamiento": "2 Lugares E.",
             "balcon": "Balcón",
-            "plano": "dakota-plano-301.png"
+            "plano": "dakota-plano-301.jpg"
           }
         },
         "depa302": {
@@ -138,7 +138,7 @@
             "banio": "2.5 Baños",
             "estacionamiento": "1 Lugar E.",
             "roof": "Roof Privado",
-            "plano": "dakota-plano-302.png"
+            "plano": "dakota-plano-302.jpg"
           }
         },
       },
@@ -149,7 +149,7 @@
             "recamaras": "2 Recámaras",
             "banio": "2.5 Baños",
             "estacionamiento": "2 Lugares E.",
-            "plano": "tlacotalpan-plano-101.png"
+            "plano": "tlacotalpan-plano-101.jpg"
           }
         },
         "depa102": {
@@ -159,7 +159,7 @@
             "banio": "2.0 Baños",
             "estacionamiento": "1 Lugar E.",
             "terraza": "Terraza",
-            "plano": "tlacotalpan-plano-102.png"
+            "plano": "tlacotalpan-plano-102.jpg"
           }
         },
         "depa201": {
@@ -169,7 +169,7 @@
             "banio": "3.5 Baños",
             "estacionamiento": "2 Lugares E.",
             "balcon": "Balcón",
-            "plano": "tlacotalpan-plano-201.png"
+            "plano": "tlacotalpan-plano-201.jpg"
           }
         },
         "depa301": {
@@ -179,7 +179,7 @@
             "banio": "3.5 Baños",
             "estacionamiento": "3 Lugares E.",
             "roof": "Roof Privado",
-            "plano": "tlacotalpan-plano-301.png"
+            "plano": "tlacotalpan-plano-301.jpg"
           }
         }
       },
@@ -190,7 +190,7 @@
             "recamaras": "2 Recámaras",
             "banio": "2.5 Baños",
             "estacionamiento": "2 Lugares E.",
-            "plano": "nebraska-plano-101.png"
+            "plano": "nebraska-plano-101.jpg"
           }
         },
         "depa102": {
@@ -200,7 +200,7 @@
             "banio": "2.0 Baños",
             "estacionamiento": "2 Lugares E.",
             "terraza": "Terraza",
-            "plano": "nebraska-plano-102.png"
+            "plano": "nebraska-plano-102.jpg"
           }
         },
         "depa201": {
@@ -210,7 +210,7 @@
             "banio": "2.5 Baños",
             "estacionamiento": "1 Lugar E.",
             "balcon": "Balcón",
-            "plano": "nebraska-plano-201.png"
+            "plano": "nebraska-plano-201.jpg"
           }
         },
         "depa202": {
@@ -219,7 +219,7 @@
             "recamaras": "2 Recámaras",
             "banio": "2.0 Baños",
             "estacionamiento": "1 Lugar E.",
-            "plano": "nebraska-plano-202.png"
+            "plano": "nebraska-plano-202.jpg"
           }
         },
         "depa301": {
@@ -229,7 +229,7 @@
             "banio": "2.5 Baños",
             "estacionamiento": "2 Lugares E.",
             "balcon": "Balcón",
-            "plano": "nebraska-plano-301.png"
+            "plano": "nebraska-plano-301.jpg"
           }
         },
         "depa302": {
@@ -239,7 +239,7 @@
             "banio": "2.0 Baños",
             "estacionamiento": "1 Lugar E.",
             "roof": "Roof Privado",
-            "plano": "nebraska-plano-302.png"
+            "plano": "nebraska-plano-302.jpg"
           }
         }
       },
@@ -250,7 +250,7 @@
             "recamaras": "2 Recámaras",
             "banio": "2.0 Baños",
             "estacionamiento": "1 Lugar E.",
-            "plano": "chicago-plano-101.png"
+            "plano": "chicago-plano-101.jpg"
           }
         },
         "depa102": {
@@ -260,7 +260,7 @@
             "banio": "2.0 Baños",
             "estacionamiento": "1 Lugar E.",
             "terraza": "Terraza",
-            "plano": "chicago-plano-102.png"
+            "plano": "chicago-plano-102.jpg"
           }
         },
         "depa201": {
@@ -270,7 +270,7 @@
             "banio": "2.0 Baños",
             "estacionamiento": "1 Lugar E.",
             "balcon": "Balcón",
-            "plano": "chicago-plano-201.png"
+            "plano": "chicago-plano-201.jpg"
           }
         },
         "depa202": {
@@ -279,7 +279,7 @@
             "recamaras": "2 Recámaras",
             "banio": "2.0 Baños",
             "estacionamiento": "1 Lugar E.",
-            "plano": "chicago-plano-202.png"
+            "plano": "chicago-plano-202.jpg"
           }
         },
         "depa301": {
@@ -289,7 +289,7 @@
             "banio": "2.0 Baños",
             "estacionamiento": "1 Lugar E.",
             "balcon": "Balcón",
-            "plano": "chicago-plano-301.png"
+            "plano": "chicago-plano-301.jpg"
           }
         },
         "depa302": {
@@ -299,7 +299,7 @@
             "banio": "2.0 Baños",
             "estacionamiento": "1 Lugar E.",
             "roof": "Roof Privado",
-            "plano": "chicago-plano-302.png"
+            "plano": "chicago-plano-302.jpg"
           }
         }
       },
@@ -311,7 +311,7 @@
             "banio": "2.0 Baños",
             "estacionamiento": "2 Lugares E.",
             "balcon": "Balcón",
-            "plano": "atlanta-plano-101.png"
+            "plano": "atlanta-plano-101.jpg"
           }
         },
         "depa102": {
@@ -321,7 +321,7 @@
             "banio": "2.0 Baños",
             "estacionamiento": "1 Lugar E.",
             "terraza": "Terraza",
-            "plano": "atlanta-plano-102.png"
+            "plano": "atlanta-plano-102.jpg"
           }
         },
         "depa201": {
@@ -331,7 +331,7 @@
             "banio": "2.0 Baños",
             "estacionamiento": "2 Lugares E.",
             "balcon": "Balcón",
-            "plano": "atlanta-plano-201.png"
+            "plano": "atlanta-plano-201.jpg"
           }
         },
         "depa202": {
@@ -340,7 +340,7 @@
             "recamaras": "2 Recámaras",
             "banio": "2.0 Baños",
             "estacionamiento": "1 Lugar E.",
-            "plano": "atlanta-plano-202.png"
+            "plano": "atlanta-plano-202.jpg"
           }
         },
         "depa301": {
@@ -351,7 +351,7 @@
             "estacionamiento": "2 Lugares E.",
             "roof": "Roof Privado",
             "balcon": "Balcón",
-            "plano": "atlanta-plano-301.png"
+            "plano": "atlanta-plano-301.jpg"
           }
         },
         "depa302": {
@@ -361,7 +361,7 @@
             "banio": "2 Baños",
             "estacionamiento": "2 Lugar E.",
             "roof": "Roof Privado",
-            "plano": "atlanta-plano-302.png"
+            "plano": "atlanta-plano-302.jpg"
           }
         }
       },
@@ -373,7 +373,7 @@
             "banio": "2.0 Baños",
             "estacionamiento": "2 Lugares E.",
             "balcon": "Balcón",
-            "plano": "carolina-plano-101.png"
+            "plano": "carolina-plano-101.jpg"
           }
         },
         "depa102": {
@@ -383,7 +383,7 @@
             "banio": "2.0 Baños",
             "estacionamiento": "2 Lugares E.",
             "terraza": "Terraza",
-            "plano": "carolina-plano-102.png"
+            "plano": "carolina-plano-102.jpg"
           }
         },
         "depa201": {
@@ -393,7 +393,7 @@
             "banio": "2.0 Baños",
             "estacionamiento": "2 Lugares E.",
             "balcon": "Balcón",
-            "plano": "carolina-plano-201.png"
+            "plano": "carolina-plano-201.jpg"
           }
         },
         "depa202": {
@@ -402,7 +402,7 @@
             "recamaras": "2 Recámaras",
             "banio": "2.0 Baños",
             "estacionamiento": "1 Lugar E.",
-            "plano": "carolina-plano-202.png"
+            "plano": "carolina-plano-202.jpg"
           }
         },
         "depa301": {
@@ -413,7 +413,7 @@
             "estacionamiento": "2 Lugares E.",
             "roof": "Roof Privado",
             "balcon": "Balcón",
-            "plano": "carolina-plano-301.png"
+            "plano": "carolina-plano-301.jpg"
           }
         },
         "depa302": {
@@ -423,7 +423,7 @@
             "banio": "2.0 Baños",
             "estacionamiento": "1 Lugar E.",
             "roof": "Roof Privado",
-            "plano": "carolina-plano-302.png"
+            "plano": "carolina-plano-302.jpg"
           }
         }
       },
@@ -435,7 +435,7 @@
             "banio": "2.5 Baños",
             "estacionamiento": "2 Lugares E.",
             "balcon": "Balcón",
-            "plano": "comercio-plano-101.png"
+            "plano": "comercio-plano-101.jpg"
           }
         },
         "depa102": {
@@ -445,7 +445,7 @@
             "banio": "2 Baños",
             "estacionamiento": "2 Lugares E.",
             "terraza": "Terraza",
-            "plano": "comercio-plano-102.png"
+            "plano": "comercio-plano-102.jpg"
           }
         },
         "depa201": {
@@ -455,7 +455,7 @@
             "banio": "2.5 Baños",
             "estacionamiento": "2 Lugares E.",
             "balcon": "Balcón",
-            "plano": "comercio-plano-201.png"
+            "plano": "comercio-plano-201.jpg"
           }
         },
         "depa202": {
@@ -464,7 +464,7 @@
             "recamaras": "2 Recámaras",
             "banio": "2 Baños",
             "estacionamiento": "2 Lugares E.",
-            "plano": "comercio-plano-202.png"
+            "plano": "comercio-plano-202.jpg"
           }
         },
         "depa301": {
@@ -474,7 +474,7 @@
             "banio": "1 Baños",
             "estacionamiento": "1 Lugar E.",
             "balcon": "Balcón",
-            "plano": "comercio-plano-301.png"
+            "plano": "comercio-plano-301.jpg"
           }
         },
         "depa302": {
@@ -483,7 +483,7 @@
             "recamaras": "2 Recámaras",
             "banio": "2 Baños",
             "estacionamiento": "2 Lugares E.",
-            "plano": "comercio-plano-302.png"
+            "plano": "comercio-plano-302.jpg"
           }
         },
         "depa303": {
@@ -493,19 +493,19 @@
             "banio": "1 Baños",
             "estacionamiento": "1 Lugar E.",
             "balcon": "Balcón",
-            "plano": "comercio-plano-303.png"
+            "plano": "comercio-plano-303.jpg"
           }
         },
         "roof1": {
           "caracteristicas": {
             "metros": "46.7 m&sup2;",
-            "plano": "comercio-plano-roof_1.png"
+            "plano": "comercio-plano-roof_1.jpg"
           }
         },
         "roof2": {
           "caracteristicas": {
             "metros": "43.8 m&sup2;",
-            "plano": "comercio-plano-roof_2.png"
+            "plano": "comercio-plano-roof_2.jpg"
           }
         }
       },
@@ -518,7 +518,7 @@
             "estacionamiento": "1 Lugar E.",
             "terraza": "Terraza",
             "balcon": "Balcón",
-            "plano": "beistegui-plano-101.png"
+            "plano": "beistegui-plano-101.jpg"
           }
         },
         "depa102": {
@@ -529,7 +529,7 @@
             "estacionamiento": "3 Lugares E.",
             "terraza": "Terraza",
             "balcon": "Balcón",
-            "plano": "beistegui-plano-102.png"
+            "plano": "beistegui-plano-102.jpg"
           }
         },
         "depa201": {
@@ -539,7 +539,7 @@
             "banio": "2.5 Baños",
             "estacionamiento": "1 Lugar E.",
             "balcon": "Balcón",
-            "plano": "beistegui-plano-201.png"
+            "plano": "beistegui-plano-201.jpg"
           }
         },
         "depa202": {
@@ -549,7 +549,7 @@
             "banio": "3.5 Baños",
             "estacionamiento": "3 Lugares E.",
             "balcon": "Balcón",
-            "plano": "beistegui-plano-202.png"
+            "plano": "beistegui-plano-202.jpg"
           }
         },
         "depa301": {
@@ -559,7 +559,7 @@
             "banio": "2.5 Baños",
             "estacionamiento": "1 Lugar E.",
             "balcon": "Balcón",
-            "plano": "beistegui-plano-301.png"
+            "plano": "beistegui-plano-301.jpg"
           }
         },
         "depa302": {
@@ -569,7 +569,7 @@
             "banio": "3.5 Baños",
             "estacionamiento": "3 Lugares E.",
             "balcon": "Balcón",
-            "plano": "beistegui-plano-302.png"
+            "plano": "beistegui-plano-302.jpg"
           }
         },
         "depa401": {
@@ -580,7 +580,7 @@
             "estacionamiento": "2 Lugares E.",
             "roof": "Roof Privado",
             "balcon": "Balcón",
-            "plano": "beistegui-plano-401.png"
+            "plano": "beistegui-plano-401.jpg"
           }
         },
         "depa402": {
@@ -591,7 +591,7 @@
             "estacionamiento": "3 Lugares E.",
             "roof": "Roof Privado",
             "balcon": "Balcón",
-            "plano": "beistegui-plano-402.png"
+            "plano": "beistegui-plano-402.jpg"
           }
         }
       }
