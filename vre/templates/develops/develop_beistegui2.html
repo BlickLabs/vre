@@ -1,0 +1,161 @@
+{% extends "base.html" %}
+{% load static from staticfiles %}
+{% block description %}Vive en la colonia del valle norte, increibles departamentos{% endblock %}
+{% block title %}Concepción Beistegui 512 | VRE México{% endblock %}
+{% block content %}
+{% include "sections_navbar.html" %}
+<main id="sections-content">
+  <div class="development-cover cover parallax" style="background-image: url('{% static "img/tmp/beistegui512_cover.jpg" %}')">
+    <img src="{% static "img/tmp/beistegui512_name.png" %}" alt="Departamentos Concepción Beistegui 512">
+  </div>
+  <div class="development-header-text">
+    Vive en la colonia del Valle Norte.<br />Increíbles departamentos de hasta 249.5 m2.
+    <a class="vre-button vre-btn-cotizarH vre-btn-center" href="https://cotiza.vre.com.mx/collections/c-beistegui-512">Cotizar o Apartar</a>
+  </div>
+  <div class="gray-container development-download-brochure">
+    <div class="development-download-brochure__inner">
+      <span>Si quieres más información, descarga aquí nuestro brochure de ventas</span>
+      <div id="brochure-form-wrapper"></div>
+    </div>
+  </div>
+  <div class="vre-develop-3d">
+    <div style="position: relative; padding-bottom:56.25%; padding-top: 30px; height: 0; overflow: hidden;">
+      <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://spaces.archilogic.com/3d/!30e88a42-2bbf-4eae-bfe5-139c8b2e542c?mode=view&main-menu=none&view-menu=none&presentation=once&editable=false" width="400" height="640" frameBorder="0" onmousewheel="false" allowfullscreen mozallowfullscreen webkitallowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="development-characteristics">
+    <div class="text-center">Características de los departamentos</div>
+    <ul class="development-characteristics-items">
+      <li class="development-characteristics-item">
+        <img src="{% static "img/icons/living_room_icon.png" %}" alt="living room icon">
+        <span>Sala</span>
+      </li>
+      <li class="development-characteristics-item">
+        <img src="{% static "img/icons/service_room_icon.png" %}" alt="service room icon">
+        <span>Cuarto de lavado</span>
+      </li>
+      <li class="development-characteristics-item">
+        <img src="{% static "img/icons/full_bathroom_icon.png" %}" alt="bathroom icon">
+        <span>De 2.5 a 3.5 baños</span>
+      </li>
+      <li class="development-characteristics-item">
+        <img src="{% static "img/icons/dinning_room_icon.png" %}" alt="dinning room icon">
+        <span>Comedor</span>
+      </li>
+      <li class="development-characteristics-item">
+        <img src="{% static "img/icons/closet_icon.png" %}" alt="closet icon">
+        <span>Clóset</span>
+      </li>
+      <li class="development-characteristics-item">
+        <img src="{% static "img/icons/private_cellar_icon.png" %}" alt="private cellar icon">
+        <span>Bodega privada</span>
+      </li>
+      <li class="development-characteristics-item">
+        <img src="{% static "img/icons/kitchen_icon.png" %}" alt="kitchen icon">
+        <span>Cocina equipada</span>
+      </li>
+      <li class="development-characteristics-item">
+        <img src="{% static "img/icons/bedroom_icon.png" %}" alt="bedroom icon">
+        <span>3 o 2 recámaras</span>
+      </li>
+      <li class="development-characteristics-item">
+        <img src="{% static "img/icons/parking_lot_icon.png" %}" alt="parking icon">
+        <span>3 o 1 cajón de estacionamiento</span>
+      </li>
+      <li class="development-characteristics-item">
+        <img src="{% static "img/icons/flat_room_icon.png" %}" alt="dinning room icon">
+        <span>Roof Garden privado*</span>
+      </li>
+      <li class="development-characteristics-item">
+      </li>
+      <li class="development-characteristics-item">
+      </li>
+      <div class="vre-container-relative">
+        *Aplica solamente en departamentos 401 y 402
+        <a class="vre-button vre-btn-cotizarH vre-center-absolute" href="https://cotiza.vre.com.mx/collections/c-beistegui-512">Cotizar o Apartar</a>
+      </div>
+    </ul>
+  </div>
+  <div class="development-nearby-places">
+    <div id="location-map" class="location-map"></div>
+    <div class="points-of-interest">
+      <span>Lugares de interés</span>
+      <ul>
+        <li>
+          <span>Superama: 5 min (650 m) Caminando</span>
+        </li>
+        <li>
+          <span>Ego´s Gym: 4 min (550 m) Caminando</span>
+        </li>
+        <li>
+          <img src="{% static "img/tmp/icons/hip_icon.png" %}" alt="aicm icon">
+          <span>Hospital Star Médica HIP: 8 min (1.7 km)</span>
+        </li>
+        <li>
+          <img src="{% static "img/tmp/icons/cdmx_icon.png" %}" alt="antara fashion icon">
+          <span>Angel de la Independencia: 18 min (4.5 km)</span>
+        </li>
+        <li>
+          <img src="{% static "img/tmp/icons/aicm_icon.png" %}" alt="santafe icon">
+          <span>Aeropuerto CDMX: 20 min (12.7 km)</span>
+        </li>
+        <li>
+          <img src="{% static "img/tmp/icons/antara_fashion_icon.png" %}" alt="antara fashion icon">
+          <span>Antara Fashion Hall: 20 min (9 km)</span>
+        </li>
+        <li>
+          <img src="{% static "img/tmp/icons/santafe_icon.png" %}" alt="santafe icon">
+          <span>Centro Comercial Santa Fe: 35 min (15 km)</span>
+        </li>
+      </ul>
+      <div class="note">* Tiempo estimado a las 9:00 am entre semana</div>
+      <a class="vre-button vre-btn-cotizarH" href="https://cotiza.vre.com.mx/collections/c-beistegui-512">Cotizar o Apartar</a>
+    </div>
+  </div>
+  <div class="development-public-transport gray-container">
+    <div class="transport-title text-center"><img src="{% static "img/icons/transport_icon.png" %}" alt="Transporte público">Transporte Público</div>
+    <div class="transport-items-container">
+      <div class="transport-items-column">
+        <div class="transport-item">
+          <span class="semibold">Metrobús: </span>
+          Parada Poliforum (650 m)
+        </div>
+        <div class="transport-item">
+          <span class="semibold">Metro: </span>
+          Estación Eugenia (1.4 km)
+        </div>
+        <div class="transport-item">
+          <span class="semibold">Ecobici: </span>
+          Estación #316 (300 m)
+        </div>
+      </div>
+      <div class="transport-items-column">
+        <div class="transport-item">
+          <span class="semibold">Walking Score ® : </span>
+          98 (Un paraíso para el peatón)
+        </div>
+        <div class="transport-item">
+          <span class="semibold">Ciclovía: </span>
+          Cto interior (800 m)
+        </div>
+      </div>
+    </div>
+    <div class="transport-separated-text">
+      Vida diaria no requiere el uso del coche
+    </div>
+  </div>
+</main>
+{% endblock %}
+{% block before_scripts %}
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYJxTs6nptICwPefTB_XR6yA2BUmUg-5A"></script>
+<!--[if lte IE 8]>
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+<![endif]-->
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+{% endblock %}
+{% block after_scripts %}
+<script>
+  insertMap([19.3901418, -99.16869600000001], 'Beistegui 512');
+  addBrochureListener('Beistegui', '81ee6c84-f8ed-4fdc-a6d4-44911a8ec010');
+</script>
+{% endblock %}
