@@ -4,145 +4,163 @@
 {% block title %}Concepción Beistegui 512 | VRE México{% endblock %}
 {% block content %}
 {% include "sections_navbar.html" %}
+
+
 <main id="sections-content">
-  <div class="development-cover cover parallax" style="background-image: url('{% static "img/tmp/beistegui512_cover.jpg" %}')">
-    <img src="{% static "img/tmp/beistegui512_name.png" %}" alt="Departamentos Concepción Beistegui 512">
+
+  <div class="vre-develop-cover">
+    <h1 class="cover-title">C. Beistegui 512</h1>
+    <h2 class="cover-subtitle">Colonia del Valle Norte</h2>
+    <a class="btn--cotizar" href="https://cotiza.vre.com.mx/collections/c-beistegui-512">Cotizar o Apartar</a>
   </div>
-  <div class="development-header-text">
-    Vive en la colonia del Valle Norte.<br />Increíbles departamentos de hasta 249.5 m2.
-    <a class="vre-button vre-btn-cotizarH vre-btn-center" href="https://cotiza.vre.com.mx/collections/c-beistegui-512">Cotizar o Apartar</a>
+
+  <div class="vre-develop-department-ubication">
+    <div class="develop-department">
+      <h3>Departamentos
+        <div class="line"></div>
+      </h3>
+      <div class="department-icons">
+        <ul class="icons-list">
+          <li class="list-item">
+            <img src="{% static "img/vre/metros.png" %}" alt="Beistegui 168.2 Metros Cuadrados" />
+            <p>168.2 m&sup2;</p>
+          </li>
+          <li class="list-item">
+            <img src="{% static "img/vre/recamaras.png" %}" alt="Beistegui 2 Recamaras" />
+            <p>2 Recamaras</p>
+          </li>
+          <li class="list-item">
+            <img src="{% static "img/vre/banio.png" %}" alt="Beistegui 2.5 Baños" />
+            <p>2.5 Baños</p>
+          </li>
+          <li class="list-item">
+            <img src="{% static "img/vre/estacionamiento.png" %}" alt="Beistegui 1 Lugar Estacionamiento" />
+            <p>1 Lugar E.</p>
+          </li>
+          <li class="list-item">
+            <img src="{% static "img/vre/terraza.png" %}" alt="Beistegui Terraza" />
+            <p>Terraza</p>
+          </li>
+          <li class="list-item">
+            <img src="{% static "img/vre/balcon.png" %}" alt="Beistegui Balcón" />
+            <p>Balcón</p>
+          </li>
+        </ul>
+      </div>
+      <div class="department-num-img">
+        <div class="department-num">
+          <ul class="num-list">
+            <li data-id= "depa101" class="item active">101</li>
+            <li data-id= "depa102" class="item">102</li>
+            <li data-id= "depa201" class="item">201</li>
+            <li data-id= "depa202" class="item">202</li>
+            <li data-id= "depa301" class="item">301</li>
+            <li data-id= "depa302" class="item">302</li>
+            <li data-id= "depa401" class="item">401</li>
+          </ul>
+        </div>
+        <div class="department-img">
+          <img src="{% static "img/vre/beistegui/beistegui-plano-101.png" %}" alt="Beistegui Plano">
+        </div>
+      </div>
+    </div>
+    <div class="develop-ubication">
+      <h3>Ubicación
+        <div class="line"></div>
+      </h3>
+      <div class="map">
+        <div id="location-map" class="location-map"></div>
+      </div>
+    </div>
   </div>
+
+  <a class="btn--cotizar" href="https://cotiza.vre.com.mx/collections/c-beistegui-512">Cotizar o Apartar</a>
+
+  <div class="vre-characteristics-wrapper">
+    <div class="vre-characteristics">
+      <h4>Características <span>generales</span></h4>
+      <div class="line"></div>
+      <ul>
+        <li>
+          <div class="img-wrapper">
+            <img src="{% static "img/vre/cocina.png" %}" alt="Beistegui Cocina">
+          </div>
+          <p>Cocina equipada</p>
+        </li>
+        <li>
+          <div class="img-wrapper"><img src="{% static "img/vre/elevador.png" %}" alt="Beistegui Elevador"></div>
+          <p>Elevador</p>
+        </li>
+        <li>
+          <div class="img-wrapper"><img src="{% static "img/vre/roof-garden.png" %}" alt="Beistegui Roof Garden"></div>
+          <p>Roof Garden común</p>
+        </li>
+        <li>
+          <div class="img-wrapper"><img src="{% static "img/vre/bodega.png" %}" alt="Beistegui Bodega Privada"></div>
+          <p>Bodega privada</p>
+        </li>
+        <li>
+          <div class="img-wrapper"><img src="{% static "img/vre/lavado.png" %}" alt="Beistegui Cuarto de Lavado"></div>
+          <p>Cuarto de lavado</p>
+        </li>
+        <li>
+          <div class="img-wrapper"><img src="{% static "img/vre/pet-friendly.png" %}" alt="Beistegui Pet Friendly / Mascotas"></div>
+          <p>Pet Friendly</p>
+        </li>
+      </ul>
+    </div>  
+ </div>
+
+
   <div class="gray-container development-download-brochure">
     <div class="development-download-brochure__inner">
       <span>Si quieres más información, descarga aquí nuestro brochure de ventas</span>
       <div id="brochure-form-wrapper"></div>
     </div>
   </div>
-  <div class="vre-develop-3d">
-    <div style="position: relative; padding-bottom:56.25%; padding-top: 30px; height: 0; overflow: hidden;">
-      <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://spaces.archilogic.com/3d/!30e88a42-2bbf-4eae-bfe5-139c8b2e542c?mode=view&main-menu=none&view-menu=none&presentation=once&editable=false" width="400" height="640" frameBorder="0" onmousewheel="false" allowfullscreen mozallowfullscreen webkitallowfullscreen></iframe>
-    </div>
-  </div>
-  <div class="development-characteristics">
-    <div class="text-center">Características de los departamentos</div>
-    <ul class="development-characteristics-items">
-      <li class="development-characteristics-item">
-        <img src="{% static "img/icons/living_room_icon.png" %}" alt="living room icon">
-        <span>Sala</span>
-      </li>
-      <li class="development-characteristics-item">
-        <img src="{% static "img/icons/service_room_icon.png" %}" alt="service room icon">
-        <span>Cuarto de lavado</span>
-      </li>
-      <li class="development-characteristics-item">
-        <img src="{% static "img/icons/full_bathroom_icon.png" %}" alt="bathroom icon">
-        <span>De 2.5 a 3.5 baños</span>
-      </li>
-      <li class="development-characteristics-item">
-        <img src="{% static "img/icons/dinning_room_icon.png" %}" alt="dinning room icon">
-        <span>Comedor</span>
-      </li>
-      <li class="development-characteristics-item">
-        <img src="{% static "img/icons/closet_icon.png" %}" alt="closet icon">
-        <span>Clóset</span>
-      </li>
-      <li class="development-characteristics-item">
-        <img src="{% static "img/icons/private_cellar_icon.png" %}" alt="private cellar icon">
-        <span>Bodega privada</span>
-      </li>
-      <li class="development-characteristics-item">
-        <img src="{% static "img/icons/kitchen_icon.png" %}" alt="kitchen icon">
-        <span>Cocina equipada</span>
-      </li>
-      <li class="development-characteristics-item">
-        <img src="{% static "img/icons/bedroom_icon.png" %}" alt="bedroom icon">
-        <span>3 o 2 recámaras</span>
-      </li>
-      <li class="development-characteristics-item">
-        <img src="{% static "img/icons/parking_lot_icon.png" %}" alt="parking icon">
-        <span>3 o 1 cajón de estacionamiento</span>
-      </li>
-      <li class="development-characteristics-item">
-        <img src="{% static "img/icons/flat_room_icon.png" %}" alt="dinning room icon">
-        <span>Roof Garden privado*</span>
-      </li>
-      <li class="development-characteristics-item">
-      </li>
-      <li class="development-characteristics-item">
-      </li>
-      <div class="vre-container-relative">
-        *Aplica solamente en departamentos 401 y 402
-        <a class="vre-button vre-btn-cotizarH vre-center-absolute" href="https://cotiza.vre.com.mx/collections/c-beistegui-512">Cotizar o Apartar</a>
-      </div>
+
+  <div class="vre-gallery hide-mobile">
+    <ul>
+      <li><img class="js-gallery-item" src="{% static "img/vre/beistegui/beistegui-comedor-cocina.jpg" %}" alt="Beistegui Comedor Cocina"></li>
+      <li><img class="js-gallery-item" src="{% static "img/vre/beistegui/beistegui-fachada.jpg" %}" alt="Beistegui Fachada"></li>
+      <li><img class="js-gallery-item" src="{% static "img/vre/beistegui/beistegui-recamara.jpg" %}" alt="Beistegui Recamara"></li>
+      <li><img class="js-gallery-item" src="{% static "img/vre/beistegui/beistegui-sala-comerdor-cocina.jpg" %}" alt="Beistegui Sala Comedor Cocina"></li>
+      <li><img class="js-gallery-item" src="{% static "img/vre/beistegui/beistegui-comedor-cocina.jpg" %}" alt=""></li>
+      <li><img class="js-gallery-item" src="{% static "img/vre/beistegui/beistegui-comedor-cocina.jpg" %}" alt=""></li>
     </ul>
   </div>
-  <div class="development-nearby-places">
-    <div id="location-map" class="location-map"></div>
-    <div class="points-of-interest">
-      <span>Lugares de interés</span>
-      <ul>
-        <li>
-          <span>Superama: 5 min (650 m) Caminando</span>
-        </li>
-        <li>
-          <span>Ego´s Gym: 4 min (550 m) Caminando</span>
-        </li>
-        <li>
-          <img src="{% static "img/tmp/icons/hip_icon.png" %}" alt="aicm icon">
-          <span>Hospital Star Médica HIP: 8 min (1.7 km)</span>
-        </li>
-        <li>
-          <img src="{% static "img/tmp/icons/cdmx_icon.png" %}" alt="antara fashion icon">
-          <span>Angel de la Independencia: 18 min (4.5 km)</span>
-        </li>
-        <li>
-          <img src="{% static "img/tmp/icons/aicm_icon.png" %}" alt="santafe icon">
-          <span>Aeropuerto CDMX: 20 min (12.7 km)</span>
-        </li>
-        <li>
-          <img src="{% static "img/tmp/icons/antara_fashion_icon.png" %}" alt="antara fashion icon">
-          <span>Antara Fashion Hall: 20 min (9 km)</span>
-        </li>
-        <li>
-          <img src="{% static "img/tmp/icons/santafe_icon.png" %}" alt="santafe icon">
-          <span>Centro Comercial Santa Fe: 35 min (15 km)</span>
-        </li>
-      </ul>
-      <div class="note">* Tiempo estimado a las 9:00 am entre semana</div>
-      <a class="vre-button vre-btn-cotizarH" href="https://cotiza.vre.com.mx/collections/c-beistegui-512">Cotizar o Apartar</a>
+
+  <div class="development-carousel-container text-center show-mobile">
+    <div class="cover" style="background-image: url('{% static "img/vre/beistegui/beistegui-comedor-cocina.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/vre/beistegui/beistegui-fachada.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/vre/beistegui/beistegui-recamara.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/vre/beistegui/beistegui-sala-comerdor-cocina.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/vre/beistegui/beistegui-comedor-cocina.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/vre/beistegui/beistegui-comedor-cocina.jpg" %}')">
     </div>
   </div>
-  <div class="development-public-transport gray-container">
-    <div class="transport-title text-center"><img src="{% static "img/icons/transport_icon.png" %}" alt="Transporte público">Transporte Público</div>
-    <div class="transport-items-container">
-      <div class="transport-items-column">
-        <div class="transport-item">
-          <span class="semibold">Metrobús: </span>
-          Parada Poliforum (650 m)
-        </div>
-        <div class="transport-item">
-          <span class="semibold">Metro: </span>
-          Estación Eugenia (1.4 km)
-        </div>
-        <div class="transport-item">
-          <span class="semibold">Ecobici: </span>
-          Estación #316 (300 m)
-        </div>
-      </div>
-      <div class="transport-items-column">
-        <div class="transport-item">
-          <span class="semibold">Walking Score ® : </span>
-          98 (Un paraíso para el peatón)
-        </div>
-        <div class="transport-item">
-          <span class="semibold">Ciclovía: </span>
-          Cto interior (800 m)
-        </div>
+
+  <div id="js-gallery-modal" class="vre-gallery-modal">
+    <span id="js-modal-close" class="modal-close">&times;</span>
+    <div class="modal-content">
+      <img id="js-img" src="{% static "img/vre/beistegui/beistegui-comedor-cocina.jpg" %}" alt="Beistegui 512 | VRE México">
+    </div>
+  </div>
+  
+  <div class="development-360-video text-center">
+    Da click sobre la imagen y vive el departamento
+    <div class="container-360">
+      <div class="embed-responsive embed-responsive-16by9">
+        <div class="help-360">Click para comenzar</div>
+        <iframe src="https://www.dwmx.com/VRE/Nebraska/" frameborder="0" class="embed-responsive-item"></iframe>
       </div>
     </div>
-    <div class="transport-separated-text">
-      Vida diaria no requiere el uso del coche
-    </div>
+    <a class="btn--cotizar" href="https://cotiza.vre.com.mx/collections/c-beistegui-512">Cotizar o Apartar</a>
   </div>
 </main>
 {% endblock %}
@@ -157,5 +175,47 @@
 <script>
   insertMap([19.3901418, -99.16869600000001], 'Beistegui 512');
   addBrochureListener('Beistegui', '81ee6c84-f8ed-4fdc-a6d4-44911a8ec010');
+</script>
+<script>
+
+window.onload = () => {
+ 
+  const desarrollo = "beistegui";
+  
+  // Events
+  [].forEach.call(document.querySelectorAll('li.item'), (el) => {
+    el.addEventListener('click', () => {
+      actualizar_caracteristicas(el, desarrollo);
+    });
+  });
+
+
+  let btnClose = document.querySelector('#js-modal-close');
+  let galleryModal = document.querySelector('#js-gallery-modal');
+  let galleryImages = document.querySelectorAll('.js-gallery-item');
+
+    
+  // Actions
+  let closeModal = () => {
+    galleryModal.style.display = 'none';
+  }
+
+  let openModal = (imgSrc) => {
+    let img = document.querySelector('#js-img');
+    
+    galleryModal.style.display = 'flex';
+    img.src = imgSrc;
+  }
+
+  // Events
+  btnClose.addEventListener('click', closeModal);
+
+  [].forEach.call(document.querySelectorAll('.js-gallery-item'), (el) => {
+    el.addEventListener('click', (e) => {
+      openModal(e.target.src)
+    });
+  });
+} 
+
 </script>
 {% endblock %}

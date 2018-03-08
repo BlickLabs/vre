@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static from staticfiles %}
-{% block description %}Seis exclusivos departamentos y un íncreible Roof Garden, todo a media cuadra del Parque Hundido{% endblock %}
-{% block title %}Carolina 149, a media cuadra del Parque Hundido | VRE México{% endblock %}
+{% block description %}Vive en la colonia Escandón, increibles departamentos{% endblock %}
+{% block title %}Comercio 44 | VRE México{% endblock %}
 {% block content %}
 {% include "sections_navbar.html" %}
 
@@ -9,8 +9,8 @@
 <main id="sections-content">
 
   <div class="vre-develop-cover">
-    <h1 class="cover-title">Carolina 149</h1>
-    <h2 class="cover-subtitle">Colonia Noche Buena</h2>
+    <h1 class="cover-title">Comercio 44</h1>
+    <h2 class="cover-subtitle">Colonia Escandón</h2>
     <a class="btn--cotizar" href="">Cotizar o Apartar</a>
   </div>
 
@@ -23,15 +23,15 @@
         <ul class="icons-list">
           <li class="list-item">
             <img src="{% static "img/vre/metros.png" %}" alt="" />
-            <p>112.5 m&sup2;</p>
+            <p>130.1 m&sup2;</p>
           </li>
           <li class="list-item">
             <img src="{% static "img/vre/recamaras.png" %}" alt="" />
-            <p>3 Recamaras</p>
+            <p>2 Recamaras</p>
           </li>
           <li class="list-item">
             <img src="{% static "img/vre/banio.png" %}" alt="" />
-            <p>2.0 Baños</p>
+            <p>2.5 Baños</p>
           </li>
           <li class="list-item">
             <img src="{% static "img/vre/estacionamiento.png" %}" alt="" />
@@ -52,10 +52,13 @@
             <li data-id= "depa202" class="item">202</li>
             <li data-id= "depa301" class="item">301</li>
             <li data-id= "depa302" class="item">302</li>
+            <li data-id= "depa303" class="item">303</li>
+            <li data-id= "roof1" class="item">Roof 1</li>
+            <li data-id= "roof2" class="item">Roof 2</li>
           </ul>
         </div>
         <div class="department-img">
-          <img src="{% static "img/vre/carolina/carolina-plano-101.png" %}" alt="">
+          <img src="{% static "img/vre/comercio/comercio-plano-101.png" %}" alt="">
         </div>
       </div>
     </div>
@@ -152,7 +155,7 @@
     <div class="container-360">
       <div class="embed-responsive embed-responsive-16by9">
         <div class="help-360">Click para comenzar</div>
-        <iframe src="https://dwmx.com/VRE/Carolina/" frameborder="0" class="embed-responsive-item"></iframe>
+        <iframe src="https://www.dwmx.com/VRE/Nebraska/" frameborder="0" class="embed-responsive-item"></iframe>
       </div>
     </div>
     <a class="btn--cotizar" href="">Cotizar o Apartar</a>
@@ -168,14 +171,13 @@
 {% endblock %}
 {% block after_scripts %}
 <script>
-  insertMap([19.380275, -99.177901], 'Carolina 149');
-  addBrochureListener('Carolina', '0da32bde-9150-4094-bb4a-e49c6126795b');
+  insertMap([19.19.405014, -99.177363], 'Comercio 44');
 </script>
 <script>
 
 window.onload = () => {
  
-  const desarrollo = "carolina";
+  const desarrollo = "comercio";
   
   // Events
   [].forEach.call(document.querySelectorAll('li.item'), (el) => {
