@@ -20,7 +20,7 @@ urlpatterns = [
         name='cotizar'),
 
     url(regex=r'^indiana176/$',
-        view=views.DevelopmentDemoView.as_view(),
+        view=views.DevelopmentIndiana.as_view(),
         name='development_demo'),
 
     url(regex=r'^dakota322/$',
@@ -78,5 +78,9 @@ urlpatterns = [
     url(regex=r'^visitanos/success/$',
         view=views.ContactSuccessView.as_view(),
         name='visitanos_success'),
+
+    url(regex=r'^comercio44/$',
+        view=views.Comercio.as_view(),
+        name='comercio'),
 
 ]
