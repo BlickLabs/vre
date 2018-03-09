@@ -92,17 +92,17 @@ class ConditionsTermsView(TemplateView):
     template_name = 'landing/conditions_terms.html'
 
 
-class DevelopmentDemoView(TemplateView):
-    template_name = 'develops/develop_detail.html'
+class DevelopmentIndiana(TemplateView):
+    template_name = 'develops/develop_indiana.html'
 
     def get_context_data(self, **kwargs):
-        context = super(DevelopmentDemoView, self).get_context_data(**kwargs)
+        context = super(DevelopmentIndiana, self).get_context_data(**kwargs)
         context['develop'] = "indiana"
         return context
 
 
 class DevelopmentDemo2View(TemplateView):
-    template_name = 'develops/develop_detail_2.html'
+    template_name = 'develops/develop_datoka.html'
 
     def get_context_data(self, **kwargs):
         context = super(DevelopmentDemo2View, self).get_context_data(**kwargs)
@@ -110,7 +110,7 @@ class DevelopmentDemo2View(TemplateView):
         return context
 
 class DevelopmentDemo3View(TemplateView):
-    template_name = 'develops/develop_detail_3.html'
+    template_name = 'develops/develop_tlacotalpan.html'
 
     def get_context_data(self, **kwargs):
         context = super(DevelopmentDemo3View, self).get_context_data(**kwargs)
@@ -118,7 +118,7 @@ class DevelopmentDemo3View(TemplateView):
         return context
 
 class DevelopmentDemo4View(TemplateView):
-    template_name = 'develops/develop_detail_4.html'
+    template_name = 'develops/develop_nebraska.html'
 
     def get_context_data(self, **kwargs):
         context = super(DevelopmentDemo4View, self).get_context_data(**kwargs)
@@ -127,7 +127,7 @@ class DevelopmentDemo4View(TemplateView):
 
 
 class DevelopmentDemo5View(TemplateView):
-    template_name = 'develops/develop_detail_5.html'
+    template_name = 'develops/develop_chicago.html'
 
     def get_context_data(self, **kwargs):
         context = super(DevelopmentDemo5View, self).get_context_data(**kwargs)
@@ -151,7 +151,7 @@ class DevelopmentBeisteguiView(TemplateView):
         return context
 
 class DevelopmentAtlantaView(TemplateView):
-    template_name = 'develops/develop_atlanta186.html'
+    template_name = 'develops/develop_atlanta.html'
 
     def get_context_data(self, **kwargs):
         context = super(DevelopmentAtlantaView, self).get_context_data(**kwargs)
@@ -231,3 +231,11 @@ class ContactView(View):
 
 class ContactSuccessView(TemplateView):
     template_name = 'landing/success_contact.html'
+
+class Comercio(TemplateView):
+    template_name = 'develops/develop_comercio.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(Comercio, self).get_context_data(**kwargs)
+        context['develop'] = "comercio"
+        return context
