@@ -8,7 +8,7 @@
 
 <main id="sections-content">
 
-  <div class="vre-develop-cover">
+  <div class="vre-develop-cover cover-beistegui">
     <h1 class="cover-title">C. Beistegui 512</h1>
     <h2 class="cover-subtitle">Colonia del Valle Norte</h2>
     <a class="btn--cotizar" href="https://cotiza.vre.com.mx/collections/c-beistegui-512">Cotizar o Apartar</a>
@@ -27,7 +27,7 @@
           </li>
           <li class="list-item">
             <img src="{% static "img/vre/recamaras.png" %}" alt="Beistegui 512 2 Recamaras" />
-            <p>2 Recamaras</p>
+            <p>2 Recámaras</p>
           </li>
           <li class="list-item">
             <img src="{% static "img/vre/banio.png" %}" alt="Beistegui 512 2.5 Baños" />
@@ -108,7 +108,7 @@
           <p>Pet Friendly</p>
         </li>
       </ul>
-    </div>  
+    </div>
  </div>
 
 
@@ -119,31 +119,42 @@
     </div>
   </div>
 
-  <div class="vre-gallery hide-mobile">
+  <div class="vre-gallery">
     <ul>
-      <li><img class="js-gallery-item" src="{% static "img/vre/beistegui/beistegui-comedor-cocina.jpg" %}" alt="Beistegui Comedor Cocina"></li>
-      <li><img class="js-gallery-item" src="{% static "img/vre/beistegui/beistegui-fachada.jpg" %}" alt="Beistegui Fachada"></li>
-      <li><img class="js-gallery-item" src="{% static "img/vre/beistegui/beistegui-recamara.jpg" %}" alt="Beistegui Recamara"></li>
-      <li><img class="js-gallery-item" src="{% static "img/vre/beistegui/beistegui-sala-comerdor-cocina.jpg" %}" alt="Beistegui Sala Comedor Cocina"></li>
-      <li><img class="js-gallery-item" src="{% static "img/vre/beistegui/beistegui-comedor-cocina.jpg" %}" alt=""></li>
-      <li><img class="js-gallery-item" src="{% static "img/vre/beistegui/beistegui-comedor-cocina.jpg" %}" alt=""></li>
+      <li>
+        <a href="{% static "img/vre/beistegui/beistegui-comedor-cocina.jpg" %}" data-lightbox="roadtrip">
+          <img class="js-gallery-item" src="{% static "img/vre/beistegui/beistegui-comedor-cocina.jpg" %}" alt="Beistegui Comedor Cocina" />
+        </a>
+      </li>
+      <li>
+        <a href="{% static "img/vre/beistegui/beistegui-fachada.jpg" %}" data-lightbox="roadtrip">
+          <img class="js-gallery-item" src="{% static "img/vre/beistegui/beistegui-fachada.jpg" %}" alt="Beistegui Fachada" />
+        </a>
+      </li>
+      <li>
+        <a href="{% static "img/vre/beistegui/beistegui-recamara.jpg" %}" data-lightbox="roadtrip">
+          <img class="js-gallery-item" src="{% static "img/vre/beistegui/beistegui-recamara.jpg" %}" alt="Beistegui Recamara" />
+        </a>
+      </li>
+      <li>
+          <a href="{% static "img/vre/beistegui/beistegui-sala-comerdor-cocina.jpg" %}" data-lightbox="roadtrip">
+            <img class="js-gallery-item" src="{% static "img/vre/beistegui/beistegui-sala-comerdor-cocina.jpg" %}" alt="Beistegui Sala Comedor Cocina" />
+          </a>
+      </li>
+      <li>
+        <a href="{% static "img/vre/beistegui/beistegui-comedor-cocina.jpg" %}" data-lightbox="roadtrip">
+          <img class="js-gallery-item" src="{% static "img/vre/beistegui/beistegui-comedor-cocina.jpg" %}" alt="" />
+        </a>
+      </li>
+      <li>
+        <a href="{% static "img/vre/beistegui/beistegui-comedor-cocina.jpg" %}" data-lightbox="roadtrip">
+          <img class="js-gallery-item" src="{% static "img/vre/beistegui/beistegui-comedor-cocina.jpg" %}" alt="" />
+        </a>
+      </li>
     </ul>
   </div>
 
-  <div class="development-carousel-container text-center show-mobile">
-    <div class="cover" style="background-image: url('{% static "img/vre/beistegui/beistegui-comedor-cocina.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/vre/beistegui/beistegui-fachada.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/vre/beistegui/beistegui-recamara.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/vre/beistegui/beistegui-sala-comerdor-cocina.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/vre/beistegui/beistegui-comedor-cocina.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/vre/beistegui/beistegui-comedor-cocina.jpg" %}')">
-    </div>
-  </div>
+
 
   <div id="js-gallery-modal" class="vre-gallery-modal">
     <span id="js-modal-close" class="modal-close">&times;</span>
@@ -171,45 +182,9 @@
   addBrochureListener('Beistegui', '81ee6c84-f8ed-4fdc-a6d4-44911a8ec010');
 </script>
 <script>
-
-window.onload = () => {
- 
-  const desarrollo = "beistegui";
-  
-  // Events
-  [].forEach.call(document.querySelectorAll('li.item'), (el) => {
-    el.addEventListener('click', () => {
-      actualizar_caracteristicas(el, desarrollo);
+    lightbox.option({
+      'positionFromTop': 100,
+      'showImageNumberLabel': false
     });
-  });
-
-
-  let btnClose = document.querySelector('#js-modal-close');
-  let galleryModal = document.querySelector('#js-gallery-modal');
-  let galleryImages = document.querySelectorAll('.js-gallery-item');
-
-    
-  // Actions
-  let closeModal = () => {
-    galleryModal.style.display = 'none';
-  }
-
-  let openModal = (imgSrc) => {
-    let img = document.querySelector('#js-img');
-    
-    galleryModal.style.display = 'flex';
-    img.src = imgSrc;
-  }
-
-  // Events
-  btnClose.addEventListener('click', closeModal);
-
-  [].forEach.call(document.querySelectorAll('.js-gallery-item'), (el) => {
-    el.addEventListener('click', (e) => {
-      openModal(e.target.src)
-    });
-  });
-} 
-
 </script>
 {% endblock %}

@@ -41,12 +41,38 @@
 
 // Cover
 .vre-develop-cover
-  background-image url('../img/vre/beistegui/vre-desarrollo-beistegui.jpg')
   background-repeat no-repeat
   background-position center
   background-size cover
   padding-top 40px
   padding-bottom 78px
+
+  &.cover-atlanta
+    background-image url('../img/vre/atlanta/vre-desarrollo-atlanta.jpg')
+
+  &.cover-beistegui
+    background-image url('../img/vre/beistegui/vre-desarrollo-beistegui.jpg')
+
+  &.cover-carolina
+    background-image url('../img/vre/carolina/vre-desarrollo-carolina.jpg')
+
+  &.cover-chicago
+    background-image url('../img/vre/chicago/vre-desarrollo-chicago.jpg')
+
+  &.cover-comercio
+    background-image url('../img/vre/comercio/vre-desarrollo-comercio.jpg')
+
+  &.cover-dakota
+    background-image url('../img/vre/dakota/vre-desarrollo-dakota.jpg')
+
+  &.cover-indiana
+    background-image url('../img/vre/indiana/vre-desarrollo-indiana.png')
+
+  &.cover-nebraska
+    background-image url('../img/vre/nebraska/vre-desarrollo-nebraska.jpg')
+
+  &.cover-tlacotalpan
+    background-image url('../img/vre/tlacotalpan/vre-desarrollo-tlacotalpan.jpg')
 
   .cover-title,
   .cover-subtitle
@@ -98,7 +124,10 @@
       display flex
       justify-content flex-end
       align-items center
-    
+
+    .icons-center
+      justify-content center
+
     .list-item
       background-color #676767
       width 75px
@@ -112,9 +141,9 @@
       align-items center
 
       .list-item:last-child
-        margin-right 0 
+        margin-right 0
 
-      img 
+      img
         max-width 20px
         display block
         margin-left auto
@@ -125,7 +154,7 @@
         animation: pulse 1s;
 
       p
-        margin-top 3px 
+        margin-top 3px
         margin-bottom 0
         color #ffffff
         font-size 9px
@@ -173,22 +202,22 @@
     .department-img
       flex-basis 77%
 
-      img 
+      img
         width 100%
         display block
 
   .develop-ubication
 
     h3
-      text-align right 
-      
+      text-align right
+
       .line
         margin-left calc(100% - 58px)
 
     .map
       background-color #f5f5f5
       height 80%
-    
+
     .location-map
       height 100%
 
@@ -198,7 +227,7 @@
 
   .vre-characteristics
     padding-top 7rem
-    padding-bottom 5rem 
+    padding-bottom 5rem
     border-top 1px solid #e8e8e8
     width 95%;
     margin-left auto
@@ -219,7 +248,7 @@
 
       span
         font-weight bold
-    
+
     ul
       padding 0
       list-style none
@@ -231,7 +260,7 @@
       max-width 50%
 
       li
-        
+
         width 91px
         height 91px
 
@@ -252,18 +281,18 @@
           text-align center
           margin-top 10px
 
-        
 
-        img 
+
+        img
           display block
 
         img:hover
           -webkit-animation: pulse 1s;
           animation: pulse 1s;
 
-// Download brochure 
+// Download brochure
 .development-download-brochure
-  border none !important 
+  border none !important
   background-color: rgba(216, 216, 216, 0.75);
 
 // Video 360
@@ -281,7 +310,7 @@
 // Gallery
 .vre-gallery
   padding-top 4rem
-  padding-left 6rem 
+  padding-left 6rem
   padding-right 6rem
 
   ul
@@ -293,7 +322,7 @@
     align-items center
 
     li
-      flex-basis 28%
+      flex-basis 30%
       margin .8rem
 
       img
@@ -304,6 +333,14 @@
       img:hover
         animation pulse 1s
         opacity .75
+
+@media screen and (max-width: 700px)
+  .vre-gallery
+    padding-left 1rem
+    padding-right 1rem
+
+  .vre-gallery ul li
+    flex-basis 40%
 
 // Modal gallery
 .vre-gallery-modal
@@ -394,13 +431,3 @@
 
   .development-360-video .help-360
     font-size 1rem
-
-  .hide-mobile
-    display none
-
-  .show-mobile
-    display block !important
-
-    .slick-arrow:before
-      font-size 50px !important
-    

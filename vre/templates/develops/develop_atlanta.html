@@ -8,7 +8,7 @@
 
 <main id="sections-content">
 
-  <div class="vre-develop-cover">
+  <div class="vre-develop-cover cover-atlanta">
     <h1 class="cover-title">Atlanta 186</h1>
     <h2 class="cover-subtitle">Colonia Noche Buena</h2>
     <a class="btn--cotizar" href="https://cotiza.vre.com.mx/collections/atlanta-186">Cotizar o Apartar</a>
@@ -27,7 +27,7 @@
           </li>
           <li class="list-item">
             <img src="{% static "img/vre/recamaras.png" %}" alt="Atlanta 186 3 Recamaras" />
-            <p>3 Recamaras</p>
+            <p>3 Recámaras</p>
           </li>
           <li class="list-item">
             <img src="{% static "img/vre/banio.png" %}" alt="Atlanta 186 2.0 Baños" />
@@ -103,7 +103,7 @@
           <p>Pet Friendly</p>
         </li>
       </ul>
-    </div>  
+    </div>
  </div>
 
 
@@ -146,7 +146,7 @@
       <img id="js-img" src="{% static "img/vre/beistegui/beistegui-comedor-cocina.jpg" %}" alt="Atlanta 186 | VRE México">
     </div>
   </div>
-  
+
   <div class="development-360-video text-center">
     Da click sobre la imagen y vive el departamento
     <div class="container-360">
@@ -174,9 +174,9 @@
 <script>
 
 window.onload = () => {
- 
+
   const desarrollo = "atlanta";
-  
+
   // Events
   [].forEach.call(document.querySelectorAll('li.item'), (el) => {
     el.addEventListener('click', () => {
@@ -189,7 +189,7 @@ window.onload = () => {
   let galleryModal = document.querySelector('#js-gallery-modal');
   let galleryImages = document.querySelectorAll('.js-gallery-item');
 
-    
+
   // Actions
   let closeModal = () => {
     galleryModal.style.display = 'none';
@@ -197,7 +197,7 @@ window.onload = () => {
 
   let openModal = (imgSrc) => {
     let img = document.querySelector('#js-img');
-    
+
     galleryModal.style.display = 'flex';
     img.src = imgSrc;
   }
@@ -210,7 +210,7 @@ window.onload = () => {
       openModal(e.target.src)
     });
   });
-} 
+}
 
 </script>
 {% endblock %}

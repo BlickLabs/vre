@@ -2,15 +2,15 @@
   * La variable departamentos_json queda declarada de manera global
   * para poder acceder a ella desde cualquier parte, y asi poder hacer
   * las peticiones como si fuera un API.
-  * 
+  *
   * Ya en cada vista de los desarrollos, por ejemplo: Beistegui,
   * Indiana, Dakota, etc..
-  * 
+  *
   * Se puede crear una variable que contenga solo la informacion de ese desarrollo
   * Ejemplo:
-  * 
+  *
   * let beistegui = departamentos_json.departamentos.beistegui
-  * 
+  *
   * El cual nos dara un objeto con la info de todos sus departamentos
   * y caracteristicas.
   */
@@ -55,7 +55,7 @@
         "depa202": {
           "caracteristicas": {
             "metros": "81.6 m&sup2;",
-            "recamaras": "2 Recaámaras",
+            "recamaras": "2 Recámaras",
             "banio": "2.5 Baños",
             "estacionamiento": "2 Lugares E.",
             "plano": "indiana-plano-202.jpg"
@@ -470,7 +470,7 @@
         "depa301": {
           "caracteristicas": {
             "metros": "68.8 m&sup2;",
-            "recamaras": "1 Recámaras",
+            "recamaras": "1 Recámara",
             "banio": "1 Baños",
             "estacionamiento": "1 Lugar E.",
             "balcon": "Balcón",
@@ -489,7 +489,7 @@
         "depa303": {
           "caracteristicas": {
             "metros": "66.7 m&sup2;",
-            "recamaras": "1 Recámaras",
+            "recamaras": "1 Recámara",
             "banio": "1 Baños",
             "estacionamiento": "1 Lugar E.",
             "balcon": "Balcón",

@@ -12,6 +12,7 @@
   <title>{% block title %}{% endblock %}</title>
   <link href="{% static "css/main.min.css" %}" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css" integrity="sha256-auPoJwk/+RK6KSkib92Dkq1Y5hEkZvKtvSwucs15Skg=" crossorigin="anonymous" />
 </head>
 <body>
 <div id="page-wrapper">
@@ -41,6 +42,7 @@
 <script src="{% static "js/bower_dependencies.min.js" %}"></script>
 {% block before_scripts %}
 {% endblock %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js" integrity="sha256-DiHJ7hbvMejsMyP76bpVWacb5HSHQ2sQlrJV8n7KEvA=" crossorigin="anonymous"></script>
 <script>
     {% url "developments:download_brochure" id=1 as download_brochure %}
     var djangoURLs = {
@@ -77,25 +79,8 @@
       ga('send', 'pageview');
 </script>
 
-<!-- SDK Facebook -->
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId            : '1140711269365279',
-      autoLogAppEvents : true,
-      xfbml            : true,
-      version          : 'v2.11'
-    });
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "https://connect.facebook.net/es_LA/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
+<!-- Tidio chat -->
+<script src="//code.tidio.co/jq8gtjlwcd6x6ir5ajbngqkx2enyu0lt.js"></script>
 
 <!-- Facebook Pixel Code -->
 <script>

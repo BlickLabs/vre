@@ -49,7 +49,7 @@ var caracteristicas = function(depa, desa) {
 
   // Se crean elementos de listam, con las caracteristicas del departamento.
   var ul       = document.createElement('ul');
-  ul.className = 'animated pulse icons-list';
+  ul.className = 'icons-list';
 
   for(var caracteristica in caracteristicas) {
     if (caracteristica != 'plano') {
@@ -60,12 +60,17 @@ var caracteristicas = function(depa, desa) {
       li.className = 'list-item';
       img.src      = '/static/img/vre/' + caracteristica + '.png';
       p.innerHTML  = caracteristicas[caracteristica];
-      
+
       li.appendChild(img);
       li.appendChild(p);
       ul.appendChild(li);
     }
   }
 
-  return ul;
+  if (ul.children.length == 1) {
+    ul.classList.add('icons-center');
+    return ul;
+  } else {
+    return ul;
+  }
 };
