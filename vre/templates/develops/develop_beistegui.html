@@ -182,6 +182,22 @@
   addBrochureListener('Beistegui', '81ee6c84-f8ed-4fdc-a6d4-44911a8ec010');
 </script>
 <script>
+
+window.onload = () => {
+
+  const desarrollo = "beistegui";
+
+  // Events
+  [].forEach.call(document.querySelectorAll('li.item'), (el) => {
+    el.addEventListener('click', () => {
+      actualizar_caracteristicas(el, desarrollo);
+    });
+  });
+}
+
+</script>
+
+<script>
     lightbox.option({
       'positionFromTop': 100,
       'showImageNumberLabel': false
