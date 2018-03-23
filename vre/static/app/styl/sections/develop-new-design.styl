@@ -342,37 +342,6 @@
   .vre-gallery ul li
     flex-basis 40%
 
-// Modal gallery
-.vre-gallery-modal
-  display none
-  z-index 100
-  position fixed
-  top 0
-  left 0
-  right 0
-  width 100vw
-  height 100vh
-  background-color rgba(0, 0, 0, 0.85)
-  justify-content center
-  align-items center
-
-  .modal-close
-    color #ffffff
-    font-size 4rem
-    position absolute
-    top 1%
-    right 5%
-    cursor pointer
-
-  .modal-content
-    display block
-    width 80%
-    max-width 700px
-
-    img
-      display block
-      width 100%
-
 @media screen and (max-width: 768px)
   .vre-develop-department-ubication
     flex-direction column
@@ -420,14 +389,30 @@
     border 1rem solid #fff
 
 @media screen and (max-width: 425px)
+
+  .gallery-item--hidden
+    display none
+    
   .vre-develop-department-ubication
-    padding-top 0
+    padding-top 2rem
+
+  .comercio-numdev-center
+    flex-wrap wrap
+    max-width 80%
+    margin-left auto
+    margin-right auto
+
+  .beistegui-numdev-center
+    flex-wrap wrap
+    max-width 68%
+    margin-left auto
+    margin-right auto
 
   .vre-develop-department-ubication .department-icons .list-item
     margin-right .5rem
 
   .vre-develop-department-ubication .department-num-img .department-num .num-list li
-    padding 7px 12px
+    padding 11px 16px
 
   .development-360-video .help-360
     font-size 1rem

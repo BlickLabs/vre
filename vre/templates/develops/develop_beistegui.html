@@ -49,7 +49,7 @@
       </div>
       <div class="department-num-img">
         <div class="department-num">
-          <ul class="num-list">
+          <ul class="num-list beistegui-numdev-center">
             <li data-id= "depa101" class="item active">101</li>
             <li data-id= "depa102" class="item">102</li>
             <li data-id= "depa201" class="item">201</li>
@@ -57,10 +57,11 @@
             <li data-id= "depa301" class="item">301</li>
             <li data-id= "depa302" class="item">302</li>
             <li data-id= "depa401" class="item">401</li>
+            <li data-id= "depa402" class="item">402</li>
           </ul>
         </div>
         <div class="department-img">
-          <img src="{% static "img/vre/beistegui/beistegui-plano-101.png" %}" alt="Beistegui 512 | VRE México">
+          <img src="{% static "img/vre/beistegui/beistegui-plano-101.jpg" %}" alt="Beistegui 512 | VRE México">
         </div>
       </div>
     </div>
@@ -122,50 +123,35 @@
   <div class="vre-gallery">
     <ul>
       <li>
-        <a href="{% static "img/vre/beistegui/beistegui-comedor-cocina.jpg" %}" data-lightbox="roadtrip">
-          <img class="js-gallery-item" src="{% static "img/vre/beistegui/beistegui-comedor-cocina.jpg" %}" alt="Beistegui Comedor Cocina" />
+        <a href="{% static "img/vre/beistegui/carousel1.jpg" %}" class="swipebox">
+          <img class="js-gallery-item" src="{% static "img/vre/beistegui/carousel1.jpg" %}" alt="">
         </a>
       </li>
       <li>
-        <a href="{% static "img/vre/beistegui/beistegui-fachada.jpg" %}" data-lightbox="roadtrip">
-          <img class="js-gallery-item" src="{% static "img/vre/beistegui/beistegui-fachada.jpg" %}" alt="Beistegui Fachada" />
+        <a href="{% static "img/vre/beistegui/carousel2.jpg" %}" class="swipebox">
+          <img class="js-gallery-item" src="{% static "img/vre/beistegui/carousel2.jpg" %}" alt="">
         </a>
       </li>
       <li>
-        <a href="{% static "img/vre/beistegui/beistegui-recamara.jpg" %}" data-lightbox="roadtrip">
-          <img class="js-gallery-item" src="{% static "img/vre/beistegui/beistegui-recamara.jpg" %}" alt="Beistegui Recamara" />
+        <a href="{% static "img/vre/beistegui/carousel3.jpg" %}" class="swipebox">
+          <img class="js-gallery-item" src="{% static "img/vre/beistegui/carousel3.jpg" %}" alt="">
         </a>
       </li>
       <li>
-          <a href="{% static "img/vre/beistegui/beistegui-sala-comerdor-cocina.jpg" %}" data-lightbox="roadtrip">
-            <img class="js-gallery-item" src="{% static "img/vre/beistegui/beistegui-sala-comerdor-cocina.jpg" %}" alt="Beistegui Sala Comedor Cocina" />
-          </a>
-      </li>
-      <li>
-        <a href="{% static "img/vre/beistegui/beistegui-comedor-cocina.jpg" %}" data-lightbox="roadtrip">
-          <img class="js-gallery-item" src="{% static "img/vre/beistegui/beistegui-comedor-cocina.jpg" %}" alt="" />
+        <a href="{% static "img/vre/beistegui/carousel4.jpg" %}" class="swipebox">
+          <img class="js-gallery-item" src="{% static "img/vre/beistegui/carousel4.jpg" %}" alt="">
         </a>
       </li>
-      <li>
-        <a href="{% static "img/vre/beistegui/beistegui-comedor-cocina.jpg" %}" data-lightbox="roadtrip">
-          <img class="js-gallery-item" src="{% static "img/vre/beistegui/beistegui-comedor-cocina.jpg" %}" alt="" />
+      <li class="gallery-item--hidden">
+        <a href="{% static "img/vre/beistegui/carousel5.jpg" %}" class="swipebox">
+          <img class="js-gallery-item" src="{% static "img/vre/beistegui/carousel5.jpg" %}" alt="">
         </a>
       </li>
     </ul>
   </div>
 
+  <a class="btn--cotizar" href="https://cotiza.vre.com.mx/collections/c-beistegui-512">Cotizar o Apartar</a>
 
-
-  <div id="js-gallery-modal" class="vre-gallery-modal">
-    <span id="js-modal-close" class="modal-close">&times;</span>
-    <div class="modal-content">
-      <img id="js-img" src="{% static "img/vre/beistegui/beistegui-comedor-cocina.jpg" %}" alt="Beistegui 512 | VRE México">
-    </div>
-  </div>
-   <div class="vre-develop-3d" style="margin-bottom: 10px;">
-    <div style="position: relative; padding-bottom:56.25%; padding-top: 30px; height: 0; overflow: hidden;">
-      <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://spaces.archilogic.com/3d/!30e88a42-2bbf-4eae-bfe5-139c8b2e542c?mode=view&main-menu=none&view-menu=none&presentation=once&editable=false" width="400" height="640" frameBorder="0" onmousewheel="false" allowfullscreen mozallowfullscreen webkitallowfullscreen></iframe>
-    </div>
   </div>
 </main>
 {% endblock %}
@@ -197,10 +183,11 @@ window.onload = () => {
 
 </script>
 
-<script>
-    lightbox.option({
-      'positionFromTop': 100,
-      'showImageNumberLabel': false
-    });
+<script type="text/javascript">
+;( function( $ ) {
+
+	$( '.swipebox' ).swipebox();
+
+} )( jQuery );
 </script>
 {% endblock %}

@@ -469,7 +469,7 @@
         },
         "depa301": {
           "caracteristicas": {
-            "metros": "68.8 m&sup2;",
+            "metros": "67.8 m&sup2;",
             "recamaras": "1 Recámara",
             "banio": "1 Baños",
             "estacionamiento": "1 Lugar E.",

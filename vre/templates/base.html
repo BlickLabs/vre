@@ -12,7 +12,7 @@
   <title>{% block title %}{% endblock %}</title>
   <link href="{% static "css/main.min.css" %}" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css" integrity="sha256-auPoJwk/+RK6KSkib92Dkq1Y5hEkZvKtvSwucs15Skg=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.swipebox/1.4.4/css/swipebox.min.css" integrity="sha256-5KRlt3ls3xVyu0Fv7M6hvDH0wCDqHraymjiBtOAhZZU=" crossorigin="anonymous" />
 </head>
 <body>
 <div id="page-wrapper">
@@ -42,7 +42,7 @@
 <script src="{% static "js/bower_dependencies.min.js" %}"></script>
 {% block before_scripts %}
 {% endblock %}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js" integrity="sha256-DiHJ7hbvMejsMyP76bpVWacb5HSHQ2sQlrJV8n7KEvA=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.swipebox/1.4.4/js/jquery.swipebox.min.js" integrity="sha256-Yc+GwTnlWzpuQ6grDKOT67UA8d1M4Fx33JkNqX3Ke50=" crossorigin="anonymous"></script>
 <script>
     {% url "developments:download_brochure" id=1 as download_brochure %}
     var djangoURLs = {

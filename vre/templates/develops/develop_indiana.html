@@ -11,7 +11,6 @@
   <div class="vre-develop-cover cover-indiana">
     <h1 class="cover-title">Indiana 176</h1>
     <h2 class="cover-subtitle">Colonia Nápoles</h2>
-    <a class="btn--cotizar" href="https://cotiza.vre.com.mx/">Cotizar o Apartar</a>
   </div>
 
   <div class="vre-develop-department-ubication">
@@ -64,8 +63,6 @@
       </div>
     </div>
   </div>
-
-  <a class="btn--cotizar" href="https://cotiza.vre.com.mx/">Cotizar o Apartar</a>
 
   <div class="vre-characteristics-wrapper">
     <div class="vre-characteristics">
@@ -121,28 +118,6 @@
     </ul>
   </div>
 
-  <div class="development-carousel-container text-center show-mobile">
-    <div class="cover" style="background-image: url('{% static "img/vre/indiana/carousel1.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/vre/indiana/carousel2.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/vre/indiana/carousel3.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/vre/indiana/carousel4.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/vre/indiana/carousel5.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/vre/indiana/carousel6.jpg" %}')">
-    </div>
-  </div>
-
-  <div id="js-gallery-modal" class="vre-gallery-modal">
-    <span id="js-modal-close" class="modal-close">&times;</span>
-    <div class="modal-content">
-      <img id="js-img" src="{% static "img/vre/beistegui/beistegui-comedor-cocina.jpg" %}" alt="Indiana 176 | VRE México">
-    </div>
-  </div>
-
   <div class="development-360-video text-center">
     Da click sobre la imagen y vive el departamento
     <div class="container-360">
@@ -179,34 +154,13 @@ window.onload = () => {
       actualizar_caracteristicas(el, desarrollo);
     });
   });
-
-
-  let btnClose = document.querySelector('#js-modal-close');
-  let galleryModal = document.querySelector('#js-gallery-modal');
-  let galleryImages = document.querySelectorAll('.js-gallery-item');
-
-
-  // Actions
-  let closeModal = () => {
-    galleryModal.style.display = 'none';
-  }
-
-  let openModal = (imgSrc) => {
-    let img = document.querySelector('#js-img');
-
-    galleryModal.style.display = 'flex';
-    img.src = imgSrc;
-  }
-
-  // Events
-  btnClose.addEventListener('click', closeModal);
-
-  [].forEach.call(document.querySelectorAll('.js-gallery-item'), (el) => {
-    el.addEventListener('click', (e) => {
-      openModal(e.target.src)
-    });
-  });
 }
+</script>
+<script type="text/javascript">
+;( function( $ ) {
 
+	$( '.swipebox' ).swipebox();
+
+} )( jQuery );
 </script>
 {% endblock %}
