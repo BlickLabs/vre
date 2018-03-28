@@ -114,37 +114,39 @@
     </div>
   </div>
 
-  <div class="vre-gallery hide-mobile">
+  <div class="vre-gallery">
     <ul>
-      <li><img class="js-gallery-item" src="{% static "img/vre/atlanta/cocina.jpg" %}" alt=""></li>
-      <li><img class="js-gallery-item" src="{% static "img/vre/atlanta/fachada.jpg" %}" alt=""></li>
-      <li><img class="js-gallery-item" src="{% static "img/vre/atlanta/recamara.jpg" %}" alt=""></li>
-      <li><img class="js-gallery-item" src="{% static "img/vre/atlanta/cocina-terraza.jpg" %}" alt=""></li>
-      <li><img class="js-gallery-item" src="{% static "img/vre/atlanta/fachada-estacionamiento.jpg" %}" alt=""></li>
-      <li><img class="js-gallery-item" src="{% static "img/vre/atlanta/recamara.jpg" %}" alt=""></li>
+      <li>
+        <a href="{% static "img/vre/atlanta/carousel1.jpg" %}" class="swipebox">
+          <img class="js-gallery-item" src="{% static "img/vre/atlanta/carousel1.jpg" %}" alt="">
+        </a>
+      </li>
+      <li>
+        <a href="{% static "img/vre/atlanta/carousel2.jpg" %}" class="swipebox">
+          <img class="js-gallery-item" src="{% static "img/vre/atlanta/carousel2.jpg" %}" alt="">
+        </a>
+      </li>
+      <li>
+        <a href="{% static "img/vre/atlanta/carousel3.jpg" %}" class="swipebox">
+          <img class="js-gallery-item" src="{% static "img/vre/atlanta/carousel3.jpg" %}" alt="">
+        </a>
+      </li>
+      <li>
+        <a href="{% static "img/vre/atlanta/carousel4.jpg" %}" class="swipebox">
+          <img class="js-gallery-item" src="{% static "img/vre/atlanta/carousel4.jpg" %}" alt="">
+        </a>
+      </li>
+      <li class="gallery-item--hidden">
+        <a href="{% static "img/vre/atlanta/carousel5.jpg" %}" class="swipebox">
+          <img class="js-gallery-item" src="{% static "img/vre/atlanta/carousel5.jpg" %}" alt="">
+        </a>
+      </li>
+      <li class="gallery-item--hidden">
+        <a href="{% static "img/vre/atlanta/carousel6.jpg" %}" class="swipebox">
+          <img class="js-gallery-item" src="{% static "img/vre/atlanta/carousel6.jpg" %}" alt="">
+        </a>
+      </li>
     </ul>
-  </div>
-
-  <div class="development-carousel-container text-center show-mobile">
-    <div class="cover" style="background-image: url('{% static "img/vre/atlanta/cocina.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/vre/atlanta/fachada.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/vre/atlanta/recamara.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/vre/atlanta/cocina-terraza.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/vre/atlanta/fachada-estacionamiento.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/vre/atlanta/recamara.jpg" %}')">
-    </div>
-  </div>
-
-  <div id="js-gallery-modal" class="vre-gallery-modal">
-    <span id="js-modal-close" class="modal-close">&times;</span>
-    <div class="modal-content">
-      <img id="js-img" src="{% static "img/vre/beistegui/beistegui-comedor-cocina.jpg" %}" alt="Atlanta 186 | VRE México">
-    </div>
   </div>
 
   <div class="development-360-video text-center">
@@ -183,34 +185,13 @@ window.onload = () => {
       actualizar_caracteristicas(el, desarrollo);
     });
   });
-
-
-  let btnClose = document.querySelector('#js-modal-close');
-  let galleryModal = document.querySelector('#js-gallery-modal');
-  let galleryImages = document.querySelectorAll('.js-gallery-item');
-
-
-  // Actions
-  let closeModal = () => {
-    galleryModal.style.display = 'none';
-  }
-
-  let openModal = (imgSrc) => {
-    let img = document.querySelector('#js-img');
-
-    galleryModal.style.display = 'flex';
-    img.src = imgSrc;
-  }
-
-  // Events
-  btnClose.addEventListener('click', closeModal);
-
-  [].forEach.call(document.querySelectorAll('.js-gallery-item'), (el) => {
-    el.addEventListener('click', (e) => {
-      openModal(e.target.src)
-    });
-  });
 }
+</script>
+<script type="text/javascript">
+;( function( $ ) {
 
+	$( '.swipebox' ).swipebox();
+
+} )( jQuery );
 </script>
 {% endblock %}

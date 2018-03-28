@@ -129,7 +129,7 @@
           <img class="js-gallery-item" src="{% static "img/vre/comercio/carousel2.jpg" %}" alt="">
         </a>
       </li>
-      <li>
+      <li class="gallery-item--hidden">
         <a href="{% static "img/vre/comercio/carousel3.jpg" %}" class="swipebox">
           <img class="js-gallery-item" src="{% static "img/vre/comercio/carousel3.jpg" %}" alt="">
         </a>
@@ -149,6 +149,7 @@
 {% block after_scripts %}
 <script>
   insertMap([19.405014, -99.177363], 'Comercio 44');
+  addBrochureListener('Comercio', 'c9a3f58b-6668-4e29-a7c6-11ab49e8c981');
 </script>
 <script>
 

@@ -107,14 +107,38 @@
     </div>
   </div>
 
-  <div class="vre-gallery hide-mobile">
+  <div class="vre-gallery">
     <ul>
-      <li><img class="js-gallery-item" src="{% static "img/vre/indiana/carousel1.jpg" %}" alt=""></li>
-      <li><img class="js-gallery-item" src="{% static "img/vre/indiana/carousel2.jpg" %}" alt=""></li>
-      <li><img class="js-gallery-item" src="{% static "img/vre/indiana/carousel3.jpg" %}" alt=""></li>
-      <li><img class="js-gallery-item" src="{% static "img/vre/indiana/carousel4.jpg" %}" alt=""></li>
-      <li><img class="js-gallery-item" src="{% static "img/vre/indiana/carousel5.jpg" %}" alt=""></li>
-      <li><img class="js-gallery-item" src="{% static "img/vre/indiana/carousel6.jpg" %}" alt=""></li>
+      <li>
+        <a href="{% static "img/vre/indiana/carousel1.jpg" %}" class="swipebox">
+          <img class="js-gallery-item" src="{% static "img/vre/indiana/carousel1.jpg" %}" alt="">
+        </a>
+      </li>
+      <li>
+        <a href="{% static "img/vre/indiana/carousel2.jpg" %}" class="swipebox">
+          <img class="js-gallery-item" src="{% static "img/vre/indiana/carousel2.jpg" %}" alt="">
+        </a>
+      </li>
+      <li>
+        <a href="{% static "img/vre/indiana/carousel3.jpg" %}" class="swipebox">
+          <img class="js-gallery-item" src="{% static "img/vre/indiana/carousel3.jpg" %}" alt="">
+        </a>
+      </li>
+      <li>
+        <a href="{% static "img/vre/indiana/carousel4.jpg" %}" class="swipebox">
+          <img class="js-gallery-item" src="{% static "img/vre/indiana/carousel4.jpg" %}" alt="">
+        </a>
+      </li>
+      <li class="gallery-item--hidden">
+        <a href="{% static "img/vre/indiana/carousel5.jpg" %}" class="swipebox">
+          <img class="js-gallery-item" src="{% static "img/vre/indiana/carousel5.jpg" %}" alt="">
+        </a>
+      </li>
+      <li class="gallery-item--hidden">
+        <a href="{% static "img/vre/indiana/carousel6.jpg" %}" class="swipebox">
+          <img class="js-gallery-item" src="{% static "img/vre/indiana/carousel6.jpg" %}" alt="">
+        </a>
+      </li>
     </ul>
   </div>
 
@@ -126,7 +150,6 @@
         <iframe src="https://dwmx.com/VRE/Indiana/" frameborder="0" class="embed-responsive-item"></iframe>
       </div>
     </div>
-    <a class="btn--cotizar" href="https://cotiza.vre.com.mx/">Cotizar o Apartar</a>
   </div>
 </main>
 {% endblock %}
