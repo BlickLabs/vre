@@ -1,0 +1,419 @@
+/*
+- New styles for the views of developments.
+
+- Important!
+- These styles are complemented with 'developments.styl'
+
+- More info:
+- @soycamis, More Co.
+*/
+
+// Global styles.
+
+.show-mobile,
+.development-carousel-container
+  display none !important
+
+.line
+  width 58px
+  border-bottom 3px solid #dedede
+  margin-top 15px;
+  margin-right 0
+
+.btn--cotizar
+    display block
+    max-width 150px
+    color #ffffff
+    font-size 12px
+    letter-spacing 0.3px
+    padding 12px 21px
+    background-color #de7c27
+    margin-top 23px
+    text-align center
+    margin-left auto
+    margin-right auto
+
+  .btn--cotizar:hover
+    background-color #ffffff
+    outline 2px solid #dedede
+    color #de7c27
+    transition all 1s
+
+// Cover
+.vre-develop-cover
+  background-repeat no-repeat
+  background-position center
+  background-size cover
+  padding-top 40px
+  padding-bottom 78px
+
+  &.cover-atlanta
+    background-image url('../img/vre/atlanta/vre-desarrollo-atlanta.jpg')
+
+  &.cover-beistegui
+    background-image url('../img/vre/beistegui/vre-desarrollo-beistegui.jpg')
+
+  &.cover-carolina
+    background-image url('../img/vre/carolina/vre-desarrollo-carolina.jpg')
+
+  &.cover-chicago
+    background-image url('../img/vre/chicago/vre-desarrollo-chicago.jpg')
+
+  &.cover-comercio
+    background-image url('../img/vre/comercio/vre-desarrollo-comercio.jpg')
+
+  &.cover-dakota
+    background-image url('../img/vre/dakota/vre-desarrollo-dakota.jpg')
+
+  &.cover-indiana
+    background-image url('../img/vre/indiana/vre-desarrollo-indiana.png')
+
+  &.cover-nebraska
+    background-image url('../img/vre/nebraska/vre-desarrollo-nebraska.jpg')
+
+  &.cover-tlacotalpan
+    background-image url('../img/vre/tlacotalpan/vre-desarrollo-tlacotalpan.jpg')
+
+  .cover-title,
+  .cover-subtitle
+    text-align center
+    color #2b2b2b
+
+  .cover-title
+    font-size 27px
+    font-weight bold
+    letter-spacing 1.5px
+    text-transform uppercase
+
+  .cover-subtitle
+    font-size 17px
+    letter-spacing 0.7px
+
+
+// Department & ubication
+.vre-develop-department-ubication
+  padding-top 2rem
+  padding-bottom 5rem
+  display flex
+
+  h3
+    font-size 18px
+    font-weight bold
+    letter-spacing 1.8px
+    color #444444
+    text-transform uppercase
+    margin-top 1rem;
+    margin-bottom 3rem
+
+  .develop-department
+    border-right 1px solid #e8e8e8
+
+  .develop-department,
+  .develop-ubication
+    flex-basis 50%
+    padding-left 45px
+    padding-right 45px
+    max-width 50%
+
+  .department-icons
+    margin-bottom 0
+
+    .icons-list
+      padding 0
+      list-style none
+      display flex
+      justify-content flex-end
+      align-items center
+
+    .icons-center
+      justify-content center
+
+    .list-item
+      background-color #676767
+      width 75px
+      height 63px
+      padding-left .3rem
+      padding-right .3rem
+      margin-right 1.571rem
+      display flex
+      flex-direction column
+      justify-content center
+      align-items center
+
+      .list-item:last-child
+        margin-right 0
+
+      img
+        max-width 20px
+        display block
+        margin-left auto
+        margin-right auto
+
+      img:hover
+        -webkit-animation: pulse 1s;
+        animation: pulse 1s;
+
+      p
+        margin-top 3px
+        margin-bottom 0
+        color #ffffff
+        font-size 9px
+        letter-spacing 0.2px
+        text-align center
+
+  .department-num-img
+    display flex
+    align-items center
+    justify-content space-between
+    margin-top 3rem
+
+    .department-num
+      flex-basis 13%
+
+      .num-list
+        list-style none
+        padding 0
+        display flex
+        flex-direction column
+
+        li
+          outline 1px solid #dedede
+          padding 7px 9px
+          text-align center
+          margin-bottom 7px
+          font-weight bold
+          letter-spacing 0.3px
+          font-size 11px
+          cursor pointer
+
+        li:hover
+          color #ffffff
+          background-color #e18a3e
+          box-shadow 0 1px 9px 0 rgba(0, 0, 0, 0.32)
+          border none
+          animation pulse 1s
+
+        li.active
+          color #ffffff
+          background-color #e18a3e
+          box-shadow 0 1px 9px 0 rgba(0, 0, 0, 0.32)
+          border none
+
+    .department-img
+      flex-basis 77%
+
+      img
+        width 100%
+        display block
+
+  .develop-ubication
+
+    h3
+      text-align right
+
+      .line
+        margin-left calc(100% - 58px)
+
+    .map
+      background-color #f5f5f5
+      height 80%
+
+    .location-map
+      height 100%
+
+// Characteristics
+.vre-characteristics-wrapper
+  margin-top 3rem
+
+  .vre-characteristics
+    padding-top 7rem
+    padding-bottom 5rem
+    border-top 1px solid #e8e8e8
+    width 95%;
+    margin-left auto
+    margin-right auto
+
+    .line
+      margin-left auto
+      margin-right auto
+      margin-top 3rem
+      margin-bottom 3rem
+
+    h4
+      color #444444
+      letter-spacing 1.8px
+      font-size 20px
+      text-align center
+      text-transform uppercase
+
+      span
+        font-weight bold
+
+    ul
+      padding 0
+      list-style none
+      display flex
+      justify-content space-around
+      align-items center
+      margin-left auto
+      margin-right auto
+      max-width 50%
+
+      li
+
+        width 91px
+        height 91px
+
+        .img-wrapper
+          width: 76px
+          height 76px
+          border 1px solid #f1f1f1
+          display flex
+          justify-content center
+          align-items center
+          margin-left auto
+          margin-right auto
+
+        p
+          color #444444
+          font-size 13px
+          letter-spacing 0.3px
+          text-align center
+          margin-top 10px
+
+
+
+        img
+          display block
+
+        img:hover
+          -webkit-animation: pulse 1s;
+          animation: pulse 1s;
+
+// Download brochure
+.development-download-brochure
+  border none !important
+  background-color: rgba(216, 216, 216, 0.75);
+
+// Video 360
+.development-360-video
+  border 4rem solid #ffffff
+  background-color #f5f5f5
+  font-size 18px
+  letter-spacing: 0.1px
+  color #2b2b2b
+  margin-bottom 0 !important
+
+  .btn--cotizar
+    margin-bottom 2rem
+
+// Gallery
+.vre-gallery
+  padding-top 4rem
+  padding-left 6rem
+  padding-right 6rem
+
+  ul
+    padding 0
+    list-style none
+    display flex
+    flex-wrap wrap
+    justify-content center
+    align-items center
+
+    li
+      flex-basis 30%
+      margin .8rem
+
+      img
+        display block
+        width 100%
+        cursor pointer
+
+      img:hover
+        animation pulse 1s
+        opacity .75
+
+@media screen and (max-width: 700px)
+
+  .gallery-item--hidden
+    display none
+    
+  .vre-gallery
+    padding-left 1rem
+    padding-right 1rem
+
+  .vre-gallery ul li
+    flex-basis 40%
+
+@media screen and (max-width: 768px)
+  .vre-develop-department-ubication
+    flex-direction column
+    padding-top 1rem
+
+    .develop-department,
+    .develop-ubication
+      flex-basis 100%
+      max-width 100%
+      padding-left 20px
+      padding-right 20px
+
+    .develop-ubication
+      height 45vh
+      margin-top 3rem
+
+      h3
+        text-align left
+
+        .line
+          margin-left 0
+
+
+    .department-num-img
+      flex-direction column-reverse
+
+      .department-num
+        flex-basis 100%
+        width 100%
+
+        .num-list
+          flex-direction row
+          justify-content space-around
+          margin-top 2rem
+
+  .vre-characteristics-wrapper .vre-characteristics ul
+    flex-wrap wrap
+    justify-content center
+    max-width 80%
+
+    li
+      margin-bottom 4.5rem
+
+  .development-360-video
+    border 1rem solid #fff
+
+@media screen and (max-width: 425px)
+    
+  .vre-develop-department-ubication
+    padding-top 2rem
+
+  .comercio-numdev-center
+    flex-wrap wrap
+    max-width 80%
+    margin-left auto
+    margin-right auto
+
+  .beistegui-numdev-center
+    flex-wrap wrap
+    max-width 68%
+    margin-left auto
+    margin-right auto
+
+  .vre-develop-department-ubication .department-icons .list-item
+    margin-right .5rem
+
+  .vre-develop-department-ubication .department-num-img .department-num .num-list li
+    padding 11px 16px
+
+  .development-360-video .help-360
+    font-size 1rem

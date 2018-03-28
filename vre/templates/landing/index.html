@@ -103,27 +103,19 @@
   <h2>Conoce nuestros departamentos en venta en la CDMX</h2>
   <div class="homepage-developments-items">
     <div class="item">
+      <a href="{% url 'landing:comercio' %}">
+        <div class="item-picture" style="background-image: url({% static "img/comercio44.jpg" %})">
+          <div class="vre-filtro preventa"><span>Preventa</span></div>
+        </div>
+        <img class="item-name" src="{% static "img/comercio_44.jpg" %}" alt="Atlanta 186" />
+      </a>
+    </div>
+    <div class="item">
       <a href="{% url 'landing:development_beistegui' %}">
         <div class="item-picture" style="background-image: url({% static "img/beistegui512_preview.jpg" %})">
           <div class="vre-filtro preventa"><span>Preventa</span></div>
         </div>
         <img class="item-name" src="{% static "img/beistegui512_name.jpg" %}" alt="Concepción Beistegui 512" />
-      </a>
-    </div>
-    <div class="item">
-      <a href="{% url 'landing:development_carolina' %}">
-        <div class="item-picture" style="background-image: url({% static "img/carolina149.jpg" %})">
-          <div class="vre-filtro preventa"><span>Preventa</span></div>
-        </div>
-        <img class="item-name" src="{% static "img/Carolina.jpg" %}" alt="Carolina 149" />
-      </a>
-    </div>
-    <div class="item">
-      <a href="{% url 'landing:development_demo5' %}">
-        <div class="item-picture" style="background-image: url({% static "img/chicago61.jpg" %})">
-          <div class="vre-filtro inmediata"><span>Entrega Inmediata</span></div>
-        </div>
-        <img class="item-name" src="{% static "img/Chicago.jpg" %}" alt="Chicago 61" />
       </a>
     </div>
     <div class="item">
@@ -135,6 +127,14 @@
       </a>
     </div>
     <div class="item">
+      <a href="{% url 'landing:development_atlanta' %}">
+        <div class="item-picture" style="background-image: url({% static "img/atlanta186.jpg" %})">
+          <div class="vre-filtro preventa"><span>Preventa</span></div>
+        </div>
+        <img class="item-name" src="{% static "img/Atlanta.jpg" %}" alt="Atlanta 186" />
+      </a>
+    </div>
+    <div class="item">
       <a href="{% url 'landing:development_demo4' %}">
         <div class="item-picture" style="background-image: url({% static "img/nebraska159.jpg" %})">
           <div class="vre-filtro inmediata"><span>Entrega Inmediata</span></div>
@@ -143,13 +143,21 @@
       </a>
     </div>
     <div class="item">
-      <a href="{% url 'landing:development_atlanta' %}">
-        <div class="item-picture" style="background-image: url({% static "img/atlanta186.jpg" %})">
+      <a href="{% url 'landing:development_carolina' %}">
+        <div class="item-picture" style="background-image: url({% static "img/carolina149.jpg" %})">
           <div class="vre-filtro preventa"><span>Preventa</span></div>
         </div>
-        <img class="item-name" src="{% static "img/Atlanta.jpg" %}" alt="Atlanta 186" />
+        <img class="item-name" src="{% static "img/Carolina.jpg" %}" alt="Carolina 149" />
       </a>
     </div>
+    <!-- <div class="item">
+      <a href="{% url 'landing:development_demo5' %}">
+        <div class="item-picture" style="background-image: url({% static "img/chicago61.jpg" %})">
+          <div class="vre-filtro inmediata"><span>Entrega Inmediata</span></div>
+        </div>
+        <img class="item-name" src="{% static "img/Chicago.jpg" %}" alt="Chicago 61" />
+      </a>
+    </div> -->
   </div>
   <a class="vre-button" href="{% url 'landing:developments' %}">Conoce más desarrollos</a>
 </div>
@@ -180,7 +188,7 @@
     <div class="outgoing-box">
       Construyendo <br>
       <b>calidad</b> de <b>vida</b>
-    </div>  
+    </div>
   </div>
   <div class="image-part cover simple-parallax"></div>
 </div>

@@ -4,155 +4,160 @@
 {% block title %}Carolina 149, a media cuadra del Parque Hundido | VRE México{% endblock %}
 {% block content %}
 {% include "sections_navbar.html" %}
+
+
 <main id="sections-content">
-  <div class="development-cover cover parallax" style="background-image: url('{% static "img/tmp/carolina_cover.jpg" %}')">
-    <img src="{% static "img/tmp/carolina_full_white_name.png" %}" alt="Departamentos Carolina 149">
+
+  <div class="vre-develop-cover cover-carolina">
+    <h1 class="cover-title">Carolina 149</h1>
+    <h2 class="cover-subtitle">Colonia Noche Buena</h2>
+    <a class="btn--cotizar" href="https://cotiza.vre.com.mx/collections/carolina-149">Cotizar o Apartar</a>
   </div>
-  <div class="development-header-text">
-    Aprovecha nuestra primera etapa de preventa<br>
-    6 exclusivos condos y un increíble Roof Garden
-    <a class="vre-button vre-btn-cotizarH vre-btn-center" href="https://cotiza.vre.com.mx/collections/carolina-149">Cotizar o Apartar</a>
+
+  <div class="vre-develop-department-ubication">
+    <div class="develop-department">
+      <h3>Departamentos
+        <div class="line"></div>
+      </h3>
+      <div class="department-icons">
+        <ul class="icons-list">
+          <li class="list-item">
+            <img src="{% static "img/vre/metros.png" %}" alt="Carolina 149 112.5 metros cuadrados" />
+            <p>112.5 m&sup2;</p>
+          </li>
+          <li class="list-item">
+            <img src="{% static "img/vre/recamaras.png" %}" alt="Carolina 149 3 Recamaras" />
+            <p>3 Recámaras</p>
+          </li>
+          <li class="list-item">
+            <img src="{% static "img/vre/banio.png" %}" alt="Carolina 149 2.0 Baños" />
+            <p>2.0 Baños</p>
+          </li>
+          <li class="list-item">
+            <img src="{% static "img/vre/estacionamiento.png" %}" alt="Carolina 149 2 Lugares Estacionamiento" />
+            <p>2 Lugares E.</p>
+          </li>
+          <li class="list-item">
+            <img src="{% static "img/vre/balcon.png" %}" alt="Carolina 149 Balcón" />
+            <p>Balcón</p>
+          </li>
+        </ul>
+      </div>
+      <div class="department-num-img">
+        <div class="department-num">
+          <ul class="num-list">
+            <li data-id= "depa101" class="item active">101</li>
+            <li data-id= "depa102" class="item">102</li>
+            <li data-id= "depa201" class="item">201</li>
+            <li data-id= "depa202" class="item">202</li>
+            <li data-id= "depa301" class="item">301</li>
+            <li data-id= "depa302" class="item">302</li>
+          </ul>
+        </div>
+        <div class="department-img">
+          <img src="{% static "img/vre/carolina/carolina-plano-101.jpg" %}" alt="Carolina 149 | VRE México">
+        </div>
+      </div>
+    </div>
+    <div class="develop-ubication">
+      <h3>Ubicación
+        <div class="line"></div>
+      </h3>
+      <div class="map">
+        <div id="location-map" class="location-map"></div>
+      </div>
+    </div>
   </div>
+
+  <a class="btn--cotizar" href="https://cotiza.vre.com.mx/collections/carolina-149">Cotizar o Apartar</a>
+
+  <div class="vre-characteristics-wrapper">
+    <div class="vre-characteristics">
+      <h4>Características <span>generales</span></h4>
+      <div class="line"></div>
+      <ul>
+        <li>
+          <div class="img-wrapper">
+            <img src="{% static "img/vre/cocina.png" %}" alt="Carolina 149 Cocina Equipada">
+          </div>
+          <p>Cocina equipada</p>
+        </li>
+        <li>
+          <div class="img-wrapper"><img src="{% static "img/vre/elevador.png" %}" alt="Carolina 149 Elevador"></div>
+          <p>Elevador</p>
+        </li>
+        <li>
+          <div class="img-wrapper"><img src="{% static "img/vre/roof-garden.png" %}" alt="Carolina 149 Roof Garden"></div>
+          <p>Roof Garden común</p>
+        </li>
+        <li>
+          <div class="img-wrapper"><img src="{% static "img/vre/bodega.png" %}" alt="Carolina 149 Bodega Privada"></div>
+          <p>Bodega privada</p>
+        </li>
+        <li>
+          <div class="img-wrapper"><img src="{% static "img/vre/lavado.png" %}" alt="Carolina 149 Cuarto de Lavado"></div>
+          <p>Cuarto de lavado</p>
+        </li>
+        <li>
+          <div class="img-wrapper"><img src="{% static "img/vre/pet-friendly.png" %}" alt="Carolina 149 Pet Friendly / Mascotas"></div>
+          <p>Pet Friendly</p>
+        </li>
+      </ul>
+    </div>
+ </div>
+
+
   <div class="gray-container development-download-brochure">
     <div class="development-download-brochure__inner">
       <span>Si quieres más información, descarga aquí nuestro brochure de ventas</span>
       <div id="brochure-form-wrapper"></div>
     </div>
   </div>
+
+  <div class="vre-gallery">
+    <ul>
+      <li>
+        <a href="{% static "img/vre/carolina/carousel1.jpg" %}" class="swipebox">
+          <img class="js-gallery-item" src="{% static "img/vre/carolina/carousel1.jpg" %}" alt="">
+        </a>
+      </li>
+      <li>
+        <a href="{% static "img/vre/carolina/carousel2.jpg" %}" class="swipebox">
+          <img class="js-gallery-item" src="{% static "img/vre/carolina/carousel2.jpg" %}" alt="">
+        </a>
+      </li>
+      <li>
+        <a href="{% static "img/vre/carolina/carousel3.jpg" %}" class="swipebox">
+          <img class="js-gallery-item" src="{% static "img/vre/carolina/carousel3.jpg" %}" alt="">
+        </a>
+      </li>
+      <li>
+        <a href="{% static "img/vre/carolina/carousel4.jpg" %}" class="swipebox">
+          <img class="js-gallery-item" src="{% static "img/vre/carolina/carousel4.jpg" %}" alt="">
+        </a>
+      </li>
+      <li class="gallery-item--hidden">
+        <a href="{% static "img/vre/carolina/carousel5.jpg" %}" class="swipebox">
+          <img class="js-gallery-item" src="{% static "img/vre/carolina/carousel5.jpg" %}" alt="">
+        </a>
+      </li>
+      <li class="gallery-item--hidden">
+        <a href="{% static "img/vre/carolina/carousel6.jpg" %}" class="swipebox">
+          <img class="js-gallery-item" src="{% static "img/vre/carolina/carousel6.jpg" %}" alt="">
+        </a>
+      </li>
+    </ul>
+  </div>
+
   <div class="development-360-video text-center">
-    Dale click sobre la imagen y vive el departamento
+    Da click sobre la imagen y vive el departamento
     <div class="container-360">
       <div class="embed-responsive embed-responsive-16by9">
         <div class="help-360">Click para comenzar</div>
         <iframe src="https://dwmx.com/VRE/Carolina/" frameborder="0" class="embed-responsive-item"></iframe>
       </div>
     </div>
-  </div>
-  <div class="vre-develop-3d">
-    <div style="position: relative; padding-bottom:56.25%; padding-top: 30px; height: 0; overflow: hidden;">
-      <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://spaces.archilogic.com/3d/tequeremos/dukkqwyg?modelResourceId=d832e129-f479-4449-9ebb-3e45261e9082&mode=view&autostart=true&view-menu=none&main-menu=interior&presentation=loop" height="400" width="640" frameBorder="0" onmousewheel="false" allowfullscreen mozallowfullscreen webkitallowfullscreen></iframe>
-    </div>
-  </div>
-  <div class="development-characteristics">
-    <div class="text-center">Características de los departamentos</div>
-    <ul class="development-characteristics-items">
-      <li class="development-characteristics-item">
-        <img src="{% static "img/icons/living_room_icon.png" %}" alt="living room icon">
-        <span>Sala</span>
-      </li>
-      <li class="development-characteristics-item">
-        <img src="{% static "img/icons/service_room_icon.png" %}" alt="service room icon">
-        <span>Cuarto de lavado</span>
-      </li>
-      <li class="development-characteristics-item">
-        <img src="{% static "img/icons/full_bathroom_icon.png" %}" alt="bathroom icon">
-        <span>Dos baños</span>
-      </li>
-      <li class="development-characteristics-item">
-        <img src="{% static "img/icons/dinning_room_icon.png" %}" alt="dinning room icon">
-        <span>Comedor</span>
-      </li>
-      <li class="development-characteristics-item">
-        <img src="{% static "img/icons/closet_icon.png" %}" alt="closet icon">
-        <span>Clóset</span>
-      </li>
-      <li class="development-characteristics-item">
-        <img src="{% static "img/icons/private_cellar_icon.png" %}" alt="private cellar icon">
-        <span>Bodega privada</span>
-      </li>
-      <li class="development-characteristics-item">
-        <img src="{% static "img/icons/kitchen_icon.png" %}" alt="kitchen icon">
-        <span>Cocina equipada</span>
-      </li>
-      <li class="development-characteristics-item">
-        <img src="{% static "img/icons/bedroom_icon.png" %}" alt="bedroom icon">
-        <span>3 o 2 recámaras</span>
-      </li>
-      <li class="development-characteristics-item">
-        <img src="{% static "img/icons/parking_lot_icon.png" %}" alt="parking icon">
-        <span>2 o 1 cajón de estacionamiento</span>
-      </li>
-      <li class="development-characteristics-item">
-        <img src="{% static "img/icons/flat_room_icon.png" %}" alt="dinning room icon">
-        <span>Roof Garden privado*</span>
-      </li>
-      <li class="development-characteristics-item">
-      </li>
-      <li class="development-characteristics-item">
-      </li>
-      <div class="vre-container-relative">
-        *Aplica solamente en departamentos 301 y 302
-        <a class="vre-button vre-btn-cotizarH vre-center-absolute" href="https://cotiza.vre.com.mx/collections/carolina-149">Cotizar o Apartar</a>
-      </div>
-    </ul>
-  </div>
-  <div class="development-nearby-places">
-    <div id="location-map" class="location-map"></div>
-    <div class="points-of-interest">
-      <span>Lugares de interés</span>
-      <ul>
-        <li>
-          <span>Superama: 5 min (650 m) Caminando</span>
-        </li>
-        <li>
-          <span>Ego´s Gym: 4 min (550 m) Caminando</span>
-        </li>
-        <li>
-          <img src="{% static "img/tmp/icons/hip_icon.png" %}" alt="aicm icon">
-          <span>Hospital Star Médica HIP: 5 min (1.5 km)</span>
-        </li>
-        <li>
-          <img src="{% static "img/tmp/icons/cdmx_icon.png" %}" alt="antara fashion icon">
-          <span>Angel de la Independencia: 27 min (6 km)</span>
-        </li>
-        <li>
-          <img src="{% static "img/tmp/icons/aicm_icon.png" %}" alt="santafe icon">
-          <span>Aeropuerto CDMX: 28 min (14 km)</span>
-        </li>
-        <li>
-          <img src="{% static "img/tmp/icons/antara_fashion_icon.png" %}" alt="antara fashion icon">
-          <span>Antara Fashion Hall: 35 min (10 km)</span>
-        </li>
-        <li>
-          <img src="{% static "img/tmp/icons/santafe_icon.png" %}" alt="santafe icon">
-          <span>Centro Comercial Santa Fe: 45 min (17 km)</span>
-        </li>
-      </ul>
-      <div class="note">* Tiempo estimado a las 9:00 am entre semana</div>
-      <a class="vre-button vre-btn-cotizarH" href="https://cotiza.vre.com.mx/collections/carolina-149">Cotizar o Apartar</a>
-    </div>
-  </div>
-  <div class="development-public-transport gray-container">
-    <div class="transport-title text-center"><img src="{% static "img/icons/transport_icon.png" %}" alt="Transporte público">Transporte Público</div>
-    <div class="transport-items-container">
-      <div class="transport-items-column">
-        <div class="transport-item">
-          <span class="semibold">Metrobús: </span>
-          Parada Parque Hundido (200 m)
-        </div>
-        <div class="transport-item">
-          <span class="semibold">Metro: </span>
-          Estación San Antonio (1.1 km)
-        </div>
-        <div class="transport-item">
-          <span class="semibold">Ecobici: </span>
-          Estación 367 (290 m)
-        </div>
-      </div>
-      <div class="transport-items-column">
-        <div class="transport-item">
-          <span class="semibold">Walking Score ® : </span>
-          98 (Un paraíso para el peatón)
-        </div>
-        <div class="transport-item">
-          <span class="semibold">Ciclovía: </span>
-          Cto interior (800 m)
-        </div>
-      </div>
-    </div>
-    <div class="transport-separated-text">
-      Vida diaria no requiere el uso del coche
-    </div>
+    <a class="btn--cotizar" href="https://cotiza.vre.com.mx/collections/carolina-149">Cotizar o Apartar</a>
   </div>
 </main>
 {% endblock %}
@@ -167,5 +172,26 @@
 <script>
   insertMap([19.380275, -99.177901], 'Carolina 149');
   addBrochureListener('Carolina', '0da32bde-9150-4094-bb4a-e49c6126795b');
+</script>
+<script>
+
+window.onload = () => {
+
+  const desarrollo = "carolina";
+
+  // Events
+  [].forEach.call(document.querySelectorAll('li.item'), (el) => {
+    el.addEventListener('click', () => {
+      actualizar_caracteristicas(el, desarrollo);
+    });
+  });
+}
+</script>
+<script type="text/javascript">
+;( function( $ ) {
+
+	$( '.swipebox' ).swipebox();
+
+} )( jQuery );
 </script>
 {% endblock %}

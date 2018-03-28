@@ -1,0 +1,189 @@
+{% extends "base.html" %}
+{% load static from staticfiles %}
+{% block description %}Departamento céntrico con un hermoso Roof Garden{% endblock %}
+{% block title %}Indiana 176, departamento céntrico en la CDMX | VRE México{% endblock %}
+{% block content %}
+{% include "sections_navbar.html" %}
+
+
+<main id="sections-content">
+
+  <div class="vre-develop-cover cover-indiana">
+    <h1 class="cover-title">Indiana 176</h1>
+    <h2 class="cover-subtitle">Colonia Nápoles</h2>
+  </div>
+
+  <div class="vre-develop-department-ubication">
+    <div class="develop-department">
+      <h3>Departamentos
+        <div class="line"></div>
+      </h3>
+      <div class="department-icons">
+        <ul class="icons-list">
+          <li class="list-item">
+            <img src="{% static "img/vre/metros.png" %}" alt="Indiana 176 77.5 Metros Cuadrados" />
+            <p>77.5 m&sup2;</p>
+          </li>
+          <li class="list-item">
+            <img src="{% static "img/vre/recamaras.png" %}" alt="Indiana 176 2 Recamaras" />
+            <p>2 Recámaras</p>
+          </li>
+          <li class="list-item">
+            <img src="{% static "img/vre/banio.png" %}" alt="Indiana 176 2.5 Baños" />
+            <p>2.5 Baños</p>
+          </li>
+          <li class="list-item">
+            <img src="{% static "img/vre/estacionamiento.png" %}" alt="Indiana 176 1 Lugar de Estacionamiento" />
+            <p>1 Lugar E.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="department-num-img">
+        <div class="department-num">
+          <ul class="num-list">
+            <li data-id= "depa101" class="item active">101</li>
+            <li data-id= "depa102" class="item">102</li>
+            <li data-id= "depa201" class="item">201</li>
+            <li data-id= "depa202" class="item">202</li>
+            <li data-id= "depa301" class="item">301</li>
+            <li data-id= "depa302" class="item">302</li>
+          </ul>
+        </div>
+        <div class="department-img">
+          <img src="{% static "img/vre/indiana/indiana-plano-101.jpg" %}" alt="Indiana 176 | VRE México">
+        </div>
+      </div>
+    </div>
+    <div class="develop-ubication">
+      <h3>Ubicación
+        <div class="line"></div>
+      </h3>
+      <div class="map">
+        <div id="location-map" class="location-map"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="vre-characteristics-wrapper">
+    <div class="vre-characteristics">
+      <h4>Características <span>generales</span></h4>
+      <div class="line"></div>
+      <ul>
+        <li>
+          <div class="img-wrapper">
+            <img src="{% static "img/vre/cocina.png" %}" alt="Indiana 176 | Cocina Equipada">
+          </div>
+          <p>Cocina equipada</p>
+        </li>
+        <li>
+          <div class="img-wrapper"><img src="{% static "img/vre/elevador.png" %}" alt="Indiana 176 Elevador"></div>
+          <p>Elevador</p>
+        </li>
+        <li>
+          <div class="img-wrapper"><img src="{% static "img/vre/roof-garden.png" %}" alt="Indiana 176 Roof Garden Común"></div>
+          <p>Roof Garden común</p>
+        </li>
+        <li>
+          <div class="img-wrapper"><img src="{% static "img/vre/bodega.png" %}" alt="Indiana 176 Bodega Privada"></div>
+          <p>Bodega privada</p>
+        </li>
+        <li>
+          <div class="img-wrapper"><img src="{% static "img/vre/lavado.png" %}" alt="Indiana 176 Cuarto de Lavado"></div>
+          <p>Cuarto de lavado</p>
+        </li>
+        <li>
+          <div class="img-wrapper"><img src="{% static "img/vre/pet-friendly.png" %}" alt="Indiana 176 Pet Friendly / Mascotas"></div>
+          <p>Pet Friendly</p>
+        </li>
+      </ul>
+    </div>
+ </div>
+
+
+  <div class="gray-container development-download-brochure">
+    <div class="development-download-brochure__inner">
+      <span>Si quieres más información, descarga aquí nuestro brochure de ventas</span>
+      <div id="brochure-form-wrapper"></div>
+    </div>
+  </div>
+
+  <div class="vre-gallery">
+    <ul>
+      <li>
+        <a href="{% static "img/vre/indiana/carousel1.jpg" %}" class="swipebox">
+          <img class="js-gallery-item" src="{% static "img/vre/indiana/carousel1.jpg" %}" alt="">
+        </a>
+      </li>
+      <li>
+        <a href="{% static "img/vre/indiana/carousel2.jpg" %}" class="swipebox">
+          <img class="js-gallery-item" src="{% static "img/vre/indiana/carousel2.jpg" %}" alt="">
+        </a>
+      </li>
+      <li>
+        <a href="{% static "img/vre/indiana/carousel3.jpg" %}" class="swipebox">
+          <img class="js-gallery-item" src="{% static "img/vre/indiana/carousel3.jpg" %}" alt="">
+        </a>
+      </li>
+      <li>
+        <a href="{% static "img/vre/indiana/carousel4.jpg" %}" class="swipebox">
+          <img class="js-gallery-item" src="{% static "img/vre/indiana/carousel4.jpg" %}" alt="">
+        </a>
+      </li>
+      <li class="gallery-item--hidden">
+        <a href="{% static "img/vre/indiana/carousel5.jpg" %}" class="swipebox">
+          <img class="js-gallery-item" src="{% static "img/vre/indiana/carousel5.jpg" %}" alt="">
+        </a>
+      </li>
+      <li class="gallery-item--hidden">
+        <a href="{% static "img/vre/indiana/carousel6.jpg" %}" class="swipebox">
+          <img class="js-gallery-item" src="{% static "img/vre/indiana/carousel6.jpg" %}" alt="">
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="development-360-video text-center">
+    Da click sobre la imagen y vive el departamento
+    <div class="container-360">
+      <div class="embed-responsive embed-responsive-16by9">
+        <div class="help-360">Click para comenzar</div>
+        <iframe src="https://dwmx.com/VRE/Indiana/" frameborder="0" class="embed-responsive-item"></iframe>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}
+{% block before_scripts %}
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYJxTs6nptICwPefTB_XR6yA2BUmUg-5A"></script>
+<!--[if lte IE 8]>
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+<![endif]-->
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+{% endblock %}
+{% block after_scripts %}
+<script>
+  insertMap([19.386183, -99.178583], 'Indiana 176');
+  addBrochureListener('Indiana', '94dd328c-3178-4316-b6f6-18ef6eaffa58');
+</script>
+<script>
+
+window.onload = () => {
+
+  const desarrollo = "indiana";
+
+  // Events
+  [].forEach.call(document.querySelectorAll('li.item'), (el) => {
+    el.addEventListener('click', () => {
+      actualizar_caracteristicas(el, desarrollo);
+    });
+  });
+}
+</script>
+<script type="text/javascript">
+;( function( $ ) {
+
+	$( '.swipebox' ).swipebox();
+
+} )( jQuery );
+</script>
+{% endblock %}

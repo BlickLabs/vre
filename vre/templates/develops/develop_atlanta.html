@@ -1,0 +1,197 @@
+{% extends "base.html" %}
+{% load static from staticfiles %}
+{% block description %}Acabados de calidad, cocina equipada y excelente ubicación, todo lo que buscas en un departamento{% endblock %}
+{% block title %}Atlanta 186, departamento con excelente ubicación | VRE México{% endblock %}
+{% block content %}
+{% include "sections_navbar.html" %}
+
+
+<main id="sections-content">
+
+  <div class="vre-develop-cover cover-atlanta">
+    <h1 class="cover-title">Atlanta 186</h1>
+    <h2 class="cover-subtitle">Colonia Noche Buena</h2>
+    <a class="btn--cotizar" href="https://cotiza.vre.com.mx/collections/atlanta-186">Cotizar o Apartar</a>
+  </div>
+
+  <div class="vre-develop-department-ubication">
+    <div class="develop-department">
+      <h3>Departamentos
+        <div class="line"></div>
+      </h3>
+      <div class="department-icons">
+        <ul class="icons-list">
+          <li class="list-item">
+            <img src="{% static "img/vre/metros.png" %}" alt="Atlanta 186 112.6 Metros Cuadrados" />
+            <p>112.6 m&sup2;</p>
+          </li>
+          <li class="list-item">
+            <img src="{% static "img/vre/recamaras.png" %}" alt="Atlanta 186 3 Recamaras" />
+            <p>3 Recámaras</p>
+          </li>
+          <li class="list-item">
+            <img src="{% static "img/vre/banio.png" %}" alt="Atlanta 186 2.0 Baños" />
+            <p>2.0 Baños</p>
+          </li>
+          <li class="list-item">
+            <img src="{% static "img/vre/estacionamiento.png" %}" alt="Atlanta 186 2 Lugares de Estacionamiento" />
+            <p>2 Lugares E.</p>
+          </li>
+          <li class="list-item">
+            <img src="{% static "img/vre/balcon.png" %}" alt="Atlanta 186 Balcón" />
+            <p>Balcón</p>
+          </li>
+        </ul>
+      </div>
+      <div class="department-num-img">
+        <div class="department-num">
+          <ul class="num-list">
+            <li data-id= "depa101" class="item active">101</li>
+            <li data-id= "depa102" class="item">102</li>
+            <li data-id= "depa201" class="item">201</li>
+            <li data-id= "depa202" class="item">202</li>
+            <li data-id= "depa301" class="item">301</li>
+            <li data-id= "depa302" class="item">302</li>
+          </ul>
+        </div>
+        <div class="department-img">
+          <img src="{% static "img/vre/atlanta/atlanta-plano-101.jpg" %}" alt="Atlanta 186 | VRE México">
+        </div>
+      </div>
+    </div>
+    <div class="develop-ubication">
+      <h3>Ubicación
+        <div class="line"></div>
+      </h3>
+      <div class="map">
+        <div id="location-map" class="location-map"></div>
+      </div>
+    </div>
+  </div>
+
+  <a class="btn--cotizar" href="https://cotiza.vre.com.mx/collections/atlanta-186">Cotizar o Apartar</a>
+
+  <div class="vre-characteristics-wrapper">
+    <div class="vre-characteristics">
+      <h4>Características <span>generales</span></h4>
+      <div class="line"></div>
+      <ul>
+        <li>
+          <div class="img-wrapper">
+            <img src="{% static "img/vre/cocina.png" %}" alt="Atlanta 186 Cocina Equipada">
+          </div>
+          <p>Cocina equipada</p>
+        </li>
+        <li>
+          <div class="img-wrapper"><img src="{% static "img/vre/elevador.png" %}" alt="Atlanta 186 Elevador"></div>
+          <p>Elevador</p>
+        </li>
+        <li>
+          <div class="img-wrapper"><img src="{% static "img/vre/roof-garden.png" %}" alt="Atlanta 186 Roof Garden Común"></div>
+          <p>Roof Garden común</p>
+        </li>
+        <li>
+          <div class="img-wrapper"><img src="{% static "img/vre/bodega.png" %}" alt="Atlanta 186 Bodega Privada"></div>
+          <p>Bodega privada</p>
+        </li>
+        <li>
+          <div class="img-wrapper"><img src="{% static "img/vre/lavado.png" %}" alt="Atlanta 186 Cuarto de Lavado"></div>
+          <p>Cuarto de lavado</p>
+        </li>
+        <li>
+          <div class="img-wrapper"><img src="{% static "img/vre/pet-friendly.png" %}" alt="Atlanta 186 Pet Friendly / Mascotas"></div>
+          <p>Pet Friendly</p>
+        </li>
+      </ul>
+    </div>
+ </div>
+
+
+  <div class="gray-container development-download-brochure">
+    <div class="development-download-brochure__inner">
+      <span>Si quieres más información, descarga aquí nuestro brochure de ventas</span>
+      <div id="brochure-form-wrapper"></div>
+    </div>
+  </div>
+
+  <div class="vre-gallery">
+    <ul>
+      <li>
+        <a href="{% static "img/vre/atlanta/carousel1.jpg" %}" class="swipebox">
+          <img class="js-gallery-item" src="{% static "img/vre/atlanta/carousel1.jpg" %}" alt="">
+        </a>
+      </li>
+      <li>
+        <a href="{% static "img/vre/atlanta/carousel2.jpg" %}" class="swipebox">
+          <img class="js-gallery-item" src="{% static "img/vre/atlanta/carousel2.jpg" %}" alt="">
+        </a>
+      </li>
+      <li>
+        <a href="{% static "img/vre/atlanta/carousel3.jpg" %}" class="swipebox">
+          <img class="js-gallery-item" src="{% static "img/vre/atlanta/carousel3.jpg" %}" alt="">
+        </a>
+      </li>
+      <li>
+        <a href="{% static "img/vre/atlanta/carousel4.jpg" %}" class="swipebox">
+          <img class="js-gallery-item" src="{% static "img/vre/atlanta/carousel4.jpg" %}" alt="">
+        </a>
+      </li>
+      <li class="gallery-item--hidden">
+        <a href="{% static "img/vre/atlanta/carousel5.jpg" %}" class="swipebox">
+          <img class="js-gallery-item" src="{% static "img/vre/atlanta/carousel5.jpg" %}" alt="">
+        </a>
+      </li>
+      <li class="gallery-item--hidden">
+        <a href="{% static "img/vre/atlanta/carousel6.jpg" %}" class="swipebox">
+          <img class="js-gallery-item" src="{% static "img/vre/atlanta/carousel6.jpg" %}" alt="">
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="development-360-video text-center">
+    Da click sobre la imagen y vive el departamento
+    <div class="container-360">
+      <div class="embed-responsive embed-responsive-16by9">
+        <div class="help-360">Click para comenzar</div>
+        <iframe src="https://dwmx.com/VRE/Carolina/" frameborder="0" class="embed-responsive-item"></iframe>
+      </div>
+    </div>
+    <a class="btn--cotizar" href="https://cotiza.vre.com.mx/collections/atlanta-186">Cotizar o Apartar</a>
+  </div>
+</main>
+{% endblock %}
+{% block before_scripts %}
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYJxTs6nptICwPefTB_XR6yA2BUmUg-5A"></script>
+<!--[if lte IE 8]>
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+<![endif]-->
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+{% endblock %}
+{% block after_scripts %}
+<script>
+  insertMap([19.3800862, -99.17858369999999], 'Atlanta 186');
+  addBrochureListener('Atlanta', 'bf7cf5ee-292f-48ca-ab84-21226d0fe7ad');
+</script>
+<script>
+
+window.onload = () => {
+
+  const desarrollo = "atlanta";
+
+  // Events
+  [].forEach.call(document.querySelectorAll('li.item'), (el) => {
+    el.addEventListener('click', () => {
+      actualizar_caracteristicas(el, desarrollo);
+    });
+  });
+}
+</script>
+<script type="text/javascript">
+;( function( $ ) {
+
+	$( '.swipebox' ).swipebox();
+
+} )( jQuery );
+</script>
+{% endblock %}
