@@ -430,7 +430,7 @@
       "comercio": {
         "depa101": {
           "caracteristicas": {
-            "metros": "130.1 m&sup2;",
+            "metros": "122.6.1 m&sup2;",
             "recamaras": "2 Recámaras",
             "banio": "2.5 Baños",
             "estacionamiento": "2 Lugares E.",
@@ -469,7 +469,7 @@
         },
         "depa301": {
           "caracteristicas": {
-            "metros": "67.8 m&sup2;",
+            "metros": "71.6 m&sup2;",
             "recamaras": "1 Recámara",
             "banio": "1 Baños",
             "estacionamiento": "1 Lugar E.",
@@ -488,7 +488,7 @@
         },
         "depa303": {
           "caracteristicas": {
-            "metros": "66.7 m&sup2;",
+            "metros": "66.2 m&sup2;",
             "recamaras": "1 Recámara",
             "banio": "1 Baños",
             "estacionamiento": "1 Lugar E.",
