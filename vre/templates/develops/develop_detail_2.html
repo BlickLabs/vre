@@ -1,26 +1,22 @@
 {% extends "base.html" %}
 {% load static from staticfiles %}
-{% block title %}Dakota 322 | VRE Mexico{% endblock %}
+{% block description %}Vive a media cuadra del parque Alfonso Esparza{% endblock %}
+{% block title %}Dakota 322, tu nuevo hogar con los mejores acabados | VRE México{% endblock %}
 {% block content %}
 {% include "sections_navbar.html" %}
 <main id="sections-content">
   <div class="development-cover cover parallax" style="background-image: url('{% static "img/tmp/dakota_cover.jpg" %}')">
-    <img src="{% static "img/tmp/dakota_full_white_name.png" %}" alt="dakota logo">
+    <img src="{% static "img/tmp/dakota_full_white_name.png" %}" alt="Departamentos Dakota 322">
   </div>
   <div class="development-header-text">
   Vive a media cuadra del parque Alfonso Esparza.
   Contamos con departamentos desde 74 a 114 m2
+  <a class="vre-button vre-btn-cotizarH vre-btn-center" href="https://cotiza.vre.com.mx/">Cotizar o Apartar</a>
   </div>
   <div class="gray-container development-download-brochure">
-    <div>
+    <div class="development-download-brochure__inner">
       <span>Si quieres más información, descarga aquí nuestro brochure de ventas</span>
-      <form id="download-brochure-form">
-        {% csrf_token %}
-        <input type="email" id="download-brochure-email" placeholder="Correo electrónico" name="email">
-        <input type="hidden" name="source" value="dakota">
-	      <span id="download-brochure-span" style="display:block;"></span>
-        <a href class="vre-inverse-button" id="download-brochure-button">Conoce más</a>
-      </form>
+      <div id="brochure-form-wrapper"></div>
     </div>
   </div>
   <div class="development-360-video text-center">
@@ -28,8 +24,48 @@
     <div class="container-360">
       <div class="embed-responsive embed-responsive-16by9">
         <div class="help-360">Click para comenzar</div>
-        <iframe src="http://www.dwmx.com/VRE/Dakota/" frameborder="0" class="embed-responsive-item"></iframe>
+        <iframe src="https://www.dwmx.com/VRE/Dakota/" frameborder="0" class="embed-responsive-item"></iframe>
       </div>
+    </div>
+  </div>
+  <div class="development-drawings gray-container text-center">
+    <div class="drawing-selectors">
+      <div class="drawing-selector active">101</div>
+      <div class="drawing-selector">102</div>
+      <div class="drawing-selector">201</div>
+    </div>
+    <div class="drawing-picture">
+      Departamento <span>101</span>
+      <img src="{% static "img/tmp/dakota_department_101.png" %}" class="show" data-department="101" alt="dakota department 101">
+      <img src="{% static "img/tmp/dakota_department_102.png" %}" class="hide" data-department="102" alt="dakota department 102">
+      <img src="{% static "img/tmp/dakota_department_201.png" %}" class="hide" data-department="201" alt="dakota department 201">
+    </div>
+    <div class="drawing-picture">
+      Departamento <span>301</span>
+      <img src="{% static "img/tmp/dakota_department_202.png" %}" class="hide" data-department="202" alt="dakota department 202 ">
+      <img src="{% static "img/tmp/dakota_department_301.png" %}" class="show" data-department="301" alt="dakota department 301">
+      <img src="{% static "img/tmp/dakota_department_302.png" %}" class="hide" data-department="302" alt="dakota department 302">
+    </div>
+    <div class="drawing-selectors">
+      <div class="drawing-selector">202</div>
+      <div class="drawing-selector active">301</div>
+      <div class="drawing-selector">302</div>
+    </div>
+  </div>
+  <div class="development-carousel-container text-center">
+    <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_00.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_01.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_02.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_03.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_04.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_05.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_06.jpg" %}')">
     </div>
   </div>
   <div class="development-characteristics">
@@ -41,7 +77,7 @@
       </li>
       <li class="development-characteristics-item">
         <img src="{% static "img/icons/service_room_icon.png" %}" alt="service room icon">
-        <span>Cuarto de servicio</span>
+        <span>Cuarto de lavado</span>
       </li>
       <li class="development-characteristics-item">
         <img src="{% static "img/icons/full_bathroom_icon.png" %}" alt="bathroom icon">
@@ -71,45 +107,10 @@
         <img src="{% static "img/icons/parking_lot_icon.png" %}" alt="parking icon">
         <span>Uno o dos cajones de estacionamiento</span>
       </li>
+      <div class="vre-container-relative">
+        <a class="vre-button vre-btn-cotizarH vre-center-absolute" href="https://cotiza.vre.com.mx/">Cotizar o Apartar</a>
+      </div>
     </ul>
-  </div>
-  <div class="development-carousel-container text-center">
-    <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_01.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_02.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_03.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_04.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_05.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_06.jpg" %}')">
-    </div>
-  </div>
-  <div class="development-drawings gray-container text-center">
-    <div class="drawing-selectors">
-      <div class="drawing-selector active">101</div>
-      <div class="drawing-selector">102</div>
-      <div class="drawing-selector">201</div>
-    </div>
-    <div class="drawing-picture">
-      Departamento <span>101</span>
-      <img src="{% static "img/tmp/dakota_department_101.png" %}" class="show" data-department="101" alt="dakota department 101">
-      <img src="{% static "img/tmp/dakota_department_102.png" %}" class="hide" data-department="102" alt="dakota department 102">
-      <img src="{% static "img/tmp/dakota_department_201.png" %}" class="hide" data-department="201" alt="dakota department 201">
-    </div>
-    <div class="drawing-picture">
-      Departamento <span>301</span>
-      <img src="{% static "img/tmp/dakota_department_202.png" %}" class="hide" data-department="202" alt="dakota department 202 ">
-      <img src="{% static "img/tmp/dakota_department_301.png" %}" class="show" data-department="301" alt="dakota department 301">
-      <img src="{% static "img/tmp/dakota_department_302.png" %}" class="hide" data-department="302" alt="dakota department 302">
-    </div>
-    <div class="drawing-selectors">
-      <div class="drawing-selector">202</div>
-      <div class="drawing-selector active">301</div>
-      <div class="drawing-selector">302</div>
-    </div>
   </div>
   <div class="development-nearby-places">
     <div id="location-map" class="location-map"></div>
@@ -146,6 +147,7 @@
         </li>
       </ul>
       <div class="note">* Tiempo estimado a las 9:00 am entre semana</div>
+      <a class="vre-button vre-btn-cotizarH" href="https://cotiza.vre.com.mx/">Cotizar o Apartar</a>
     </div>
   </div>
   <div class="development-public-transport gray-container">
@@ -180,17 +182,18 @@
       Vida diaria no requiere el uso del coche
     </div>
   </div>
-  <div class="development-built-by">
-    Construido por <img src="{% static "img/icons/zago-logo.png" %}" alt="zago logo">
-  </div>
 </main>
 {% endblock %}
 {% block before_scripts %}
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYJxTs6nptICwPefTB_XR6yA2BUmUg-5A"></script>
+<!--[if lte IE 8]>
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+<![endif]-->
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
 {% endblock %}
 {% block after_scripts %}
 <script>
   insertMap([19.388950, -99.178761], 'Dakota 322');
-  addBrochureListener('BrochureDakota', 2);
+  addBrochureListener('Dakota', '6e83c89a-ffd8-4063-ba0b-8d4d34aeaeab');
 </script>
 {% endblock %}

@@ -11,7 +11,7 @@ from . import models
 if settings.DEBUG:
     @admin.register(models.Develop)
     class DevelopsAdmin(admin.ModelAdmin):
-        list_display = ('name',)
+        list_display = ('id', 'name',)
         form = DevelopForm
         actions = [export_as_xls]
         export_as_xls.short_description = "Export selected objects to XLS"

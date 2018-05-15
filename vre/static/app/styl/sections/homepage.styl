@@ -1,11 +1,54 @@
+.homepage-desktop
+  display flex
+  flex-direction column
+  align-items center
+  justify-content center
+  max-width 480px
+
+  & .homepage-desktop-logo
+    display flex
+    justify-content center
+    align-items center 
+    margin-bottom 27px
+
+    & h1
+      margin 0 0 0 .5em
+      font-family 'Oswald'
+
+    & img 
+      width 27%
+
+  & .homepage-desktop-text
+    font-family 'Open Sans'
+    font-weight $fontBold
+    font-size 23px
+    line-height 31px
+    text-align center
+
+.vre-division
+    width 100%
+    height 50px
+    display flex
+    justify-content flex-end
+
+    & .right
+      width 94%
+      background-color #eeeeee
+
+  
 .homepage-cover
   background-image url('../img/homepage_cover.jpg')
+  background-repeat no-repeat
+  background-position center bottom
   simple-border('bottom', 4px, $orange)
   color white
-  height 80vh
+  height 93vh
   min-height 480px
   position relative
   width 100%
+  display flex
+  justify-content center
+  align-items center
 
   .phone-box
     position relative
@@ -18,11 +61,13 @@
       display inline-block
       height 63px
       font-weight $fontSemiBold
-      padding 7px 20px
+      padding 9px 28px 10px
       right 0
       text-align center
       top 0
       width 240px
+      font-size 18px
+      font-family "Open Sans"
 
       .small-text
         display block
@@ -67,7 +112,7 @@
   .homepage-menu
     center-block()
     margin-top 10px
-    max-width 605px
+    max-width 660px
     text-align center
     width 90%
 
@@ -122,6 +167,7 @@
           color white
 
     &.fix-in-top
+      left 0px
       background white
       simple-border('bottom', 1px, #e5e5e5)
       height 63px
@@ -163,14 +209,15 @@
 
         ul
           margin-top 10px
+          font-family: "Open Sans"
 
         li
           &:not(:first-child)::before
-            color black
+            color #4a4a4a
             font-size 15px
             margin 0 3px
           a
-            color black
+            color #4a4a4a
             transition color 0.2s
 
             &:hover
@@ -180,30 +227,49 @@
             color $orange
 
   .white-box
-    background white
-    bottom -70px
+    background #fff
+    bottom -26px
     color black
-    font-size 15.5px
-    left 150px
+    font-size 15px
+    left 140px
+    width 247px
     max-width 302px
-    padding 28px 35px 10px 35px
+    padding 16px 13px 18px 13px
     position absolute
+    border-radius 2px
+    box-shadow 0 2px 4px 0 rgba(0, 0, 0, 0.22)
+
+    .actions
+      margin-top 10px
+      position relative
+
+      & input 
+        position absolute
+        margin-left auto !important
+        margin-right auto !important
+        left 0 !important
+        right 0 !important
+        width 74.78px !important
 
     .text-left
       line-height 1.25
+      padding-bottom .8em
+      border-bottom 1px solid #eb944a
 
     #homepage-special-form,
     .hbspt-form
-      font-size 13.8px
-      margin-top 15px
+      font-size 11px
+      margin-top 11px
+      color #9b9b9b
 
       input:not([type="submit"])
-        background none
-        simple-border('bottom', 1px, $orange)
+        border-radius 3px
+        background-color #f7f7f7
         display block
         padding 7px 8px
         width 97.5%
         min-width 0
+        margin-top 6px
 
         &:focus
           outline none
@@ -221,21 +287,28 @@
 
       button,
       [type="submit"]
-        margin-top 36px
-        padding 8px 28px
-        background white
-        simple-border('all', 2px, $orange)
-        color $orange !important
+        margin-top 8px
+        padding 5px 29px 5px 12px
+        background $orange
+        simple-border('all', 1px, $orange)
+        color white
+        text-align left
+        background-image url('../img/send.svg')
+        background-repeat no-repeat
+        background-position 82% 51%
 
         &:hover,
         &:active,
         &:focus
           background $orange
           color white !important
+          background-image url('../img/send.svg')
+          background-repeat no-repeat
+          background-position 82% 51%
 
 .homepage-developments
   font-size $sectionTitleSize
-  margin-bottom 30px
+  margin-bottom 87px
   center-block()
   margin-top 80px
   text-align center
@@ -247,43 +320,48 @@
 
   &-items
     display flex
-    justify-content space-around
+    justify-content flex-start
     flex-wrap wrap
     height auto
     center-block()
     margin-top 10px
-    max-width 900px
+    max-width 710px
 
     .item
-      margin 0
+      margin 0 11px
       margin-top 25px
-      width 204px
+      width 214px
 
       &-name
-        margin-top 20px
-        width 140px
+        margin-top 0
+        width 100%
 
       &-picture
         background-position center
         background-size cover
-        height 242px
+        height 189px
         center-block()
         padding-bottom 0%
-        width 204px
+        width 100%
+        position relative
 
   .vre-button
     border-width 1px
     font-size 13px
-    margin-top 3.5em
+    margin-top 1.5em
     padding 0.9em 1.5em
     font-weight $fontSemiBold
+
+  .vre-btn-cotizarH
+    margin-bottom 2em
+    font-size: 16px;
 
 .homepage-cover-divider-1
   .text-part
     img
       margin-bottom 45px
-      margin-top 30px
-      width 65%
+      margin-top 60px
+      width 35%
 
     .outgoing-box
       background white
@@ -397,13 +475,13 @@
     .white-box
       left 40px
 
-@media screen and (max-width: 870px)
+@media screen and (max-width: 920px)
   .homepage-cover
     .homepage-mobile-logo
       display block
 
     .homepage-menu
-      background white
+      background #fff
       simple-border('bottom', 1px, #e5e5e5)
       height 63px
       margin-top 0 !important
@@ -454,13 +532,14 @@
         ul
           margin-top 10px
           padding 0
+          font-family "Open Sans"
 
         li
           display block
           font-size 14px
 
           a
-            color black
+            color #4a4a4a
             display block
             padding 15px 30px
 
@@ -562,6 +641,28 @@
   .homepage-developments-items .item
     width 45%
 
+  .homepage-cover
+    display block
+    padding-top 100px
+
+    & .homepage-desktop
+      display block
+      margin-left auto
+      margin-right auto
+
+    & .homepage-desktop-logo h1
+      font-size 20px
+    
+    & .homepage-desktop-logo img
+      width 27%
+
+    & .homepage-desktop-text
+      font-size 15px
+      line-height 20px
+      max-width 400px
+      margin-left auto
+      margin-right auto
+
 @media $smallPortrait
   .homepage-cover
     height 50vh
@@ -575,7 +676,10 @@
   .homepage-cover-divider-2 .image-part
     height 70vh
 
-@media screen and (max-width: 630px)
+@media screen and (max-width: 800px)
+  .homepage-developments-items
+   justify-content center
+   
   .homepage-gray-divider .iframe-option
     box-sizing border-box
     border-width 0
@@ -591,26 +695,115 @@
     &:nth-child(2n)
       border-left-width 1px
 
+    &:last-child,
+    &.vre-tabs-full
+      width 100%
+
+  .homepage-cover
+    display block
+    padding-top 100px
+    
+
+    & .homepage-desktop
+      display block
+      margin-left auto
+      margin-right auto
+
+    & .homepage-desktop-logo h1
+      font-size 20px
+    
+    & .homepage-desktop-logo img
+      width 27%
+
+    & .homepage-desktop-text
+      font-size 15px
+      line-height 20px
+
 @media screen and (max-width: 500px)
+
+  .homepage-developments-items
+   justify-content center
+
   .homepage-developments-items .item
     width 100%
 
-@media screen and (max-width: 480px)
-  .homepage-cover .homepage-mobile-logo
-    font-size 30px
+  .homepage-cover
+    display block
+    padding-top 100px
 
-    img
-      height 45px
+    & .homepage-desktop
+      display block
+      margin-left auto
+      margin-right auto
+
+    & .homepage-desktop-logo h1
+      font-size 20px
+    
+    & .homepage-desktop-logo img
+      width 27%
+
+    & .homepage-desktop-text
+      font-size 15px
+      line-height 20px
+
+@media screen and (max-width: 480px)
+  .homepage-cover
+    display block
+    padding-top 100px
+
+    & .homepage-desktop
+      display block
+      margin-left auto
+      margin-right auto
+
+    & .homepage-desktop-logo h1
+      font-size 20px
+    
+    & .homepage-desktop-logo img
+      width 27%
+
+    & .homepage-desktop-text
+      font-size 15px
+      line-height 20px
 
   .homepage-cover .white-box
     left 50%
-    padding 23px
+    padding 18px
     width 280px
+    bottom -45px
     transform translateX(-50%)
 
 @media screen and (max-width: 320px)
   .homepage-cover
     height 60vh
+    display block
+    padding-top 100px
+
+    & .homepage-desktop
+      display block
+      margin-left auto
+      margin-right auto
+
+    & .homepage-desktop-logo h1
+      font-size 20px
+    
+    & .homepage-desktop-logo img
+      width 27%
+
+    & .homepage-desktop-text
+      font-size 15px
+      line-height 20px
 
     .homepage-menu
       margin-top 20px
+
+
+
+//styles for cover form, responsively adapt the new design
+
+@media only screen and (min-width: 481px) and (max-width: 768px)
+
+  .homepage-cover .white-box
+    left 50%
+    transform translateX(-50%)
+    bottom -51px

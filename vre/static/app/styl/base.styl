@@ -1,3 +1,57 @@
+.vre-triangulo
+  position absolute
+  top 36%
+  left 0
+  width 0
+  height 0
+  border-left 7px solid #fff
+  border-top 7px solid transparent
+  border-bottom 7px solid transparent
+
+.develops .vre-items-develop
+  max-width 780px
+
+.develops .vre-item-develop
+  width 237px !important
+
+.develops .vre-item-picture
+  height 212px !important
+
+.vre-filtro
+  font-family 'Open Sans'
+  font-weight $fontNormal
+  font-style normal
+  border-radius 2px
+  position absolute
+  top 3%
+  left: 3%
+  color #fff
+  text-align center
+  font-size 12px
+  display flex
+  justify-content center
+  align-items center
+  padding 5px 17px
+
+  & .vre-filtro-text
+    margin-top 0
+    width 100%
+
+  &.preventa
+    background-color #ef8b2e
+
+  &.inmediata
+    background-color #ef8b2e
+
+  &.vendido
+    background-color #ef662e
+
+.vre-develops
+  margin-top 50px
+
+  & .iframe-selector > a
+    cursor pointer
+
 body
   font-size $mainFontSize
   font-family 'Open Sans'
@@ -100,9 +154,9 @@ body #converse-chat
       pointer-events none
 
 .vre-button
-  background white
-  simple-border('all', 2px, $orange)
-  color $orange !important
+  background-color $orange
+  simple-border('all', 0px, $orange)
+  color #fff !important
 
   &:hover, &:active
     background $orange
@@ -207,9 +261,10 @@ textarea.hs-input
         content ' | ' !important
         font-size 15px
         margin 0 3px
+        color #4a4a4a
 
       a
-        color black
+        color #4a4a4a
         display inline-block
         transition color 0.2s
 
@@ -257,6 +312,7 @@ footer
 
   &.gray-footer
     background $darkGray
+    margin-top 2rem
 
     #footer-newsletter-form button,
     .hbspt-form input[type="submit"]
@@ -320,7 +376,7 @@ footer
 
     .footer-logo
       max-width 300px
-      width 60%
+      width 22%
 
     .footer-logo-legend
       display block
@@ -431,7 +487,6 @@ footer
 
         .footer-logo
           max-width 400px
-          min-width 240px
 
         &:first-child
           margin-right 5%
@@ -469,7 +524,7 @@ footer
   .orange-cover-divider .image-part
     height 70vh
 
-@media screen and (max-width: 830px)
+@media screen and (max-width: 920px)
   .phone-box
     display none
 

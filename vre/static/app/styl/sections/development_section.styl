@@ -1,3 +1,8 @@
+.vre-develop-3d
+  width 60%
+  margin-left auto
+  margin-right auto
+
 .development-cover
   background-blend-mode multiply
   background-color rgba(black, 0.12)
@@ -22,8 +27,8 @@
   center-block()
   max-width 520px
   min-width 280px
-  margin-bottom 90px
-  margin-top 90px
+  margin-bottom 60px
+  margin-top 60px
   text-align center
   width 70%
 
@@ -35,39 +40,50 @@
   line-height 1.25
   padding 50px 0 43px 0
 
-  div
+  .development-download-brochure__inner
     center-block()
     max-width 450px
     min-width 280px
     text-align center
     width 50%
 
-    span
-      display block
-      font-size $mainFontSize
+  .hs-error-msgs
+    font-size $mainFontSize
+    margin-top 20px
+    margin-bottom 0
 
-    input
-      display block
-      font-weight $fontLight
-      center-block()
-      margin-top 40px
-      min-width 280px
-      padding 14px 10px
-      text-align center
-      width 85%
+    label
+      font-weight normal
+      margin 0
 
-      &:focus
-        outline none
+  span
+    display block
+    font-size $mainFontSize
 
-    a
-      border none !important
-      display inline-block
-      margin-top 40px
-      padding 12px 20px !important
-      width 170px
+  [type="email"]
+    display block
+    simple-border('all', 1px, #a9a9a9)
+    font-weight $fontLight
+    center-block()
+    margin-top 40px
+    min-width 280px
+    padding 14px 10px
+    text-align center
+    width 85%
+
+    &:focus
+      outline none
+
+  [type="submit"]
+    border none !important
+    display inline-block
+    margin-top 40px
+    padding 12px 20px !important
+    width 170px
 
 .development-360-video
-  padding 60px 0
+  padding 60px 0 10px 0
+  margin-bottom 40px
 
   .container-360
     center-block()
@@ -79,7 +95,7 @@
 .development-characteristics
   font-size $sectionTitleSize
   margin-left 10%
-  margin-top 10px
+  margin-top 60px
   padding-right 10%
   width 90%
 
@@ -87,7 +103,7 @@
     display block
     font-size 14px
     list-style none
-    margin-bottom 80px
+    margin-bottom 70px
     margin-left -40px
     margin-top 40px
     text-align right
@@ -283,7 +299,7 @@
     margin-top 75px
     width 90%
 
-  .development-download-brochure div span
+  .development-download-brochure span
     font-size 16px
 
   .development-characteristics

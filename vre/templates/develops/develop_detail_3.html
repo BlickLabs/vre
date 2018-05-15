@@ -1,26 +1,22 @@
 {% extends "base.html" %}
 {% load static from staticfiles %}
-{% block title %}Tlacotalpan 146 | VRE Mexico{% endblock %}
+{% block description %}Departamentos a unas cuadras de los mejores restaurantes de la ciudad{% endblock %}
+{% block title %}Tlacotalpan 146, cerca de los mejores restaurantes | VRE México{% endblock %}
 {% block content %}
 {% include "sections_navbar.html" %}
 <main id="sections-content">
   <div class="development-cover cover parallax" style="background-image: url('{% static "img/tmp/tlacotalpan_cover.jpg" %}')">
-    <img src="{% static "img/tmp/tlacotalpan_full_white_name.png" %}" alt="Tlacotalpan logo">
+    <img src="{% static "img/tmp/tlacotalpan_full_white_name.png" %}" alt="Departamentos Tlacotalpan 146">
   </div>
   <div class="development-header-text tlacotalpan">
     Vive a un par de cuadras de los mejores restaurantes de la ciudad.<br>
     Departamentos desde 73 hasta 155m2.
+    <a class="vre-button vre-btn-cotizarH vre-btn-center" href="https://cotiza.vre.com.mx/collections/tlacotalpan-146">Cotizar o Apartar</a>
   </div>
   <div class="gray-container development-download-brochure">
-    <div>
+    <div class="development-download-brochure__inner">
       <span>Si quieres más información, descarga aquí nuestro brochure de ventas</span>
-      <form id="download-brochure-form">
-        {% csrf_token %}
-        <input type="email" id="download-brochure-email" placeholder="Correo electrónico" name="email">
-        <input type="hidden" name="source" value="tlacotalpan">
-        <span id="download-brochure-span" style="display:block;"></span>
-        <a href class="vre-inverse-button" id="download-brochure-button">Conoce más</a>
-      </form>
+      <div id="brochure-form-wrapper"></div>
     </div>
   </div>
   <div class="development-360-video text-center">
@@ -28,8 +24,40 @@
     <div class="container-360">
       <div class="embed-responsive embed-responsive-16by9">
         <div class="help-360">Click para comenzar</div>
-        <iframe src="http://www.dwmx.com/VRE/Tlacotalpan/" frameborder="0" class="embed-responsive-item"></iframe>
+        <iframe src="https://www.dwmx.com/VRE/Tlacotalpan/" frameborder="0" class="embed-responsive-item"></iframe>
       </div>
+    </div>
+  </div>
+  <div class="development-drawings gray-container text-center">
+    <div class="drawing-selectors">
+      <div class="drawing-selector active">101</div>
+      <div class="drawing-selector">201</div>
+    </div>
+    <div class="drawing-picture">
+      Departamento <span>101</span>
+      <img src="{% static "img/tmp/tlacotalpan_department_101.png" %}" class="show" data-department="101" alt="Tlacotalpan department 101">
+      <img src="{% static "img/tmp/tlacotalpan_department_201.png" %}" class="hide" data-department="201" alt="Tlacotalpan department 201">
+    </div>
+    <div class="drawing-picture">
+      Departamento <span>301</span>
+      <img src="{% static "img/tmp/tlacotalpan_department_102.png" %}" class="hide" data-department="102" alt="Tlacotalpan department 102 ">
+      <img src="{% static "img/tmp/tlacotalpan_department_201.png" %}" class="show" data-department="301" alt="Tlacotalpan department 301">
+    </div>
+    <div class="drawing-selectors">
+      <div class="drawing-selector">102</div>
+      <div class="drawing-selector active">301</div>
+    </div>
+  </div>
+  <div class="development-carousel-container text-center">
+    <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_02.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/tmp/tlacotalpan_carousel_02.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_05.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_04.jpg" %}')">
+    </div>
+    <div class="cover" style="background-image: url('{% static "img/tmp/tlacotalpan_carousel_06.jpg" %}')">
     </div>
   </div>
   <div class="development-characteristics">
@@ -41,7 +69,7 @@
       </li>
       <li class="development-characteristics-item">
         <img src="{% static "img/icons/service_room_icon.png" %}" alt="service room icon">
-        <span>Cuarto de servicio</span>
+        <span>Cuarto de lavado</span>
       </li>
       <li class="development-characteristics-item">
         <img src="{% static "img/icons/dinning_room_icon.png" %}" alt="dinning room icon">
@@ -81,40 +109,11 @@
       </li>
       <li class="development-characteristics-item">
       </li>
-      <div>*Aplica solamente en algunos departamentos</div>
+      <div class="vre-container-relative">
+        *Aplica solamente en algunos departamento
+        <a class="vre-button vre-btn-cotizarH vre-center-absolute" href="https://cotiza.vre.com.mx/collections/tlacotalpan-146">Cotizar o Apartar</a>
+      </div>
     </ul>
-  </div>
-  <div class="development-carousel-container text-center">
-    <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_02.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/tmp/tlacotalpan_carousel_02.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_05.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/tmp/dakota_carousel_04.jpg" %}')">
-    </div>
-    <div class="cover" style="background-image: url('{% static "img/tmp/tlacotalpan_carousel_06.jpg" %}')">
-    </div>
-  </div>
-  <div class="development-drawings gray-container text-center">
-    <div class="drawing-selectors">
-      <div class="drawing-selector active">101</div>
-      <div class="drawing-selector">201</div>
-    </div>
-    <div class="drawing-picture">
-      Departamento <span>101</span>
-      <img src="{% static "img/tmp/tlacotalpan_department_101.png" %}" class="show" data-department="101" alt="Tlacotalpan department 101">
-      <img src="{% static "img/tmp/tlacotalpan_department_201.png" %}" class="hide" data-department="201" alt="Tlacotalpan department 201">
-    </div>
-    <div class="drawing-picture">
-      Departamento <span>301</span>
-      <img src="{% static "img/tmp/tlacotalpan_department_102.png" %}" class="hide" data-department="102" alt="Tlacotalpan department 102 ">
-      <img src="{% static "img/tmp/tlacotalpan_department_201.png" %}" class="show" data-department="301" alt="Tlacotalpan department 301">
-    </div>
-    <div class="drawing-selectors">
-      <div class="drawing-selector">102</div>
-      <div class="drawing-selector active">301</div>
-    </div>
   </div>
   <div class="development-nearby-places">
     <div id="location-map" class="location-map"></div>
@@ -143,6 +142,7 @@
         </li>
       </ul>
       <div class="note">* Tiempo estimado a las 9:00 am entre semana</div>
+      <a class="vre-button vre-btn-cotizarH" href="https://cotiza.vre.com.mx/collections/tlacotalpan-146">Cotizar o Apartar</a>
     </div>
   </div>
   <div class="development-public-transport gray-container">
@@ -172,18 +172,18 @@
     <div class="transport-separated-text">
       Vida diaria no requiere el uso del coche
     </div>
-  </div>
-  <div class="development-built-by">
-    Construido por <img src="{% static "img/icons/zago-logo.png" %}" alt="zago logo">
-  </div>
 </main>
 {% endblock %}
 {% block before_scripts %}
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYJxTs6nptICwPefTB_XR6yA2BUmUg-5A"></script>
+<!--[if lte IE 8]>
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+<![endif]-->
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
 {% endblock %}
 {% block after_scripts %}
 <script>
   insertMap([19.402214, -99.165347], 'Tlacotalpan 146');
-  addBrochureListener('BrochureTlacotalpan', 3);
+  addBrochureListener('Tlacotalpan', '0c4378ea-24a3-48f1-a343-808b2382b645');
 </script>
 {% endblock %}

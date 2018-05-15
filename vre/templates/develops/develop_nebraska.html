@@ -1,0 +1,178 @@
+{% extends "base.html" %}
+{% load static from staticfiles %}
+{% block description %}Vive en una de las mejores zonas de la ciudad, a unas cuadras del WTC{% endblock %}
+{% block title %}Nebraska 159, vive en la mejor zona de la ciudad | VRE México{% endblock %}
+{% block content %}
+{% include "sections_navbar.html" %}
+
+
+<main id="sections-content">
+
+  <div class="vre-develop-cover cover-nebraska">
+    <h1 class="cover-title">Nebraska 159</h1>
+    <h2 class="cover-subtitle">Colonia Nápoles</h2>
+    <a class="btn--cotizar" href="https://cotiza.vre.com.mx/collections/nebraska-159">Cotizar o Apartar</a>
+  </div>
+
+  <div class="vre-develop-department-ubication">
+    <div class="develop-department">
+      <h3>Departamentos
+        <div class="line"></div>
+      </h3>
+      <div class="department-icons">
+        <ul class="icons-list">
+          <li class="list-item">
+            <img src="{% static "img/vre/metros.png" %}" alt="Nebraska 159 77.2 Metros Cuadrados" />
+            <p>77.2 m&sup2;</p>
+          </li>
+          <li class="list-item">
+            <img src="{% static "img/vre/recamaras.png" %}" alt="Nebraska 159 2 Recamaras" />
+            <p>2 Recámaras</p>
+          </li>
+          <li class="list-item">
+            <img src="{% static "img/vre/banio.png" %}" alt="Nebraska 159 2.5 Baños" />
+            <p>2.5 Baños</p>
+          </li>
+          <li class="list-item">
+            <img src="{% static "img/vre/estacionamiento.png" %}" alt="Nebraska 159 2 Lugares de Estacionamiento" />
+            <p>2 Lugares E.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="department-num-img">
+        <div class="department-num">
+          <ul class="num-list">
+            <li data-id= "depa101" class="item active">101</li>
+            <li data-id= "depa102" class="item">102</li>
+            <li data-id= "depa201" class="item">201</li>
+            <li data-id= "depa202" class="item">202</li>
+            <li data-id= "depa301" class="item">301</li>
+            <li data-id= "depa302" class="item">302</li>
+          </ul>
+        </div>
+        <div class="department-img">
+          <img src="{% static "img/vre/nebraska/nebraska-plano-101.jpg" %}" alt="Nebraska 159 | VRE México">
+        </div>
+      </div>
+    </div>
+    <div class="develop-ubication">
+      <h3>Ubicación
+        <div class="line"></div>
+      </h3>
+      <div class="map">
+        <div id="location-map" class="location-map"></div>
+      </div>
+    </div>
+  </div>
+
+  <a class="btn--cotizar" href="https://cotiza.vre.com.mx/collections/nebraska-159">Cotizar o Apartar</a>
+
+  <div class="vre-characteristics-wrapper">
+    <div class="vre-characteristics">
+      <h4>Características <span>generales</span></h4>
+      <div class="line"></div>
+      <ul>
+        <li>
+          <div class="img-wrapper">
+            <img src="{% static "img/vre/cocina.png" %}" alt="Nebraska 159 Cocina Equipada">
+          </div>
+          <p>Cocina equipada</p>
+        </li>
+        <li>
+          <div class="img-wrapper"><img src="{% static "img/vre/elevador.png" %}" alt="Nebraska 159 Elevador"></div>
+          <p>Elevador</p>
+        </li>
+        <li>
+          <div class="img-wrapper"><img src="{% static "img/vre/roof-garden.png" %}" alt="Nebraska 159 Roof Garden Común"></div>
+          <p>Roof Garden común</p>
+        </li>
+        <li>
+          <div class="img-wrapper"><img src="{% static "img/vre/bodega.png" %}" alt="Nebraska 159 Bodega Privada"></div>
+          <p>Bodega privada</p>
+        </li>
+        <li>
+          <div class="img-wrapper"><img src="{% static "img/vre/lavado.png" %}" alt="Nebraska 159 Cuarto de Lavado"></div>
+          <p>Cuarto de lavado</p>
+        </li>
+        <li>
+          <div class="img-wrapper"><img src="{% static "img/vre/pet-friendly.png" %}" alt="Nebraska 159 Pet Friendly / Mascotas"></div>
+          <p>Pet Friendly</p>
+        </li>
+      </ul>
+    </div>
+ </div>
+
+
+  <div class="gray-container development-download-brochure">
+    <div class="development-download-brochure__inner">
+      <span>Si quieres más información, descarga aquí nuestro brochure de ventas</span>
+      <div id="brochure-form-wrapper"></div>
+    </div>
+  </div>
+
+  <div class="vre-gallery">
+    <ul>
+      <li>
+        <a href="{% static "img/vre/nebraska/carousel1.jpg" %}" class="swipebox">
+          <img class="js-gallery-item" src="{% static "img/vre/nebraska/carousel1.jpg" %}" alt="">
+        </a>
+      </li>
+      <li>
+        <a href="{% static "img/vre/nebraska/carousel2.jpg" %}" class="swipebox">
+          <img class="js-gallery-item" src="{% static "img/vre/nebraska/carousel2.jpg" %}" alt="">
+        </a>
+      </li>
+      <li class="gallery-item--hidden">
+        <a href="{% static "img/vre/nebraska/carousel3.jpg" %}" class="swipebox">
+          <img class="js-gallery-item" src="{% static "img/vre/nebraska/carousel3.jpg" %}" alt="">
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="development-360-video text-center">
+    Da click sobre la imagen y vive el departamento
+    <div class="container-360">
+      <div class="embed-responsive embed-responsive-16by9">
+        <div class="help-360">Click para comenzar</div>
+        <iframe src="https://www.dwmx.com/VRE/Nebraska/" frameborder="0" class="embed-responsive-item"></iframe>
+      </div>
+    </div>
+    <a class="btn--cotizar" href="https://cotiza.vre.com.mx/collections/nebraska-159">Cotizar o Apartar</a>
+  </div>
+</main>
+{% endblock %}
+{% block before_scripts %}
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYJxTs6nptICwPefTB_XR6yA2BUmUg-5A"></script>
+<!--[if lte IE 8]>
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+<![endif]-->
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+{% endblock %}
+{% block after_scripts %}
+<script>
+  insertMap([19.395001, -99.176670], 'Nebraska 159');
+  addBrochureListener('Nebraska', 'c97949a2-82c8-4deb-bc2a-179495e321e0');
+</script>
+<script>
+
+window.onload = () => {
+
+  const desarrollo = "nebraska";
+
+  // Events
+  [].forEach.call(document.querySelectorAll('li.item'), (el) => {
+    el.addEventListener('click', () => {
+      actualizar_caracteristicas(el, desarrollo);
+    });
+  });
+}
+</script>
+<script type="text/javascript">
+;( function( $ ) {
+
+	$( '.swipebox' ).swipebox();
+
+} )( jQuery );
+</script>
+{% endblock %}
