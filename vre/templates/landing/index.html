@@ -103,11 +103,19 @@
   <h2>Conoce nuestros departamentos en venta en la CDMX</h2>
   <div class="homepage-developments-items">
     <div class="item">
+      <a href="{% url 'landing:development_coyoacan' %}">
+        <div class="item-picture" style="background-image: url({% static "img/coyoacan1424.jpg" %})">
+          <div class="vre-filtro preventa"><span>Preventa</span></div>
+        </div>
+        <img class="item-name" src="{% static "img/coyoacan_1424.jpg" %}" alt="Coyoacán 1424" />
+      </a>
+    </div>
+    <div class="item">
       <a href="{% url 'landing:comercio' %}">
         <div class="item-picture" style="background-image: url({% static "img/comercio44.jpg" %})">
           <div class="vre-filtro preventa"><span>Preventa</span></div>
         </div>
-        <img class="item-name" src="{% static "img/comercio_44.jpg" %}" alt="Atlanta 186" />
+        <img class="item-name" src="{% static "img/comercio_44.jpg" %}" alt="Comercio 44" />
       </a>
     </div>
     <div class="item">
