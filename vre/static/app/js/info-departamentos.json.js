@@ -594,6 +594,78 @@
             "plano": "beistegui-plano-402.jpg"
           }
         }
+      },
+      "coyoacan": {
+        "tipoa": {
+          "caracteristicas": {
+            "metros": "78.14 - 98.59 m&sup2;",
+            "recamaras": "1 - 2 Recámaras",
+            "banio": "1 - 2 Baños",
+            "estacionamiento": "1 - 2 Lugares Estacionamiento",
+            "balcon": "Con Opción",
+            "plano": "coyoacan-plano-tipo-a.jpg"
+          }
+        },
+        "tipob": {
+          "caracteristicas": {
+            "metros": "67.5 - 128.52 m&sup2",
+            "recamaras": "1 Recámara",
+            "banio": "1 Baño",
+            "estacionamiento": "1 Lugar Estacionamiento",
+            "terraza": "Con Opción",
+            "roof": "Privado con Opción",
+            "plano": "coyoacan-plano-tipo-b.jpg"
+          }
+        },
+        "tipoc": {
+          "caracteristicas": {
+            "metros": "81.1 - 89.67 m&sup2",
+            "recamaras": "1 - 2 Recámaras",
+            "banio": "1 - 2 Baños",
+            "estacionamiento": "1 - 2  Lugares Estacionamiento",
+            "balcon": "Con Opción",
+            "plano": "coyoacan-plano-tipo-c.jpg"
+          }
+        },
+        "tipod": {
+          "caracteristicas": {
+            "metros": "71.46 - 137.77 m&sup2",
+            "recamaras": "1 Recámara",
+            "banio": "1 Baño",
+            "estacionamiento": "1 - 2  Lugares Estacionamiento",
+            "terraza": "Con Opción",
+            "roof": "Privado con Opción",
+            "plano": "coyoacan-plano-tipo-d.jpg"
+          }
+        },
+        "tipoe": {
+          "caracteristicas": {
+            "metros": "85.91 - 153.77 m&sup2",
+            "recamaras": "2 Recámaras",
+            "banio": "2 - 2.5 Baños",
+            "estacionamiento": "1 - 2  Lugares Estacionamiento",
+            "balcon": "Con Opción",
+            "roof": "Privado con Opción",
+            "plano": "coyoacan-plano-tipo-e.jpg"
+          }
+        },
+        "tipof": {
+          "caracteristicas": {
+            "metros": "67.5 - 129.23 m&sup2",
+            "recamaras": "1 Recámara",
+            "banio": "1 Baño",
+            "estacionamiento": "1 Lugar Estacionamiento",
+            "terraza": "Con Opción",
+            "roof": "Privado con Opción",
+            "plano": "coyoacan-plano-tipo-f.jpg"
+          }
+        },
+        "roof": {
+          "caracteristicas": {
+            "metros": "43.9 m&sup2",
+            "plano": "coyoacan-plano-rg.jpg"
+          }
+        }
       }
     }
   });
