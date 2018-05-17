@@ -662,7 +662,7 @@
         },
         "roof": {
           "caracteristicas": {
-            "metros": "43.9 m&sup2",
+            "metros": "49.3 m&sup2",
             "plano": "coyoacan-plano-rg.jpg"
           }
         }
