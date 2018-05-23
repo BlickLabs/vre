@@ -1,0 +1,173 @@
+{% extends "base.html" %}
+{% load static from staticfiles %}
+{% block description %}Vive en la colonia Del Valle Centro, íncreibles departamentos{% endblock %}
+{% block title %}Coyoacán 1424 | VRE México{% endblock %}
+{% block content %}
+{% include "sections_navbar.html" %}
+
+
+<main id="sections-content">
+
+  <div class="vre-develop-cover cover-coyoacan">
+    <h1 class="cover-title">Coyoacán 1424</h1>
+    <h2 class="cover-subtitle">Del Valle Centro</h2>
+    <a class="btn--cotizar" href="https://cotiza.vre.com.mx/collections/coyoacan-1424">Cotizar o Apartar</a>
+  </div>
+
+  <div class="vre-develop-department-ubication">
+    <div class="develop-department">
+      <h3>Departamentos
+        <div class="line"></div>
+      </h3>
+      <div class="department-icons">
+        <ul class="icons-list">
+          <li class="list-item">
+            <img src="{% static "img/vre/metros.png" %}" alt="Coyoacán 1424 130.1 Metros Cuadrados" />
+            <p>78.14-98.59 m&sup2;</p>
+          </li>
+          <li class="list-item">
+            <img src="{% static "img/vre/recamaras.png" %}" alt="Coyoacán 1424 2 Recamaras" />
+            <p>1 - 2 Recámaras</p>
+          </li>
+          <li class="list-item">
+            <img src="{% static "img/vre/banio.png" %}" alt="Coyoacán 1424 2.5 Baños" />
+            <p>1 - 2 Baños</p>
+          </li>
+          <li class="list-item">
+            <img src="{% static "img/vre/estacionamiento.png" %}" alt="Coyoacán 1424 2 Lugares de Estacionamiento" />
+            <p>1 - 2 Lugares Estacionamiento</p>
+          </li>
+          <li class="list-item">
+            <img src="{% static "img/vre/balcon.png" %}" alt="Coyoacán 1424 Balcón" />
+            <p>Con opción</p>
+          </li>
+        </ul>
+      </div>
+      <div class="department-num-img">
+        <div class="department-num">
+          <ul class="num-list comercio-numdev-center">
+            <li data-id= "tipoa" class="item active">Tipo A</li>
+            <li data-id= "tipob" class="item">Tipo B</li>
+            <li data-id= "tipoc" class="item">Tipo C</li>
+            <li data-id= "tipod" class="item">Tipo D</li>
+            <li data-id= "tipoe" class="item">Tipo E</li>
+            <li data-id= "tipof" class="item">Tipo F</li>
+            <li data-id= "roof" class="item">Roof Garden</li>
+          </ul>
+        </div>
+        <div class="department-img">
+          <img src="{% static "img/vre/coyoacan/coyoacan-plano-tipo-a.jpg" %}" alt="Coyoacán 1424 | VRE México">
+        </div>
+      </div>
+    </div>
+    <div class="develop-ubication">
+      <h3>Ubicación
+        <div class="line"></div>
+      </h3>
+      <div class="map">
+        <div id="location-map" class="location-map"></div>
+      </div>
+    </div>
+  </div>
+
+  <a class="btn--cotizar" href="https://cotiza.vre.com.mx/collections/coyoacan-1424">Cotizar o Apartar</a>
+
+  <div class="vre-characteristics-wrapper">
+    <div class="vre-characteristics">
+      <h4>Características <span>generales</span></h4>
+      <div class="line"></div>
+      <ul>
+        <li>
+          <div class="img-wrapper">
+            <img src="{% static "img/vre/cocina.png" %}" alt="Coyoacán 1424 Cocina Equipada">
+          </div>
+          <p>Cocina equipada</p>
+        </li>
+        <li>
+          <div class="img-wrapper"><img src="{% static "img/vre/elevador.png" %}" alt="Coyoacán 1424 Elevador"></div>
+          <p>Elevador</p>
+        </li>
+        <li>
+          <div class="img-wrapper"><img src="{% static "img/vre/roof-garden.png" %}" alt="Coyoacán 1424 Roof Garden Común"></div>
+          <p>Roof Garden común</p>
+        </li>
+        <li>
+          <div class="img-wrapper"><img src="{% static "img/vre/bodega.png" %}" alt="Coyoacán 1424 Bodega Privada"></div>
+          <p>Bodega privada</p>
+        </li>
+        <li>
+          <div class="img-wrapper"><img src="{% static "img/vre/lavado.png" %}" alt="Coyoacán 1424 Cuarto de Lavado"></div>
+          <p>Cuarto de lavado</p>
+        </li>
+        <li>
+          <div class="img-wrapper"><img src="{% static "img/vre/pet-friendly.png" %}" alt="Coyoacán 1424 Pet Friendly / Mascotas"></div>
+          <p>Pet Friendly</p>
+        </li>
+      </ul>
+    </div>
+ </div>
+
+
+  <div class="gray-container development-download-brochure">
+    <div class="development-download-brochure__inner">
+      <span>Si quieres más información, descarga aquí nuestro brochure de ventas</span>
+      <div id="brochure-form-wrapper"></div>
+    </div>
+  </div>
+
+  <div class="vre-gallery">
+    <ul>
+      <li>
+        <a href="{% static "img/vre/coyoacan/carousel1.jpg" %}" class="swipebox">
+          <img class="js-gallery-item" src="{% static "img/vre/coyoacan/carousel1.jpg" %}" alt="">
+        </a>
+      </li>
+      <li>
+        <a href="{% static "img/vre/coyoacan/carousel2.jpg" %}" class="swipebox">
+          <img class="js-gallery-item" src="{% static "img/vre/coyoacan/carousel2.jpg" %}" alt="">
+        </a>
+      </li>
+      <li class="gallery-item--hidden">
+        <a href="{% static "img/vre/coyoacan/carousel3.jpg" %}" class="swipebox">
+          <img class="js-gallery-item" src="{% static "img/vre/coyoacan/carousel3.jpg" %}" alt="">
+        </a>
+      </li>
+    </ul>
+  </div>
+
+</main>
+{% endblock %}
+{% block before_scripts %}
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYJxTs6nptICwPefTB_XR6yA2BUmUg-5A"></script>
+<!--[if lte IE 8]>
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+<![endif]-->
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+{% endblock %}
+{% block after_scripts %}
+<script>
+  insertMap([19.3711532, -99.1714376], 'Coyoacán 1424');
+  addBrochureListener('Coyoacan', '3f5a47eb-67de-40c3-a2e8-7e4b071b6201');
+</script>
+<script>
+
+window.onload = () => {
+
+  const desarrollo = "coyoacan";
+
+  // Events
+  [].forEach.call(document.querySelectorAll('li.item'), (el) => {
+    el.addEventListener('click', () => {
+      actualizar_caracteristicas(el, desarrollo);
+    });
+  }); 
+}
+</script>
+<script type="text/javascript">
+;( function( $ ) {
+
+	$( '.swipebox' ).swipebox();
+
+} )( jQuery );
+</script>
+{% endblock %}

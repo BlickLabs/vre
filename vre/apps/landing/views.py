@@ -239,3 +239,12 @@ class Comercio(TemplateView):
         context = super(Comercio, self).get_context_data(**kwargs)
         context['develop'] = "comercio"
         return context
+
+
+class Coyoacan(TemplateView):
+    template_name = 'develops/develop_coyoacan.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(Coyoacan, self).get_context_data(**kwargs)
+        context['develop'] = "coyoacan"
+        return context
